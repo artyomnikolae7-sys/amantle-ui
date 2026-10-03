@@ -76,3 +76,6 @@ function ThemeContextWrapper({
 export function useAppTheme() {
   return React.useContext(ThemeContext);
 }
+
+export const useTheme = useAppTheme;
+

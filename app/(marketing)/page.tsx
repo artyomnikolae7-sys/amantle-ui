@@ -3,6 +3,7 @@ import path from "node:path";
 import Link from "next/link";
 import { ArrowRight, Layers, Sparkles, Terminal, ShieldCheck, Cpu } from "lucide-react";
 import { CatalogGrid, CatalogItem } from "@/components/catalog-grid";
+import { InteractiveShowcase } from "@/components/interactive-showcase";
 
 export default async function HomePage() {
   let items: CatalogItem[] = [];
@@ -27,7 +28,7 @@ export default async function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-12 md:pt-24 md:pb-20 text-center">
+      <section className="container mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-10 md:pt-20 md:pb-14 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-medium text-primary mb-8 shadow-sm">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Экосистема shadcn нового поколения</span>
@@ -62,7 +63,7 @@ export default async function HomePage() {
         </div>
 
         {/* Key Pillars Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           <div className="rounded-xl border border-border bg-card/60 p-6 shadow-sm backdrop-blur-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <Layers className="w-5 h-5" />
@@ -95,7 +96,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Interactive Catalog Grid */}
+      {/* Live Interactive Sandbox Window */}
+      <InteractiveShowcase />
+
+      {/* Interactive Catalog Grid with Live Previews & Quick View */}
       <CatalogGrid items={items} />
     </div>
   );
