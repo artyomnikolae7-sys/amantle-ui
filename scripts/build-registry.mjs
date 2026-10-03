@@ -1,12 +1,43 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { z } from "zod";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, "..");
 const REGISTRY_DIR = path.join(ROOT_DIR, "registry");
 const OUTPUT_DIR = path.join(ROOT_DIR, "public", "r");
+
+const registryProvenanceSchema = z.object({
+  source: z.string(),
+  author: z.string(),
+  license: z.string(),
+  modified: z.string().optional(),
+});
+
+const registryItemFileSchema = z.object({
+  path: z.string(),
+  content: z.string(),
+  type: z.string(),
+  target: z.string().optional(),
+});
+
+const registryItemSchema = z.object({
+  name: z.string(),
+  type: z.string(),
+  title: z.string().optional(),
+  description: z.string().optional(),
+  dependencies: z.array(z.string()).default([]),
+  devDependencies: z.array(z.string()).default([]),
+  registryDependencies: z.array(z.string()).default([]),
+  files: z.array(registryItemFileSchema),
+  category: z.string().optional(),
+  tags: z.array(z.string()).default([]),
+  meta: registryProvenanceSchema.optional(),
+});
+
+const registryIndexSchema = z.array(registryItemSchema.omit({ files: true }));
 
 function parseProvenance(fileContent, fileName) {
   const jsdocMatch = fileContent.match(/\/\*\*([\s\S]*?)\*\//);
@@ -71,6 +102,8 @@ export function buildRegistry() {
     { dir: "ui", type: "registry:ui" },
     { dir: "blocks", type: "registry:block" },
     { dir: "templates", type: "registry:template" },
+    { dir: "hooks", type: "registry:hook" },
+    { dir: "lib", type: "registry:lib" },
   ];
 
   const indexList = [];
@@ -114,21 +147,25 @@ export function buildRegistry() {
         meta: provenance,
       };
 
+      const validatedItem = registryItemSchema.parse(registryItem);
+
       fs.writeFileSync(
         path.join(OUTPUT_DIR, `${name}.json`),
-        JSON.stringify(registryItem, null, 2),
+        JSON.stringify(validatedItem, null, 2),
         "utf-8"
       );
 
-      const { files: _, ...indexItem } = registryItem;
+      const { files: _, ...indexItem } = validatedItem;
       indexList.push(indexItem);
       totalBuilt++;
     }
   }
 
+  const validatedIndex = registryIndexSchema.parse(indexList);
+
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "index.json"),
-    JSON.stringify(indexList, null, 2),
+    JSON.stringify(validatedIndex, null, 2),
     "utf-8"
   );
 

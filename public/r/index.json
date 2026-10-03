@@ -8,6 +8,7 @@
       "@radix-ui/react-slot",
       "class-variance-authority"
     ],
+    "devDependencies": [],
     "registryDependencies": [],
     "category": "ui",
     "tags": [
