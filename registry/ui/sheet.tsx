@@ -8,6 +8,7 @@
 "use client";
 
 import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,23 +46,30 @@ function Sheet({ open, defaultOpen = false, onOpenChange, children }: SheetProps
   );
 }
 
-const SheetTrigger = React.forwardRef<
-  HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ onClick, ...props }, ref) => {
-  const ctx = React.useContext(SheetContext);
-  return (
-    <button
-      ref={ref}
-      type="button"
-      onClick={(e) => {
-        ctx?.setOpen(true);
-        onClick?.(e);
-      }}
-      {...props}
-    />
-  );
-});
+export interface SheetTriggerProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
+}
+
+const SheetTrigger = React.forwardRef<HTMLButtonElement, SheetTriggerProps>(
+  ({ asChild = false, onClick, children, ...props }, ref) => {
+    const ctx = React.useContext(SheetContext);
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        ref={ref}
+        type={asChild ? undefined : "button"}
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+          ctx?.setOpen(true);
+          onClick?.(e);
+        }}
+        {...props}
+      >
+        {children}
+      </Comp>
+    );
+  }
+);
 SheetTrigger.displayName = "SheetTrigger";
 
 const SheetClose = React.forwardRef<

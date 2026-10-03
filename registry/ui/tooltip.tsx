@@ -8,6 +8,7 @@
 "use client";
 
 import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 function TooltipProvider({ children }: { children: React.ReactNode }) {
@@ -39,16 +40,21 @@ function Tooltip({ children }: { children: React.ReactNode }) {
   );
 }
 
-const TooltipTrigger = React.forwardRef<
-  HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ children, ...props }, ref) => {
-  return (
-    <button ref={ref} type="button" {...props}>
-      {children}
-    </button>
-  );
-});
+export interface TooltipTriggerProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean;
+}
+
+const TooltipTrigger = React.forwardRef<HTMLButtonElement, TooltipTriggerProps>(
+  ({ asChild = false, children, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp ref={ref as any} type={asChild ? undefined : "button"} {...props}>
+        {children}
+      </Comp>
+    );
+  }
+);
 TooltipTrigger.displayName = "TooltipTrigger";
 
 const TooltipContent = React.forwardRef<

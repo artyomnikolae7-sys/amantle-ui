@@ -1,7 +1,18 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import Link from "next/link";
-import { ArrowRight, Layers, Sparkles, Terminal, CheckCircle2, ShieldCheck, Cpu } from "lucide-react";
+import { ArrowRight, Layers, Sparkles, Terminal, ShieldCheck, Cpu } from "lucide-react";
+import { CatalogGrid, CatalogItem } from "@/components/catalog-grid";
 
-export default function HomePage() {
+export default async function HomePage() {
+  let items: CatalogItem[] = [];
+  try {
+    const raw = await fs.readFile(path.join(process.cwd(), "public", "r", "index.json"), "utf-8");
+    items = JSON.parse(raw);
+  } catch {
+    items = [];
+  }
+
   return (
     <div className="relative overflow-hidden">
       {/* Background radial gradient glow */}
@@ -16,7 +27,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-20 md:pt-24 md:pb-32 text-center">
+      <section className="container mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-12 md:pt-24 md:pb-20 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-medium text-primary mb-8 shadow-sm">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Экосистема shadcn нового поколения</span>
@@ -36,22 +47,22 @@ export default function HomePage() {
 
         {/* CTA Buttons & CLI quick-copy */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/ui"
+          <a
+            href="#catalog"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition-opacity gap-2"
           >
-            <span>Перейти к компонентам</span>
+            <span>Исследовать каталог (55)</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
 
           <div className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-xs font-mono text-foreground shadow-sm">
             <Terminal className="w-4 h-4 text-primary" />
-            <span>npx shadcn add https://amantle.dev/r/button.json</span>
+            <span>npx shadcn add http://localhost:3000/r/button.json</span>
           </div>
         </div>
 
         {/* Key Pillars Grid */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           <div className="rounded-xl border border-border bg-card/60 p-6 shadow-sm backdrop-blur-sm">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <Layers className="w-5 h-5" />
@@ -68,7 +79,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-lg font-bold text-foreground">Нативный MCP-сервер для AI</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Прямая интеграция с Cursor, Claude Code и Antigravity. Агенты сами находят блоки, забирают код и настраивают переменные темы.
+              Прямая интеграция с Cursor, Windsurf и Antigravity. Агенты сами находят блоки, забирают код и настраивают переменные темы.
             </p>
           </div>
 
@@ -82,27 +93,10 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-
-        {/* Categories preview banner */}
-        <div className="mt-16 rounded-2xl border border-border bg-gradient-to-b from-card to-background p-8 text-center">
-          <div className="text-xs uppercase tracking-wider font-semibold text-primary mb-2">Архитектура экосистемы</div>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground">Три уровня структурирования</h2>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-4 rounded-lg bg-muted/40 border border-border">
-              <div className="font-semibold text-sm text-foreground">UI Primitives</div>
-              <div className="text-xs text-muted-foreground mt-1">25+ доступных компонентов</div>
-            </div>
-            <div className="p-4 rounded-lg bg-muted/40 border border-border">
-              <div className="font-semibold text-sm text-foreground">Blocks & Sections</div>
-              <div className="text-xs text-muted-foreground mt-1">20+ составных секций</div>
-            </div>
-            <div className="p-4 rounded-lg bg-muted/40 border border-border">
-              <div className="font-semibold text-sm text-foreground">Page Templates</div>
-              <div className="text-xs text-muted-foreground mt-1">3 полноценных каркаса</div>
-            </div>
-          </div>
-        </div>
       </section>
+
+      {/* Interactive Catalog Grid */}
+      <CatalogGrid items={items} />
     </div>
   );
 }

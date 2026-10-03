@@ -381,6 +381,7 @@
     "title": "Sheet",
     "description": "AMANTLE UI ui: sheet",
     "dependencies": [
+      "@radix-ui/react-slot",
       "lucide-react",
       "class-variance-authority"
     ],
@@ -425,7 +426,9 @@
     "type": "registry:ui",
     "title": "Tooltip",
     "description": "AMANTLE UI ui: tooltip",
-    "dependencies": [],
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
     "devDependencies": [],
     "registryDependencies": [],
     "category": "ui",
@@ -445,7 +448,9 @@
     "type": "registry:ui",
     "title": "Dropdown Menu",
     "description": "AMANTLE UI ui: dropdown-menu",
-    "dependencies": [],
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
     "devDependencies": [],
     "registryDependencies": [],
     "category": "ui",
