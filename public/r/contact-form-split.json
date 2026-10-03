@@ -1,0 +1,34 @@
+{
+  "name": "contact-form-split",
+  "type": "registry:block",
+  "title": "Contact Form Split",
+  "description": "AMANTLE UI block: contact-form-split",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "blocks/contact-form-split.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/contact-form-split\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Mail, MapPin, Phone } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\nimport { Textarea } from \"@/registry/ui/textarea\";\n\nexport function ContactFormSplit() {\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 rounded-2xl border border-border bg-card p-8 md:p-12\">\n          <div className=\"space-y-6\">\n            <h2 className=\"text-3xl font-extrabold tracking-tight\">Свяжитесь с нами</h2>\n            <p className=\"text-muted-foreground leading-relaxed\">\n              Есть вопросы по интеграции MCP, внедрению корпоративной дизайн-системы или предложение по сотрудничеству? Напишите нам.\n            </p>\n            <div className=\"space-y-4 pt-4 text-sm text-muted-foreground\">\n              <div className=\"flex items-center gap-3\">\n                <Mail className=\"h-5 w-5 text-primary shrink-0\" />\n                <span>support@amantle.dev</span>\n              </div>\n              <div className=\"flex items-center gap-3\">\n                <Phone className=\"h-5 w-5 text-primary shrink-0\" />\n                <span>+7 (495) 123-45-67</span>\n              </div>\n              <div className=\"flex items-center gap-3\">\n                <MapPin className=\"h-5 w-5 text-primary shrink-0\" />\n                <span>Москва, Инновационный центр</span>\n              </div>\n            </div>\n          </div>\n          <form onSubmit={(e) => e.preventDefault()} className=\"space-y-4\">\n            <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-4\">\n              <div className=\"space-y-2\">\n                <label className=\"text-sm font-medium\">Имя</label>\n                <Input placeholder=\"Ваше имя\" required />\n              </div>\n              <div className=\"space-y-2\">\n                <label className=\"text-sm font-medium\">Email</label>\n                <Input type=\"email\" placeholder=\"email@domain.com\" required />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <label className=\"text-sm font-medium\">Тема сообщения</label>\n              <Input placeholder=\"Внедрение в проект\" required />\n            </div>\n            <div className=\"space-y-2\">\n              <label className=\"text-sm font-medium\">Сообщение</label>\n              <Textarea placeholder=\"Расскажите подробнее о вашей задаче...\" rows={4} required />\n            </div>\n            <Button type=\"submit\" className=\"w-full\">Отправить сообщение</Button>\n          </form>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default ContactFormSplit;\n",
+      "type": "registry:block",
+      "target": "components/blocks/contact-form-split.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "contact-form-split"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/contact-form-split",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

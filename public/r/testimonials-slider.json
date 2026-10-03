@@ -1,0 +1,33 @@
+{
+  "name": "testimonials-slider",
+  "type": "registry:block",
+  "title": "Testimonials Slider",
+  "description": "AMANTLE UI block: testimonials-slider",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "card",
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "blocks/testimonials-slider.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/testimonials-slider\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Star } from \"lucide-react\";\nimport { Card, CardContent, CardHeader } from \"@/registry/ui/card\";\nimport { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\n\nexport function TestimonialsSlider() {\n  const testimonials = [\n    {\n      name: \"Алексей Смирнов\",\n      role: \"Lead Frontend Engineer, FinTech\",\n      text: \"Переход на AMANTLE UI сократил время разработки дизайн-системы с месяцев до пары дней. Интеграция с Cursor через MCP просто волшебна.\",\n      initials: \"АС\",\n    },\n    {\n      name: \"Елена Власова\",\n      role: \"Head of Product, SaaS Inc.\",\n      text: \"Наличие проверенной атрибуции Provenance в каждом компоненте избавило наш юридический отдел от головной боли с лицензиями.\",\n      initials: \"ЕВ\",\n    },\n    {\n      name: \"Дмитрий Ковалев\",\n      role: \"CTO, Digital Agency\",\n      text: \"Чистый Tailwind v4 без огромных конфигов и мгновенный переключатель тем. Это именно то, чего не хватало индустрии.\",\n      initials: \"ДК\",\n    },\n  ];\n\n  return (\n    <section className=\"py-20 bg-muted/20\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"text-center mb-16\">\n          <h2 className=\"text-3xl font-extrabold sm:text-4xl\">Что говорят инженеры</h2>\n          <p className=\"mt-3 text-muted-foreground\">Отзывы команд, строящих цифровые продукты на AMANTLE UI</p>\n        </div>\n        <div className=\"grid gap-6 md:grid-cols-3\">\n          {testimonials.map((item) => (\n            <Card key={item.name} className=\"flex flex-col justify-between\">\n              <CardHeader className=\"pb-2\">\n                <div className=\"flex gap-1 text-primary mb-3\">\n                  {[...Array(5)].map((_, i) => (\n                    <Star key={i} className=\"h-4 w-4 fill-current\" />\n                  ))}\n                </div>\n                <p className=\"text-sm text-foreground/90 italic leading-relaxed\">\n                  &ldquo;{item.text}&rdquo;\n                </p>\n              </CardHeader>\n              <CardContent className=\"pt-4 flex items-center gap-3\">\n                <Avatar>\n                  <AvatarFallback className=\"bg-primary/10 text-primary font-bold\">\n                    {item.initials}\n                  </AvatarFallback>\n                </Avatar>\n                <div>\n                  <h4 className=\"text-sm font-semibold\">{item.name}</h4>\n                  <p className=\"text-xs text-muted-foreground\">{item.role}</p>\n                </div>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default TestimonialsSlider;\n",
+      "type": "registry:block",
+      "target": "components/blocks/testimonials-slider.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "testimonials-slider"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/testimonials-slider",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

@@ -21,5 +21,1222 @@
       "license": "MIT",
       "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
     }
+  },
+  {
+    "name": "input",
+    "type": "registry:ui",
+    "title": "Input",
+    "description": "AMANTLE UI ui: input",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "input"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/input.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "textarea",
+    "type": "registry:ui",
+    "title": "Textarea",
+    "description": "AMANTLE UI ui: textarea",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "textarea"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/textarea.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "badge",
+    "type": "registry:ui",
+    "title": "Badge",
+    "description": "AMANTLE UI ui: badge",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "badge"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/badge.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "card",
+    "type": "registry:ui",
+    "title": "Card",
+    "description": "AMANTLE UI ui: card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "card"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/card.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "separator",
+    "type": "registry:ui",
+    "title": "Separator",
+    "description": "AMANTLE UI ui: separator",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "separator"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/separator.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "skeleton",
+    "type": "registry:ui",
+    "title": "Skeleton",
+    "description": "AMANTLE UI ui: skeleton",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "skeleton"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/skeleton.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "avatar",
+    "type": "registry:ui",
+    "title": "Avatar",
+    "description": "AMANTLE UI ui: avatar",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "avatar"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/avatar.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "switch",
+    "type": "registry:ui",
+    "title": "Switch",
+    "description": "AMANTLE UI ui: switch",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "switch"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/switch.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "checkbox",
+    "type": "registry:ui",
+    "title": "Checkbox",
+    "description": "AMANTLE UI ui: checkbox",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "checkbox"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/checkbox.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "slider",
+    "type": "registry:ui",
+    "title": "Slider",
+    "description": "AMANTLE UI ui: slider",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "slider"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/slider.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "progress",
+    "type": "registry:ui",
+    "title": "Progress",
+    "description": "AMANTLE UI ui: progress",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "progress"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/progress.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "toggle",
+    "type": "registry:ui",
+    "title": "Toggle",
+    "description": "AMANTLE UI ui: toggle",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "toggle"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/toggle.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "alert",
+    "type": "registry:ui",
+    "title": "Alert",
+    "description": "AMANTLE UI ui: alert",
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "alert"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/alert.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "table",
+    "type": "registry:ui",
+    "title": "Table",
+    "description": "AMANTLE UI ui: table",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "table"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/table.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "tabs",
+    "type": "registry:ui",
+    "title": "Tabs",
+    "description": "AMANTLE UI ui: tabs",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tabs"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/tabs.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "accordion",
+    "type": "registry:ui",
+    "title": "Accordion",
+    "description": "AMANTLE UI ui: accordion",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "accordion"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/accordion.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "dialog",
+    "type": "registry:ui",
+    "title": "Dialog",
+    "description": "AMANTLE UI ui: dialog",
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dialog"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/dialog.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "sheet",
+    "type": "registry:ui",
+    "title": "Sheet",
+    "description": "AMANTLE UI ui: sheet",
+    "dependencies": [
+      "lucide-react",
+      "class-variance-authority"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "sheet"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/sheet.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "popover",
+    "type": "registry:ui",
+    "title": "Popover",
+    "description": "AMANTLE UI ui: popover",
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "popover"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/popover.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "tooltip",
+    "type": "registry:ui",
+    "title": "Tooltip",
+    "description": "AMANTLE UI ui: tooltip",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tooltip"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/tooltip.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "dropdown-menu",
+    "type": "registry:ui",
+    "title": "Dropdown Menu",
+    "description": "AMANTLE UI ui: dropdown-menu",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dropdown-menu"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/dropdown-menu.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "select",
+    "type": "registry:ui",
+    "title": "Select",
+    "description": "AMANTLE UI ui: select",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "select"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/select.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "radio-group",
+    "type": "registry:ui",
+    "title": "Radio Group",
+    "description": "AMANTLE UI ui: radio-group",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "radio-group"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/radio-group.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "sonner",
+    "type": "registry:ui",
+    "title": "Sonner",
+    "description": "AMANTLE UI ui: sonner",
+    "dependencies": [
+      "sonner"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "sonner"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/sonner.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "hero-simple",
+    "type": "registry:block",
+    "title": "Hero Simple",
+    "description": "AMANTLE UI block: hero-simple",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "hero-simple"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/hero-simple",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "hero-gradient-glow",
+    "type": "registry:block",
+    "title": "Hero Gradient Glow",
+    "description": "AMANTLE UI block: hero-gradient-glow",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "hero-gradient-glow"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/hero-gradient-glow",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "hero-badge-cta",
+    "type": "registry:block",
+    "title": "Hero Badge Cta",
+    "description": "AMANTLE UI block: hero-badge-cta",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "hero-badge-cta"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/hero-badge-cta",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "pricing-cards-tier",
+    "type": "registry:block",
+    "title": "Pricing Cards Tier",
+    "description": "AMANTLE UI block: pricing-cards-tier",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button",
+      "card",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "pricing-cards-tier"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/pricing-cards-tier",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "pricing-comparison-table",
+    "type": "registry:block",
+    "title": "Pricing Comparison Table",
+    "description": "AMANTLE UI block: pricing-comparison-table",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "table",
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "pricing-comparison-table"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/pricing-comparison-table",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "bento-grid-3x3",
+    "type": "registry:block",
+    "title": "Bento Grid 3x3",
+    "description": "AMANTLE UI block: bento-grid-3x3",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "card",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "bento-grid-3x3"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/bento-grid-3x3",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "feature-cards-grid",
+    "type": "registry:block",
+    "title": "Feature Cards Grid",
+    "description": "AMANTLE UI block: feature-cards-grid",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "feature-cards-grid"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/feature-cards-grid",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "feature-alternating-rows",
+    "type": "registry:block",
+    "title": "Feature Alternating Rows",
+    "description": "AMANTLE UI block: feature-alternating-rows",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "feature-alternating-rows"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/feature-alternating-rows",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "testimonials-slider",
+    "type": "registry:block",
+    "title": "Testimonials Slider",
+    "description": "AMANTLE UI block: testimonials-slider",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "card",
+      "avatar"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "testimonials-slider"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/testimonials-slider",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "stats-counter-strip",
+    "type": "registry:block",
+    "title": "Stats Counter Strip",
+    "description": "AMANTLE UI block: stats-counter-strip",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "stats-counter-strip"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/stats-counter-strip",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "faq-accordion",
+    "type": "registry:block",
+    "title": "Faq Accordion",
+    "description": "AMANTLE UI block: faq-accordion",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [
+      "accordion"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "faq-accordion"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/faq-accordion",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "navbar-sticky-blur",
+    "type": "registry:block",
+    "title": "Navbar Sticky Blur",
+    "description": "AMANTLE UI block: navbar-sticky-blur",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "navbar-sticky-blur"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/navbar-sticky-blur",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "footer-mega-columns",
+    "type": "registry:block",
+    "title": "Footer Mega Columns",
+    "description": "AMANTLE UI block: footer-mega-columns",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "footer-mega-columns"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/footer-mega-columns",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "dashboard-stats-kpi",
+    "type": "registry:block",
+    "title": "Dashboard Stats Kpi",
+    "description": "AMANTLE UI block: dashboard-stats-kpi",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "dashboard-stats-kpi"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/dashboard-stats-kpi",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "dashboard-recent-transactions",
+    "type": "registry:block",
+    "title": "Dashboard Recent Transactions",
+    "description": "AMANTLE UI block: dashboard-recent-transactions",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [
+      "table",
+      "badge",
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "dashboard-recent-transactions"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/dashboard-recent-transactions",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "cta-banner-glow",
+    "type": "registry:block",
+    "title": "Cta Banner Glow",
+    "description": "AMANTLE UI block: cta-banner-glow",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "cta-banner-glow"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/cta-banner-glow",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "newsletter-card-minimal",
+    "type": "registry:block",
+    "title": "Newsletter Card Minimal",
+    "description": "AMANTLE UI block: newsletter-card-minimal",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "input",
+      "button",
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "newsletter-card-minimal"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/newsletter-card-minimal",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "login-card-floating",
+    "type": "registry:block",
+    "title": "Login Card Floating",
+    "description": "AMANTLE UI block: login-card-floating",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button",
+      "input",
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "login-card-floating"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/login-card-floating",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "empty-state-card",
+    "type": "registry:block",
+    "title": "Empty State Card",
+    "description": "AMANTLE UI block: empty-state-card",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "empty-state-card"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/empty-state-card",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "team-members-grid",
+    "type": "registry:block",
+    "title": "Team Members Grid",
+    "description": "AMANTLE UI block: team-members-grid",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [
+      "avatar",
+      "card"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "team-members-grid"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/team-members-grid",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "contact-form-split",
+    "type": "registry:block",
+    "title": "Contact Form Split",
+    "description": "AMANTLE UI block: contact-form-split",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button",
+      "input",
+      "textarea"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "contact-form-split"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/contact-form-split",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "integration-logos-cloud",
+    "type": "registry:block",
+    "title": "Integration Logos Cloud",
+    "description": "AMANTLE UI block: integration-logos-cloud",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "integration-logos-cloud"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/integration-logos-cloud",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "metrics-graph-card",
+    "type": "registry:block",
+    "title": "Metrics Graph Card",
+    "description": "AMANTLE UI block: metrics-graph-card",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "card",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "metrics-graph-card"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/metrics-graph-card",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "user-profile-header",
+    "type": "registry:block",
+    "title": "User Profile Header",
+    "description": "AMANTLE UI block: user-profile-header",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "avatar",
+      "button",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "user-profile-header"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/user-profile-header",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "notification-feed-popover",
+    "type": "registry:block",
+    "title": "Notification Feed Popover",
+    "description": "AMANTLE UI block: notification-feed-popover",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "popover",
+      "button"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "notification-feed-popover"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/notification-feed-popover",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "search-command-palette",
+    "type": "registry:block",
+    "title": "Search Command Palette",
+    "description": "AMANTLE UI block: search-command-palette",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "input",
+      "badge"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "search-command-palette"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/search-command-palette",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "hero-video-dialog",
+    "type": "registry:block",
+    "title": "Hero Video Dialog",
+    "description": "AMANTLE UI block: hero-video-dialog",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "dialog"
+    ],
+    "category": "blocks",
+    "tags": [
+      "blocks",
+      "hero-video-dialog"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/blocks/hero-video-dialog",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "saas-landing-page",
+    "type": "registry:template",
+    "title": "Saas Landing Page",
+    "description": "AMANTLE UI template: saas-landing-page",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "templates",
+    "tags": [
+      "templates",
+      "saas-landing-page"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/templates/saas-landing-page",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "modern-dashboard-page",
+    "type": "registry:template",
+    "title": "Modern Dashboard Page",
+    "description": "AMANTLE UI template: modern-dashboard-page",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button",
+      "input"
+    ],
+    "category": "templates",
+    "tags": [
+      "templates",
+      "modern-dashboard-page"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/templates/modern-dashboard-page",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  },
+  {
+    "name": "auth-split-screen-page",
+    "type": "registry:template",
+    "title": "Auth Split Screen Page",
+    "description": "AMANTLE UI template: auth-split-screen-page",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "templates",
+    "tags": [
+      "templates",
+      "auth-split-screen-page"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/registry/templates/auth-split-screen-page",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
   }
 ]

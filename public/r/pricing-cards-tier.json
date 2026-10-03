@@ -1,0 +1,34 @@
+{
+  "name": "pricing-cards-tier",
+  "type": "registry:block",
+  "title": "Pricing Cards Tier",
+  "description": "AMANTLE UI block: pricing-cards-tier",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "card",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/pricing-cards-tier.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/pricing-cards-tier\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Check } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/registry/ui/card\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport function PricingCardsTier() {\n  const plans = [\n    {\n      name: \"Starter\",\n      price: \"$0\",\n      description: \"Для пет-проектов и открытых библиотек\",\n      features: [\"50+ базовых примитивов\", \"Tailwind CSS v4 токены\", \"Статический реестр CLI\", \"MIT Лицензия\"],\n      popular: false,\n      cta: \"Начать бесплатно\",\n      variant: \"outline\" as const,\n    },\n    {\n      name: \"Pro\",\n      price: \"$29\",\n      description: \"Для продуктовых команд и студий\",\n      features: [\n        \"Все примитивы и блоки\",\n        \"Интеграция с Cursor/Windsurf (MCP)\",\n        \"Визуальный composer интерфейсов\",\n        \"Приоритетные обновления\",\n        \"Поддержка 5 цветовых палитр\",\n      ],\n      popular: true,\n      cta: \"Подключить Pro\",\n      variant: \"default\" as const,\n    },\n    {\n      name: \"Enterprise\",\n      price: \"$99\",\n      description: \"Для корпоративных дизайн-систем\",\n      features: [\n        \"Dedicated Registry Server\",\n        \"Кастомные дизайн-токены бренда\",\n        \"Provenance-аудит лицензий\",\n        \"SLA и корпоративная поддержка\",\n      ],\n      popular: false,\n      cta: \"Связаться с нами\",\n      variant: \"outline\" as const,\n    },\n  ];\n\n  return (\n    <section className=\"py-20 md:py-32\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"text-center mb-16\">\n          <Badge variant=\"outline\" className=\"mb-4\">Тарифные планы</Badge>\n          <h2 className=\"text-3xl font-extrabold sm:text-5xl text-foreground\">\n            Прозрачные условия для любого масштаба\n          </h2>\n          <p className=\"mt-4 text-muted-foreground\">\n            Выбирайте план, подходящий под текущие задачи вашей команды.\n          </p>\n        </div>\n\n        <div className=\"grid gap-8 md:grid-cols-3 items-stretch\">\n          {plans.map((plan) => (\n            <Card\n              key={plan.name}\n              className={`relative flex flex-col justify-between ${\n                plan.popular ? \"border-primary shadow-xl scale-105 z-10\" : \"\"\n              }`}\n            >\n              {plan.popular && (\n                <div className=\"absolute -top-3 left-1/2 -translate-x-1/2\">\n                  <Badge className=\"bg-primary text-primary-foreground\">Рекомендуем</Badge>\n                </div>\n              )}\n              <CardHeader>\n                <CardTitle className=\"text-xl\">{plan.name}</CardTitle>\n                <CardDescription>{plan.description}</CardDescription>\n                <div className=\"mt-4\">\n                  <span className=\"text-4xl font-extrabold\">{plan.price}</span>\n                  <span className=\"text-xs text-muted-foreground ml-1\">/ месяц</span>\n                </div>\n              </CardHeader>\n              <CardContent>\n                <ul className=\"space-y-3 text-sm\">\n                  {plan.features.map((feat) => (\n                    <li key={feat} className=\"flex items-center gap-2 text-muted-foreground\">\n                      <Check className=\"h-4 w-4 text-primary shrink-0\" />\n                      <span>{feat}</span>\n                    </li>\n                  ))}\n                </ul>\n              </CardContent>\n              <CardFooter>\n                <Button className=\"w-full\" variant={plan.variant}>\n                  {plan.cta}\n                </Button>\n              </CardFooter>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default PricingCardsTier;\n",
+      "type": "registry:block",
+      "target": "components/blocks/pricing-cards-tier.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "pricing-cards-tier"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/pricing-cards-tier",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

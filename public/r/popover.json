@@ -1,0 +1,30 @@
+{
+  "name": "popover",
+  "type": "registry:ui",
+  "title": "Popover",
+  "description": "AMANTLE UI ui: popover",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/popover.tsx",
+      "content": "/**\n * @source https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/popover.tsx\n * @author shadcn\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cn } from \"@/lib/utils\";\n\ninterface PopoverContextValue {\n  open: boolean;\n  setOpen: (open: boolean) => void;\n  toggle: () => void;\n}\n\nconst PopoverContext = React.createContext<PopoverContextValue | null>(null);\n\nexport interface PopoverProps {\n  open?: boolean;\n  defaultOpen?: boolean;\n  onOpenChange?: (open: boolean) => void;\n  children: React.ReactNode;\n}\n\nfunction Popover({ open, defaultOpen = false, onOpenChange, children }: PopoverProps) {\n  const [isOpen, setIsOpen] = React.useState(defaultOpen);\n  const activeOpen = open !== undefined ? open : isOpen;\n\n  const setOpen = React.useCallback(\n    (val: boolean) => {\n      if (open === undefined) setIsOpen(val);\n      onOpenChange?.(val);\n    },\n    [open, onOpenChange]\n  );\n\n  const toggle = React.useCallback(() => {\n    setOpen(!activeOpen);\n  }, [activeOpen, setOpen]);\n\n  return (\n    <PopoverContext.Provider value={{ open: activeOpen, setOpen, toggle }}>\n      <div className=\"relative inline-block text-left\">{children}</div>\n    </PopoverContext.Provider>\n  );\n}\n\nexport interface PopoverTriggerProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  asChild?: boolean;\n}\n\nconst PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTriggerProps>(\n  ({ asChild = false, onClick, children, ...props }, ref) => {\n    const ctx = React.useContext(PopoverContext);\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        ref={ref}\n        type={asChild ? undefined : \"button\"}\n        aria-expanded={ctx?.open}\n        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {\n          ctx?.toggle();\n          onClick?.(e);\n        }}\n        {...props}\n      >\n        {children}\n      </Comp>\n    );\n  }\n);\nPopoverTrigger.displayName = \"PopoverTrigger\";\n\nexport interface PopoverContentProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  align?: \"start\" | \"center\" | \"end\";\n}\n\nconst PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(\n  ({ className, align = \"center\", ...props }, ref) => {\n    const ctx = React.useContext(PopoverContext);\n    if (!ctx?.open) return null;\n\n    const alignClass =\n      align === \"start\"\n        ? \"left-0\"\n        : align === \"end\"\n        ? \"right-0\"\n        : \"left-1/2 -translate-x-1/2\";\n\n    return (\n      <>\n        <div\n          className=\"fixed inset-0 z-40\"\n          onClick={() => ctx.setOpen(false)}\n        />\n        <div\n          ref={ref}\n          className={cn(\n            \"absolute z-50 mt-2 w-72 rounded-md border border-border bg-popover p-4 text-popover-foreground shadow-md outline-none animate-in fade-in-0 zoom-in-95\",\n            alignClass,\n            className\n          )}\n          {...props}\n        />\n      </>\n    );\n  }\n);\nPopoverContent.displayName = \"PopoverContent\";\n\nexport { Popover, PopoverTrigger, PopoverContent };\n",
+      "type": "registry:ui",
+      "target": "components/ui/popover.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "popover"
+  ],
+  "meta": {
+    "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/popover.tsx",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

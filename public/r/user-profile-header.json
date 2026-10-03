@@ -1,0 +1,34 @@
+{
+  "name": "user-profile-header",
+  "type": "registry:block",
+  "title": "User Profile Header",
+  "description": "AMANTLE UI block: user-profile-header",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/user-profile-header.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/user-profile-header\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Edit3, MapPin, Calendar } from \"lucide-react\";\nimport { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport function UserProfileHeader() {\n  return (\n    <div className=\"rounded-2xl border border-border bg-card overflow-hidden\">\n      <div className=\"h-32 bg-gradient-to-r from-primary/30 via-primary/10 to-muted\" />\n      <div className=\"px-6 pb-6 pt-0 relative flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4\">\n        <div className=\"flex flex-col sm:flex-row items-center sm:items-end gap-4 -mt-12 sm:-mt-16 text-center sm:text-left\">\n          <Avatar className=\"h-24 w-24 border-4 border-card shadow-lg\">\n            <AvatarFallback className=\"bg-primary text-primary-foreground text-2xl font-bold\">\n              ВК\n            </AvatarFallback>\n          </Avatar>\n          <div className=\"space-y-1\">\n            <div className=\"flex items-center gap-2 justify-center sm:justify-start\">\n              <h3 className=\"text-xl font-bold text-foreground\">Виктор Капустин</h3>\n              <Badge variant=\"secondary\" className=\"text-xs\">PRO</Badge>\n            </div>\n            <p className=\"text-sm text-muted-foreground\">Архитектор пользовательских интерфейсов</p>\n            <div className=\"flex items-center gap-4 text-xs text-muted-foreground pt-1 justify-center sm:justify-start\">\n              <span className=\"flex items-center gap-1\">\n                <MapPin className=\"h-3.5 w-3.5\" /> Санкт-Петербург\n              </span>\n              <span className=\"flex items-center gap-1\">\n                <Calendar className=\"h-3.5 w-3.5\" /> В проекте с 2024\n              </span>\n            </div>\n          </div>\n        </div>\n        <Button size=\"sm\" variant=\"outline\" className=\"gap-2 shrink-0\">\n          <Edit3 className=\"h-3.5 w-3.5\" /> Редактировать профиль\n        </Button>\n      </div>\n    </div>\n  );\n}\n\nexport default UserProfileHeader;\n",
+      "type": "registry:block",
+      "target": "components/blocks/user-profile-header.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "user-profile-header"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/user-profile-header",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

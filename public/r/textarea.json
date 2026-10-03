@@ -1,0 +1,28 @@
+{
+  "name": "textarea",
+  "type": "registry:ui",
+  "title": "Textarea",
+  "description": "AMANTLE UI ui: textarea",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/textarea.tsx",
+      "content": "/**\n * @source https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/textarea.tsx\n * @author shadcn\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TextareaProps\n  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}\n\nconst Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(\n  ({ className, ...props }, ref) => {\n    return (\n      <textarea\n        className={cn(\n          \"flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50\",\n          className\n        )}\n        ref={ref}\n        {...props}\n      />\n    );\n  }\n);\nTextarea.displayName = \"Textarea\";\n\nexport { Textarea };\n",
+      "type": "registry:ui",
+      "target": "components/ui/textarea.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "textarea"
+  ],
+  "meta": {
+    "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/textarea.tsx",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

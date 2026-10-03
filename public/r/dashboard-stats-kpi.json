@@ -1,0 +1,32 @@
+{
+  "name": "dashboard-stats-kpi",
+  "type": "registry:block",
+  "title": "Dashboard Stats Kpi",
+  "description": "AMANTLE UI block: dashboard-stats-kpi",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/dashboard-stats-kpi.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/dashboard-stats-kpi\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { TrendingUp, Users, DollarSign, Activity } from \"lucide-react\";\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/registry/ui/card\";\n\nexport function DashboardStatsKpi() {\n  const kpis = [\n    {\n      title: \"Выручка за месяц\",\n      value: \"$45,231.89\",\n      change: \"+20.1% к прошлому месяцу\",\n      icon: DollarSign,\n    },\n    {\n      title: \"Активные пользователи\",\n      value: \"+2,350\",\n      change: \"+180.1% за квартал\",\n      icon: Users,\n    },\n    {\n      title: \"Успешные транзакции\",\n      value: \"+12,234\",\n      change: \"+19% с прошлой недели\",\n      icon: TrendingUp,\n    },\n    {\n      title: \"Аптайм сервиса\",\n      value: \"99.98%\",\n      change: \"+0.1% к стандарту\",\n      icon: Activity,\n    },\n  ];\n\n  return (\n    <div className=\"grid gap-4 md:grid-cols-2 lg:grid-cols-4\">\n      {kpis.map((kpi) => {\n        const Icon = kpi.icon;\n        return (\n          <Card key={kpi.title}>\n            <CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">\n              <CardTitle className=\"text-sm font-medium text-muted-foreground\">\n                {kpi.title}\n              </CardTitle>\n              <Icon className=\"h-4 w-4 text-muted-foreground\" />\n            </CardHeader>\n            <CardContent>\n              <div className=\"text-2xl font-bold tracking-tight text-foreground\">{kpi.value}</div>\n              <p className=\"text-xs text-muted-foreground mt-1\">{kpi.change}</p>\n            </CardContent>\n          </Card>\n        );\n      })}\n    </div>\n  );\n}\n\nexport default DashboardStatsKpi;\n",
+      "type": "registry:block",
+      "target": "components/blocks/dashboard-stats-kpi.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "dashboard-stats-kpi"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/dashboard-stats-kpi",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

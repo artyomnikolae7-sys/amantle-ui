@@ -1,0 +1,33 @@
+{
+  "name": "bento-grid-3x3",
+  "type": "registry:block",
+  "title": "Bento Grid 3x3",
+  "description": "AMANTLE UI block: bento-grid-3x3",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "card",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/bento-grid-3x3.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/bento-grid-3x3\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Layers, Palette, Cpu, Sparkles, ShieldCheck, Terminal } from \"lucide-react\";\nimport { Card, CardContent, CardHeader, CardTitle, CardDescription } from \"@/registry/ui/card\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport function BentoGrid3x3() {\n  return (\n    <section className=\"py-20 md:py-32\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"text-center mb-16\">\n          <Badge variant=\"outline\" className=\"mb-4\">Архитектура</Badge>\n          <h2 className=\"text-3xl font-extrabold sm:text-5xl text-foreground\">\n            Создано для разработчиков новой эры\n          </h2>\n          <p className=\"mt-4 text-muted-foreground max-w-2xl mx-auto\">\n            Мощная основа для масштабируемых веб-приложений с поддержкой AI и современных стандартов.\n          </p>\n        </div>\n\n        <div className=\"grid grid-cols-1 md:grid-cols-3 gap-6\">\n          {/* Card 1 - Large spanning 2 cols */}\n          <Card className=\"md:col-span-2 border-border/80 bg-gradient-to-br from-card to-muted/20\">\n            <CardHeader>\n              <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2\">\n                <Cpu className=\"h-5 w-5\" />\n              </div>\n              <CardTitle className=\"text-2xl\">Нативная интеграция Model Context Protocol</CardTitle>\n              <CardDescription className=\"text-base\">\n                AI-ассистенты в Cursor, Windsurf и Claude Desktop могут искать компоненты в каталоге, читать схему токенов и генерировать экраны без выхода из редактора.\n              </CardDescription>\n            </CardHeader>\n            <CardContent>\n              <div className=\"rounded-lg bg-background border border-border p-4 font-mono text-xs text-muted-foreground\">\n                <span className=\"text-primary font-bold\">mcp tools:</span> search_registry, get_component, list_categories, get_theme_tokens\n              </div>\n            </CardContent>\n          </Card>\n\n          {/* Card 2 */}\n          <Card className=\"border-border/80\">\n            <CardHeader>\n              <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2\">\n                <Palette className=\"h-5 w-5\" />\n              </div>\n              <CardTitle>5 цветовых палитр</CardTitle>\n              <CardDescription>\n                Мгновенное переключение акцентных цветов: Zinc, Slate, Violet, Emerald, Rose на чистых CSS-переменных.\n              </CardDescription>\n            </CardHeader>\n          </Card>\n\n          {/* Card 3 */}\n          <Card className=\"border-border/80\">\n            <CardHeader>\n              <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2\">\n                <ShieldCheck className=\"h-5 w-5\" />\n              </div>\n              <CardTitle>Аудит Provenance</CardTitle>\n              <CardDescription>\n                Каждый файл содержит строгие метаданные авторства, первоисточника и лицензии для комплаенса.\n              </CardDescription>\n            </CardHeader>\n          </Card>\n\n          {/* Card 4 - Large spanning 2 cols */}\n          <Card className=\"md:col-span-2 border-border/80 bg-gradient-to-tl from-card to-muted/20\">\n            <CardHeader>\n              <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2\">\n                <Layers className=\"h-5 w-5\" />\n              </div>\n              <CardTitle className=\"text-2xl\">Tailwind CSS v4 & @theme inline</CardTitle>\n              <CardDescription className=\"text-base\">\n                Никаких раздутых tailwind.config.js. Токены инлайнятся напрямую в CSS с нулевым оверхедом и максимальной производительностью сборки.\n              </CardDescription>\n            </CardHeader>\n            <CardContent>\n              <div className=\"flex flex-wrap gap-2\">\n                <Badge variant=\"secondary\">@theme inline</Badge>\n                <Badge variant=\"secondary\">CSS Variables</Badge>\n                <Badge variant=\"secondary\">OKLCH / HSL</Badge>\n                <Badge variant=\"secondary\">Zero Config</Badge>\n              </div>\n            </CardContent>\n          </Card>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default BentoGrid3x3;\n",
+      "type": "registry:block",
+      "target": "components/blocks/bento-grid-3x3.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "bento-grid-3x3"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/bento-grid-3x3",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

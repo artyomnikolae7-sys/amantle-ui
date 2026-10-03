@@ -1,0 +1,32 @@
+{
+  "name": "feature-cards-grid",
+  "type": "registry:block",
+  "title": "Feature Cards Grid",
+  "description": "AMANTLE UI block: feature-cards-grid",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/feature-cards-grid.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/feature-cards-grid\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Terminal, Shield, Zap, Sparkles, Layout, Globe } from \"lucide-react\";\nimport { Card, CardContent, CardHeader, CardTitle, CardDescription } from \"@/registry/ui/card\";\n\nexport function FeatureCardsGrid() {\n  const features = [\n    {\n      icon: Terminal,\n      title: \"Команда shadcn CLI\",\n      description: \"Установка любого компонента одной строкой в терминале без лишних зависимостей.\",\n    },\n    {\n      icon: Zap,\n      title: \"Мгновенная скорость\",\n      description: \"Оптимизировано для React Server Components и Next.js App Router.\",\n    },\n    {\n      icon: Shield,\n      title: \"Code Ownership\",\n      description: \"Полное владение исходным кодом. Изменяйте стили и логику как угодно.\",\n    },\n    {\n      icon: Layout,\n      title: \"50+ Готовых компонентов\",\n      description: \"От базовых кнопок до сложных аналитических дашбордов и лендингов.\",\n    },\n    {\n      icon: Sparkles,\n      title: \"AI Composer\",\n      description: \"Генерируйте экраны с помощью контекстно-заряженных промптов и MCP-инструментов.\",\n    },\n    {\n      icon: Globe,\n      title: \"Открытый исходный код\",\n      description: \"Распространяется по лицензии MIT. Свободно используйте в коммерческих проектах.\",\n    },\n  ];\n\n  return (\n    <section className=\"py-20 bg-muted/20\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"text-center mb-16\">\n          <h2 className=\"text-3xl font-extrabold sm:text-4xl text-foreground\">\n            Ключевые преимущества AMANTLE UI\n          </h2>\n          <p className=\"mt-3 text-muted-foreground\">\n            Всё, что нужно для создания современных интерфейсов мирового уровня\n          </p>\n        </div>\n        <div className=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-3\">\n          {features.map((feat) => {\n            const Icon = feat.icon;\n            return (\n              <Card key={feat.title} className=\"transition-all hover:border-primary/50 hover:shadow-lg\">\n                <CardHeader>\n                  <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3\">\n                    <Icon className=\"h-5 w-5\" />\n                  </div>\n                  <CardTitle className=\"text-lg\">{feat.title}</CardTitle>\n                </CardHeader>\n                <CardContent>\n                  <CardDescription className=\"text-sm leading-relaxed\">{feat.description}</CardDescription>\n                </CardContent>\n              </Card>\n            );\n          })}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default FeatureCardsGrid;\n",
+      "type": "registry:block",
+      "target": "components/blocks/feature-cards-grid.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "feature-cards-grid"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/feature-cards-grid",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

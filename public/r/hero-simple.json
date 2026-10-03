@@ -1,0 +1,32 @@
+{
+  "name": "hero-simple",
+  "type": "registry:block",
+  "title": "Hero Simple",
+  "description": "AMANTLE UI block: hero-simple",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/hero-simple.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/hero-simple\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { ArrowRight } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport function HeroSimple() {\n  return (\n    <section className=\"relative overflow-hidden py-24 md:py-32\">\n      <div className=\"container mx-auto max-w-5xl px-4 text-center\">\n        <h1 className=\"text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground\">\n          Создавайте веб-интерфейсы с непревзойденной скоростью\n        </h1>\n        <p className=\"mx-auto mt-6 max-w-2xl text-lg text-muted-foreground\">\n          AMANTLE UI — открытая экосистема компонентов, шаблонов и дизайн-токенов с нативной поддержкой Tailwind CSS v4 и AI/MCP-интеграцией.\n        </p>\n        <div className=\"mt-8 flex flex-wrap items-center justify-center gap-4\">\n          <Button size=\"lg\" className=\"gap-2\">\n            Начать работу <ArrowRight className=\"h-4 w-4\" />\n          </Button>\n          <Button variant=\"outline\" size=\"lg\">\n            Документация\n          </Button>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default HeroSimple;\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-simple.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-simple"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/hero-simple",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

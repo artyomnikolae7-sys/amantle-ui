@@ -1,0 +1,28 @@
+{
+  "name": "separator",
+  "type": "registry:ui",
+  "title": "Separator",
+  "description": "AMANTLE UI ui: separator",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/separator.tsx",
+      "content": "/**\n * @source https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/separator.tsx\n * @author shadcn\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nconst Separator = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement> & {\n    orientation?: \"horizontal\" | \"vertical\";\n    decorative?: boolean;\n  }\n>(\n  (\n    { className, orientation = \"horizontal\", decorative = true, ...props },\n    ref\n  ) => (\n    <div\n      ref={ref}\n      role={decorative ? \"none\" : \"separator\"}\n      aria-orientation={orientation}\n      className={cn(\n        \"shrink-0 bg-border\",\n        orientation === \"horizontal\" ? \"h-[1px] w-full\" : \"h-full w-[1px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nSeparator.displayName = \"Separator\";\n\nexport { Separator };\n",
+      "type": "registry:ui",
+      "target": "components/ui/separator.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "separator"
+  ],
+  "meta": {
+    "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/separator.tsx",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

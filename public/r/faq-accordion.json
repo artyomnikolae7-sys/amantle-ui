@@ -1,0 +1,30 @@
+{
+  "name": "faq-accordion",
+  "type": "registry:block",
+  "title": "Faq Accordion",
+  "description": "AMANTLE UI block: faq-accordion",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "blocks/faq-accordion.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/faq-accordion\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@/registry/ui/accordion\";\n\nexport function FaqAccordion() {\n  const faqs = [\n    {\n      q: \"Чем AMANTLE UI отличается от стандартных библиотек компонентов?\",\n      a: \"AMANTLE UI распространяется по модели Code Ownership: вы копируете исходный код прямо в проект через CLI, а не подключаете его как закрытый npm-пакет. Это даёт 100% контроль над кодовой базой.\",\n    },\n    {\n      q: \"Как работает интеграция с Cursor и Windsurf?\",\n      a: \"В проект встроен MCP-сервер, который предоставляет AI-агенту доступ к инструментам поиска компонентов, чтения схем токенов и контекстной генерации шаблонов прямо в редакторе.\",\n    },\n    {\n      q: \"Что такое аудит Provenance?\",\n      a: \"Каждый файл в реестре имеет строгую шапку с метаданными о происхождении (@source, @author, @license, @modified). Сборщик реестра гарантирует, что ни один файл без лицензии не попадёт в продакшн.\",\n    },\n    {\n      q: \"Как добавить компонент в существующий проект Next.js?\",\n      a: \"Используйте стандартную команду npx shadcn add с URL нашего реестра, например: npx shadcn add http://localhost:3000/r/button.json.\",\n    },\n  ];\n\n  return (\n    <section className=\"py-20 md:py-28\">\n      <div className=\"container mx-auto max-w-4xl px-4\">\n        <div className=\"text-center mb-12\">\n          <h2 className=\"text-3xl font-bold tracking-tight sm:text-4xl\">Часто задаваемые вопросы</h2>\n          <p className=\"mt-3 text-muted-foreground\">Ответы на популярные технические вопросы о системе</p>\n        </div>\n        <Accordion type=\"single\" defaultValue=\"item-0\">\n          {faqs.map((faq, index) => (\n            <AccordionItem key={faq.q} value={`item-${index}`}>\n              <AccordionTrigger className=\"text-base font-semibold\">{faq.q}</AccordionTrigger>\n              <AccordionContent className=\"text-sm leading-relaxed\">{faq.a}</AccordionContent>\n            </AccordionItem>\n          ))}\n        </Accordion>\n      </div>\n    </section>\n  );\n}\n\nexport default FaqAccordion;\n",
+      "type": "registry:block",
+      "target": "components/blocks/faq-accordion.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "faq-accordion"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/faq-accordion",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

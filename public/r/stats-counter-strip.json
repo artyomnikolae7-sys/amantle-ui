@@ -1,0 +1,28 @@
+{
+  "name": "stats-counter-strip",
+  "type": "registry:block",
+  "title": "Stats Counter Strip",
+  "description": "AMANTLE UI block: stats-counter-strip",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/stats-counter-strip.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/stats-counter-strip\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\n\nexport function StatsCounterStrip() {\n  const stats = [\n    { label: \"Компонентов и блоков\", value: \"50+\" },\n    { label: \"Поддерживаемых палитр\", value: \"5\" },\n    { label: \"Загрузок через CLI\", value: \"100k+\" },\n    { label: \"Удовлетворенность кодом\", value: \"99.8%\" },\n  ];\n\n  return (\n    <section className=\"border-y border-border bg-card/50 py-12\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"grid grid-cols-2 gap-8 md:grid-cols-4 text-center\">\n          {stats.map((stat) => (\n            <div key={stat.label} className=\"space-y-1\">\n              <div className=\"text-3xl font-extrabold sm:text-5xl text-primary font-mono\">\n                {stat.value}\n              </div>\n              <p className=\"text-xs sm:text-sm text-muted-foreground font-medium\">\n                {stat.label}\n              </p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default StatsCounterStrip;\n",
+      "type": "registry:block",
+      "target": "components/blocks/stats-counter-strip.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "stats-counter-strip"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/stats-counter-strip",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "saas-landing-page",
+  "type": "registry:template",
+  "title": "Saas Landing Page",
+  "description": "AMANTLE UI template: saas-landing-page",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "templates/saas-landing-page.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/templates/saas-landing-page\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { NavbarStickyBlur } from \"@/registry/blocks/navbar-sticky-blur\";\nimport { HeroGradientGlow } from \"@/registry/blocks/hero-gradient-glow\";\nimport { IntegrationLogosCloud } from \"@/registry/blocks/integration-logos-cloud\";\nimport { BentoGrid3x3 } from \"@/registry/blocks/bento-grid-3x3\";\nimport { FeatureAlternatingRows } from \"@/registry/blocks/feature-alternating-rows\";\nimport { PricingCardsTier } from \"@/registry/blocks/pricing-cards-tier\";\nimport { TestimonialsSlider } from \"@/registry/blocks/testimonials-slider\";\nimport { FaqAccordion } from \"@/registry/blocks/faq-accordion\";\nimport { CtaBannerGlow } from \"@/registry/blocks/cta-banner-glow\";\nimport { FooterMegaColumns } from \"@/registry/blocks/footer-mega-columns\";\n\nexport function SaasLandingPage() {\n  return (\n    <div className=\"min-h-screen bg-background text-foreground\">\n      <NavbarStickyBlur />\n      <main>\n        <HeroGradientGlow />\n        <IntegrationLogosCloud />\n        <BentoGrid3x3 />\n        <FeatureAlternatingRows />\n        <PricingCardsTier />\n        <TestimonialsSlider />\n        <FaqAccordion />\n        <CtaBannerGlow />\n      </main>\n      <FooterMegaColumns />\n    </div>\n  );\n}\n\nexport default SaasLandingPage;\n",
+      "type": "registry:template",
+      "target": "components/templates/saas-landing-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "saas-landing-page"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/templates/saas-landing-page",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

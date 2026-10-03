@@ -1,0 +1,28 @@
+{
+  "name": "switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "description": "AMANTLE UI ui: switch",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/switch.tsx",
+      "content": "/**\n * @source https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/switch.tsx\n * @author shadcn\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface SwitchProps extends React.InputHTMLAttributes<HTMLInputElement> {\n  onCheckedChange?: (checked: boolean) => void;\n}\n\nconst Switch = React.forwardRef<HTMLInputElement, SwitchProps>(\n  ({ className, checked, defaultChecked, onChange, onCheckedChange, disabled, ...props }, ref) => {\n    const [isChecked, setIsChecked] = React.useState(defaultChecked ?? false);\n    const activeChecked = checked !== undefined ? checked : isChecked;\n\n    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n      if (checked === undefined) {\n        setIsChecked(e.target.checked);\n      }\n      onChange?.(e);\n      onCheckedChange?.(e.target.checked);\n    };\n\n    return (\n      <label className={cn(\"inline-flex items-center cursor-pointer select-none\", disabled && \"cursor-not-allowed opacity-50\")}>\n        <input\n          type=\"checkbox\"\n          className=\"sr-only\"\n          checked={activeChecked}\n          onChange={handleChange}\n          disabled={disabled}\n          ref={ref}\n          {...props}\n        />\n        <div\n          className={cn(\n            \"relative inline-flex h-6 w-11 shrink-0 rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\",\n            activeChecked ? \"bg-primary\" : \"bg-input\",\n            className\n          )}\n        >\n          <span\n            className={cn(\n              \"pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform\",\n              activeChecked ? \"translate-x-5\" : \"translate-x-0\"\n            )}\n          />\n        </div>\n      </label>\n    );\n  }\n);\nSwitch.displayName = \"Switch\";\n\nexport { Switch };\n",
+      "type": "registry:ui",
+      "target": "components/ui/switch.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "switch"
+  ],
+  "meta": {
+    "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/switch.tsx",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

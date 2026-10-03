@@ -1,0 +1,33 @@
+{
+  "name": "hero-gradient-glow",
+  "type": "registry:block",
+  "title": "Hero Gradient Glow",
+  "description": "AMANTLE UI block: hero-gradient-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/hero-gradient-glow.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/hero-gradient-glow\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Sparkles, ArrowRight, Terminal } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport function HeroGradientGlow() {\n  return (\n    <section className=\"relative overflow-hidden py-24 md:py-36\">\n      <div className=\"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/20 blur-[130px] rounded-full pointer-events-none\" />\n      <div className=\"container relative z-10 mx-auto max-w-5xl px-4 text-center\">\n        <Badge variant=\"secondary\" className=\"gap-1.5 px-3 py-1 mb-6 rounded-full border border-primary/20 bg-secondary/80 backdrop-blur-md\">\n          <Sparkles className=\"h-3.5 w-3.5 text-primary\" />\n          <span>Next.js 15 + Tailwind CSS v4</span>\n        </Badge>\n        <h1 className=\"text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl\">\n          Дизайн-система, где{\" \"}\n          <span className=\"bg-gradient-to-r from-primary via-primary/80 to-muted-foreground bg-clip-text text-transparent\">\n            код принадлежит вам\n          </span>\n        </h1>\n        <p className=\"mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed\">\n          Копируйте исходный код напрямую в проект. Никаких закрытых npm-библиотек. Полный контроль над стилями, разметкой и доступностью.\n        </p>\n        <div className=\"mt-10 flex flex-wrap items-center justify-center gap-4\">\n          <Button size=\"lg\" className=\"h-12 px-6 gap-2 text-base shadow-xl shadow-primary/20\">\n            Исследовать каталог <ArrowRight className=\"h-4 w-4\" />\n          </Button>\n          <div className=\"flex items-center gap-2 rounded-lg border border-border bg-card/60 backdrop-blur-sm px-4 py-2.5 font-mono text-xs text-foreground\">\n            <Terminal className=\"h-4 w-4 text-muted-foreground\" />\n            <span>npx shadcn add @amantle/button</span>\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default HeroGradientGlow;\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-gradient-glow.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-gradient-glow"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/hero-gradient-glow",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

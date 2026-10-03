@@ -1,0 +1,31 @@
+{
+  "name": "team-members-grid",
+  "type": "registry:block",
+  "title": "Team Members Grid",
+  "description": "AMANTLE UI block: team-members-grid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/team-members-grid.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/team-members-grid\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Avatar, AvatarFallback } from \"@/registry/ui/avatar\";\nimport { Card, CardContent } from \"@/registry/ui/card\";\n\nexport function TeamMembersGrid() {\n  const members = [\n    { name: \"Анна Мельникова\", role: \"Design Director\", initials: \"АМ\" },\n    { name: \"Максим Орлов\", role: \"Principal Engineer\", initials: \"МО\" },\n    { name: \"София Лебедева\", role: \"Product Designer\", initials: \"СЛ\" },\n    { name: \"Артем Новиков\", role: \"Design Technologist\", initials: \"АН\" },\n  ];\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto max-w-5xl px-4 text-center\">\n        <h2 className=\"text-3xl font-bold tracking-tight mb-3\">Команда создателей</h2>\n        <p className=\"text-muted-foreground mb-12 max-w-xl mx-auto\">\n          Инженеры и дизайнеры, развивающие открытую экосистему AMANTLE UI\n        </p>\n        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-6\">\n          {members.map((m) => (\n            <Card key={m.name} className=\"p-6 text-center border-border\">\n              <CardContent className=\"p-0 flex flex-col items-center\">\n                <Avatar className=\"h-16 w-16 mb-4\">\n                  <AvatarFallback className=\"bg-primary/10 text-primary font-bold text-lg\">\n                    {m.initials}\n                  </AvatarFallback>\n                </Avatar>\n                <h4 className=\"font-semibold text-sm text-foreground\">{m.name}</h4>\n                <p className=\"text-xs text-muted-foreground mt-1\">{m.role}</p>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default TeamMembersGrid;\n",
+      "type": "registry:block",
+      "target": "components/blocks/team-members-grid.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "team-members-grid"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/team-members-grid",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

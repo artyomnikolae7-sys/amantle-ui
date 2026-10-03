@@ -1,0 +1,33 @@
+{
+  "name": "pricing-comparison-table",
+  "type": "registry:block",
+  "title": "Pricing Comparison Table",
+  "description": "AMANTLE UI block: pricing-comparison-table",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "table",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/pricing-comparison-table.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/pricing-comparison-table\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Check, Minus } from \"lucide-react\";\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow,\n} from \"@/registry/ui/table\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport function PricingComparisonTable() {\n  const rows = [\n    { feature: \"Базовые компоненты UI\", free: true, pro: true, ent: true },\n    { feature: \"Составные блоки (Blocks)\", free: \"20 блоков\", pro: \"Все 100+\", ent: \"Безлимитно\" },\n    { feature: \"Полноценные шаблоны страниц\", free: false, pro: \"3 шаблона\", ent: \"Все шаблоны\" },\n    { feature: \"Tailwind CSS v4 токены\", free: true, pro: true, ent: true },\n    { feature: \"MCP-сервер для AI IDE\", free: false, pro: true, ent: true },\n    { feature: \"Кастомные цветовые схемы\", free: false, pro: \"5 палитр\", ent: \"Неограниченно\" },\n    { feature: \"Аудит лицензий Provenance\", free: true, pro: true, ent: true },\n    { feature: \"Приоритетная поддержка\", free: false, pro: false, ent: true },\n  ];\n\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto max-w-5xl px-4\">\n        <div className=\"text-center mb-12\">\n          <h2 className=\"text-3xl font-bold tracking-tight\">Сравнение функционала тарифов</h2>\n          <p className=\"mt-2 text-muted-foreground\">Детальная матрица возможностей каждого уровня</p>\n        </div>\n        <div className=\"rounded-xl border border-border bg-card overflow-hidden\">\n          <Table>\n            <TableHeader>\n              <TableRow className=\"bg-muted/40\">\n                <TableHead className=\"w-1/2\">Возможность</TableHead>\n                <TableHead className=\"text-center\">Free</TableHead>\n                <TableHead className=\"text-center font-bold text-primary\">Pro</TableHead>\n                <TableHead className=\"text-center\">Enterprise</TableHead>\n              </TableRow>\n            </TableHeader>\n            <TableBody>\n              {rows.map((row) => (\n                <TableRow key={row.feature}>\n                  <TableCell className=\"font-medium\">{row.feature}</TableCell>\n                  <TableCell className=\"text-center\">\n                    {typeof row.free === \"boolean\" ? (\n                      row.free ? <Check className=\"inline h-4 w-4 text-primary\" /> : <Minus className=\"inline h-4 w-4 text-muted-foreground\" />\n                    ) : (\n                      <span className=\"text-xs\">{row.free}</span>\n                    )}\n                  </TableCell>\n                  <TableCell className=\"text-center font-semibold\">\n                    {typeof row.pro === \"boolean\" ? (\n                      row.pro ? <Check className=\"inline h-4 w-4 text-primary\" /> : <Minus className=\"inline h-4 w-4 text-muted-foreground\" />\n                    ) : (\n                      <span className=\"text-xs text-primary\">{row.pro}</span>\n                    )}\n                  </TableCell>\n                  <TableCell className=\"text-center\">\n                    {typeof row.ent === \"boolean\" ? (\n                      row.ent ? <Check className=\"inline h-4 w-4 text-primary\" /> : <Minus className=\"inline h-4 w-4 text-muted-foreground\" />\n                    ) : (\n                      <span className=\"text-xs\">{row.ent}</span>\n                    )}\n                  </TableCell>\n                </TableRow>\n              ))}\n            </TableBody>\n          </Table>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default PricingComparisonTable;\n",
+      "type": "registry:block",
+      "target": "components/blocks/pricing-comparison-table.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "pricing-comparison-table"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/pricing-comparison-table",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

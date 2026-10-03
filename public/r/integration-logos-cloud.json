@@ -1,0 +1,28 @@
+{
+  "name": "integration-logos-cloud",
+  "type": "registry:block",
+  "title": "Integration Logos Cloud",
+  "description": "AMANTLE UI block: integration-logos-cloud",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/integration-logos-cloud.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/integration-logos-cloud\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\n\nexport function IntegrationLogosCloud() {\n  const integrations = [\n    \"Next.js 15\",\n    \"React 19\",\n    \"Tailwind CSS v4\",\n    \"Model Context Protocol\",\n    \"Cursor IDE\",\n    \"Windsurf\",\n    \"Radix UI\",\n    \"TypeScript 5\",\n  ];\n\n  return (\n    <section className=\"py-16 border-y border-border/50 bg-muted/10\">\n      <div className=\"container mx-auto max-w-6xl px-4 text-center\">\n        <p className=\"text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-8\">\n          Бесшовная совместимость с передовым стеком разработки\n        </p>\n        <div className=\"flex flex-wrap items-center justify-center gap-6 sm:gap-10\">\n          {integrations.map((item) => (\n            <div\n              key={item}\n              className=\"rounded-lg border border-border/60 bg-card/60 px-5 py-2.5 text-sm font-semibold text-foreground/80 shadow-xs hover:border-primary/40 hover:text-primary transition-colors\"\n            >\n              {item}\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default IntegrationLogosCloud;\n",
+      "type": "registry:block",
+      "target": "components/blocks/integration-logos-cloud.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "integration-logos-cloud"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/integration-logos-cloud",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

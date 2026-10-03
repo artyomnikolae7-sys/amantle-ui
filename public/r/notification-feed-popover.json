@@ -1,0 +1,33 @@
+{
+  "name": "notification-feed-popover",
+  "type": "registry:block",
+  "title": "Notification Feed Popover",
+  "description": "AMANTLE UI block: notification-feed-popover",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/notification-feed-popover.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/notification-feed-popover\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Bell, CheckCircle2, AlertCircle, Info } from \"lucide-react\";\nimport { Popover, PopoverTrigger, PopoverContent } from \"@/registry/ui/popover\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport function NotificationFeedPopover() {\n  const notifications = [\n    {\n      id: 1,\n      title: \"Сборка реестра завершена\",\n      desc: \"50 компонентов скомпилированы в public/r/\",\n      time: \"2 мин назад\",\n      icon: CheckCircle2,\n      color: \"text-emerald-500\",\n    },\n    {\n      id: 2,\n      title: \"Новый запрос к MCP серверу\",\n      desc: \"Cursor IDE запросил инструменты реестра\",\n      time: \"15 мин назад\",\n      icon: Info,\n      color: \"text-primary\",\n    },\n    {\n      id: 3,\n      title: \"Обновление токенов\",\n      desc: \"Палитра Violet активирована по умолчанию\",\n      time: \"1 час назад\",\n      icon: AlertCircle,\n      color: \"text-amber-500\",\n    },\n  ];\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant=\"outline\" size=\"sm\" className=\"relative gap-2\">\n          <Bell className=\"h-4 w-4\" />\n          <span>Уведомления</span>\n          <span className=\"absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground\">\n            3\n          </span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent align=\"end\" className=\"w-80 p-0\">\n        <div className=\"border-b border-border p-3 font-semibold text-sm flex items-center justify-between\">\n          <span>Уведомления</span>\n          <button type=\"button\" className=\"text-xs text-primary hover:underline\">\n            Прочитать все\n          </button>\n        </div>\n        <div className=\"divide-y divide-border/60 max-h-72 overflow-y-auto\">\n          {notifications.map((n) => {\n            const Icon = n.icon;\n            return (\n              <div key={n.id} className=\"p-3 hover:bg-muted/50 transition-colors flex gap-3 text-left\">\n                <Icon className={`h-4 w-4 shrink-0 mt-0.5 ${n.color}`} />\n                <div className=\"space-y-1\">\n                  <p className=\"text-xs font-medium text-foreground\">{n.title}</p>\n                  <p className=\"text-[11px] text-muted-foreground\">{n.desc}</p>\n                  <p className=\"text-[10px] text-muted-foreground/70\">{n.time}</p>\n                </div>\n              </div>\n            );\n          })}\n        </div>\n      </PopoverContent>\n    </Popover>\n  );\n}\n\nexport default NotificationFeedPopover;\n",
+      "type": "registry:block",
+      "target": "components/blocks/notification-feed-popover.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "notification-feed-popover"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/notification-feed-popover",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

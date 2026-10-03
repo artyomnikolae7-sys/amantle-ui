@@ -1,0 +1,34 @@
+{
+  "name": "newsletter-card-minimal",
+  "type": "registry:block",
+  "title": "Newsletter Card Minimal",
+  "description": "AMANTLE UI block: newsletter-card-minimal",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "input",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/newsletter-card-minimal.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/newsletter-card-minimal\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Mail } from \"lucide-react\";\nimport { Input } from \"@/registry/ui/input\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Card, CardContent } from \"@/registry/ui/card\";\n\nexport function NewsletterCardMinimal() {\n  return (\n    <Card className=\"border-border/80 bg-card p-6 sm:p-10 max-w-xl mx-auto\">\n      <CardContent className=\"p-0 text-center space-y-4\">\n        <div className=\"mx-auto h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary\">\n          <Mail className=\"h-6 w-6\" />\n        </div>\n        <h3 className=\"text-2xl font-bold tracking-tight text-foreground\">\n          Подпишитесь на обновления\n        </h3>\n        <p className=\"text-sm text-muted-foreground max-w-md mx-auto\">\n          Получайте уведомления о новых компонентах, релизах шаблонов и обновлениях MCP-сервера раз в месяц. Без спама.\n        </p>\n        <form onSubmit={(e) => e.preventDefault()} className=\"flex flex-col sm:flex-row gap-2 pt-2\">\n          <Input\n            type=\"email\"\n            placeholder=\"ваш.email@domain.com\"\n            className=\"h-10 text-sm\"\n            required\n          />\n          <Button type=\"submit\" className=\"h-10 px-5\">\n            Подписаться\n          </Button>\n        </form>\n      </CardContent>\n    </Card>\n  );\n}\n\nexport default NewsletterCardMinimal;\n",
+      "type": "registry:block",
+      "target": "components/blocks/newsletter-card-minimal.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "newsletter-card-minimal"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/newsletter-card-minimal",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "search-command-palette",
+  "type": "registry:block",
+  "title": "Search Command Palette",
+  "description": "AMANTLE UI block: search-command-palette",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "input",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/search-command-palette.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/search-command-palette\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Search, FileCode, Layers, Palette, Terminal } from \"lucide-react\";\nimport { Input } from \"@/registry/ui/input\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport function SearchCommandPalette() {\n  const [query, setQuery] = React.useState(\"\");\n\n  const items = [\n    { name: \"Button\", category: \"UI Примитив\", icon: FileCode },\n    { name: \"Hero Gradient Glow\", category: \"Блок\", icon: Layers },\n    { name: \"Violet Theme\", category: \"Палитра\", icon: Palette },\n    { name: \"CLI Generator\", category: \"Инструмент\", icon: Terminal },\n    { name: \"SaaS Landing Page\", category: \"Шаблон\", icon: Layers },\n  ];\n\n  const filtered = items.filter(\n    (item) =>\n      item.name.toLowerCase().includes(query.toLowerCase()) ||\n      item.category.toLowerCase().includes(query.toLowerCase())\n  );\n\n  return (\n    <div className=\"w-full max-w-lg mx-auto rounded-xl border border-border bg-card p-2 shadow-2xl\">\n      <div className=\"flex items-center gap-2 border-b border-border px-3 pb-2 pt-1\">\n        <Search className=\"h-4 w-4 text-muted-foreground shrink-0\" />\n        <input\n          type=\"text\"\n          value={query}\n          onChange={(e) => setQuery(e.target.value)}\n          placeholder=\"Поиск по реестру (компоненты, блоки, токены)...\"\n          className=\"w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground\"\n        />\n        <Badge variant=\"secondary\" className=\"text-[10px] font-mono\">\n          ESC\n        </Badge>\n      </div>\n      <div className=\"p-1 space-y-1 mt-1 max-h-60 overflow-y-auto\">\n        {filtered.map((item) => {\n          const Icon = item.icon;\n          return (\n            <div\n              key={item.name}\n              className=\"flex items-center justify-between rounded-lg p-2 text-sm hover:bg-muted cursor-pointer transition-colors\"\n            >\n              <div className=\"flex items-center gap-2.5\">\n                <Icon className=\"h-4 w-4 text-muted-foreground\" />\n                <span className=\"font-medium text-foreground\">{item.name}</span>\n              </div>\n              <span className=\"text-xs text-muted-foreground\">{item.category}</span>\n            </div>\n          );\n        })}\n        {filtered.length === 0 && (\n          <p className=\"p-4 text-center text-xs text-muted-foreground\">\n            Ничего не найдено по запросу &ldquo;{query}&rdquo;\n          </p>\n        )}\n      </div>\n    </div>\n  );\n}\n\nexport default SearchCommandPalette;\n",
+      "type": "registry:block",
+      "target": "components/blocks/search-command-palette.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "search-command-palette"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/search-command-palette",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

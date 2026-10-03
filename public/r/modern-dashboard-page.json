@@ -1,0 +1,33 @@
+{
+  "name": "modern-dashboard-page",
+  "type": "registry:template",
+  "title": "Modern Dashboard Page",
+  "description": "AMANTLE UI template: modern-dashboard-page",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "templates/modern-dashboard-page.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/templates/modern-dashboard-page\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { LayoutDashboard, Users, CreditCard, Settings, Bell, Search } from \"lucide-react\";\nimport { DashboardStatsKpi } from \"@/registry/blocks/dashboard-stats-kpi\";\nimport { DashboardRecentTransactions } from \"@/registry/blocks/dashboard-recent-transactions\";\nimport { MetricsGraphCard } from \"@/registry/blocks/metrics-graph-card\";\nimport { UserProfileHeader } from \"@/registry/blocks/user-profile-header\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\n\nexport function ModernDashboardPage() {\n  return (\n    <div className=\"flex min-h-screen bg-muted/20\">\n      {/* Sidebar */}\n      <aside className=\"hidden md:flex w-64 flex-col border-r border-border bg-card p-4 space-y-6\">\n        <div className=\"flex items-center gap-2 font-bold tracking-tight text-foreground px-2\">\n          <div className=\"h-6 w-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-mono text-xs font-black\">\n            A\n          </div>\n          <span>AMANTLE Console</span>\n        </div>\n        <nav className=\"space-y-1\">\n          <Button variant=\"secondary\" className=\"w-full justify-start gap-2\">\n            <LayoutDashboard className=\"h-4 w-4\" /> Главная\n          </Button>\n          <Button variant=\"ghost\" className=\"w-full justify-start gap-2 text-muted-foreground\">\n            <Users className=\"h-4 w-4\" /> Пользователи\n          </Button>\n          <Button variant=\"ghost\" className=\"w-full justify-start gap-2 text-muted-foreground\">\n            <CreditCard className=\"h-4 w-4\" /> Платежи\n          </Button>\n          <Button variant=\"ghost\" className=\"w-full justify-start gap-2 text-muted-foreground\">\n            <Settings className=\"h-4 w-4\" /> Настройки\n          </Button>\n        </nav>\n      </aside>\n\n      {/* Main Content Area */}\n      <div className=\"flex-1 flex flex-col\">\n        {/* Top Navbar */}\n        <header className=\"h-14 border-b border-border bg-background px-6 flex items-center justify-between\">\n          <div className=\"flex items-center gap-2 w-72\">\n            <Search className=\"h-4 w-4 text-muted-foreground\" />\n            <Input placeholder=\"Быстрый поиск...\" className=\"h-8 border-none bg-muted/40\" />\n          </div>\n          <div className=\"flex items-center gap-3\">\n            <Button variant=\"ghost\" size=\"icon\" className=\"h-8 w-8\">\n              <Bell className=\"h-4 w-4\" />\n            </Button>\n          </div>\n        </header>\n\n        {/* Dashboard Grid */}\n        <main className=\"p-6 space-y-6 max-w-7xl mx-auto w-full\">\n          <UserProfileHeader />\n          <DashboardStatsKpi />\n          <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\">\n            <div className=\"lg:col-span-2\">\n              <DashboardRecentTransactions />\n            </div>\n            <div>\n              <MetricsGraphCard />\n            </div>\n          </div>\n        </main>\n      </div>\n    </div>\n  );\n}\n\nexport default ModernDashboardPage;\n",
+      "type": "registry:template",
+      "target": "components/templates/modern-dashboard-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "modern-dashboard-page"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/templates/modern-dashboard-page",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

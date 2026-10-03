@@ -1,0 +1,32 @@
+{
+  "name": "hero-video-dialog",
+  "type": "registry:block",
+  "title": "Hero Video Dialog",
+  "description": "AMANTLE UI block: hero-video-dialog",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "dialog"
+  ],
+  "files": [
+    {
+      "path": "blocks/hero-video-dialog.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/hero-video-dialog\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Play } from \"lucide-react\";\nimport { Dialog, DialogTrigger, DialogContent } from \"@/registry/ui/dialog\";\n\nexport function HeroVideoDialog() {\n  return (\n    <div className=\"relative mx-auto max-w-4xl p-2 rounded-2xl border border-border bg-card shadow-2xl overflow-hidden group\">\n      <div className=\"relative aspect-video w-full rounded-xl bg-muted overflow-hidden flex items-center justify-center\">\n        <div className=\"absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10\" />\n        <Dialog>\n          <DialogTrigger asChild>\n            <button\n              type=\"button\"\n              className=\"relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition-transform group-hover:scale-110 hover:brightness-110\"\n            >\n              <Play className=\"h-6 w-6 fill-current ml-1\" />\n            </button>\n          </DialogTrigger>\n          <DialogContent className=\"max-w-3xl p-0 overflow-hidden bg-black aspect-video flex items-center justify-center text-white\">\n            <div className=\"text-center p-8\">\n              <p className=\"text-lg font-semibold\">Демонстрационное видео AMANTLE UI</p>\n              <p className=\"text-xs text-muted-foreground mt-2\">Визуальный обзор возможностей экосистемы и MCP-сервера</p>\n            </div>\n          </DialogContent>\n        </Dialog>\n      </div>\n    </div>\n  );\n}\n\nexport default HeroVideoDialog;\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-video-dialog.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-video-dialog"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/hero-video-dialog",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

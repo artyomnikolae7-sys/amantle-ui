@@ -1,0 +1,31 @@
+{
+  "name": "dialog",
+  "type": "registry:ui",
+  "title": "Dialog",
+  "description": "AMANTLE UI ui: dialog",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dialog.tsx",
+      "content": "/**\n * @source https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/dialog.tsx\n * @author shadcn\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { X } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\ninterface DialogContextValue {\n  open: boolean;\n  setOpen: (open: boolean) => void;\n}\n\nconst DialogContext = React.createContext<DialogContextValue | null>(null);\n\nexport interface DialogProps {\n  open?: boolean;\n  defaultOpen?: boolean;\n  onOpenChange?: (open: boolean) => void;\n  children: React.ReactNode;\n}\n\nfunction Dialog({ open, defaultOpen = false, onOpenChange, children }: DialogProps) {\n  const [isOpen, setIsOpen] = React.useState(defaultOpen);\n  const activeOpen = open !== undefined ? open : isOpen;\n\n  const setOpen = React.useCallback(\n    (val: boolean) => {\n      if (open === undefined) setIsOpen(val);\n      onOpenChange?.(val);\n    },\n    [open, onOpenChange]\n  );\n\n  return (\n    <DialogContext.Provider value={{ open: activeOpen, setOpen }}>\n      {children}\n    </DialogContext.Provider>\n  );\n}\n\nexport interface DialogTriggerProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  asChild?: boolean;\n}\n\nconst DialogTrigger = React.forwardRef<HTMLButtonElement, DialogTriggerProps>(\n  ({ asChild = false, onClick, children, ...props }, ref) => {\n    const ctx = React.useContext(DialogContext);\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        ref={ref}\n        type={asChild ? undefined : \"button\"}\n        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {\n          ctx?.setOpen(true);\n          onClick?.(e);\n        }}\n        {...props}\n      >\n        {children}\n      </Comp>\n    );\n  }\n);\nDialogTrigger.displayName = \"DialogTrigger\";\n\nconst DialogClose = React.forwardRef<\n  HTMLButtonElement,\n  React.ButtonHTMLAttributes<HTMLButtonElement>\n>(({ onClick, ...props }, ref) => {\n  const ctx = React.useContext(DialogContext);\n  return (\n    <button\n      ref={ref}\n      type=\"button\"\n      onClick={(e) => {\n        ctx?.setOpen(false);\n        onClick?.(e);\n      }}\n      {...props}\n    />\n  );\n});\nDialogClose.displayName = \"DialogClose\";\n\nconst DialogContent = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement>\n>(({ className, children, ...props }, ref) => {\n  const ctx = React.useContext(DialogContext);\n  if (!ctx?.open) return null;\n\n  return (\n    <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-0 p-4\">\n      <div\n        ref={ref}\n        role=\"dialog\"\n        aria-modal=\"true\"\n        className={cn(\n          \"relative w-full max-w-lg rounded-xl border border-border bg-background p-6 shadow-2xl duration-200 animate-in zoom-in-95\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        <button\n          type=\"button\"\n          onClick={() => ctx.setOpen(false)}\n          className=\"absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\"\n        >\n          <X className=\"h-4 w-4\" />\n          <span className=\"sr-only\">Close</span>\n        </button>\n      </div>\n    </div>\n  );\n});\nDialogContent.displayName = \"DialogContent\";\n\nfunction DialogHeader({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col space-y-1.5 text-center sm:text-left\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\nDialogHeader.displayName = \"DialogHeader\";\n\nfunction DialogFooter({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 mt-4\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\nDialogFooter.displayName = \"DialogFooter\";\n\nconst DialogTitle = React.forwardRef<\n  HTMLHeadingElement,\n  React.HTMLAttributes<HTMLHeadingElement>\n>(({ className, ...props }, ref) => (\n  <h2\n    ref={ref}\n    className={cn(\n      \"text-lg font-semibold leading-none tracking-tight\",\n      className\n    )}\n    {...props}\n  />\n));\nDialogTitle.displayName = \"DialogTitle\";\n\nconst DialogDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => (\n  <p\n    ref={ref}\n    className={cn(\"text-sm text-muted-foreground\", className)}\n    {...props}\n  />\n));\nDialogDescription.displayName = \"DialogDescription\";\n\nexport {\n  Dialog,\n  DialogTrigger,\n  DialogClose,\n  DialogContent,\n  DialogHeader,\n  DialogFooter,\n  DialogTitle,\n  DialogDescription,\n};\n",
+      "type": "registry:ui",
+      "target": "components/ui/dialog.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dialog"
+  ],
+  "meta": {
+    "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/dialog.tsx",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

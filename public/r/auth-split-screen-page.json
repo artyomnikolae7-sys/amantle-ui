@@ -1,0 +1,28 @@
+{
+  "name": "auth-split-screen-page",
+  "type": "registry:template",
+  "title": "Auth Split Screen Page",
+  "description": "AMANTLE UI template: auth-split-screen-page",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "templates/auth-split-screen-page.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/templates/auth-split-screen-page\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { LoginCardFloating } from \"@/registry/blocks/login-card-floating\";\n\nexport function AuthSplitScreenPage() {\n  return (\n    <div className=\"grid min-h-screen grid-cols-1 lg:grid-cols-2\">\n      {/* Left Column (Brand / Aesthetics) */}\n      <div className=\"hidden lg:flex relative flex-col justify-between bg-primary p-12 text-primary-foreground overflow-hidden\">\n        <div className=\"absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-black/40\" />\n        <div className=\"relative z-10 flex items-center gap-2 font-bold text-xl tracking-tight\">\n          <div className=\"h-8 w-8 rounded-lg bg-background flex items-center justify-center text-primary font-mono text-sm font-black\">\n            A\n          </div>\n          <span>AMANTLE UI</span>\n        </div>\n        <div className=\"relative z-10 max-w-md space-y-4\">\n          <blockquote className=\"text-2xl font-medium tracking-tight\">\n            &ldquo;AMANTLE UI полностью трансформировал наш подход к продуктовому дизайну и разработке. Это лучший стек на Tailwind v4.&rdquo;\n          </blockquote>\n          <div className=\"text-sm opacity-80\">\n            <div className=\"font-semibold\">Даниил Романов</div>\n            <div>Основатель платформы CloudForge</div>\n          </div>\n        </div>\n        <div className=\"relative z-10 text-xs opacity-60\">\n          &copy; {new Date().getFullYear()} AMANTLE UI. Все права защищены.\n        </div>\n      </div>\n\n      {/* Right Column (Form) */}\n      <div className=\"flex items-center justify-center p-8 bg-background\">\n        <div className=\"w-full max-w-sm\">\n          <LoginCardFloating />\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport default AuthSplitScreenPage;\n",
+      "type": "registry:template",
+      "target": "components/templates/auth-split-screen-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "auth-split-screen-page"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/templates/auth-split-screen-page",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

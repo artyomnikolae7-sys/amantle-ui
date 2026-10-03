@@ -1,0 +1,32 @@
+{
+  "name": "cta-banner-glow",
+  "type": "registry:block",
+  "title": "Cta Banner Glow",
+  "description": "AMANTLE UI block: cta-banner-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/cta-banner-glow.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/cta-banner-glow\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { ArrowRight, Sparkles } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport function CtaBannerGlow() {\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto max-w-6xl px-4\">\n        <div className=\"relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-b from-primary/10 via-background to-background p-8 md:p-16 text-center shadow-2xl\">\n          <div className=\"absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-primary/25 blur-[120px] rounded-full pointer-events-none\" />\n          <div className=\"relative z-10 max-w-2xl mx-auto space-y-6\">\n            <div className=\"inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary\">\n              <Sparkles className=\"h-3.5 w-3.5\" />\n              <span>Готовы трансформировать ваш UI?</span>\n            </div>\n            <h2 className=\"text-3xl font-extrabold sm:text-5xl tracking-tight text-foreground\">\n              Начните разработку на AMANTLE UI прямо сегодня\n            </h2>\n            <p className=\"text-muted-foreground text-base sm:text-lg\">\n              Копируйте компоненты одной командой CLI или подключайте MCP-сервер для мгновенного контекста в вашем любимом редакторе кода.\n            </p>\n            <div className=\"pt-2 flex flex-wrap items-center justify-center gap-4\">\n              <Button size=\"lg\" className=\"gap-2 shadow-lg shadow-primary/25\">\n                Открыть документацию <ArrowRight className=\"h-4 w-4\" />\n              </Button>\n              <Button variant=\"outline\" size=\"lg\">\n                Клонировать GitHub\n              </Button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n}\n\nexport default CtaBannerGlow;\n",
+      "type": "registry:block",
+      "target": "components/blocks/cta-banner-glow.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "cta-banner-glow"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/cta-banner-glow",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

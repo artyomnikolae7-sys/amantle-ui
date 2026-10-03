@@ -1,0 +1,32 @@
+{
+  "name": "login-card-floating",
+  "type": "registry:block",
+  "title": "Login Card Floating",
+  "description": "AMANTLE UI block: login-card-floating",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/login-card-floating.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/login-card-floating\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\nimport { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/registry/ui/card\";\n\nexport function LoginCardFloating() {\n  return (\n    <Card className=\"w-full max-w-sm mx-auto shadow-2xl border-border\">\n      <CardHeader className=\"space-y-1\">\n        <CardTitle className=\"text-2xl font-bold\">Вход в систему</CardTitle>\n        <CardDescription>\n          Введите адрес электронной почты для доступа к аккаунту\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"grid gap-4\">\n        <div className=\"grid gap-2\">\n          <label className=\"text-sm font-medium leading-none\">Email</label>\n          <Input id=\"email\" type=\"email\" placeholder=\"m@example.com\" />\n        </div>\n        <div className=\"grid gap-2\">\n          <div className=\"flex items-center justify-between\">\n            <label className=\"text-sm font-medium leading-none\">Пароль</label>\n            <a href=\"#\" className=\"text-xs text-muted-foreground hover:underline\">\n              Забыли пароль?\n            </a>\n          </div>\n          <Input id=\"password\" type=\"password\" />\n        </div>\n      </CardContent>\n      <CardFooter className=\"flex flex-col gap-3\">\n        <Button className=\"w-full\">Войти</Button>\n        <p className=\"text-center text-xs text-muted-foreground\">\n          Нет аккаунта?{\" \"}\n          <a href=\"#\" className=\"text-primary underline-offset-4 hover:underline\">\n            Зарегистрироваться\n          </a>\n        </p>\n      </CardFooter>\n    </Card>\n  );\n}\n\nexport default LoginCardFloating;\n",
+      "type": "registry:block",
+      "target": "components/blocks/login-card-floating.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "login-card-floating"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/login-card-floating",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "navbar-sticky-blur",
+  "type": "registry:block",
+  "title": "Navbar Sticky Blur",
+  "description": "AMANTLE UI block: navbar-sticky-blur",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/navbar-sticky-blur.tsx",
+      "content": "/**\n * @source https://amantle.dev/registry/blocks/navbar-sticky-blur\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Adapted for Tailwind v4 and AMANTLE Design Tokens\n */\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport function NavbarStickyBlur() {\n  return (\n    <header className=\"sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md\">\n      <div className=\"container mx-auto max-w-7xl flex h-14 items-center justify-between px-4 sm:px-6\">\n        <div className=\"flex items-center gap-6\">\n          <a href=\"#\" className=\"flex items-center gap-2 font-bold tracking-tight text-foreground\">\n            <div className=\"h-6 w-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-mono text-xs font-black\">\n              A\n            </div>\n            <span>AMANTLE UI</span>\n          </a>\n          <nav className=\"hidden md:flex items-center gap-5 text-sm text-muted-foreground font-medium\">\n            <a href=\"#\" className=\"hover:text-foreground transition-colors\">Компоненты</a>\n            <a href=\"#\" className=\"hover:text-foreground transition-colors\">Блоки</a>\n            <a href=\"#\" className=\"hover:text-foreground transition-colors\">Шаблоны</a>\n            <a href=\"#\" className=\"hover:text-foreground transition-colors\">Документация</a>\n          </nav>\n        </div>\n        <div className=\"flex items-center gap-3\">\n          <Button variant=\"ghost\" size=\"sm\" className=\"hidden sm:inline-flex\">\n            Войти\n          </Button>\n          <Button size=\"sm\" className=\"gap-1.5 shadow-sm\">\n            <Sparkles className=\"h-3.5 w-3.5\" />\n            <span>Composer</span>\n          </Button>\n        </div>\n      </div>\n    </header>\n  );\n}\n\nexport default NavbarStickyBlur;\n",
+      "type": "registry:block",
+      "target": "components/blocks/navbar-sticky-blur.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "navbar-sticky-blur"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/registry/blocks/navbar-sticky-blur",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+  }
+}
