@@ -1,0 +1,24 @@
+[
+  {
+    "name": "button",
+    "type": "registry:ui",
+    "title": "Button",
+    "description": "AMANTLE UI ui: button",
+    "dependencies": [
+      "@radix-ui/react-slot",
+      "class-variance-authority"
+    ],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "button"
+    ],
+    "meta": {
+      "source": "https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/button.tsx",
+      "author": "shadcn",
+      "license": "MIT",
+      "modified": "Adapted for Tailwind v4 and AMANTLE Design Tokens"
+    }
+  }
+]
