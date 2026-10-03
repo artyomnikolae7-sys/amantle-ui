@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:registry": "node scripts/build-registry.mjs"
+    "build:registry": "node scripts/build-registry.mjs",
+    "mcp": "node scripts/mcp-server.mjs",
+    "test:mcp": "node --experimental-strip-types scripts/test-mcp.mjs",
+    "test": "node --experimental-strip-types scripts/test-mcp.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -21,7 +24,8 @@
     "react-dom": "^19.0.0",
     "sonner": "^2.0.1",
     "tailwind-merge": "^3.0.2",
-    "zod": "^3.24.2"
+    "zod": "^3.24.2",
+    "@modelcontextprotocol/sdk": "^1.6.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.9",
