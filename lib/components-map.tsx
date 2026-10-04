@@ -212,6 +212,28 @@ import NotificationFeedPopover from "@/registry/blocks/notification-feed-popover
 import SearchCommandPalette from "@/registry/blocks/search-command-palette";
 
 import { BadgeShimmer } from "@/registry/ui/badge-shimmer";
+
+// React Bits Synthesized Components
+import { SplitText } from "@/registry/ui/split-text";
+import { BlurText } from "@/registry/ui/blur-text";
+import { DecryptedText } from "@/registry/ui/decrypted-text";
+import { TrueFocus } from "@/registry/ui/true-focus";
+import { ShinyText } from "@/registry/ui/shiny-text";
+import { CountUp } from "@/registry/ui/count-up";
+import { GradientText } from "@/registry/ui/gradient-text";
+import { RotatingText } from "@/registry/ui/rotating-text";
+import { StarBorder } from "@/registry/ui/star-border";
+import { ClickSpark } from "@/registry/ui/click-spark";
+import { PixelCard } from "@/registry/ui/pixel-card";
+import { SpringCheck } from "@/registry/ui/spring-check";
+import { JellyRadio } from "@/registry/ui/jelly-radio";
+import { PillNav } from "@/registry/ui/pill-nav";
+
+// Design Variants (Neo-Brutalist & Cyber-Glass)
+import { ButtonCyberGlass } from "@/registry/ui/button-cyber-glass";
+import { CardCyberGlass } from "@/registry/ui/card-cyber-glass";
+import { InputCyberGlass } from "@/registry/ui/input-cyber-glass";
+import { InputNeubrutalist } from "@/registry/ui/input-neubrutalist";
 // Page Templates
 import SaasLandingPage from "@/registry/templates/saas-landing-page";
 import ModernDashboardPage from "@/registry/templates/modern-dashboard-page";
@@ -1831,4 +1853,99 @@ export const componentMap: Record<string, React.ComponentType<any>> = {
       </div>
     );
   },
+  "split-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <SplitText text="AMANTLE UI • Кинематографичный сплит-текст" {...props} />
+    </div>
+  ),
+  "blur-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <BlurText text="Проявление текста из мягкого фокуса" {...props} />
+    </div>
+  ),
+  "decrypted-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <DecryptedText text="NEURAL_INTERFACE_ACTIVATED_2026" trigger="hover" {...props} />
+    </div>
+  ),
+  "true-focus": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <TrueFocus {...props} />
+    </div>
+  ),
+  "shiny-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <ShinyText text="Металлический блик AMANTLE UI" {...props} />
+    </div>
+  ),
+  "count-up": (props?: any) => (
+    <div className="p-8 flex items-center justify-center text-3xl">
+      <CountUp to={2500000} prefix="$" suffix=" ARR" decimals={0} {...props} />
+    </div>
+  ),
+  "gradient-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center text-2xl">
+      <GradientText {...props}>Интерфейсы следующего десятилетия</GradientText>
+    </div>
+  ),
+  "rotating-text": (props?: any) => (
+    <div className="p-8 flex items-center justify-center text-2xl font-bold">
+      <span className="text-foreground mr-2">Создавай</span>
+      <RotatingText {...props} />
+    </div>
+  ),
+  "star-border": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <StarBorder {...props}>
+        <span>Запустить нейро-конвейер</span>
+      </StarBorder>
+    </div>
+  ),
+  "click-spark": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <ClickSpark {...props} />
+    </div>
+  ),
+  "pixel-card": (props?: any) => (
+    <div className="p-8 max-w-sm mx-auto">
+      <PixelCard {...props} />
+    </div>
+  ),
+  "spring-check": (props?: any) => (
+    <div className="p-8 flex flex-col gap-2 max-w-md mx-auto">
+      <SpringCheck label="Проанализировать все компоненты React Bits" defaultChecked {...props} />
+      <SpringCheck label="Внедрить кастомизатор тем (Remix)" defaultChecked {...props} />
+      <SpringCheck label="Запустить A/B тестирование и аудит верстки" {...props} />
+    </div>
+  ),
+  "jelly-radio": (props?: any) => (
+    <div className="p-8 max-w-md mx-auto">
+      <JellyRadio {...props} />
+    </div>
+  ),
+  "pill-nav": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <PillNav {...props} />
+    </div>
+  ),
+  "button-cyber-glass": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <ButtonCyberGlass {...props} />
+    </div>
+  ),
+  "card-cyber-glass": (props?: any) => (
+    <div className="p-8 max-w-sm mx-auto">
+      <CardCyberGlass {...props} />
+    </div>
+  ),
+  "input-cyber-glass": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <InputCyberGlass {...props} />
+    </div>
+  ),
+  "input-neubrutalist": (props?: any) => (
+    <div className="p-8 flex items-center justify-center">
+      <InputNeubrutalist {...props} />
+    </div>
+  ),
 };

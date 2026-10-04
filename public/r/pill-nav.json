@@ -1,0 +1,28 @@
+{
+  "name": "pill-nav",
+  "type": "registry:ui",
+  "title": "Pill Nav",
+  "description": "AMANTLE UI ui: pill-nav",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pill-nav.tsx",
+      "content": "/**\n * @source https://reactbits.dev/components/pill-nav\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface PillNavItem {\n  id: string;\n  label: string;\n}\n\nexport interface PillNavProps {\n  items?: PillNavItem[];\n  activeId?: string;\n  onSelect?: (id: string) => void;\n  className?: string;\n}\n\nexport function PillNav({\n  items = [\n    { id: \"overview\", label: \"Обзор\" },\n    { id: \"analytics\", label: \"Метрики\" },\n    { id: \"components\", label: \"Компоненты\" },\n    { id: \"motion\", label: \"Анимации\" },\n    { id: \"settings\", label: \"Настройки\" },\n  ],\n  activeId,\n  onSelect,\n  className,\n}: PillNavProps) {\n  const [selected, setSelected] = React.useState(activeId || items[0]?.id);\n  const containerRef = React.useRef<HTMLDivElement>(null);\n  const itemRefs = React.useRef<Record<string, HTMLButtonElement | null>>({});\n  const [pillStyle, setPillStyle] = React.useState({ left: 0, width: 0 });\n\n  const active = activeId !== undefined ? activeId : selected;\n\n  React.useEffect(() => {\n    const el = itemRefs.current[active];\n    const container = containerRef.current;\n    if (el && container) {\n      const containerRect = container.getBoundingClientRect();\n      const elRect = el.getBoundingClientRect();\n      setPillStyle({\n        left: elRect.left - containerRect.left,\n        width: elRect.width,\n      });\n    }\n  }, [active, items]);\n\n  const handleItemClick = (id: string) => {\n    if (activeId === undefined) {\n      setSelected(id);\n    }\n    onSelect?.(id);\n  };\n\n  return (\n    <div\n      ref={containerRef}\n      className={cn(\n        \"relative inline-flex items-center gap-1 p-1 rounded-full bg-muted/50 border border-border/80 backdrop-blur-md shadow-xs select-none\",\n        className\n      )}\n    >\n      {/* Magnetic Sliding Pill Highlight */}\n      <div\n        className=\"absolute top-1 bottom-1 rounded-full bg-primary shadow-xs transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]\"\n        style={{\n          transform: `translateX(${pillStyle.left}px)`,\n          width: `${pillStyle.width}px`,\n          opacity: pillStyle.width > 0 ? 1 : 0,\n        }}\n      />\n\n      {items.map((item) => {\n        const isCurrent = active === item.id;\n        return (\n          <button\n            key={item.id}\n            ref={(el) => {\n              itemRefs.current[item.id] = el;\n            }}\n            onClick={() => handleItemClick(item.id)}\n            className={cn(\n              \"relative z-10 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-200 cursor-pointer\",\n              isCurrent\n                ? \"text-primary-foreground font-bold\"\n                : \"text-muted-foreground hover:text-foreground\"\n            )}\n          >\n            {item.label}\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport default PillNav;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pill-nav.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pill-nav"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/pill-nav",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

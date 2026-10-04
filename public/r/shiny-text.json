@@ -1,0 +1,28 @@
+{
+  "name": "shiny-text",
+  "type": "registry:ui",
+  "title": "Shiny Text",
+  "description": "AMANTLE UI ui: shiny-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/shiny-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/shiny-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ShinyTextProps extends React.HTMLAttributes<HTMLSpanElement> {\n  text?: string;\n  speed?: number; // duration in seconds\n  className?: string;\n  disabled?: boolean;\n}\n\nexport function ShinyText({\n  text = \"Премиальное сияние AMANTLE UI\",\n  speed = 4,\n  className,\n  disabled = false,\n  ...props\n}: ShinyTextProps) {\n  return (\n    <span\n      className={cn(\n        \"inline-block font-semibold bg-clip-text text-transparent select-none\",\n        disabled ? \"text-foreground\" : \"animate-shiny-sweep\",\n        className\n      )}\n      style={{\n        backgroundImage:\n          \"linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 60%)\",\n        backgroundSize: \"200% 100%\",\n        WebkitBackgroundClip: \"text\",\n        animationDuration: `${speed}s`,\n      }}\n      {...props}\n    >\n      <span className=\"text-foreground/90\">{text}</span>\n    </span>\n  );\n}\nexport default ShinyText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/shiny-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "shiny-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/shiny-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

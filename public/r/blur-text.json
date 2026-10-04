@@ -1,0 +1,28 @@
+{
+  "name": "blur-text",
+  "type": "registry:ui",
+  "title": "Blur Text",
+  "description": "AMANTLE UI ui: blur-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/blur-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/blur-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BlurTextProps extends React.HTMLAttributes<HTMLParagraphElement> {\n  text?: string;\n  delay?: number;\n  className?: string;\n  animateBy?: \"words\" | \"chars\";\n  direction?: \"top\" | \"bottom\";\n}\n\nexport function BlurText({\n  text = \"Кинематографичный текст с прогрессивным фокусом\",\n  delay = 50,\n  className,\n  animateBy = \"words\",\n  direction = \"top\",\n  ...props\n}: BlurTextProps) {\n  const [inView, setInView] = React.useState(false);\n  const ref = React.useRef<HTMLParagraphElement>(null);\n\n  const elements = React.useMemo(() => {\n    return animateBy === \"words\" ? text.split(\" \") : text.split(\"\");\n  }, [text, animateBy]);\n\n  React.useEffect(() => {\n    if (!ref.current) return;\n    const observer = new IntersectionObserver(\n      ([entry]) => {\n        if (entry.isIntersecting) {\n          setInView(true);\n          observer.unobserve(entry.target);\n        }\n      },\n      { threshold: 0.1 }\n    );\n    observer.observe(ref.current);\n    return () => observer.disconnect();\n  }, []);\n\n  return (\n    <p\n      ref={ref}\n      className={cn(\"inline-flex flex-wrap items-center font-medium text-foreground\", className)}\n      {...props}\n    >\n      {elements.map((segment, index) => {\n        const itemDelay = `${index * delay}ms`;\n        const initialY = direction === \"top\" ? \"-20px\" : \"20px\";\n\n        return (\n          <span\n            key={index}\n            className=\"inline-block transition-all will-change-[transform,filter,opacity]\"\n            style={{\n              transitionDuration: \"600ms\",\n              transitionTimingFunction: \"cubic-bezier(0.23, 1, 0.32, 1)\", // Emil smooth spring\n              transitionDelay: itemDelay,\n              opacity: inView ? 1 : 0,\n              filter: inView ? \"blur(0px)\" : \"blur(10px)\",\n              transform: inView ? \"translateY(0)\" : `translateY(${initialY})`,\n            }}\n          >\n            {segment === \" \" ? \"\\u00A0\" : segment}\n            {animateBy === \"words\" && index < elements.length - 1 && \"\\u00A0\"}\n          </span>\n        );\n      })}\n    </p>\n  );\n}\nexport default BlurText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/blur-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "blur-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/blur-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

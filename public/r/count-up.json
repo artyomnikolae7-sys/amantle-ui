@@ -1,0 +1,28 @@
+{
+  "name": "count-up",
+  "type": "registry:ui",
+  "title": "Count Up",
+  "description": "AMANTLE UI ui: count-up",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/count-up.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/count-up\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CountUpProps extends React.HTMLAttributes<HTMLSpanElement> {\n  to?: number;\n  from?: number;\n  duration?: number;\n  separator?: string;\n  decimals?: number;\n  prefix?: string;\n  suffix?: string;\n  className?: string;\n}\n\nexport function CountUp({\n  to = 1000000,\n  from = 0,\n  duration = 2000,\n  separator = \" \",\n  decimals = 0,\n  prefix = \"\",\n  suffix = \"+\",\n  className,\n  ...props\n}: CountUpProps) {\n  const [value, setValue] = React.useState(from);\n  const ref = React.useRef<HTMLSpanElement>(null);\n  const [started, setStarted] = React.useState(false);\n\n  React.useEffect(() => {\n    if (!ref.current) return;\n    const observer = new IntersectionObserver(\n      ([entry]) => {\n        if (entry.isIntersecting) {\n          setStarted(true);\n          observer.unobserve(entry.target);\n        }\n      },\n      { threshold: 0.1 }\n    );\n    observer.observe(ref.current);\n    return () => observer.disconnect();\n  }, []);\n\n  React.useEffect(() => {\n    if (!started) return;\n\n    let startTimestamp: number | null = null;\n    const step = (timestamp: number) => {\n      if (!startTimestamp) startTimestamp = timestamp;\n      const progress = Math.min((timestamp - startTimestamp) / duration, 1);\n      // Emil smooth easeOutExpo\n      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);\n      const current = from + (to - from) * ease;\n      setValue(current);\n\n      if (progress < 1) {\n        requestAnimationFrame(step);\n      } else {\n        setValue(to);\n      }\n    };\n\n    requestAnimationFrame(step);\n  }, [started, from, to, duration]);\n\n  const formattedValue = React.useMemo(() => {\n    const fixed = value.toFixed(decimals);\n    const parts = fixed.split(\".\");\n    parts[0] = parts[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g, separator);\n    return parts.join(\".\");\n  }, [value, decimals, separator]);\n\n  return (\n    <span\n      ref={ref}\n      className={cn(\"font-mono font-bold tracking-tight text-foreground select-none inline-flex items-center\", className)}\n      {...props}\n    >\n      {prefix}\n      {formattedValue}\n      {suffix}\n    </span>\n  );\n}\nexport default CountUp;\n",
+      "type": "registry:ui",
+      "target": "components/ui/count-up.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "count-up"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/count-up",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

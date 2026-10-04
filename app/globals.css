@@ -90,6 +90,59 @@
     --primary-foreground: hsl(222.2 47.4% 11.2%);
     --ring: hsl(212.8 26.8% 83.9%);
   }
+
+  [data-theme="blue"] {
+    --primary: hsl(221.2 83.2% 53.3%);
+    --primary-foreground: hsl(210 40% 98%);
+    --ring: hsl(221.2 83.2% 53.3%);
+  }
+  .dark[data-theme="blue"] {
+    --primary: hsl(217.2 91.2% 59.8%);
+    --primary-foreground: hsl(222.2 47.4% 11.2%);
+    --ring: hsl(217.2 91.2% 59.8%);
+  }
+
+  [data-theme="amber"] {
+    --primary: hsl(38 92% 50%);
+    --primary-foreground: hsl(48 96% 89%);
+    --ring: hsl(38 92% 50%);
+  }
+  .dark[data-theme="amber"] {
+    --primary: hsl(48 96% 53%);
+    --primary-foreground: hsl(26 83% 14%);
+    --ring: hsl(48 96% 53%);
+  }
+
+  [data-theme="zinc"] {
+    --primary: hsl(240 5.9% 10%);
+    --primary-foreground: hsl(0 0% 98%);
+    --ring: hsl(240 5.9% 10%);
+  }
+  .dark[data-theme="zinc"] {
+    --primary: hsl(0 0% 98%);
+    --primary-foreground: hsl(240 5.9% 10%);
+    --ring: hsl(240 4.9% 83.9%);
+  }
+
+  [data-theme="stone"] {
+    --primary: hsl(24 9.8% 10%);
+    --primary-foreground: hsl(60 9.1% 97.8%);
+    --ring: hsl(24 9.8% 10%);
+  }
+  .dark[data-theme="stone"] {
+    --primary: hsl(60 9.1% 97.8%);
+    --primary-foreground: hsl(24 9.8% 10%);
+    --ring: hsl(24 5.7% 82.9%);
+  }
+}
+
+/* Global Design Style Overlays (Remix Engine) */
+[data-style="neo-brutalist"] {
+  --radius: 0px !important;
+}
+
+[data-style="cyber-glass"] {
+  --radius: 0.75rem !important;
 }
 
 @theme inline {

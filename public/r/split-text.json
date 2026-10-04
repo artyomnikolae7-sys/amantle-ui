@@ -1,0 +1,28 @@
+{
+  "name": "split-text",
+  "type": "registry:ui",
+  "title": "Split Text",
+  "description": "AMANTLE UI ui: split-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/split-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/split-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface SplitTextProps extends React.HTMLAttributes<HTMLParagraphElement> {\n  text?: string;\n  delay?: number;\n  animateBy?: \"words\" | \"chars\";\n  className?: string;\n}\n\nexport function SplitText({\n  text = \"AMANTLE UI Design System\",\n  delay = 40,\n  animateBy = \"words\",\n  className,\n  ...props\n}: SplitTextProps) {\n  const [mounted, setMounted] = React.useState(false);\n  const elements = React.useMemo(() => {\n    return animateBy === \"words\" ? text.split(\" \") : text.split(\"\");\n  }, [text, animateBy]);\n\n  React.useEffect(() => {\n    const timer = setTimeout(() => setMounted(true), 50);\n    return () => clearTimeout(timer);\n  }, []);\n\n  return (\n    <p\n      className={cn(\"inline-flex flex-wrap items-center font-bold tracking-tight text-foreground\", className)}\n      {...props}\n    >\n      {elements.map((segment, index) => {\n        const itemDelay = `${index * delay}ms`;\n        return (\n          <span\n            key={index}\n            className=\"inline-block transition-all will-change-[transform,opacity]\"\n            style={{\n              transitionDuration: \"500ms\",\n              transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\", // Emil snappy spring\n              transitionDelay: itemDelay,\n              opacity: mounted ? 1 : 0,\n              transform: mounted ? \"translateY(0)\" : \"translateY(16px)\",\n            }}\n          >\n            {segment === \" \" ? \"\\u00A0\" : segment}\n            {animateBy === \"words\" && index < elements.length - 1 && \"\\u00A0\"}\n          </span>\n        );\n      })}\n    </p>\n  );\n}\nexport default SplitText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/split-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "split-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/split-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

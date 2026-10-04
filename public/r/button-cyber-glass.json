@@ -1,0 +1,30 @@
+{
+  "name": "button-cyber-glass",
+  "type": "registry:ui",
+  "title": "Button Cyber Glass",
+  "description": "AMANTLE UI ui: button-cyber-glass",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-cyber-glass.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-cyber-glass\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Cyber-Glass frosted glassmorphic glow button\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ButtonCyberGlassProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  glowColor?: string;\n}\n\nexport function ButtonCyberGlass({\n  children = \"Кибер-Стекло Кнопка\",\n  className,\n  glowColor = \"hsl(var(--primary))\",\n  ...props\n}: ButtonCyberGlassProps) {\n  return (\n    <button\n      className={cn(\n        \"relative inline-flex items-center gap-2.5 px-6 py-2.5 rounded-xl font-medium text-sm text-foreground\",\n        \"bg-background/40 hover:bg-background/60 backdrop-blur-xl border border-white/20 dark:border-white/10\",\n        \"shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] hover:shadow-[0_0_25px_rgba(var(--primary),0.4)]\",\n        \"transition-all duration-300 hover:scale-[1.02] active:scale-[0.97] cursor-pointer group\",\n        className\n      )}\n      {...props}\n    >\n      {/* Specular Edge Highlight */}\n      <span className=\"absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 dark:via-white/30 to-transparent rounded-t-xl\" />\n\n      {/* Cyber Dot Indicator */}\n      <span className=\"w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_currentColor] animate-pulse\" />\n\n      <span>{children}</span>\n\n      <Sparkles className=\"w-3.5 h-3.5 text-primary opacity-60 group-hover:opacity-100 transition-opacity\" />\n    </button>\n  );\n}\nexport default ButtonCyberGlass;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-cyber-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-cyber-glass"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-cyber-glass",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Cyber-Glass frosted glassmorphic glow button"
+  }
+}

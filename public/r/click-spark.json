@@ -1,0 +1,28 @@
+{
+  "name": "click-spark",
+  "type": "registry:ui",
+  "title": "Click Spark",
+  "description": "AMANTLE UI ui: click-spark",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/click-spark.tsx",
+      "content": "/**\n * @source https://reactbits.dev/animations/click-spark\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ClickSparkProps extends React.HTMLAttributes<HTMLDivElement> {\n  sparkColor?: string;\n  sparkCount?: number;\n  sparkSize?: number;\n  duration?: number;\n  children?: React.ReactNode;\n  className?: string;\n}\n\ninterface Spark {\n  x: number;\n  y: number;\n  angle: number;\n  startTime: number;\n}\n\nexport function ClickSpark({\n  sparkColor = \"hsl(var(--primary))\",\n  sparkCount = 8,\n  sparkSize = 8,\n  duration = 400,\n  children,\n  className,\n  ...props\n}: ClickSparkProps) {\n  const canvasRef = React.useRef<HTMLCanvasElement>(null);\n  const sparksRef = React.useRef<Spark[]>([]);\n\n  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {\n    const canvas = canvasRef.current;\n    if (!canvas) return;\n    const rect = canvas.getBoundingClientRect();\n    const x = e.clientX - rect.left;\n    const y = e.clientY - rect.top;\n\n    const now = performance.now();\n    for (let i = 0; i < sparkCount; i++) {\n      sparksRef.current.push({\n        x,\n        y,\n        angle: (i / sparkCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.4,\n        startTime: now,\n      });\n    }\n  };\n\n  React.useEffect(() => {\n    const canvas = canvasRef.current;\n    if (!canvas) return;\n    const ctx = canvas.getContext(\"2d\");\n    if (!ctx) return;\n\n    let animId: number;\n\n    const updateCanvasSize = () => {\n      if (canvas.parentElement) {\n        canvas.width = canvas.parentElement.clientWidth;\n        canvas.height = canvas.parentElement.clientHeight;\n      }\n    };\n    updateCanvasSize();\n    window.addEventListener(\"resize\", updateCanvasSize);\n\n    const render = (time: number) => {\n      ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n      sparksRef.current = sparksRef.current.filter((spark) => {\n        const elapsed = time - spark.startTime;\n        const progress = Math.min(elapsed / duration, 1);\n        if (progress >= 1) return false;\n\n        const distance = progress * 24;\n        const currentX = spark.x + Math.cos(spark.angle) * distance;\n        const currentY = spark.y + Math.sin(spark.angle) * distance;\n        const size = sparkSize * (1 - progress);\n\n        ctx.save();\n        ctx.fillStyle = sparkColor;\n        ctx.beginPath();\n        ctx.arc(currentX, currentY, size, 0, Math.PI * 2);\n        ctx.fill();\n        ctx.restore();\n\n        return true;\n      });\n\n      animId = requestAnimationFrame(render);\n    };\n\n    animId = requestAnimationFrame(render);\n    return () => {\n      cancelAnimationFrame(animId);\n      window.removeEventListener(\"resize\", updateCanvasSize);\n    };\n  }, [sparkColor, sparkSize, duration]);\n\n  return (\n    <div\n      onPointerDown={handlePointerDown}\n      className={cn(\"relative inline-block cursor-pointer select-none\", className)}\n      {...props}\n    >\n      <canvas\n        ref={canvasRef}\n        className=\"absolute inset-0 pointer-events-none z-20\"\n      />\n      {children || (\n        <div className=\"px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary font-medium text-xs\">\n          Кликни в любой точке для искр\n        </div>\n      )}\n    </div>\n  );\n}\nexport default ClickSpark;\n",
+      "type": "registry:ui",
+      "target": "components/ui/click-spark.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "click-spark"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/animations/click-spark",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

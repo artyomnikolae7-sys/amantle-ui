@@ -58,11 +58,11 @@ export function FeatureAlternatingRows() {
               <Paintbrush className="h-4 w-4 text-primary" />
               <span>globals.css (@theme inline)</span>
             </div>
-            <div className="grid grid-cols-5 gap-2 text-center text-xs font-mono">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 text-center text-xs font-mono">
               {["Zinc", "Slate", "Violet", "Emerald", "Rose"].map((name) => (
                 <div key={name} className="p-3 rounded-lg border border-border bg-muted/30">
                   <div className="h-6 w-full rounded bg-primary mb-2 mx-auto" />
-                  <span>{name}</span>
+                  <span className="truncate block">{name}</span>
                 </div>
               ))}
             </div>

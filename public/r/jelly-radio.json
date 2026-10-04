@@ -1,0 +1,28 @@
+{
+  "name": "jelly-radio",
+  "type": "registry:ui",
+  "title": "Jelly Radio",
+  "description": "AMANTLE UI ui: jelly-radio",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/jelly-radio.tsx",
+      "content": "/**\n * @source https://reactbits.dev/micro/jelly-radio\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface JellyRadioOption {\n  id: string;\n  label: string;\n  description?: string;\n}\n\nexport interface JellyRadioProps {\n  options?: JellyRadioOption[];\n  value?: string;\n  defaultValue?: string;\n  onValueChange?: (val: string) => void;\n  className?: string;\n}\n\nexport function JellyRadio({\n  options = [\n    { id: \"opt1\", label: \"Стандартный поток\", description: \"Оптимизировано для экономии ресурсов\" },\n    { id: \"opt2\", label: \"Турбо-режим 120 FPS\", description: \"Плавные пружинные интерполяции\" },\n    { id: \"opt3\", label: \"Нейро-синтез\", description: \"Максимальное качество и точность\" },\n  ],\n  value,\n  defaultValue = \"opt2\",\n  onValueChange,\n  className,\n}: JellyRadioProps) {\n  const [internalValue, setInternalValue] = React.useState(defaultValue);\n  const selected = value !== undefined ? value : internalValue;\n  const [squashId, setSquashId] = React.useState<string | null>(null);\n\n  const handleSelect = (id: string) => {\n    if (selected === id) return;\n    setSquashId(id);\n    if (value === undefined) {\n      setInternalValue(id);\n    }\n    onValueChange?.(id);\n    setTimeout(() => setSquashId(null), 300);\n  };\n\n  return (\n    <div className={cn(\"space-y-2 select-none\", className)}>\n      {options.map((opt) => {\n        const isSelected = selected === opt.id;\n        const isSquashing = squashId === opt.id;\n\n        return (\n          <div\n            key={opt.id}\n            onClick={() => handleSelect(opt.id)}\n            className={cn(\n              \"flex items-center gap-3 p-3 rounded-xl border transition-all cursor-pointer\",\n              isSelected\n                ? \"border-primary/80 bg-primary/5 shadow-xs\"\n                : \"border-border/60 bg-card hover:border-border hover:bg-muted/30\"\n            )}\n          >\n            {/* Jelly Outer Ring */}\n            <div\n              className={cn(\n                \"relative w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300\",\n                isSelected\n                  ? \"border-primary ring-2 ring-primary/20\"\n                  : \"border-muted-foreground/40\",\n                isSquashing && \"animate-jelly-squash\"\n              )}\n              style={{\n                transitionTimingFunction: \"cubic-bezier(0.34, 1.56, 0.64, 1)\", // bouncy spring\n              }}\n            >\n              {/* Inner Dot */}\n              <div\n                className={cn(\n                  \"w-2.5 h-2.5 rounded-full bg-primary transition-all duration-200\",\n                  isSelected ? \"scale-100 opacity-100\" : \"scale-0 opacity-0\"\n                )}\n              />\n            </div>\n\n            <div className=\"flex flex-col\">\n              <span className=\"text-xs sm:text-sm font-semibold text-foreground\">{opt.label}</span>\n              {opt.description && (\n                <span className=\"text-[11px] text-muted-foreground mt-0.5\">{opt.description}</span>\n              )}\n            </div>\n          </div>\n        );\n      })}\n\n      <style jsx>{`\n        @keyframes jelly-squash {\n          0% {\n            transform: scale(1, 1);\n          }\n          30% {\n            transform: scale(1.3, 0.7);\n          }\n          60% {\n            transform: scale(0.85, 1.15);\n          }\n          100% {\n            transform: scale(1, 1);\n          }\n        }\n        .animate-jelly-squash {\n          animation: jelly-squash 300ms cubic-bezier(0.34, 1.56, 0.64, 1);\n        }\n      `}</style>\n    </div>\n  );\n}\nexport default JellyRadio;\n",
+      "type": "registry:ui",
+      "target": "components/ui/jelly-radio.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "jelly-radio"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/micro/jelly-radio",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "star-border",
+  "type": "registry:ui",
+  "title": "Star Border",
+  "description": "AMANTLE UI ui: star-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/star-border.tsx",
+      "content": "/**\n * @source https://reactbits.dev/animations/star-border\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface StarBorderProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode;\n  color?: string;\n  speed?: string;\n  className?: string;\n  innerClassName?: string;\n}\n\nexport function StarBorder({\n  children = \"Интерактивная кнопка Star Border\",\n  color = \"hsl(var(--primary))\",\n  speed = \"5s\",\n  className,\n  innerClassName,\n  ...props\n}: StarBorderProps) {\n  return (\n    <div\n      className={cn(\n        \"relative inline-block overflow-hidden rounded-xl p-[1px] transition-transform duration-150 active:scale-[0.98] select-none cursor-pointer\",\n        className\n      )}\n      {...props}\n    >\n      {/* Top Orbiting Star Beam */}\n      <div\n        className=\"absolute -top-[50%] -left-[100%] w-[300%] h-[100%] rounded-full pointer-events-none opacity-80 blur-[2px]\"\n        style={{\n          background: `radial-gradient(circle, ${color} 0%, transparent 60%)`,\n          animation: `star-orbit-top ${speed} linear infinite alternate`,\n        }}\n      />\n\n      {/* Bottom Orbiting Star Beam */}\n      <div\n        className=\"absolute -bottom-[50%] -right-[100%] w-[300%] h-[100%] rounded-full pointer-events-none opacity-80 blur-[2px]\"\n        style={{\n          background: `radial-gradient(circle, ${color} 0%, transparent 60%)`,\n          animation: `star-orbit-bottom ${speed} linear infinite alternate`,\n        }}\n      />\n\n      {/* Inner Surface */}\n      <div\n        className={cn(\n          \"relative z-10 px-5 py-2.5 rounded-[11px] bg-card text-card-foreground border border-border/80 font-medium text-xs sm:text-sm flex items-center justify-center gap-2 backdrop-blur-md shadow-xs\",\n          innerClassName\n        )}\n      >\n        {children}\n      </div>\n\n      <style jsx>{`\n        @keyframes star-orbit-top {\n          0% {\n            transform: translate(0%, 0%);\n            opacity: 0.2;\n          }\n          50% {\n            opacity: 1;\n          }\n          100% {\n            transform: translate(60%, 0%);\n            opacity: 0.2;\n          }\n        }\n        @keyframes star-orbit-bottom {\n          0% {\n            transform: translate(0%, 0%);\n            opacity: 0.2;\n          }\n          50% {\n            opacity: 1;\n          }\n          100% {\n            transform: translate(-60%, 0%);\n            opacity: 0.2;\n          }\n        }\n      `}</style>\n    </div>\n  );\n}\nexport default StarBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/star-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "star-border"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/animations/star-border",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

@@ -30,7 +30,7 @@ export function FooterMegaColumns() {
   return (
     <footer className="border-t border-border bg-card/30">
       <div className="container mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-6">
           <div className="col-span-2 space-y-4">
             <div className="flex items-center gap-2 font-bold tracking-tight text-foreground">
               <div className="h-6 w-6 rounded bg-primary flex items-center justify-center text-primary-foreground font-mono text-xs font-black">
@@ -42,7 +42,7 @@ export function FooterMegaColumns() {
               Открытая дизайн-система нового поколения с принципами Code Ownership и нативной интеграцией с искусственным интеллектом.
             </p>
           </div>
-          {columns.slice(0, 3).map((col) => (
+          {columns.map((col) => (
             <div key={col.title} className="space-y-3">
               <h4 className="text-sm font-semibold text-foreground">{col.title}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">

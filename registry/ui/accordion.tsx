@@ -90,16 +90,16 @@ const AccordionTrigger = React.forwardRef<
       data-state={isOpen ? "open" : "closed"}
       onClick={() => item && acc?.toggleItem(item.value)}
       className={cn(
-        "flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform] hover:underline text-left",
+        "flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-colors hover:text-foreground text-left cursor-pointer select-none",
         className
       )}
       {...props}
     >
-      {children}
+      <span className="pr-2">{children}</span>
       <ChevronDown
         className={cn(
-          "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200",
-          isOpen && "rotate-180"
+          "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-250 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          isOpen && "rotate-180 text-foreground"
         )}
       />
     </button>
@@ -122,7 +122,7 @@ const AccordionContent = React.forwardRef<
       ref={ref}
       data-state={isOpen ? "open" : "closed"}
       className={cn(
-        "overflow-hidden text-sm transition-[color,background-color,border-color,box-shadow,transform] pb-4 pt-0 text-muted-foreground animate-in motion-reduce:animate-none fade-in-50",
+        "overflow-hidden text-sm pb-4 pt-0 text-muted-foreground animate-in motion-reduce:animate-none fade-in-0 slide-in-from-top-1 duration-200 leading-relaxed",
         className
       )}
       {...props}

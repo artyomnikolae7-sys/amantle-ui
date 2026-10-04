@@ -1,0 +1,28 @@
+{
+  "name": "input-neubrutalist",
+  "type": "registry:ui",
+  "title": "Input Neubrutalist",
+  "description": "AMANTLE UI ui: input-neubrutalist",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-neubrutalist.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-neubrutalist\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Neubrutalist hard-bordered input with solid shadow offset\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputNeubrutalistProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {\n  label?: string;\n}\n\nexport function InputNeubrutalist({\n  className,\n  label = \"Команда CLI\",\n  placeholder = \"amantle-ui build --turbo\",\n  ...props\n}: InputNeubrutalistProps) {\n  return (\n    <div className=\"w-full max-w-md space-y-1.5 font-mono\">\n      {label && (\n        <label className=\"text-xs font-bold text-foreground uppercase tracking-wider block\">\n          {label}\n        </label>\n      )}\n      <input\n        placeholder={placeholder}\n        className={cn(\n          \"w-full h-11 px-4 text-xs sm:text-sm font-bold text-foreground bg-card\",\n          \"border-2 border-foreground dark:border-white rounded-lg\",\n          \"shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]\",\n          \"focus:translate-x-[2px] focus:translate-y-[2px] focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:focus:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]\",\n          \"focus:outline-none transition-all duration-150\",\n          className\n        )}\n        {...props}\n      />\n    </div>\n  );\n}\nexport default InputNeubrutalist;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-neubrutalist.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-neubrutalist"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-neubrutalist",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Neubrutalist hard-bordered input with solid shadow offset"
+  }
+}

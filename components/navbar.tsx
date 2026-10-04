@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Sparkles, Terminal, Layers, BookOpen } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { ThemeCustomizerTrigger } from "./theme-customizer-modal";
 
 export function Navbar() {
   return (
@@ -14,7 +15,7 @@ export function Navbar() {
             </span>
             <span className="font-extrabold tracking-wider">AMANTLE</span>
             <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
-              v1.0
+              v2.0
             </span>
           </Link>
 
@@ -41,6 +42,7 @@ export function Navbar() {
             <span>npx shadcn add https://amantle.dev/r/...</span>
           </div>
 
+          <ThemeCustomizerTrigger />
           <ThemeToggle />
         </div>
       </div>

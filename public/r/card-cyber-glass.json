@@ -1,0 +1,28 @@
+{
+  "name": "card-cyber-glass",
+  "type": "registry:ui",
+  "title": "Card Cyber Glass",
+  "description": "AMANTLE UI ui: card-cyber-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-cyber-glass.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-cyber-glass\n * @author AMANTLE UI Design System\n * @license MIT\n * @modified Cyber-Glass frosted glassmorphic card with ambient glow\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CardCyberGlassProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode;\n}\n\nexport function CardCyberGlass({ children, className, ...props }: CardCyberGlassProps) {\n  return (\n    <div\n      className={cn(\n        \"relative overflow-hidden rounded-2xl p-6\",\n        \"bg-background/30 hover:bg-background/45 backdrop-blur-2xl border border-white/20 dark:border-white/10\",\n        \"shadow-[0_12px_40px_0_rgba(0,0,0,0.3)] hover:shadow-[0_0_35px_rgba(var(--primary),0.25)]\",\n        \"transition-all duration-300 group\",\n        className\n      )}\n      {...props}\n    >\n      {/* Specular Edge Line */}\n      <div className=\"absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent\" />\n\n      {/* Cyber Ambient Corner Halo */}\n      <div className=\"absolute -top-12 -right-12 w-28 h-28 rounded-full bg-primary/15 blur-2xl pointer-events-none group-hover:bg-primary/25 transition-all\" />\n\n      <div className=\"relative z-10\">\n        {children || (\n          <div className=\"space-y-3\">\n            <div className=\"flex items-center justify-between\">\n              <span className=\"text-[10px] uppercase font-mono font-bold tracking-widest text-primary\">\n                Cyber-Glass Surface\n              </span>\n              <span className=\"w-2 h-2 rounded-full bg-primary animate-ping\" />\n            </div>\n            <h4 className=\"text-lg font-bold text-foreground tracking-tight\">\n              Квантовая Прозрачность\n            </h4>\n            <p className=\"text-xs text-muted-foreground leading-relaxed\">\n              Многослойный оптический эффект с микро-блюром 40px и адаптивным рассеиванием света.\n            </p>\n          </div>\n        )}\n      </div>\n    </div>\n  );\n}\nexport default CardCyberGlass;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-cyber-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-cyber-glass"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-cyber-glass",
+    "author": "AMANTLE UI Design System",
+    "license": "MIT",
+    "modified": "Cyber-Glass frosted glassmorphic card with ambient glow"
+  }
+}

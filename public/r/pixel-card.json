@@ -1,0 +1,28 @@
+{
+  "name": "pixel-card",
+  "type": "registry:ui",
+  "title": "Pixel Card",
+  "description": "AMANTLE UI ui: pixel-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pixel-card.tsx",
+      "content": "/**\n * @source https://reactbits.dev/components/pixel-card\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface PixelCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  children?: React.ReactNode;\n  pixelColor?: string;\n  className?: string;\n}\n\nexport function PixelCard({\n  children,\n  pixelColor = \"hsl(var(--primary))\",\n  className,\n  ...props\n}: PixelCardProps) {\n  const canvasRef = React.useRef<HTMLCanvasElement>(null);\n  const [isHovered, setIsHovered] = React.useState(false);\n\n  React.useEffect(() => {\n    const canvas = canvasRef.current;\n    if (!canvas) return;\n    const ctx = canvas.getContext(\"2d\");\n    if (!ctx) return;\n\n    let animId: number;\n    const pixelSize = 6;\n    const gap = 2;\n    let alpha = 0;\n\n    const render = () => {\n      ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n      if (isHovered && alpha < 0.8) {\n        alpha += 0.05;\n      } else if (!isHovered && alpha > 0) {\n        alpha -= 0.04;\n      }\n\n      if (alpha > 0) {\n        const cols = Math.floor(canvas.width / (pixelSize + gap));\n        const rows = Math.floor(canvas.height / (pixelSize + gap));\n\n        ctx.fillStyle = pixelColor;\n        for (let r = 0; r < rows; r++) {\n          for (let c = 0; c < cols; c++) {\n            // Random scatter probability\n            if (Math.random() > 0.85) {\n              ctx.globalAlpha = Math.random() * alpha;\n              ctx.fillRect(\n                c * (pixelSize + gap),\n                r * (pixelSize + gap),\n                pixelSize,\n                pixelSize\n              );\n            }\n          }\n        }\n      }\n\n      animId = requestAnimationFrame(render);\n    };\n\n    const updateSize = () => {\n      if (canvas.parentElement) {\n        canvas.width = canvas.parentElement.clientWidth;\n        canvas.height = canvas.parentElement.clientHeight;\n      }\n    };\n    updateSize();\n\n    animId = requestAnimationFrame(render);\n    return () => cancelAnimationFrame(animId);\n  }, [isHovered, pixelColor]);\n\n  return (\n    <div\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n      className={cn(\n        \"relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-lg\",\n        className\n      )}\n      {...props}\n    >\n      <canvas\n        ref={canvasRef}\n        className=\"absolute inset-0 pointer-events-none z-0\"\n      />\n      <div className=\"relative z-10\">{children || (\n        <div className=\"space-y-2\">\n          <h4 className=\"text-base font-bold text-foreground\">Pixel Matrix Card</h4>\n          <p className=\"text-xs text-muted-foreground leading-relaxed\">\n            Наведите курсор для генерации интерактивной пиксельной матрицы с переливающимся шлейфом.\n          </p>\n        </div>\n      )}</div>\n    </div>\n  );\n}\nexport default PixelCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pixel-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pixel-card"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/pixel-card",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

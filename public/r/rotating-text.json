@@ -1,0 +1,28 @@
+{
+  "name": "rotating-text",
+  "type": "registry:ui",
+  "title": "Rotating Text",
+  "description": "AMANTLE UI ui: rotating-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/rotating-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/rotating-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface RotatingTextProps extends React.HTMLAttributes<HTMLDivElement> {\n  texts?: string[];\n  rotationInterval?: number;\n  className?: string;\n  staggerDuration?: number;\n}\n\nexport function RotatingText({\n  texts = [\"Интеллект\", \"Эстетика\", \"Скорость\", \"Доступность\", \"Магия\"],\n  rotationInterval = 2400,\n  className,\n  staggerDuration = 0.025,\n  ...props\n}: RotatingTextProps) {\n  const [index, setIndex] = React.useState(0);\n  const [isTransitioning, setIsTransitioning] = React.useState(false);\n\n  React.useEffect(() => {\n    const interval = setInterval(() => {\n      setIsTransitioning(true);\n      setTimeout(() => {\n        setIndex((prev) => (prev + 1) % texts.length);\n        setIsTransitioning(false);\n      }, 300);\n    }, rotationInterval);\n\n    return () => clearInterval(interval);\n  }, [texts.length, rotationInterval]);\n\n  const currentText = texts[index];\n\n  return (\n    <div\n      className={cn(\"inline-flex items-center overflow-hidden py-1 font-extrabold text-primary\", className)}\n      style={{ perspective: \"1000px\" }}\n      {...props}\n    >\n      <span\n        className=\"inline-block transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]\"\n        style={{\n          transform: isTransitioning\n            ? \"translateY(-100%) rotateX(60deg) scale(0.9)\"\n            : \"translateY(0) rotateX(0) scale(1)\",\n          opacity: isTransitioning ? 0 : 1,\n        }}\n      >\n        {currentText}\n      </span>\n    </div>\n  );\n}\nexport default RotatingText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/rotating-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "rotating-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/rotating-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

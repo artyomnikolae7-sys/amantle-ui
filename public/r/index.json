@@ -2702,6 +2702,372 @@
     }
   },
   {
+    "name": "split-text",
+    "type": "registry:ui",
+    "title": "Split Text",
+    "description": "AMANTLE UI ui: split-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "split-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/split-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "blur-text",
+    "type": "registry:ui",
+    "title": "Blur Text",
+    "description": "AMANTLE UI ui: blur-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "blur-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/blur-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "decrypted-text",
+    "type": "registry:ui",
+    "title": "Decrypted Text",
+    "description": "AMANTLE UI ui: decrypted-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "decrypted-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/decrypted-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "true-focus",
+    "type": "registry:ui",
+    "title": "True Focus",
+    "description": "AMANTLE UI ui: true-focus",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "true-focus"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/true-focus",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "shiny-text",
+    "type": "registry:ui",
+    "title": "Shiny Text",
+    "description": "AMANTLE UI ui: shiny-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "shiny-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/shiny-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "count-up",
+    "type": "registry:ui",
+    "title": "Count Up",
+    "description": "AMANTLE UI ui: count-up",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "count-up"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/count-up",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "gradient-text",
+    "type": "registry:ui",
+    "title": "Gradient Text",
+    "description": "AMANTLE UI ui: gradient-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "gradient-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/gradient-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "rotating-text",
+    "type": "registry:ui",
+    "title": "Rotating Text",
+    "description": "AMANTLE UI ui: rotating-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "rotating-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/rotating-text",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "star-border",
+    "type": "registry:ui",
+    "title": "Star Border",
+    "description": "AMANTLE UI ui: star-border",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "star-border"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/animations/star-border",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "click-spark",
+    "type": "registry:ui",
+    "title": "Click Spark",
+    "description": "AMANTLE UI ui: click-spark",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "click-spark"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/animations/click-spark",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "pixel-card",
+    "type": "registry:ui",
+    "title": "Pixel Card",
+    "description": "AMANTLE UI ui: pixel-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pixel-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/pixel-card",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "spring-check",
+    "type": "registry:ui",
+    "title": "Spring Check",
+    "description": "AMANTLE UI ui: spring-check",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "spring-check"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/micro/spring-check",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "jelly-radio",
+    "type": "registry:ui",
+    "title": "Jelly Radio",
+    "description": "AMANTLE UI ui: jelly-radio",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "jelly-radio"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/micro/jelly-radio",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "pill-nav",
+    "type": "registry:ui",
+    "title": "Pill Nav",
+    "description": "AMANTLE UI ui: pill-nav",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pill-nav"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/pill-nav",
+      "author": "React Bits / DavidHDev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+    }
+  },
+  {
+    "name": "button-cyber-glass",
+    "type": "registry:ui",
+    "title": "Button Cyber Glass",
+    "description": "AMANTLE UI ui: button-cyber-glass",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "button-cyber-glass"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/components/button-cyber-glass",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Cyber-Glass frosted glassmorphic glow button"
+    }
+  },
+  {
+    "name": "card-cyber-glass",
+    "type": "registry:ui",
+    "title": "Card Cyber Glass",
+    "description": "AMANTLE UI ui: card-cyber-glass",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "card-cyber-glass"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/components/card-cyber-glass",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Cyber-Glass frosted glassmorphic card with ambient glow"
+    }
+  },
+  {
+    "name": "input-cyber-glass",
+    "type": "registry:ui",
+    "title": "Input Cyber Glass",
+    "description": "AMANTLE UI ui: input-cyber-glass",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "input-cyber-glass"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/components/input-cyber-glass",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Cyber-Glass frosted input field"
+    }
+  },
+  {
+    "name": "input-neubrutalist",
+    "type": "registry:ui",
+    "title": "Input Neubrutalist",
+    "description": "AMANTLE UI ui: input-neubrutalist",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "input-neubrutalist"
+    ],
+    "meta": {
+      "source": "https://amantle.dev/components/input-neubrutalist",
+      "author": "AMANTLE UI Design System",
+      "license": "MIT",
+      "modified": "Neubrutalist hard-bordered input with solid shadow offset"
+    }
+  },
+  {
     "name": "hero-simple",
     "type": "registry:block",
     "title": "Hero Simple",

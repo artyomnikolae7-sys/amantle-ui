@@ -86,11 +86,19 @@ const RadioGroupItem = React.forwardRef<HTMLInputElement, RadioGroupItemProps>(
         />
         <div
           className={cn(
-            "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 flex items-center justify-center",
+            "aspect-square h-4 w-4 rounded-full border transition-all flex items-center justify-center",
+            isChecked
+              ? "border-primary text-primary ring-2 ring-primary/20"
+              : "border-muted-foreground/40 hover:border-primary/60",
             className
           )}
         >
-          {isChecked && <Circle className="h-2.5 w-2.5 fill-current text-current" />}
+          <Circle
+            className={cn(
+              "h-2 w-2 fill-current text-current transition-transform duration-150",
+              isChecked ? "scale-100 opacity-100" : "scale-0 opacity-0"
+            )}
+          />
         </div>
       </label>
     );

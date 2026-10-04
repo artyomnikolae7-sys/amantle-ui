@@ -1,0 +1,28 @@
+{
+  "name": "gradient-text",
+  "type": "registry:ui",
+  "title": "Gradient Text",
+  "description": "AMANTLE UI ui: gradient-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/gradient-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/gradient-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface GradientTextProps extends React.HTMLAttributes<HTMLHeadingElement> {\n  children?: React.ReactNode;\n  colors?: string[];\n  animationSpeed?: number;\n  className?: string;\n  as?: \"h1\" | \"h2\" | \"h3\" | \"span\" | \"p\";\n}\n\nexport function GradientText({\n  children = \"Следующее поколение веб-интерфейсов\",\n  colors = [\"#7c3aed\", \"#3b82f6\", \"#06b6d4\", \"#10b981\", \"#7c3aed\"],\n  animationSpeed = 6,\n  className,\n  as: Component = \"span\",\n  ...props\n}: GradientTextProps) {\n  const gradientString = colors.join(\", \");\n\n  return (\n    <Component\n      className={cn(\n        \"inline-block font-extrabold tracking-tight bg-clip-text text-transparent select-none animate-gradient-flow\",\n        className\n      )}\n      style={{\n        backgroundImage: `linear-gradient(to right, ${gradientString})`,\n        backgroundSize: \"300% 100%\",\n        WebkitBackgroundClip: \"text\",\n        animationDuration: `${animationSpeed}s`,\n      }}\n      {...props}\n    >\n      {children}\n    </Component>\n  );\n}\nexport default GradientText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/gradient-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "gradient-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/gradient-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

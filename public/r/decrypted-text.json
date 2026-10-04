@@ -1,0 +1,28 @@
+{
+  "name": "decrypted-text",
+  "type": "registry:ui",
+  "title": "Decrypted Text",
+  "description": "AMANTLE UI ui: decrypted-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/decrypted-text.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/decrypted-text\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DecryptedTextProps extends React.HTMLAttributes<HTMLSpanElement> {\n  text?: string;\n  speed?: number;\n  maxIterations?: number;\n  characters?: string;\n  className?: string;\n  encryptedClassName?: string;\n  trigger?: \"auto\" | \"hover\";\n}\n\nexport function DecryptedText({\n  text = \"CLASSIFIED_NEURAL_INTERFACE_READY\",\n  speed = 40,\n  maxIterations = 12,\n  characters = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?\",\n  className,\n  encryptedClassName,\n  trigger = \"auto\",\n  ...props\n}: DecryptedTextProps) {\n  const [displayText, setDisplayText] = React.useState(text);\n  const [isHovered, setIsHovered] = React.useState(false);\n\n  const startAnimation = React.useCallback(() => {\n    let iteration = 0;\n    const interval = setInterval(() => {\n      setDisplayText(() =>\n        text\n          .split(\"\")\n          .map((char, index) => {\n            if (char === \" \") return \" \";\n            if (index < iteration) {\n              return text[index];\n            }\n            return characters[Math.floor(Math.random() * characters.length)];\n          })\n          .join(\"\")\n      );\n\n      if (iteration >= text.length) {\n        clearInterval(interval);\n      }\n      iteration += 1 / (maxIterations / text.length);\n    }, speed);\n\n    return () => clearInterval(interval);\n  }, [text, speed, maxIterations, characters]);\n\n  React.useEffect(() => {\n    if (trigger === \"auto\") {\n      const cleanup = startAnimation();\n      return cleanup;\n    }\n  }, [trigger, startAnimation]);\n\n  const handleMouseEnter = () => {\n    if (trigger === \"hover\") {\n      setIsHovered(true);\n      startAnimation();\n    }\n  };\n\n  return (\n    <span\n      onMouseEnter={handleMouseEnter}\n      onMouseLeave={() => setIsHovered(false)}\n      className={cn(\n        \"font-mono font-semibold tracking-wider transition-colors inline-block select-none cursor-default\",\n        isHovered ? \"text-primary\" : \"text-foreground\",\n        className\n      )}\n      {...props}\n    >\n      {displayText}\n    </span>\n  );\n}\nexport default DecryptedText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/decrypted-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "decrypted-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/decrypted-text",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

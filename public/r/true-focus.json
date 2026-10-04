@@ -1,0 +1,28 @@
+{
+  "name": "true-focus",
+  "type": "registry:ui",
+  "title": "True Focus",
+  "description": "AMANTLE UI ui: true-focus",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/true-focus.tsx",
+      "content": "/**\n * @source https://reactbits.dev/text-animations/true-focus\n * @author React Bits / DavidHDev\n * @license MIT\n * @modified Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TrueFocusProps extends React.HTMLAttributes<HTMLDivElement> {\n  words?: string[];\n  intervalMs?: number;\n  className?: string;\n  glow?: boolean;\n}\n\nexport function TrueFocus({\n  words = [\"Проектируй\", \"Анимируй\", \"Синтезируй\", \"Масштабируй\"],\n  intervalMs = 2200,\n  className,\n  glow = true,\n  ...props\n}: TrueFocusProps) {\n  const [activeIndex, setActiveIndex] = React.useState(0);\n  const containerRef = React.useRef<HTMLDivElement>(null);\n  const wordRefs = React.useRef<(HTMLSpanElement | null)[]>([]);\n  const [boxStyle, setBoxStyle] = React.useState({ left: 0, top: 0, width: 0, height: 0 });\n\n  React.useEffect(() => {\n    const timer = setInterval(() => {\n      setActiveIndex((prev) => (prev + 1) % words.length);\n    }, intervalMs);\n    return () => clearInterval(timer);\n  }, [words.length, intervalMs]);\n\n  React.useEffect(() => {\n    const activeEl = wordRefs.current[activeIndex];\n    const container = containerRef.current;\n    if (activeEl && container) {\n      const parentRect = container.getBoundingClientRect();\n      const elRect = activeEl.getBoundingClientRect();\n      setBoxStyle({\n        left: elRect.left - parentRect.left - 6,\n        top: elRect.top - parentRect.top - 4,\n        width: elRect.width + 12,\n        height: elRect.height + 8,\n      });\n    }\n  }, [activeIndex]);\n\n  return (\n    <div\n      ref={containerRef}\n      className={cn(\"relative inline-flex items-center gap-3 py-3 px-4 select-none font-bold text-lg md:text-xl\", className)}\n      {...props}\n    >\n      {/* Animated Viewfinder Rect */}\n      <div\n        className={cn(\n          \"absolute pointer-events-none rounded-lg border-2 border-primary transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]\",\n          glow && \"shadow-[0_0_20px_rgba(var(--primary),0.5)]\"\n        )}\n        style={{\n          transform: `translate(${boxStyle.left}px, ${boxStyle.top}px)`,\n          width: `${boxStyle.width}px`,\n          height: `${boxStyle.height}px`,\n          opacity: boxStyle.width > 0 ? 1 : 0,\n        }}\n      >\n        {/* Corner Brackets */}\n        <span className=\"absolute -top-1.5 -left-1.5 w-2 h-2 border-t-2 border-l-2 border-primary\" />\n        <span className=\"absolute -top-1.5 -right-1.5 w-2 h-2 border-t-2 border-r-2 border-primary\" />\n        <span className=\"absolute -bottom-1.5 -left-1.5 w-2 h-2 border-b-2 border-l-2 border-primary\" />\n        <span className=\"absolute -bottom-1.5 -right-1.5 w-2 h-2 border-b-2 border-r-2 border-primary\" />\n      </div>\n\n      {words.map((word, idx) => {\n        const isCurrent = idx === activeIndex;\n        return (\n          <span\n            key={idx}\n            ref={(el) => {\n              wordRefs.current[idx] = el;\n            }}\n            onClick={() => setActiveIndex(idx)}\n            className={cn(\n              \"cursor-pointer transition-all duration-300 z-10 px-1\",\n              isCurrent\n                ? \"text-primary scale-105\"\n                : \"text-muted-foreground/40 filter blur-[1.5px] hover:blur-none hover:text-muted-foreground\"\n            )}\n          >\n            {word}\n          </span>\n        );\n      })}\n    </div>\n  );\n}\nexport default TrueFocus;\n",
+      "type": "registry:ui",
+      "target": "components/ui/true-focus.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "true-focus"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/true-focus",
+    "author": "React Bits / DavidHDev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with TypeScript, Tailwind v4 and Emil Kowalski motion tokens"
+  }
+}

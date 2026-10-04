@@ -15,10 +15,22 @@ import {
   Compass,
   ChevronsUpDown,
   ChevronsDownUp,
+  MousePointerClick,
+  LayoutTemplate,
+  Type,
+  Bell,
+  Table,
+  Zap,
+  Grid,
+  CreditCard,
+  Users,
+  Footprints,
+  FolderTree,
 } from "lucide-react";
 import { Input } from "@/registry/ui/input";
 import { Badge } from "@/registry/ui/badge";
 import { Button } from "@/registry/ui/button";
+import { getComponentFamily, ComponentFamily } from "@/lib/component-families";
 
 export interface CatalogItemMeta {
   name: string;
@@ -42,6 +54,25 @@ const CATEGORY_CONFIG: Record<
   templates: { label: "Шаблоны", icon: BookOpen },
 };
 
+const FAMILY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  MousePointerClick,
+  FormInput: MousePointerClick, // fallback safe
+  LayoutTemplate,
+  Compass,
+  Type,
+  Bell,
+  Table,
+  Sparkles,
+  Zap,
+  Grid,
+  CreditCard,
+  Users,
+  Footprints,
+  BookOpen,
+  Layers,
+  FolderTree,
+};
+
 export function SidebarCatalog({ items }: SidebarCatalogProps) {
   const pathname = usePathname();
   const [search, setSearch] = React.useState("");
@@ -50,28 +81,44 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
 
   const activeItemRef = React.useRef<HTMLAnchorElement>(null);
 
-  // Identify current category from URL (e.g. /ui/button -> "ui")
-  const currentCategory = React.useMemo(() => {
+  // Identify current category and item from URL
+  const { currentCategory, currentItemName } = React.useMemo(() => {
     const parts = pathname.split("/").filter(Boolean);
-    return parts[0] || "ui";
+    return {
+      currentCategory: parts[0] || "ui",
+      currentItemName: parts[1] || "",
+    };
   }, [pathname]);
 
-  // Collapsed categories state: by default, ONLY the current category is open
-  const [collapsedCategories, setCollapsedCategories] = React.useState<Record<string, boolean>>(() => {
-    return {
-      ui: currentCategory !== "ui",
-      blocks: currentCategory !== "blocks",
-      templates: currentCategory !== "templates",
-    };
-  });
+  // Family of the currently active item
+  const activeFamilyId = React.useMemo(() => {
+    if (!currentItemName) return "";
+    return getComponentFamily(currentItemName, currentCategory).id;
+  }, [currentItemName, currentCategory]);
 
-  // Whenever pathname changes, ensure current category is opened
+  // Collapsed categories state (top level)
+  const [collapsedCategories, setCollapsedCategories] = React.useState<Record<string, boolean>>(() => ({
+    ui: currentCategory !== "ui",
+    blocks: currentCategory !== "blocks",
+    templates: currentCategory !== "templates",
+  }));
+
+  // Collapsed families state (second level)
+  const [collapsedFamilies, setCollapsedFamilies] = React.useState<Record<string, boolean>>({});
+
+  // Ensure current category and family are opened when route changes
   React.useEffect(() => {
     setCollapsedCategories((prev) => ({
       ...prev,
       [currentCategory]: false,
     }));
-  }, [currentCategory]);
+    if (activeFamilyId) {
+      setCollapsedFamilies((prev) => ({
+        ...prev,
+        [activeFamilyId]: false,
+      }));
+    }
+  }, [currentCategory, activeFamilyId]);
 
   // Auto-scroll active component into view
   React.useEffect(() => {
@@ -80,26 +127,35 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     }
   }, [pathname]);
 
-  // Group items by category
-  const grouped = React.useMemo(() => {
-    const map: Record<string, CatalogItemMeta[]> = {
-      ui: [],
-      blocks: [],
-      templates: [],
+  // Group items by category and then by family
+  const groupedData = React.useMemo(() => {
+    const topLevel: Record<string, Record<string, { family: ComponentFamily; items: CatalogItemMeta[] }>> = {
+      ui: {},
+      blocks: {},
+      templates: {},
     };
 
     for (const item of items) {
       const cat = item.category || "ui";
-      if (!map[cat]) map[cat] = [];
-      map[cat].push(item);
+      const family = getComponentFamily(item.name, cat);
+
+      if (!topLevel[cat]) topLevel[cat] = {};
+      if (!topLevel[cat][family.id]) {
+        topLevel[cat][family.id] = { family, items: [] };
+      }
+      topLevel[cat][family.id].items.push(item);
     }
 
-    // Sort alphabetically by title or name
-    for (const key of Object.keys(map)) {
-      map[key].sort((a, b) => (a.title || a.name).localeCompare(b.title || b.name));
+    // Sort items inside each family alphabetically
+    for (const cat of Object.keys(topLevel)) {
+      for (const famId of Object.keys(topLevel[cat])) {
+        topLevel[cat][famId].items.sort((a, b) =>
+          (a.title || a.name).localeCompare(b.title || b.name)
+        );
+      }
     }
 
-    return map;
+    return topLevel;
   }, [items]);
 
   const toggleCategory = (cat: string) => {
@@ -109,46 +165,91 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     }));
   };
 
+  const toggleFamily = (famId: string) => {
+    setCollapsedFamilies((prev) => ({
+      ...prev,
+      [famId]: !prev[famId],
+    }));
+  };
+
   const collapseAll = () => {
     setCollapsedCategories({ ui: true, blocks: true, templates: true });
+    const allFamIds: Record<string, boolean> = {};
+    for (const cat of Object.keys(groupedData)) {
+      for (const famId of Object.keys(groupedData[cat])) {
+        allFamIds[famId] = true;
+      }
+    }
+    setCollapsedFamilies(allFamIds);
   };
 
   const expandAll = () => {
     setCollapsedCategories({ ui: false, blocks: false, templates: false });
+    const allFamIds: Record<string, boolean> = {};
+    for (const cat of Object.keys(groupedData)) {
+      for (const famId of Object.keys(groupedData[cat])) {
+        allFamIds[famId] = false;
+      }
+    }
+    setCollapsedFamilies(allFamIds);
   };
 
-  // Filtered grouped items based on search and selected category tab
-  const filteredGrouped = React.useMemo(() => {
-    const result: Record<string, CatalogItemMeta[]> = {};
+  // Filter items by search query and active tab
+  const filteredData = React.useMemo(() => {
+    const result: Record<string, Record<string, { family: ComponentFamily; items: CatalogItemMeta[] }>> = {};
     const q = search.trim().toLowerCase();
 
-    for (const [cat, list] of Object.entries(grouped)) {
-      // Filter by selected tab
+    for (const [cat, famMap] of Object.entries(groupedData)) {
       if (selectedTab !== "all" && selectedTab !== cat) continue;
 
-      let filteredList = list;
-      if (q) {
-        filteredList = list.filter(
-          (i) =>
-            i.name.toLowerCase().includes(q) ||
-            (i.title && i.title.toLowerCase().includes(q)) ||
-            (i.tags && i.tags.some((t) => t.toLowerCase().includes(q)))
-        );
+      const filteredFamMap: Record<string, { family: ComponentFamily; items: CatalogItemMeta[] }> = {};
+
+      for (const [famId, famObj] of Object.entries(famMap)) {
+        let matchingItems = famObj.items;
+        if (q) {
+          matchingItems = famObj.items.filter(
+            (i) =>
+              i.name.toLowerCase().includes(q) ||
+              (i.title && i.title.toLowerCase().includes(q)) ||
+              (i.tags && i.tags.some((t) => t.toLowerCase().includes(q))) ||
+              famObj.family.name.toLowerCase().includes(q)
+          );
+        }
+
+        if (matchingItems.length > 0) {
+          filteredFamMap[famId] = {
+            family: famObj.family,
+            items: matchingItems,
+          };
+        }
       }
 
-      if (filteredList.length > 0) {
-        result[cat] = filteredList;
+      if (Object.keys(filteredFamMap).length > 0) {
+        result[cat] = filteredFamMap;
       }
     }
 
     return result;
-  }, [grouped, search, selectedTab]);
+  }, [groupedData, search, selectedTab]);
+
+  // Calculate counts for tabs
+  const tabCounts = React.useMemo(() => {
+    let ui = 0;
+    let blocks = 0;
+    let templates = 0;
+    for (const item of items) {
+      if (item.category === "blocks") blocks++;
+      else if (item.category === "templates") templates++;
+      else ui++;
+    }
+    return { all: items.length, ui, blocks, templates };
+  }, [items]);
 
   const tabs: Array<{ id: "all" | "ui" | "blocks" | "templates"; label: string; count: number }> = [
-    { id: "all", label: "Все", count: items.length },
-    { id: "ui", label: "UI", count: grouped.ui.length },
-    { id: "blocks", label: "Блоки", count: grouped.blocks.length },
-    { id: "templates", label: "Шаблоны", count: grouped.templates.length },
+    { id: "all", label: "Все", count: tabCounts.all },
+    { id: "ui", label: "UI", count: tabCounts.ui },
+    { id: "blocks", label: "Блоки", count: tabCounts.blocks },
+    { id: "templates", label: "Шаблоны", count: tabCounts.templates },
   ];
 
   const sidebarContent = (
@@ -173,7 +274,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
           <Input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Фильтр компонентов..."
+            placeholder="Поиск по 205 компонентам..."
             className="h-8 pl-8 pr-14 text-xs bg-muted/30 border-border focus-visible:ring-primary/30"
           />
           {search && (
@@ -213,72 +314,128 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
         </div>
       </div>
 
-      {/* Categories & Items Scrollable List */}
+      {/* Categories & Hierarchical Families Scrollable List */}
       <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1.5 py-2.5 space-y-3 custom-scrollbar text-xs">
-        {Object.entries(filteredGrouped).length === 0 ? (
+        {Object.entries(filteredData).length === 0 ? (
           <div className="text-center py-8 text-muted-foreground text-xs">
             Ничего не найдено
           </div>
         ) : (
-          Object.entries(filteredGrouped).map(([category, list]) => {
+          Object.entries(filteredData).map(([category, famMap]) => {
             const config = CATEGORY_CONFIG[category] || {
               label: category,
               icon: Layers,
             };
-            const Icon = config.icon;
-            // Always expand when searching or when specifically filtered
-            const isCollapsed = !search && selectedTab === "all" && !!collapsedCategories[category];
+            const CatIcon = config.icon;
+            const isCatCollapsed = !search && selectedTab === "all" && !!collapsedCategories[category];
+
+            const totalCategoryItems = Object.values(famMap).reduce(
+              (acc, f) => acc + f.items.length,
+              0
+            );
 
             return (
-              <div key={category} className="space-y-1">
-                {/* Category Group Header */}
+              <div key={category} className="space-y-1.5">
+                {/* Level 1: Category Header */}
                 <button
                   type="button"
                   onClick={() => toggleCategory(category)}
-                  className="w-full flex items-center justify-between py-1.5 px-2 rounded-lg font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-left select-none group cursor-pointer"
+                  className="w-full flex items-center justify-between py-1.5 px-2 rounded-lg font-bold text-foreground bg-muted/20 hover:bg-muted/50 transition-colors text-left select-none group cursor-pointer border border-border/40"
                 >
                   <div className="flex items-center gap-2">
-                    <Icon className="h-3.5 w-3.5 text-primary/80 group-hover:text-primary transition-colors" />
-                    <span>{config.label}</span>
+                    <CatIcon className="h-3.5 w-3.5 text-primary" />
+                    <span className="tracking-tight">{config.label}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] font-mono text-muted-foreground/70">
-                      {list.length}
+                    <span className="text-[10px] font-mono text-muted-foreground bg-muted/60 px-1 rounded">
+                      {totalCategoryItems}
                     </span>
-                    {isCollapsed ? (
-                      <ChevronRight className="h-3 w-3 text-muted-foreground" />
+                    {isCatCollapsed ? (
+                      <ChevronRight className="h-3.5 w-3.5 text-muted-foreground" />
                     ) : (
-                      <ChevronDown className="h-3 w-3 text-muted-foreground" />
+                      <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
                     )}
                   </div>
                 </button>
 
-                {/* Sub-items */}
-                {!isCollapsed && (
-                  <div className="pl-3.5 space-y-0.5 border-l border-border/50 ml-3">
-                    {list.map((item) => {
-                      const itemUrl = `/${item.category || "ui"}/${item.name}`;
-                      const isActive = pathname === itemUrl;
+                {/* Level 2: Component Families Inside Category */}
+                {!isCatCollapsed && (
+                  <div className="pl-1.5 space-y-1.5">
+                    {Object.entries(famMap).map(([famId, famObj]) => {
+                      const isFamCollapsed =
+                        !search &&
+                        famId !== activeFamilyId &&
+                        collapsedFamilies[famId] === true;
+
+                      const FamIcon =
+                        FAMILY_ICONS[famObj.family.iconName] || FolderTree;
 
                       return (
-                        <Link
-                          key={item.name}
-                          href={itemUrl}
-                          ref={isActive ? activeItemRef : undefined}
-                          onClick={() => setMobileOpen(false)}
-                          className={`flex items-center justify-between py-1.5 px-2.5 rounded-lg transition-all text-xs ${
-                            isActive
-                              ? "bg-primary text-primary-foreground font-semibold shadow-xs"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                          }`}
+                        <div
+                          key={famId}
+                          className="rounded-lg border border-border/30 bg-card/40 overflow-hidden"
                         >
-                          <span className="truncate">{item.title || item.name}</span>
-                          {item.name === "button" && (
-                            <span className={`text-[9px] px-1 rounded uppercase font-mono ${isActive ? "bg-primary-foreground/20 text-primary-foreground" : "bg-primary/10 text-primary"}`}>
-                              Updated
-                            </span>
+                          {/* Family Header */}
+                          <button
+                            type="button"
+                            onClick={() => toggleFamily(famId)}
+                            className="w-full flex items-center justify-between py-1 px-2 text-[11px] font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-left select-none cursor-pointer"
+                          >
+                            <div className="flex items-center gap-1.5 truncate pr-1">
+                              <FamIcon className="h-3 w-3 text-primary/70 shrink-0" />
+                              <span className="truncate">{famObj.family.name}</span>
+                            </div>
+                            <div className="flex items-center gap-1 shrink-0">
+                              <span className="text-[9px] font-mono text-muted-foreground/80">
+                                {famObj.items.length}
+                              </span>
+                              {isFamCollapsed ? (
+                                <ChevronRight className="h-2.5 w-2.5 text-muted-foreground" />
+                              ) : (
+                                <ChevronDown className="h-2.5 w-2.5 text-muted-foreground" />
+                              )}
+                            </div>
+                          </button>
+
+                          {/* Level 3: Components in Family */}
+                          {!isFamCollapsed && (
+                            <div className="p-1 space-y-0.5 border-t border-border/20 bg-background/30">
+                              {famObj.items.map((item) => {
+                                const itemUrl = `/${item.category || "ui"}/${item.name}`;
+                                const isActive = pathname === itemUrl;
+
+                                return (
+                                  <Link
+                                    key={item.name}
+                                    href={itemUrl}
+                                    ref={isActive ? activeItemRef : undefined}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={`flex items-center justify-between py-1 px-2 rounded-md transition-all text-[11px] ${
+                                      isActive
+                                        ? "bg-primary text-primary-foreground font-semibold shadow-xs"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                                    }`}
+                                  >
+                                    <span className="truncate">
+                                      {item.title || item.name}
+                                    </span>
+                                    {item.name === "button" && (
+                                      <span
+                                        className={`text-[8px] px-1 rounded uppercase font-mono ${
+                                          isActive
+                                            ? "bg-primary-foreground/20 text-primary-foreground"
+                                            : "bg-primary/10 text-primary"
+                                        }`}
+                                      >
+                                        Updated
+                                      </span>
+                                    )}
+                                  </Link>
+                                );
+                              })}
+                            </div>
                           )}
-                        </Link>
+                        </div>
                       );
                     })}
                   </div>
@@ -294,18 +451,18 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
         <Link href="/" className="hover:text-primary transition-colors font-medium">
           ← На главную
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <button
             onClick={expandAll}
-            title="Развернуть все категории"
-            className="hover:text-foreground transition-colors p-1 rounded hover:bg-muted"
+            title="Развернуть все категории и группы"
+            className="hover:text-foreground transition-colors p-1 rounded hover:bg-muted cursor-pointer"
           >
             <ChevronsUpDown className="h-3.5 w-3.5" />
           </button>
           <button
             onClick={collapseAll}
-            title="Свернуть все категории"
-            className="hover:text-foreground transition-colors p-1 rounded hover:bg-muted"
+            title="Свернуть все"
+            className="hover:text-foreground transition-colors p-1 rounded hover:bg-muted cursor-pointer"
           >
             <ChevronsDownUp className="h-3.5 w-3.5" />
           </button>
@@ -321,7 +478,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
         <Button
           size="sm"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="rounded-full shadow-lg gap-2 h-10 px-4 bg-primary text-primary-foreground"
+          className="rounded-full shadow-lg gap-2 h-10 px-4 bg-primary text-primary-foreground cursor-pointer"
         >
           {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           <span>Компоненты ({items.length})</span>
