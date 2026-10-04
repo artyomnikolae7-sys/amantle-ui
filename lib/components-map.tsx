@@ -1,3 +1,5 @@
+"use client";
+
 import { ButtonElasticBounce } from "@/registry/ui/button-elastic-bounce";
 import { ButtonGlowNeon } from "@/registry/ui/button-glow-neon";
 import { ButtonGradientBorder } from "@/registry/ui/button-gradient-border";
@@ -43,7 +45,7 @@ import { CardNeubrutalistShadow } from "@/registry/ui/card-neubrutalist-shadow";
 import { ButtonPulseRing } from "@/registry/ui/button-pulse-ring";
 import { ButtonGradientFlow } from "@/registry/ui/button-gradient-flow";
 import { InputStepperNumber } from "@/registry/ui/input-stepper-number";
-"use client";
+
 
 import { InteractiveGridPattern } from "@/registry/ui/interactive-grid-pattern";
 import { Terminal as TerminalComponent } from "@/registry/ui/terminal";

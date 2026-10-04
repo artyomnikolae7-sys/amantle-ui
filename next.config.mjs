@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   typescript: {
-    // We run typecheck separately via tsc
     ignoreBuildErrors: true,
+  },
+  webpack: (config) => {
+    config.cache = false;
+    return config;
   },
 };
 
