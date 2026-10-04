@@ -1,0 +1,27 @@
+{
+  "name": "magic-odometer-counter-indigo",
+  "type": "registry:ui",
+  "title": "Magic Odometer Counter Indigo",
+  "description": "AMANTLE UI ui: magic-odometer-counter-indigo",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-odometer-counter-indigo.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicOdometerCounterIndigo\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicOdometerCounterIndigo({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-indigo-400 border-indigo-500/30 bg-indigo-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">⏱️</span>\n        <span className=\"text-xs font-bold text-foreground\">Rolling Number Odometer</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Deep Indigo</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicOdometerCounterIndigo;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-odometer-counter-indigo.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-odometer-counter-indigo"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

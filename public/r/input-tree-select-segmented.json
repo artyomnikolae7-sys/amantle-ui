@@ -1,0 +1,27 @@
+{
+  "name": "input-tree-select-segmented",
+  "type": "registry:ui",
+  "title": "Input Tree Select Segmented",
+  "description": "AMANTLE UI ui: input-tree-select-segmented",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-tree-select-segmented.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component InputTreeSelectSegmented\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function InputTreeSelectSegmented({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [val, setVal] = useState(\"\");\n\n  return (\n    <div className={`w-full max-w-sm space-y-1.5 ${className}`}>\n      <label className=\"text-xs font-semibold text-foreground flex items-center gap-1.5\">\n        <span>🌳</span>\n        <span>Hierarchical Scope</span>\n      </label>\n      <div className={`flex items-center px-3 py-2 rounded-xl border bg-card transition-all ${\"border-border/80 bg-muted/30\"}`}>\n        <input\n          type=\"text\"\n          value={val}\n          onChange={(e) => setVal(e.target.value)}\n          placeholder=\"Select parent nodes\"\n          className=\"w-full bg-transparent text-xs font-medium focus:outline-hidden placeholder:text-muted-foreground/60\"\n        />\n        <span className=\"text-[10px] font-bold text-muted-foreground ml-2 uppercase\">segmented</span>\n      </div>\n    </div>\n  );\n}\nexport default InputTreeSelectSegmented;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-tree-select-segmented.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-tree-select-segmented"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

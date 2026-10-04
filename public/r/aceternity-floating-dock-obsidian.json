@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-floating-dock-obsidian",
+  "type": "registry:ui",
+  "title": "Aceternity Floating Dock Obsidian",
+  "description": "AMANTLE UI ui: aceternity-floating-dock-obsidian",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-floating-dock-obsidian.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityFloatingDockObsidian\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityFloatingDockObsidian({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-neutral-900/60 border-neutral-700/40 text-neutral-300\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">⚓</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Obsidian Core</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Floating Spring Dock</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityFloatingDockObsidian;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-floating-dock-obsidian.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-floating-dock-obsidian"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

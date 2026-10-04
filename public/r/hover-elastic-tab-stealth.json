@@ -1,0 +1,27 @@
+{
+  "name": "hover-elastic-tab-stealth",
+  "type": "registry:ui",
+  "title": "Hover Elastic Tab Stealth",
+  "description": "AMANTLE UI ui: hover-elastic-tab-stealth",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-elastic-tab-stealth.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverElasticTabStealth\n * @source https://hover.dev\n * @author Tom Is Loading\n * @license MIT\n */\nexport function HoverElasticTabStealth({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setActive(true)}\n      onMouseLeave={() => setActive(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${\"border-neutral-700/60 bg-neutral-900/60 text-neutral-300\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">🪃</span>\n        <span className=\"text-[10px] font-mono uppercase font-bold tracking-wider\">Stealth Noir</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-2\">Elastic Resistance Tab</div>\n      <div className=\"text-xs text-muted-foreground mt-1 flex justify-between\">\n        <span>Hover.dev Physics</span>\n        <span className=\"font-mono text-[10px]\">{active ? \"Engaged ⚡\" : \"Damped\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default HoverElasticTabStealth;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-elastic-tab-stealth.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-elastic-tab-stealth"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Tom Is Loading",
+    "license": "MIT"
+  }
+}

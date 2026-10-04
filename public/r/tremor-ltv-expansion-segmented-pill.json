@@ -1,0 +1,27 @@
+{
+  "name": "tremor-ltv-expansion-segmented-pill",
+  "type": "registry:ui",
+  "title": "Tremor Ltv Expansion Segmented Pill",
+  "description": "AMANTLE UI ui: tremor-ltv-expansion-segmented-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-ltv-expansion-segmented-pill.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorLtvExpansionSegmentedPill\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorLtvExpansionSegmentedPill({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"space-y-2 w-full\">\n        <div className=\"flex justify-between items-center text-xs\">\n          <span className=\"font-medium text-foreground\">LTV Projection</span>\n          <span className=\"text-muted-foreground\">+12.7%</span>\n        </div>\n        <div className=\"w-full h-2 rounded-full overflow-hidden flex bg-muted\">\n          <div className=\"h-full bg-emerald-500 w-[60%]\" />\n          <div className=\"h-full bg-indigo-500 w-[25%]\" />\n          <div className=\"h-full bg-amber-500 w-[15%]\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorLtvExpansionSegmentedPill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-ltv-expansion-segmented-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-ltv-expansion-segmented-pill"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

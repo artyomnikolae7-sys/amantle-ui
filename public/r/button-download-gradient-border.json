@@ -1,0 +1,27 @@
+{
+  "name": "button-download-gradient-border",
+  "type": "registry:ui",
+  "title": "Button Download Gradient Border",
+  "description": "AMANTLE UI ui: button-download-gradient-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-download-gradient-border.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ButtonDownloadGradientBorder\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function ButtonDownloadGradientBorder({\n  children = \"Export TSX Package\",\n  onClick,\n  className = \"\",\n}: {\n  children?: React.ReactNode;\n  onClick?: () => void;\n  className?: string;\n}) {\n  return (\n    <button\n      onClick={onClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-primary-foreground shadow-sm hover:opacity-95 p-[1px] bg-gradient-to-r from-primary via-cyan-400 to-primary rounded-xl ${className}`}\n    >\n      <span>💾</span>\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonDownloadGradientBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-download-gradient-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-download-gradient-border"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "picker-blur-circular-gauge",
+  "type": "registry:ui",
+  "title": "Picker Blur Circular Gauge",
+  "description": "AMANTLE UI ui: picker-blur-circular-gauge",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/picker-blur-circular-gauge.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component PickerBlurCircularGauge\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function PickerBlurCircularGauge({ className = \"\" }: { className?: string }) {\n  const [val, setVal] = useState(8);\n\n  return (\n    <div className={`p-3 rounded-xl border border-border/60 bg-card/60 w-full max-w-xs space-y-2 ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-medium text-foreground\">Gaussian Blur</span>\n        <span className=\"font-mono text-primary font-bold\">{val}px</span>\n      </div>\n      <input\n        type=\"range\"\n        min=\"0\"\n        max=\"24\"\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"w-full accent-primary h-1.5 bg-muted rounded-lg cursor-pointer\"\n      />\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono\">\n        <span>0px</span>\n        <span>24px</span>\n      </div>\n    </div>\n  );\n}\nexport default PickerBlurCircularGauge;\n",
+      "type": "registry:ui",
+      "target": "components/ui/picker-blur-circular-gauge.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "picker-blur-circular-gauge"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

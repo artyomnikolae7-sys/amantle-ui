@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-lamp-beam-aurora",
+  "type": "registry:ui",
+  "title": "Aceternity Lamp Beam Aurora",
+  "description": "AMANTLE UI ui: aceternity-lamp-beam-aurora",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-lamp-beam-aurora.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityLampBeamAurora\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityLampBeamAurora({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-emerald-950/20 border-emerald-500/30 text-emerald-400\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">💡</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Polar Aurora</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Top Lamp Header Beam</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityLampBeamAurora;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-lamp-beam-aurora.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-lamp-beam-aurora"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

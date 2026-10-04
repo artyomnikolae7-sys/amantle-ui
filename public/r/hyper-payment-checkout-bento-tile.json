@@ -1,0 +1,27 @@
+{
+  "name": "hyper-payment-checkout-bento-tile",
+  "type": "registry:ui",
+  "title": "Hyper Payment Checkout Bento Tile",
+  "description": "AMANTLE UI ui: hyper-payment-checkout-bento-tile",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-payment-checkout-bento-tile.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperPaymentCheckoutBentoTile\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperPaymentCheckoutBentoTile({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"group relative p-5 rounded-2xl border border-border bg-card/50 overflow-hidden hover:bg-card/80 transition-all\">\n        <div className=\"absolute top-0 right-0 w-24 h-24 bg-teal-500/10 rounded-full blur-xl group-hover:scale-125 transition-transform\" />\n        <span className=\"text-xs font-bold text-teal-500 uppercase tracking-widest\">135+ Lands</span>\n        <div className=\"text-base font-bold text-foreground mt-1\">Global Multi-Currency</div>\n      </div>\n    </div>\n  );\n}\nexport default HyperPaymentCheckoutBentoTile;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-payment-checkout-bento-tile.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-payment-checkout-bento-tile"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

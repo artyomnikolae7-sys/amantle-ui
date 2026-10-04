@@ -1,0 +1,27 @@
+{
+  "name": "tremor-mrr-flow-segmented-pill",
+  "type": "registry:ui",
+  "title": "Tremor Mrr Flow Segmented Pill",
+  "description": "AMANTLE UI ui: tremor-mrr-flow-segmented-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-mrr-flow-segmented-pill.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorMrrFlowSegmentedPill\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorMrrFlowSegmentedPill({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"space-y-2 w-full\">\n        <div className=\"flex justify-between items-center text-xs\">\n          <span className=\"font-medium text-foreground\">MRR Net Flow</span>\n          <span className=\"text-muted-foreground\">+18.4%</span>\n        </div>\n        <div className=\"w-full h-2 rounded-full overflow-hidden flex bg-muted\">\n          <div className=\"h-full bg-emerald-500 w-[60%]\" />\n          <div className=\"h-full bg-indigo-500 w-[25%]\" />\n          <div className=\"h-full bg-amber-500 w-[15%]\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorMrrFlowSegmentedPill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-mrr-flow-segmented-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-mrr-flow-segmented-pill"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

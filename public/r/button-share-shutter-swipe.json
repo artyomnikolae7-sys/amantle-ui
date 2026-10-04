@@ -1,0 +1,27 @@
+{
+  "name": "button-share-shutter-swipe",
+  "type": "registry:ui",
+  "title": "Button Share Shutter Swipe",
+  "description": "AMANTLE UI ui: button-share-shutter-swipe",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-share-shutter-swipe.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ButtonShareShutterSwipe\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function ButtonShareShutterSwipe({\n  children = \"Generate Live Share Link\",\n  onClick,\n  className = \"\",\n}: {\n  children?: React.ReactNode;\n  onClick?: () => void;\n  className?: string;\n}) {\n  return (\n    <button\n      onClick={onClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-primary-foreground shadow-sm hover:opacity-95 overflow-hidden relative group hover:border-primary ${className}`}\n    >\n      <span>🔗</span>\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonShareShutterSwipe;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-share-shutter-swipe.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-share-shutter-swipe"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

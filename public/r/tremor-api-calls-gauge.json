@@ -1,0 +1,27 @@
+{
+  "name": "tremor-api-calls-gauge",
+  "type": "registry:ui",
+  "title": "Tremor Api Calls Gauge",
+  "description": "AMANTLE UI ui: tremor-api-calls-gauge",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-api-calls-gauge.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorApiCallsGauge\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function TremorApiCallsGauge({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/70 bg-card shadow-sm w-full max-w-xs space-y-3 ${className}`}>\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xs font-medium text-muted-foreground flex items-center gap-1.5\">\n          <span>🔁</span>\n          <span>Total API Requests</span>\n        </span>\n        <span className=\"text-[11px] font-semibold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full font-mono\">\n          +38.1%\n        </span>\n      </div>\n      <div className=\"flex items-baseline justify-between\">\n        <h3 className=\"text-2xl font-bold font-mono tracking-tight text-foreground\">142.8M</h3>\n        <span className=\"text-[10px] text-muted-foreground uppercase font-mono\">Circular Progress Arc</span>\n      </div>\n      <div className=\"pt-2 border-t border-border/40\">\n        <div className=\"h-1.5 w-full bg-muted rounded-full overflow-hidden\">\n          <div className=\"h-full bg-primary rounded-full transition-all duration-500\" style={{ width: \"72%\" }} />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorApiCallsGauge;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-api-calls-gauge.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-api-calls-gauge"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

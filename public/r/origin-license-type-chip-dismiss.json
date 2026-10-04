@@ -1,0 +1,27 @@
+{
+  "name": "origin-license-type-chip-dismiss",
+  "type": "registry:ui",
+  "title": "Origin License Type Chip Dismiss",
+  "description": "AMANTLE UI ui: origin-license-type-chip-dismiss",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-license-type-chip-dismiss.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginLicenseTypeChipDismiss\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginLicenseTypeChipDismiss({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-600 dark:text-emerald-400\">\n        <span>License Scope</span>\n        <button className=\"hover:opacity-75 text-sm font-bold\">×</button>\n      </div>\n    </div>\n  );\n}\nexport default OriginLicenseTypeChipDismiss;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-license-type-chip-dismiss.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-license-type-chip-dismiss"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "trigger-benchmark-hold-confirm",
+  "type": "registry:ui",
+  "title": "Trigger Benchmark Hold Confirm",
+  "description": "AMANTLE UI ui: trigger-benchmark-hold-confirm",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/trigger-benchmark-hold-confirm.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component TriggerBenchmarkHoldConfirm\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function TriggerBenchmarkHoldConfirm({ className = \"\" }: { className?: string }) {\n  const [done, setDone] = useState(false);\n\n  const handleClick = () => {\n    setDone(true);\n    setTimeout(() => setDone(false), 2000);\n  };\n\n  return (\n    <button\n      onClick={handleClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 active:scale-95 ${\n        done\n          ? \"bg-emerald-500 text-white shadow-md\"\n          : \"bg-primary text-primary-foreground hover:opacity-95 shadow-sm\"\n      } ${className}`}\n    >\n      <span>⏱️</span>\n      <span>{done ? \"Completed ✓\" : \"Run Latency Benchmark\"}</span>\n    </button>\n  );\n}\nexport default TriggerBenchmarkHoldConfirm;\n",
+      "type": "registry:ui",
+      "target": "components/ui/trigger-benchmark-hold-confirm.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "trigger-benchmark-hold-confirm"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

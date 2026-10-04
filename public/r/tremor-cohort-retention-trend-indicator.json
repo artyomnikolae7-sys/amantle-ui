@@ -1,0 +1,27 @@
+{
+  "name": "tremor-cohort-retention-trend-indicator",
+  "type": "registry:ui",
+  "title": "Tremor Cohort Retention Trend Indicator",
+  "description": "AMANTLE UI ui: tremor-cohort-retention-trend-indicator",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-cohort-retention-trend-indicator.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorCohortRetentionTrendIndicator\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorCohortRetentionTrendIndicator({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-card\">\n        <span className=\"text-xs font-medium text-foreground\">Cohort D30 Retention</span>\n        <span className=\"text-xs font-extrabold text-emerald-500\">+3.2%</span>\n        <span className=\"w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-emerald-500/50 shadow-sm\" />\n      </div>\n    </div>\n  );\n}\nexport default TremorCohortRetentionTrendIndicator;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-cohort-retention-trend-indicator.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-cohort-retention-trend-indicator"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

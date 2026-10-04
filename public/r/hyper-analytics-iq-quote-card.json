@@ -1,0 +1,27 @@
+{
+  "name": "hyper-analytics-iq-quote-card",
+  "type": "registry:ui",
+  "title": "Hyper Analytics Iq Quote Card",
+  "description": "AMANTLE UI ui: hyper-analytics-iq-quote-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-analytics-iq-quote-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperAnalyticsIqQuoteCard\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperAnalyticsIqQuoteCard({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"p-3.5 rounded-xl border border-border bg-card/70\">\n        <div className=\"text-xs italic text-muted-foreground\">“Predictive Funnel IQ delivers Neural Model without any latency overhead.”</div>\n        <div className=\"flex items-center gap-2 mt-2\">\n          <div className=\"w-5 h-5 rounded-full bg-teal-500/20 text-[10px] flex items-center justify-center font-bold\">AU</div>\n          <span className=\"text-[10px] font-semibold text-foreground\">Verified Enterprise User</span>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperAnalyticsIqQuoteCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-analytics-iq-quote-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-analytics-iq-quote-card"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

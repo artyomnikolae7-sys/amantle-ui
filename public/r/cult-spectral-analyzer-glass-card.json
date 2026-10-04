@@ -1,0 +1,27 @@
+{
+  "name": "cult-spectral-analyzer-glass-card",
+  "type": "registry:ui",
+  "title": "Cult Spectral Analyzer Glass Card",
+  "description": "AMANTLE UI ui: cult-spectral-analyzer-glass-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-spectral-analyzer-glass-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultSpectralAnalyzerGlassCard\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultSpectralAnalyzerGlassCard({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"p-4 rounded-2xl bg-card/40 border border-rose-500/20 backdrop-blur-md\">\n        <div className=\"text-lg\">🎚️</div>\n        <div className=\"text-sm font-bold text-foreground mt-1\">Harmonic Equalizer</div>\n        <div className=\"text-[11px] text-muted-foreground mt-0.5\">Ultra-precise responsive tactile surface.</div>\n      </div>\n    </div>\n  );\n}\nexport default CultSpectralAnalyzerGlassCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-spectral-analyzer-glass-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-spectral-analyzer-glass-card"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

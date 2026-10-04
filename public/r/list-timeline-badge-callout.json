@@ -1,0 +1,27 @@
+{
+  "name": "list-timeline-badge-callout",
+  "type": "registry:ui",
+  "title": "List Timeline Badge Callout",
+  "description": "AMANTLE UI ui: list-timeline-badge-callout",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/list-timeline-badge-callout.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ListTimelineBadgeCallout\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function ListTimelineBadgeCallout({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`flex items-center justify-between p-3 rounded-xl border border-border/60 bg-card hover:bg-muted/30 transition-colors w-full max-w-sm ${className}`}>\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-base\">🚀</span>\n        <div>\n          <p className=\"text-xs font-semibold text-foreground\">Deployment Event</p>\n          <p className=\"text-[10px] text-muted-foreground font-mono\">2 mins ago</p>\n        </div>\n      </div>\n      <span className=\"text-[10px] px-2 py-0.5 rounded-full bg-muted font-mono text-muted-foreground\">\n        Callout Highlight\n      </span>\n    </div>\n  );\n}\nexport default ListTimelineBadgeCallout;\n",
+      "type": "registry:ui",
+      "target": "components/ui/list-timeline-badge-callout.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "list-timeline-badge-callout"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

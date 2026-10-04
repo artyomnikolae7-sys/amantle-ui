@@ -1,0 +1,27 @@
+{
+  "name": "badge-live-glow",
+  "type": "registry:ui",
+  "title": "Badge Live Glow",
+  "description": "AMANTLE UI ui: badge-live-glow",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-live-glow.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BadgeLiveGlow\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function BadgeLiveGlow({\n  text = \"Live Broadcast\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-card/80 backdrop-blur-sm ${className} text-rose-500 border-rose-500/30`}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 bg-rose-500 shadow-[0_0_12px_rgba(var(--primary),0.3)]`} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 bg-rose-500`} />\n      </span>\n      <span className=\"font-mono text-[11px] font-semibold\">{text}</span>\n    </span>\n  );\n}\nexport default BadgeLiveGlow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-live-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-live-glow"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

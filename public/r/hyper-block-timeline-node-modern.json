@@ -1,0 +1,27 @@
+{
+  "name": "hyper-block-timeline-node-modern",
+  "type": "registry:ui",
+  "title": "Hyper Block Timeline Node Modern",
+  "description": "AMANTLE UI ui: hyper-block-timeline-node-modern",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-block-timeline-node-modern.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperBlockTimelineNodeModern\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperBlockTimelineNodeModern({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl transition-all ${\"border border-teal-500/30 bg-teal-500/5 shadow-xs\"} ${className}`}>\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-xl\">🏁</span>\n        <div>\n          <div className=\"text-sm font-bold text-foreground\">Product Roadmap Milestone</div>\n          <div className=\"text-xs text-muted-foreground\">Modern Gradient Style Block</div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperBlockTimelineNodeModern;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-block-timeline-node-modern.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-block-timeline-node-modern"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

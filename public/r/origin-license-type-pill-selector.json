@@ -1,0 +1,27 @@
+{
+  "name": "origin-license-type-pill-selector",
+  "type": "registry:ui",
+  "title": "Origin License Type Pill Selector",
+  "description": "AMANTLE UI ui: origin-license-type-pill-selector",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-license-type-pill-selector.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginLicenseTypePillSelector\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginLicenseTypePillSelector({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-border bg-card text-xs font-medium cursor-pointer hover:border-emerald-500/40 transition-colors\">\n        <span>📜</span>\n        <span>License Scope:</span>\n        <span className=\"font-bold text-emerald-500\">All Active</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginLicenseTypePillSelector;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-license-type-pill-selector.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-license-type-pill-selector"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

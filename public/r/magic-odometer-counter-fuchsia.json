@@ -1,0 +1,27 @@
+{
+  "name": "magic-odometer-counter-fuchsia",
+  "type": "registry:ui",
+  "title": "Magic Odometer Counter Fuchsia",
+  "description": "AMANTLE UI ui: magic-odometer-counter-fuchsia",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-odometer-counter-fuchsia.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicOdometerCounterFuchsia\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicOdometerCounterFuchsia({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-fuchsia-400 border-fuchsia-500/30 bg-fuchsia-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">⏱️</span>\n        <span className=\"text-xs font-bold text-foreground\">Rolling Number Odometer</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Neon Fuchsia</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicOdometerCounterFuchsia;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-odometer-counter-fuchsia.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-odometer-counter-fuchsia"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

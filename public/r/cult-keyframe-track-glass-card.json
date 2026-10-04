@@ -1,0 +1,27 @@
+{
+  "name": "cult-keyframe-track-glass-card",
+  "type": "registry:ui",
+  "title": "Cult Keyframe Track Glass Card",
+  "description": "AMANTLE UI ui: cult-keyframe-track-glass-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-keyframe-track-glass-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultKeyframeTrackGlassCard\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultKeyframeTrackGlassCard({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"p-4 rounded-2xl bg-card/40 border border-rose-500/20 backdrop-blur-md\">\n        <div className=\"text-lg\">📈</div>\n        <div className=\"text-sm font-bold text-foreground mt-1\">Interpolation Spline</div>\n        <div className=\"text-[11px] text-muted-foreground mt-0.5\">Ultra-precise responsive tactile surface.</div>\n      </div>\n    </div>\n  );\n}\nexport default CultKeyframeTrackGlassCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-keyframe-track-glass-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-keyframe-track-glass-card"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

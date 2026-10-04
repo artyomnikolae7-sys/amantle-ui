@@ -1,0 +1,27 @@
+{
+  "name": "badge-deprecated-ping",
+  "type": "registry:ui",
+  "title": "Badge Deprecated Ping",
+  "description": "AMANTLE UI ui: badge-deprecated-ping",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-deprecated-ping.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BadgeDeprecatedPing\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function BadgeDeprecatedPing({\n  text = \"Deprecated Tier\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-card/80 backdrop-blur-sm ${className} text-zinc-500 border-zinc-500/30`}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 bg-zinc-500 animate-ping`} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 bg-zinc-500`} />\n      </span>\n      <span className=\"font-mono text-[11px] font-semibold\">{text}</span>\n    </span>\n  );\n}\nexport default BadgeDeprecatedPing;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-deprecated-ping.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-deprecated-ping"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

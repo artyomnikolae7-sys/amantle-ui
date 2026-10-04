@@ -1,0 +1,27 @@
+{
+  "name": "tremor-mrr-minimal-stat",
+  "type": "registry:ui",
+  "title": "Tremor Mrr Minimal Stat",
+  "description": "AMANTLE UI ui: tremor-mrr-minimal-stat",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-mrr-minimal-stat.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorMrrMinimalStat\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function TremorMrrMinimalStat({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/70 bg-card shadow-sm w-full max-w-xs space-y-3 ${className}`}>\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xs font-medium text-muted-foreground flex items-center gap-1.5\">\n          <span>💳</span>\n          <span>Monthly Recurring Revenue</span>\n        </span>\n        <span className=\"text-[11px] font-semibold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full font-mono\">\n          +14.8%\n        </span>\n      </div>\n      <div className=\"flex items-baseline justify-between\">\n        <h3 className=\"text-2xl font-bold font-mono tracking-tight text-foreground\">$48,250</h3>\n        <span className=\"text-[10px] text-muted-foreground uppercase font-mono\">Minimal Mono Stat</span>\n      </div>\n      <div className=\"pt-2 border-t border-border/40\">\n        <div className=\"h-1.5 w-full bg-muted rounded-full overflow-hidden\">\n          <div className=\"h-full bg-primary rounded-full transition-all duration-500\" style={{ width: \"72%\" }} />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorMrrMinimalStat;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-mrr-minimal-stat.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-mrr-minimal-stat"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

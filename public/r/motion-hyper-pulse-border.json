@@ -1,0 +1,27 @@
+{
+  "name": "motion-hyper-pulse-border",
+  "type": "registry:ui",
+  "title": "Motion Hyper Pulse Border",
+  "description": "AMANTLE UI ui: motion-hyper-pulse-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-hyper-pulse-border.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component MotionHyperPulseBorder\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function MotionHyperPulseBorder({\n  text = \"HYPERVELOCITY MATRIX\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <div className={`inline-block font-black text-xl tracking-tight uppercase select-none ${className}`}>\n      <span className=\"bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent hover:tracking-wider transition-all duration-300\">\n        {text}\n      </span>\n      <span className=\"block text-[9px] font-mono text-muted-foreground font-normal tracking-normal lowercase\">\n        Pure CSS Animation\n      </span>\n    </div>\n  );\n}\nexport default MotionHyperPulseBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-hyper-pulse-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-hyper-pulse-border"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "button-share-cyber-glass",
+  "type": "registry:ui",
+  "title": "Button Share Cyber Glass",
+  "description": "AMANTLE UI ui: button-share-cyber-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-share-cyber-glass.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ButtonShareCyberGlass\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function ButtonShareCyberGlass({\n  children = \"Generate Live Share Link\",\n  onClick,\n  className = \"\",\n}: {\n  children?: React.ReactNode;\n  onClick?: () => void;\n  className?: string;\n}) {\n  return (\n    <button\n      onClick={onClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-primary-foreground shadow-sm hover:opacity-95 bg-card/70 backdrop-blur-md border border-border/80 shadow-sm ${className}`}\n    >\n      <span>🔗</span>\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonShareCyberGlass;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-share-cyber-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-share-cyber-glass"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

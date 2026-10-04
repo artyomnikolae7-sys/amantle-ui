@@ -1,0 +1,27 @@
+{
+  "name": "tremor-bandwidth-load-summary-stat",
+  "type": "registry:ui",
+  "title": "Tremor Bandwidth Load Summary Stat",
+  "description": "AMANTLE UI ui: tremor-bandwidth-load-summary-stat",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-bandwidth-load-summary-stat.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorBandwidthLoadSummaryStat\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorBandwidthLoadSummaryStat({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"text-center p-2\">\n        <div className=\"text-2xl font-black tracking-tight text-foreground\">TB842.1</div>\n        <div className=\"text-[11px] font-medium text-muted-foreground mt-0.5\">Edge Throughput</div>\n      </div>\n    </div>\n  );\n}\nexport default TremorBandwidthLoadSummaryStat;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-bandwidth-load-summary-stat.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-bandwidth-load-summary-stat"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

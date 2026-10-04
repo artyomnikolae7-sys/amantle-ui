@@ -1,0 +1,27 @@
+{
+  "name": "hyper-developer-cli-banner-inline",
+  "type": "registry:ui",
+  "title": "Hyper Developer Cli Banner Inline",
+  "description": "AMANTLE UI ui: hyper-developer-cli-banner-inline",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-developer-cli-banner-inline.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperDeveloperCliBannerInline\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperDeveloperCliBannerInline({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"flex items-center justify-between p-3 rounded-xl bg-secondary/50 border border-border gap-4\">\n        <div className=\"flex items-center gap-2\">\n          <span>💻</span>\n          <span className=\"text-xs font-semibold\">Headless CLI Tooling</span>\n        </div>\n        <button className=\"text-[11px] font-bold text-teal-600 hover:underline\">Explore →</button>\n      </div>\n    </div>\n  );\n}\nexport default HyperDeveloperCliBannerInline;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-developer-cli-banner-inline.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-developer-cli-banner-inline"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

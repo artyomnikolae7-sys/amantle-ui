@@ -1,0 +1,27 @@
+{
+  "name": "list-security-alert-interactive-card",
+  "type": "registry:ui",
+  "title": "List Security Alert Interactive Card",
+  "description": "AMANTLE UI ui: list-security-alert-interactive-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/list-security-alert-interactive-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ListSecurityAlertInteractiveCard\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function ListSecurityAlertInteractiveCard({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`flex items-center justify-between p-3 rounded-xl border border-border/60 bg-card hover:bg-muted/30 transition-colors w-full max-w-sm ${className}`}>\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-base\">⚠️</span>\n        <div>\n          <p className=\"text-xs font-semibold text-foreground\">Suspicious API Ingress</p>\n          <p className=\"text-[10px] text-muted-foreground font-mono\">Severity: High</p>\n        </div>\n      </div>\n      <span className=\"text-[10px] px-2 py-0.5 rounded-full bg-muted font-mono text-muted-foreground\">\n        Interactive Feed Card\n      </span>\n    </div>\n  );\n}\nexport default ListSecurityAlertInteractiveCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/list-security-alert-interactive-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "list-security-alert-interactive-card"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

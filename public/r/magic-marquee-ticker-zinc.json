@@ -1,0 +1,27 @@
+{
+  "name": "magic-marquee-ticker-zinc",
+  "type": "registry:ui",
+  "title": "Magic Marquee Ticker Zinc",
+  "description": "AMANTLE UI ui: magic-marquee-ticker-zinc",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-marquee-ticker-zinc.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicMarqueeTickerZinc\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicMarqueeTickerZinc({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-zinc-300 border-zinc-700/40 bg-zinc-800/10\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">🎞️</span>\n        <span className=\"text-xs font-bold text-foreground\">Infinite Stream Marquee</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Raw Zinc</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicMarqueeTickerZinc;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-marquee-ticker-zinc.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-marquee-ticker-zinc"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

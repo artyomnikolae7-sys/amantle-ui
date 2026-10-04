@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-floating-dock-starlight",
+  "type": "registry:ui",
+  "title": "Aceternity Floating Dock Starlight",
+  "description": "AMANTLE UI ui: aceternity-floating-dock-starlight",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-floating-dock-starlight.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityFloatingDockStarlight\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityFloatingDockStarlight({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-indigo-950/30 border-indigo-500/40 text-indigo-300\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">⚓</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Starlight Glow</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Floating Spring Dock</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityFloatingDockStarlight;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-floating-dock-starlight.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-floating-dock-starlight"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

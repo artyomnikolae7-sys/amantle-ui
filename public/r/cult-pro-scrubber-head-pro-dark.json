@@ -1,0 +1,27 @@
+{
+  "name": "cult-pro-scrubber-head-pro-dark",
+  "type": "registry:ui",
+  "title": "Cult Pro Scrubber Head Pro Dark",
+  "description": "AMANTLE UI ui: cult-pro-scrubber-head-pro-dark",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-pro-scrubber-head-pro-dark.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultProScrubberHeadProDark\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultProScrubberHeadProDark({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-3.5 rounded-xl transition-all ${\"border border-rose-500/30 bg-black/80 text-rose-400\"} ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-lg\">🎞️</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">Chrono Timeline Scrubber</div>\n            <div className=\"text-[10px] text-muted-foreground\">Pro Darkroom Interface</div>\n          </div>\n        </div>\n        <span className=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-secondary text-secondary-foreground\">PRO</span>\n      </div>\n    </div>\n  );\n}\nexport default CultProScrubberHeadProDark;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-pro-scrubber-head-pro-dark.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-pro-scrubber-head-pro-dark"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

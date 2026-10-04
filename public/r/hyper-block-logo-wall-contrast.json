@@ -1,0 +1,27 @@
+{
+  "name": "hyper-block-logo-wall-contrast",
+  "type": "registry:ui",
+  "title": "Hyper Block Logo Wall Contrast",
+  "description": "AMANTLE UI ui: hyper-block-logo-wall-contrast",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-block-logo-wall-contrast.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperBlockLogoWallContrast\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperBlockLogoWallContrast({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl transition-all ${\"border-2 border-foreground/30 bg-card\"} ${className}`}>\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-xl\">🏢</span>\n        <div>\n          <div className=\"text-sm font-bold text-foreground\">Enterprise Customer Marquee</div>\n          <div className=\"text-xs text-muted-foreground\">High Contrast Style Block</div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperBlockLogoWallContrast;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-block-logo-wall-contrast.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-block-logo-wall-contrast"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

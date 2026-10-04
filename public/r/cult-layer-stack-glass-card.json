@@ -1,0 +1,27 @@
+{
+  "name": "cult-layer-stack-glass-card",
+  "type": "registry:ui",
+  "title": "Cult Layer Stack Glass Card",
+  "description": "AMANTLE UI ui: cult-layer-stack-glass-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-layer-stack-glass-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultLayerStackGlassCard\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultLayerStackGlassCard({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"p-4 rounded-2xl bg-card/40 border border-rose-500/20 backdrop-blur-md\">\n        <div className=\"text-lg\">🥞</div>\n        <div className=\"text-sm font-bold text-foreground mt-1\">Composite Blend Tree</div>\n        <div className=\"text-[11px] text-muted-foreground mt-0.5\">Ultra-precise responsive tactile surface.</div>\n      </div>\n    </div>\n  );\n}\nexport default CultLayerStackGlassCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-layer-stack-glass-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-layer-stack-glass-card"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

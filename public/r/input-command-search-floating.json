@@ -1,0 +1,27 @@
+{
+  "name": "input-command-search-floating",
+  "type": "registry:ui",
+  "title": "Input Command Search Floating",
+  "description": "AMANTLE UI ui: input-command-search-floating",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-command-search-floating.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component InputCommandSearchFloating\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function InputCommandSearchFloating({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [val, setVal] = useState(\"\");\n\n  return (\n    <div className={`w-full max-w-sm space-y-1.5 ${className}`}>\n      <label className=\"text-xs font-semibold text-foreground flex items-center gap-1.5\">\n        <span>🔍</span>\n        <span>Search Index Filter</span>\n      </label>\n      <div className={`flex items-center px-3 py-2 rounded-xl border bg-card transition-all ${\"border-border relative pt-4\"}`}>\n        <input\n          type=\"text\"\n          value={val}\n          onChange={(e) => setVal(e.target.value)}\n          placeholder=\"Type a query (⌘K)...\"\n          className=\"w-full bg-transparent text-xs font-medium focus:outline-hidden placeholder:text-muted-foreground/60\"\n        />\n        <span className=\"text-[10px] font-bold text-muted-foreground ml-2 uppercase\">floating</span>\n      </div>\n    </div>\n  );\n}\nexport default InputCommandSearchFloating;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-command-search-floating.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-command-search-floating"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

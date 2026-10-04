@@ -1,0 +1,27 @@
+{
+  "name": "trigger-invite-member-ghost-glow",
+  "type": "registry:ui",
+  "title": "Trigger Invite Member Ghost Glow",
+  "description": "AMANTLE UI ui: trigger-invite-member-ghost-glow",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/trigger-invite-member-ghost-glow.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component TriggerInviteMemberGhostGlow\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function TriggerInviteMemberGhostGlow({ className = \"\" }: { className?: string }) {\n  const [done, setDone] = useState(false);\n\n  const handleClick = () => {\n    setDone(true);\n    setTimeout(() => setDone(false), 2000);\n  };\n\n  return (\n    <button\n      onClick={handleClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 active:scale-95 ${\n        done\n          ? \"bg-emerald-500 text-white shadow-md\"\n          : \"bg-primary text-primary-foreground hover:opacity-95 shadow-sm\"\n      } ${className}`}\n    >\n      <span>✉️</span>\n      <span>{done ? \"Completed ✓\" : \"Invite Collaborator\"}</span>\n    </button>\n  );\n}\nexport default TriggerInviteMemberGhostGlow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/trigger-invite-member-ghost-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "trigger-invite-member-ghost-glow"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

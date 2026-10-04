@@ -1,0 +1,27 @@
+{
+  "name": "cult-pro-keyframe-pin-neon-accent",
+  "type": "registry:ui",
+  "title": "Cult Pro Keyframe Pin Neon Accent",
+  "description": "AMANTLE UI ui: cult-pro-keyframe-pin-neon-accent",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-pro-keyframe-pin-neon-accent.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultProKeyframePinNeonAccent\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultProKeyframePinNeonAccent({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-3.5 rounded-xl transition-all ${\"border border-rose-500/50 bg-rose-500/10 text-rose-300\"} ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-lg\">💎</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">Parametric Curve Keyframe</div>\n            <div className=\"text-[10px] text-muted-foreground\">Neon Crimson Interface</div>\n          </div>\n        </div>\n        <span className=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-secondary text-secondary-foreground\">PRO</span>\n      </div>\n    </div>\n  );\n}\nexport default CultProKeyframePinNeonAccent;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-pro-keyframe-pin-neon-accent.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-pro-keyframe-pin-neon-accent"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

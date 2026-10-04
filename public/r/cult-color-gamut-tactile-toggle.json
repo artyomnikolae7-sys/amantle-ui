@@ -1,0 +1,27 @@
+{
+  "name": "cult-color-gamut-tactile-toggle",
+  "type": "registry:ui",
+  "title": "Cult Color Gamut Tactile Toggle",
+  "description": "AMANTLE UI ui: cult-color-gamut-tactile-toggle",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-color-gamut-tactile-toggle.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultColorGamutTactileToggle\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultColorGamutTactileToggle({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <button className=\"inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-border bg-card hover:bg-rose-500/5 active:scale-95 transition-all text-xs font-semibold\">\n        <span>🎨</span>\n        <span>Toggle Display P3 Gamut</span>\n      </button>\n    </div>\n  );\n}\nexport default CultColorGamutTactileToggle;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-color-gamut-tactile-toggle.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-color-gamut-tactile-toggle"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

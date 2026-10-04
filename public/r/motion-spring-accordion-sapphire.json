@@ -1,0 +1,27 @@
+{
+  "name": "motion-spring-accordion-sapphire",
+  "type": "registry:ui",
+  "title": "Motion Spring Accordion Sapphire",
+  "description": "AMANTLE UI ui: motion-spring-accordion-sapphire",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-spring-accordion-sapphire.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MotionSpringAccordionSapphire\n * @source https://reactbits.dev\n * @author David Hckh\n * @license MIT\n */\nexport function MotionSpringAccordionSapphire({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`p-4 rounded-2xl border ${\"border-blue-500/30\"} bg-gradient-to-br ${\"from-blue-600/20 to-cyan-500/20\"} transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${className}`}\n    >\n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xl\">📂</span>\n        <span className={`text-xs font-bold ${\"text-blue-400\"}`}>Damped Accordion Slice</span>\n      </div>\n      <div className=\"text-[11px] text-muted-foreground mt-2 flex items-center justify-between\">\n        <span>Sapphire Ocean Scheme</span>\n        <span className=\"font-mono text-[10px]\">{hovered ? \"Active Motion ⚡\" : \"Damped Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MotionSpringAccordionSapphire;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-spring-accordion-sapphire.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-spring-accordion-sapphire"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "David Hckh",
+    "license": "MIT"
+  }
+}

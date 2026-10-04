@@ -1,0 +1,27 @@
+{
+  "name": "origin-user-role-toggle-counter",
+  "type": "registry:ui",
+  "title": "Origin User Role Toggle Counter",
+  "description": "AMANTLE UI ui: origin-user-role-toggle-counter",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-user-role-toggle-counter.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginUserRoleToggleCounter\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginUserRoleToggleCounter({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-secondary text-xs font-bold\">\n        <span>Access Role</span>\n        <span className=\"w-4 h-4 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center\">3</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginUserRoleToggleCounter;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-user-role-toggle-counter.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-user-role-toggle-counter"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

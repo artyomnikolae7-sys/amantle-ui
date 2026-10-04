@@ -1,0 +1,27 @@
+{
+  "name": "tremor-error-rate-summary-stat",
+  "type": "registry:ui",
+  "title": "Tremor Error Rate Summary Stat",
+  "description": "AMANTLE UI ui: tremor-error-rate-summary-stat",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-error-rate-summary-stat.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorErrorRateSummaryStat\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorErrorRateSummaryStat({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"text-center p-2\">\n        <div className=\"text-2xl font-black tracking-tight text-foreground\">%0.012</div>\n        <div className=\"text-[11px] font-medium text-muted-foreground mt-0.5\">HTTP 5xx Anomalies</div>\n      </div>\n    </div>\n  );\n}\nexport default TremorErrorRateSummaryStat;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-error-rate-summary-stat.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-error-rate-summary-stat"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

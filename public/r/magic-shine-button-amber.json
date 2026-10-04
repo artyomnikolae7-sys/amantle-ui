@@ -1,0 +1,27 @@
+{
+  "name": "magic-shine-button-amber",
+  "type": "registry:ui",
+  "title": "Magic Shine Button Amber",
+  "description": "AMANTLE UI ui: magic-shine-button-amber",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-shine-button-amber.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicShineButtonAmber\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicShineButtonAmber({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-amber-400 border-amber-500/30 bg-amber-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">🔘</span>\n        <span className=\"text-xs font-bold text-foreground\">Specular Shine Trigger</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Amber Gold</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicShineButtonAmber;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-shine-button-amber.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-shine-button-amber"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

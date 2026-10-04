@@ -1,0 +1,27 @@
+{
+  "name": "origin-deploy-env-toggle-counter",
+  "type": "registry:ui",
+  "title": "Origin Deploy Env Toggle Counter",
+  "description": "AMANTLE UI ui: origin-deploy-env-toggle-counter",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-deploy-env-toggle-counter.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginDeployEnvToggleCounter\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginDeployEnvToggleCounter({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-secondary text-xs font-bold\">\n        <span>Deploy Cluster</span>\n        <span className=\"w-4 h-4 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center\">3</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginDeployEnvToggleCounter;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-deploy-env-toggle-counter.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-deploy-env-toggle-counter"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

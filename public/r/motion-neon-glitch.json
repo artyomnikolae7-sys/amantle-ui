@@ -1,0 +1,27 @@
+{
+  "name": "motion-neon-glitch",
+  "type": "registry:ui",
+  "title": "Motion Neon Glitch",
+  "description": "AMANTLE UI ui: motion-neon-glitch",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-neon-glitch.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component MotionNeonGlitch\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function MotionNeonGlitch({\n  text = \"NEON SYNTHESIS\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <div className={`inline-block font-black text-xl tracking-tight uppercase select-none ${className}`}>\n      <span className=\"bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent hover:tracking-wider transition-all duration-300\">\n        {text}\n      </span>\n      <span className=\"block text-[9px] font-mono text-muted-foreground font-normal tracking-normal lowercase\">\n        Dark Palette\n      </span>\n    </div>\n  );\n}\nexport default MotionNeonGlitch;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-neon-glitch.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-neon-glitch"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

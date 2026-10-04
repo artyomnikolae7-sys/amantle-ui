@@ -1,0 +1,27 @@
+{
+  "name": "hyper-block-feature-compare-modern",
+  "type": "registry:ui",
+  "title": "Hyper Block Feature Compare Modern",
+  "description": "AMANTLE UI ui: hyper-block-feature-compare-modern",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-block-feature-compare-modern.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperBlockFeatureCompareModern\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperBlockFeatureCompareModern({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl transition-all ${\"border border-teal-500/30 bg-teal-500/5 shadow-xs\"} ${className}`}>\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-xl\">📊</span>\n        <div>\n          <div className=\"text-sm font-bold text-foreground\">Spec Matrix Comparison</div>\n          <div className=\"text-xs text-muted-foreground\">Modern Gradient Style Block</div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperBlockFeatureCompareModern;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-block-feature-compare-modern.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-block-feature-compare-modern"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

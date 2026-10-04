@@ -1,0 +1,27 @@
+{
+  "name": "motion-ping-status-sunset",
+  "type": "registry:ui",
+  "title": "Motion Ping Status Sunset",
+  "description": "AMANTLE UI ui: motion-ping-status-sunset",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-ping-status-sunset.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MotionPingStatusSunset\n * @source https://reactbits.dev\n * @author David Hckh\n * @license MIT\n */\nexport function MotionPingStatusSunset({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`p-4 rounded-2xl border ${\"border-orange-500/30\"} bg-gradient-to-br ${\"from-orange-500/20 to-rose-500/20\"} transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${className}`}\n    >\n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xl\">🟢</span>\n        <span className={`text-xs font-bold ${\"text-orange-400\"}`}>Liveness Ping Indicator</span>\n      </div>\n      <div className=\"text-[11px] text-muted-foreground mt-2 flex items-center justify-between\">\n        <span>Sunset Flare Scheme</span>\n        <span className=\"font-mono text-[10px]\">{hovered ? \"Active Motion ⚡\" : \"Damped Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MotionPingStatusSunset;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-ping-status-sunset.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-ping-status-sunset"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "David Hckh",
+    "license": "MIT"
+  }
+}

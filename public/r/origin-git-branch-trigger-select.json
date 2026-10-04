@@ -1,0 +1,27 @@
+{
+  "name": "origin-git-branch-trigger-select",
+  "type": "registry:ui",
+  "title": "Origin Git Branch Trigger Select",
+  "description": "AMANTLE UI ui: origin-git-branch-trigger-select",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-git-branch-trigger-select.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginGitBranchTriggerSelect\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginGitBranchTriggerSelect({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"flex items-center justify-between px-3 py-1.5 rounded-lg border border-border bg-card text-xs font-medium min-w-[140px]\">\n        <span className=\"flex items-center gap-1.5\"><span>🌿</span><span>VCS Branch</span></span>\n        <span className=\"text-[10px] text-muted-foreground\">▼</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginGitBranchTriggerSelect;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-git-branch-trigger-select.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-git-branch-trigger-select"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "tremor-nps-score-mini-histogram",
+  "type": "registry:ui",
+  "title": "Tremor Nps Score Mini Histogram",
+  "description": "AMANTLE UI ui: tremor-nps-score-mini-histogram",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-nps-score-mini-histogram.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorNpsScoreMiniHistogram\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorNpsScoreMiniHistogram({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"flex items-end justify-between gap-1.5 h-10 w-full px-1\">\n        <div className=\"w-3 bg-muted rounded-t h-[40%]\" />\n        <div className=\"w-3 bg-muted rounded-t h-[65%]\" />\n        <div className=\"w-3 bg-indigo-500/50 rounded-t h-[50%]\" />\n        <div className=\"w-3 bg-indigo-500/70 rounded-t h-[80%]\" />\n        <div className=\"w-3 bg-indigo-500 rounded-t h-[95%]\" />\n        <div className=\"w-3 bg-emerald-500 rounded-t h-[100%]\" />\n      </div>\n    </div>\n  );\n}\nexport default TremorNpsScoreMiniHistogram;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-nps-score-mini-histogram.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-nps-score-mini-histogram"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

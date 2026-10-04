@@ -1,0 +1,27 @@
+{
+  "name": "hover-gravity-button-minimal",
+  "type": "registry:ui",
+  "title": "Hover Gravity Button Minimal",
+  "description": "AMANTLE UI ui: hover-gravity-button-minimal",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-gravity-button-minimal.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverGravityButtonMinimal\n * @source https://hover.dev\n * @author Tom Is Loading\n * @license MIT\n */\nexport function HoverGravityButtonMinimal({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setActive(true)}\n      onMouseLeave={() => setActive(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${\"border-border bg-card text-foreground\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">🪐</span>\n        <span className=\"text-[10px] font-mono uppercase font-bold tracking-wider\">Clean Minimal</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-2\">Gravity Attraction Trigger</div>\n      <div className=\"text-xs text-muted-foreground mt-1 flex justify-between\">\n        <span>Hover.dev Physics</span>\n        <span className=\"font-mono text-[10px]\">{active ? \"Engaged ⚡\" : \"Damped\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default HoverGravityButtonMinimal;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-gravity-button-minimal.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-gravity-button-minimal"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Tom Is Loading",
+    "license": "MIT"
+  }
+}

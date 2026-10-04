@@ -1,0 +1,27 @@
+{
+  "name": "tremor-bandwidth-load-delta-badge",
+  "type": "registry:ui",
+  "title": "Tremor Bandwidth Load Delta Badge",
+  "description": "AMANTLE UI ui: tremor-bandwidth-load-delta-badge",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-bandwidth-load-delta-badge.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorBandwidthLoadDeltaBadge\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorBandwidthLoadDeltaBadge({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xs font-semibold text-foreground\">Edge Throughput</span>\n        <span className=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20\">\n          <span>↓</span>\n          <span>+24.0%</span>\n        </span>\n      </div>\n    </div>\n  );\n}\nexport default TremorBandwidthLoadDeltaBadge;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-bandwidth-load-delta-badge.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-bandwidth-load-delta-badge"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

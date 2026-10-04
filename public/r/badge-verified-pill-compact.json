@@ -1,0 +1,27 @@
+{
+  "name": "badge-verified-pill-compact",
+  "type": "registry:ui",
+  "title": "Badge Verified Pill Compact",
+  "description": "AMANTLE UI ui: badge-verified-pill-compact",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-verified-pill-compact.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BadgeVerifiedPillCompact\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function BadgeVerifiedPillCompact({\n  text = \"Cryptographically Verified\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-card/80 backdrop-blur-sm ${className} text-emerald-500 border-emerald-500/30`}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 bg-emerald-500 `} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 bg-emerald-500`} />\n      </span>\n      <span className=\"font-mono text-[11px] font-semibold\">{text}</span>\n    </span>\n  );\n}\nexport default BadgeVerifiedPillCompact;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-verified-pill-compact.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-verified-pill-compact"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

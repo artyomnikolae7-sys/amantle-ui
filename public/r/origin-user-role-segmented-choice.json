@@ -1,0 +1,27 @@
+{
+  "name": "origin-user-role-segmented-choice",
+  "type": "registry:ui",
+  "title": "Origin User Role Segmented Choice",
+  "description": "AMANTLE UI ui: origin-user-role-segmented-choice",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-user-role-segmented-choice.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginUserRoleSegmentedChoice\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginUserRoleSegmentedChoice({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex p-1 rounded-xl bg-muted text-xs font-semibold\">\n        <button className=\"px-2.5 py-1 rounded-lg bg-card text-foreground shadow-xs\">Default</button>\n        <button className=\"px-2.5 py-1 rounded-lg text-muted-foreground hover:text-foreground\">Custom</button>\n      </div>\n    </div>\n  );\n}\nexport default OriginUserRoleSegmentedChoice;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-user-role-segmented-choice.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-user-role-segmented-choice"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cult-keyframe-track-slider-scrub",
+  "type": "registry:ui",
+  "title": "Cult Keyframe Track Slider Scrub",
+  "description": "AMANTLE UI ui: cult-keyframe-track-slider-scrub",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-keyframe-track-slider-scrub.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultKeyframeTrackSliderScrub\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultKeyframeTrackSliderScrub({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"space-y-1.5 w-full\">\n        <div className=\"flex justify-between text-xs\">\n          <span className=\"font-semibold text-muted-foreground\">Interpolation Spline</span>\n          <span className=\"font-mono text-[11px] text-rose-500\">00:42.18</span>\n        </div>\n        <div className=\"w-full bg-muted h-1.5 rounded-full relative overflow-hidden\">\n          <div className=\"bg-rose-500 h-full w-[42%]\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default CultKeyframeTrackSliderScrub;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-keyframe-track-slider-scrub.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-keyframe-track-slider-scrub"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

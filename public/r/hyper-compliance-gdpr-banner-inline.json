@@ -1,0 +1,27 @@
+{
+  "name": "hyper-compliance-gdpr-banner-inline",
+  "type": "registry:ui",
+  "title": "Hyper Compliance Gdpr Banner Inline",
+  "description": "AMANTLE UI ui: hyper-compliance-gdpr-banner-inline",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-compliance-gdpr-banner-inline.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperComplianceGdprBannerInline\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperComplianceGdprBannerInline({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"flex items-center justify-between p-3 rounded-xl bg-secondary/50 border border-border gap-4\">\n        <div className=\"flex items-center gap-2\">\n          <span>🔒</span>\n          <span className=\"text-xs font-semibold\">Privacy Perimeter</span>\n        </div>\n        <button className=\"text-[11px] font-bold text-teal-600 hover:underline\">Explore →</button>\n      </div>\n    </div>\n  );\n}\nexport default HyperComplianceGdprBannerInline;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-compliance-gdpr-banner-inline.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-compliance-gdpr-banner-inline"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

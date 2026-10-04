@@ -1,0 +1,27 @@
+{
+  "name": "tremor-p99-latency-summary-stat",
+  "type": "registry:ui",
+  "title": "Tremor P99 Latency Summary Stat",
+  "description": "AMANTLE UI ui: tremor-p99-latency-summary-stat",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-p99-latency-summary-stat.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorP99LatencySummaryStat\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorP99LatencySummaryStat({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"text-center p-2\">\n        <div className=\"text-2xl font-black tracking-tight text-foreground\">ms18.4</div>\n        <div className=\"text-[11px] font-medium text-muted-foreground mt-0.5\">P99 Response Tail</div>\n      </div>\n    </div>\n  );\n}\nexport default TremorP99LatencySummaryStat;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-p99-latency-summary-stat.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-p99-latency-summary-stat"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

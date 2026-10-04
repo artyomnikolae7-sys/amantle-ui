@@ -1,0 +1,27 @@
+{
+  "name": "badge-enterprise-pulse",
+  "type": "registry:ui",
+  "title": "Badge Enterprise Pulse",
+  "description": "AMANTLE UI ui: badge-enterprise-pulse",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-enterprise-pulse.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BadgeEnterprisePulse\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function BadgeEnterprisePulse({\n  text = \"Enterprise Security\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-card/80 backdrop-blur-sm ${className} text-blue-500 border-blue-500/30`}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 bg-blue-500 animate-pulse`} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 bg-blue-500`} />\n      </span>\n      <span className=\"font-mono text-[11px] font-semibold\">{text}</span>\n    </span>\n  );\n}\nexport default BadgeEnterprisePulse;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-enterprise-pulse.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-enterprise-pulse"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

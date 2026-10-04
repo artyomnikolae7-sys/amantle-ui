@@ -1,0 +1,27 @@
+{
+  "name": "list-db-backup-timeline-node",
+  "type": "registry:ui",
+  "title": "List Db Backup Timeline Node",
+  "description": "AMANTLE UI ui: list-db-backup-timeline-node",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/list-db-backup-timeline-node.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ListDbBackupTimelineNode\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function ListDbBackupTimelineNode({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`flex items-center justify-between p-3 rounded-xl border border-border/60 bg-card hover:bg-muted/30 transition-colors w-full max-w-sm ${className}`}>\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-base\">💾</span>\n        <div>\n          <p className=\"text-xs font-semibold text-foreground\">Postgres Snapshot Created</p>\n          <p className=\"text-[10px] text-muted-foreground font-mono\">1.42 GB</p>\n        </div>\n      </div>\n      <span className=\"text-[10px] px-2 py-0.5 rounded-full bg-muted font-mono text-muted-foreground\">\n        Timeline Node\n      </span>\n    </div>\n  );\n}\nexport default ListDbBackupTimelineNode;\n",
+      "type": "registry:ui",
+      "target": "components/ui/list-db-backup-timeline-node.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "list-db-backup-timeline-node"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

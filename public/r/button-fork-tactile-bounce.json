@@ -1,0 +1,27 @@
+{
+  "name": "button-fork-tactile-bounce",
+  "type": "registry:ui",
+  "title": "Button Fork Tactile Bounce",
+  "description": "AMANTLE UI ui: button-fork-tactile-bounce",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-fork-tactile-bounce.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ButtonForkTactileBounce\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function ButtonForkTactileBounce({\n  children = \"Fork Component Registry\",\n  onClick,\n  className = \"\",\n}: {\n  children?: React.ReactNode;\n  onClick?: () => void;\n  className?: string;\n}) {\n  return (\n    <button\n      onClick={onClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-primary text-primary-foreground shadow-sm hover:opacity-95 transition-transform duration-150 active:scale-90 ${className}`}\n    >\n      <span>🍴</span>\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonForkTactileBounce;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-fork-tactile-bounce.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-fork-tactile-bounce"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

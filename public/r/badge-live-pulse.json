@@ -1,0 +1,27 @@
+{
+  "name": "badge-live-pulse",
+  "type": "registry:ui",
+  "title": "Badge Live Pulse",
+  "description": "AMANTLE UI ui: badge-live-pulse",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-live-pulse.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BadgeLivePulse\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function BadgeLivePulse({\n  text = \"Live Broadcast\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border bg-card/80 backdrop-blur-sm ${className} text-rose-500 border-rose-500/30`}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 bg-rose-500 animate-pulse`} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 bg-rose-500`} />\n      </span>\n      <span className=\"font-mono text-[11px] font-semibold\">{text}</span>\n    </span>\n  );\n}\nexport default BadgeLivePulse;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-live-pulse.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-live-pulse"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

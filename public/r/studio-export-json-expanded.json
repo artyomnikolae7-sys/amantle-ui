@@ -1,0 +1,27 @@
+{
+  "name": "studio-export-json-expanded",
+  "type": "registry:ui",
+  "title": "Studio Export Json Expanded",
+  "description": "AMANTLE UI ui: studio-export-json-expanded",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/studio-export-json-expanded.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component StudioExportJsonExpanded\n * @source https://shadcnstudio.dev\n * @author Shadcn Studio Team\n * @license MIT\n */\nexport function StudioExportJsonExpanded({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [copied, setCopied] = useState(false);\n\n  const handleAction = () => {\n    setCopied(true);\n    setTimeout(() => setCopied(false), 1500);\n  };\n\n  return (\n    <div className={`p-3.5 rounded-xl transition-all ${\"border border-border bg-card p-5\"} ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-base\">📦</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">Registry Manifest Trigger</div>\n            <div className=\"text-[10px] text-muted-foreground\">Expanded Detail Mode</div>\n          </div>\n        </div>\n        <button\n          onClick={handleAction}\n          className=\"px-2.5 py-1 rounded-lg bg-secondary text-secondary-foreground text-[11px] font-semibold hover:bg-secondary/80 active:scale-95 transition-all\"\n        >\n          {copied ? \"Done ✓\" : \"Inspect\"}\n        </button>\n      </div>\n    </div>\n  );\n}\nexport default StudioExportJsonExpanded;\n",
+      "type": "registry:ui",
+      "target": "components/ui/studio-export-json-expanded.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "studio-export-json-expanded"
+  ],
+  "meta": {
+    "source": "https://shadcnstudio.dev",
+    "author": "Shadcn Studio Team",
+    "license": "MIT"
+  }
+}

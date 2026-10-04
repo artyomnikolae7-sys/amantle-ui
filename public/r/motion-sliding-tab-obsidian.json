@@ -1,0 +1,27 @@
+{
+  "name": "motion-sliding-tab-obsidian",
+  "type": "registry:ui",
+  "title": "Motion Sliding Tab Obsidian",
+  "description": "AMANTLE UI ui: motion-sliding-tab-obsidian",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-sliding-tab-obsidian.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MotionSlidingTabObsidian\n * @source https://reactbits.dev\n * @author David Hckh\n * @license MIT\n */\nexport function MotionSlidingTabObsidian({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`p-4 rounded-2xl border ${\"border-neutral-700/40\"} bg-gradient-to-br ${\"from-neutral-800/40 to-neutral-900/60\"} transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${className}`}\n    >\n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xl\">💊</span>\n        <span className={`text-xs font-bold ${\"text-neutral-300\"}`}>Gliding Active Pill</span>\n      </div>\n      <div className=\"text-[11px] text-muted-foreground mt-2 flex items-center justify-between\">\n        <span>Deep Obsidian Scheme</span>\n        <span className=\"font-mono text-[10px]\">{hovered ? \"Active Motion ⚡\" : \"Damped Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MotionSlidingTabObsidian;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-sliding-tab-obsidian.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-sliding-tab-obsidian"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "David Hckh",
+    "license": "MIT"
+  }
+}

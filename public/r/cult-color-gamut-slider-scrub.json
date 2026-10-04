@@ -1,0 +1,27 @@
+{
+  "name": "cult-color-gamut-slider-scrub",
+  "type": "registry:ui",
+  "title": "Cult Color Gamut Slider Scrub",
+  "description": "AMANTLE UI ui: cult-color-gamut-slider-scrub",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-color-gamut-slider-scrub.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultColorGamutSliderScrub\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultColorGamutSliderScrub({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"space-y-1.5 w-full\">\n        <div className=\"flex justify-between text-xs\">\n          <span className=\"font-semibold text-muted-foreground\">Display P3 Gamut</span>\n          <span className=\"font-mono text-[11px] text-rose-500\">00:42.18</span>\n        </div>\n        <div className=\"w-full bg-muted h-1.5 rounded-full relative overflow-hidden\">\n          <div className=\"bg-rose-500 h-full w-[42%]\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default CultColorGamutSliderScrub;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-color-gamut-slider-scrub.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-color-gamut-slider-scrub"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

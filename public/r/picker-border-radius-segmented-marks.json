@@ -1,0 +1,27 @@
+{
+  "name": "picker-border-radius-segmented-marks",
+  "type": "registry:ui",
+  "title": "Picker Border Radius Segmented Marks",
+  "description": "AMANTLE UI ui: picker-border-radius-segmented-marks",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/picker-border-radius-segmented-marks.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component PickerBorderRadiusSegmentedMarks\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function PickerBorderRadiusSegmentedMarks({ className = \"\" }: { className?: string }) {\n  const [val, setVal] = useState(16);\n\n  return (\n    <div className={`p-3 rounded-xl border border-border/60 bg-card/60 w-full max-w-xs space-y-2 ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-medium text-foreground\">Corner Curvature</span>\n        <span className=\"font-mono text-primary font-bold\">{val}px</span>\n      </div>\n      <input\n        type=\"range\"\n        min=\"0\"\n        max=\"32\"\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"w-full accent-primary h-1.5 bg-muted rounded-lg cursor-pointer\"\n      />\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono\">\n        <span>0px</span>\n        <span>32px</span>\n      </div>\n    </div>\n  );\n}\nexport default PickerBorderRadiusSegmentedMarks;\n",
+      "type": "registry:ui",
+      "target": "components/ui/picker-border-radius-segmented-marks.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "picker-border-radius-segmented-marks"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

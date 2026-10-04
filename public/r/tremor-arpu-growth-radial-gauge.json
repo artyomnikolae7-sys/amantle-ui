@@ -1,0 +1,27 @@
+{
+  "name": "tremor-arpu-growth-radial-gauge",
+  "type": "registry:ui",
+  "title": "Tremor Arpu Growth Radial Gauge",
+  "description": "AMANTLE UI ui: tremor-arpu-growth-radial-gauge",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-arpu-growth-radial-gauge.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorArpuGrowthRadialGauge\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorArpuGrowthRadialGauge({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"flex items-center gap-3\">\n        <div className=\"relative w-11 h-11 flex items-center justify-center\">\n          <svg className=\"w-full h-full -rotate-90\" viewBox=\"0 0 36 36\">\n            <circle cx=\"18\" cy=\"18\" r=\"14\" fill=\"none\" className=\"stroke-muted\" strokeWidth=\"3\" />\n            <circle cx=\"18\" cy=\"18\" r=\"14\" fill=\"none\" className=\"stroke-indigo-500\" strokeWidth=\"3\" strokeDasharray=\"88\" strokeDashoffset=\"22\" strokeLinecap=\"round\" />\n          </svg>\n          <span className=\"absolute text-[10px] font-bold\">75%</span>\n        </div>\n        <div>\n          <div className=\"text-xs font-medium text-muted-foreground\">ARPU Global</div>\n          <div className=\"text-sm font-bold text-foreground\">$84.50</div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorArpuGrowthRadialGauge;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-arpu-growth-radial-gauge.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-arpu-growth-radial-gauge"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

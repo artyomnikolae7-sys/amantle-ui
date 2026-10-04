@@ -1,0 +1,27 @@
+{
+  "name": "ai-prompt-composer-glass",
+  "type": "registry:ui",
+  "title": "Ai Prompt Composer Glass",
+  "description": "AMANTLE UI ui: ai-prompt-composer-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/ai-prompt-composer-glass.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AiPromptComposerGlass\n * @source https://21st.dev\n * @author 21st.dev / Kokonut\n * @license MIT\n */\nexport function AiPromptComposerGlass({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div className={`p-3 rounded-2xl border border-border/60 bg-card/40 backdrop-blur-md ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-base\">✨</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">Agent Prompt Composer</div>\n            <div className=\"text-[10px] text-muted-foreground\">Multi-line prompt input with context attachments</div>\n          </div>\n        </div>\n        <button\n          onClick={() => setActive(!active)}\n          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all active:scale-95 ${\n            active\n              ? \"bg-violet-600 text-white shadow-xs\"\n              : \"bg-secondary text-secondary-foreground hover:bg-secondary/80\"\n          }`}\n        >\n          {active ? \"Active ✓\" : \"Enable\"}\n        </button>\n      </div>\n    </div>\n  );\n}\nexport default AiPromptComposerGlass;\n",
+      "type": "registry:ui",
+      "target": "components/ui/ai-prompt-composer-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "ai-prompt-composer-glass"
+  ],
+  "meta": {
+    "source": "https://21st.dev",
+    "author": "21st.dev / Kokonut",
+    "license": "MIT"
+  }
+}

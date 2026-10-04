@@ -1,0 +1,27 @@
+{
+  "name": "motion-chrono-scroller",
+  "type": "registry:ui",
+  "title": "Motion Chrono Scroller",
+  "description": "AMANTLE UI ui: motion-chrono-scroller",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-chrono-scroller.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component MotionChronoScroller\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function MotionChronoScroller({\n  text = \"CHRONOS METRONOME\",\n  className = \"\",\n}: {\n  text?: string;\n  className?: string;\n}) {\n  return (\n    <div className={`inline-block font-black text-xl tracking-tight uppercase select-none ${className}`}>\n      <span className=\"bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent hover:tracking-wider transition-all duration-300\">\n        {text}\n      </span>\n      <span className=\"block text-[9px] font-mono text-muted-foreground font-normal tracking-normal lowercase\">\n        High FPS Engine\n      </span>\n    </div>\n  );\n}\nexport default MotionChronoScroller;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-chrono-scroller.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-chrono-scroller"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

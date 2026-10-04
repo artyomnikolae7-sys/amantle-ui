@@ -1,0 +1,27 @@
+{
+  "name": "motion-ping-status-amethyst",
+  "type": "registry:ui",
+  "title": "Motion Ping Status Amethyst",
+  "description": "AMANTLE UI ui: motion-ping-status-amethyst",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-ping-status-amethyst.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MotionPingStatusAmethyst\n * @source https://reactbits.dev\n * @author David Hckh\n * @license MIT\n */\nexport function MotionPingStatusAmethyst({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`p-4 rounded-2xl border ${\"border-purple-500/30\"} bg-gradient-to-br ${\"from-purple-600/20 to-indigo-500/20\"} transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${className}`}\n    >\n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xl\">🟢</span>\n        <span className={`text-xs font-bold ${\"text-purple-400\"}`}>Liveness Ping Indicator</span>\n      </div>\n      <div className=\"text-[11px] text-muted-foreground mt-2 flex items-center justify-between\">\n        <span>Amethyst Pulse Scheme</span>\n        <span className=\"font-mono text-[10px]\">{hovered ? \"Active Motion ⚡\" : \"Damped Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MotionPingStatusAmethyst;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-ping-status-amethyst.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-ping-status-amethyst"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "David Hckh",
+    "license": "MIT"
+  }
+}

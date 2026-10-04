@@ -1,0 +1,27 @@
+{
+  "name": "origin-device-type-trigger-select",
+  "type": "registry:ui",
+  "title": "Origin Device Type Trigger Select",
+  "description": "AMANTLE UI ui: origin-device-type-trigger-select",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-device-type-trigger-select.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginDeviceTypeTriggerSelect\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function OriginDeviceTypeTriggerSelect({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"flex items-center justify-between px-3 py-1.5 rounded-lg border border-border bg-card text-xs font-medium min-w-[140px]\">\n        <span className=\"flex items-center gap-1.5\"><span>💻</span><span>Client Engine</span></span>\n        <span className=\"text-[10px] text-muted-foreground\">▼</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginDeviceTypeTriggerSelect;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-device-type-trigger-select.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-device-type-trigger-select"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

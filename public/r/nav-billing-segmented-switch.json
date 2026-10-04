@@ -1,0 +1,27 @@
+{
+  "name": "nav-billing-segmented-switch",
+  "type": "registry:ui",
+  "title": "Nav Billing Segmented Switch",
+  "description": "AMANTLE UI ui: nav-billing-segmented-switch",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/nav-billing-segmented-switch.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component NavBillingSegmentedSwitch\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function NavBillingSegmentedSwitch({ className = \"\" }: { className?: string }) {\n  const options = [\"Monthly\",\"Annual (-20%)\"];\n  const [active, setActive] = useState(options[0]);\n\n  return (\n    <div className={`inline-flex items-center gap-1 p-1 rounded-xl bg-muted/50 border border-border/60 max-w-fit ${className}`}>\n      {options.map((opt) => (\n        <button\n          key={opt}\n          onClick={() => setActive(opt)}\n          className={`px-3 py-1 rounded-lg text-xs font-medium transition-all duration-150 active:scale-95 ${\n            active === opt\n              ? \"bg-card text-foreground font-semibold shadow-xs border border-border/40\"\n              : \"text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {opt}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport default NavBillingSegmentedSwitch;\n",
+      "type": "registry:ui",
+      "target": "components/ui/nav-billing-segmented-switch.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "nav-billing-segmented-switch"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

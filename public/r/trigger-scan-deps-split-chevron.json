@@ -1,0 +1,27 @@
+{
+  "name": "trigger-scan-deps-split-chevron",
+  "type": "registry:ui",
+  "title": "Trigger Scan Deps Split Chevron",
+  "description": "AMANTLE UI ui: trigger-scan-deps-split-chevron",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/trigger-scan-deps-split-chevron.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component TriggerScanDepsSplitChevron\n * @source https://magicui.design\n * @author Magic UI Team\n * @license MIT\n */\nexport function TriggerScanDepsSplitChevron({ className = \"\" }: { className?: string }) {\n  const [done, setDone] = useState(false);\n\n  const handleClick = () => {\n    setDone(true);\n    setTimeout(() => setDone(false), 2000);\n  };\n\n  return (\n    <button\n      onClick={handleClick}\n      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 active:scale-95 ${\n        done\n          ? \"bg-emerald-500 text-white shadow-md\"\n          : \"bg-primary text-primary-foreground hover:opacity-95 shadow-sm\"\n      } ${className}`}\n    >\n      <span>🛡️</span>\n      <span>{done ? \"Completed ✓\" : \"Scan Security Advisories\"}</span>\n    </button>\n  );\n}\nexport default TriggerScanDepsSplitChevron;\n",
+      "type": "registry:ui",
+      "target": "components/ui/trigger-scan-deps-split-chevron.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "trigger-scan-deps-split-chevron"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI Team",
+    "license": "MIT"
+  }
+}

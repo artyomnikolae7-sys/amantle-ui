@@ -1,0 +1,27 @@
+{
+  "name": "input-file-drop-bordered",
+  "type": "registry:ui",
+  "title": "Input File Drop Bordered",
+  "description": "AMANTLE UI ui: input-file-drop-bordered",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-file-drop-bordered.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component InputFileDropBordered\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function InputFileDropBordered({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [val, setVal] = useState(\"\");\n\n  return (\n    <div className={`w-full max-w-sm space-y-1.5 ${className}`}>\n      <label className=\"text-xs font-semibold text-foreground flex items-center gap-1.5\">\n        <span>📁</span>\n        <span>Chunked File Target</span>\n      </label>\n      <div className={`flex items-center px-3 py-2 rounded-xl border bg-card transition-all ${\"border-2 border-foreground/20\"}`}>\n        <input\n          type=\"text\"\n          value={val}\n          onChange={(e) => setVal(e.target.value)}\n          placeholder=\"Drop PDF/ZIP here\"\n          className=\"w-full bg-transparent text-xs font-medium focus:outline-hidden placeholder:text-muted-foreground/60\"\n        />\n        <span className=\"text-[10px] font-bold text-muted-foreground ml-2 uppercase\">bordered</span>\n      </div>\n    </div>\n  );\n}\nexport default InputFileDropBordered;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-file-drop-bordered.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-file-drop-bordered"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

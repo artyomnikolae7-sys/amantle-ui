@@ -1,0 +1,27 @@
+{
+  "name": "magic-shine-button-cyan",
+  "type": "registry:ui",
+  "title": "Magic Shine Button Cyan",
+  "description": "AMANTLE UI ui: magic-shine-button-cyan",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-shine-button-cyan.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicShineButtonCyan\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicShineButtonCyan({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-cyan-400 border-cyan-500/30 bg-cyan-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">🔘</span>\n        <span className=\"text-xs font-bold text-foreground\">Specular Shine Trigger</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Electric Cyan</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicShineButtonCyan;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-shine-button-cyan.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-shine-button-cyan"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

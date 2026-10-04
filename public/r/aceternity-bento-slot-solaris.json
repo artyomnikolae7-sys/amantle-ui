@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-bento-slot-solaris",
+  "type": "registry:ui",
+  "title": "Aceternity Bento Slot Solaris",
+  "description": "AMANTLE UI ui: aceternity-bento-slot-solaris",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-bento-slot-solaris.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityBentoSlotSolaris\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityBentoSlotSolaris({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-amber-950/20 border-amber-500/30 text-amber-400\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">🍱</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Solaris Flare</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Glowing Bento Slot</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityBentoSlotSolaris;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-bento-slot-solaris.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-bento-slot-solaris"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

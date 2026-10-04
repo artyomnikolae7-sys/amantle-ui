@@ -1,0 +1,27 @@
+{
+  "name": "hyper-compliance-gdpr-bento-tile",
+  "type": "registry:ui",
+  "title": "Hyper Compliance Gdpr Bento Tile",
+  "description": "AMANTLE UI ui: hyper-compliance-gdpr-bento-tile",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-compliance-gdpr-bento-tile.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperComplianceGdprBentoTile\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperComplianceGdprBentoTile({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"group relative p-5 rounded-2xl border border-border bg-card/50 overflow-hidden hover:bg-card/80 transition-all\">\n        <div className=\"absolute top-0 right-0 w-24 h-24 bg-teal-500/10 rounded-full blur-xl group-hover:scale-125 transition-transform\" />\n        <span className=\"text-xs font-bold text-teal-500 uppercase tracking-widest\">Cryptographic</span>\n        <div className=\"text-base font-bold text-foreground mt-1\">Privacy Perimeter</div>\n      </div>\n    </div>\n  );\n}\nexport default HyperComplianceGdprBentoTile;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-compliance-gdpr-bento-tile.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-compliance-gdpr-bento-tile"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

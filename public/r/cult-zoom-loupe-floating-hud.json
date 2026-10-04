@@ -1,0 +1,27 @@
+{
+  "name": "cult-zoom-loupe-floating-hud",
+  "type": "registry:ui",
+  "title": "Cult Zoom Loupe Floating Hud",
+  "description": "AMANTLE UI ui: cult-zoom-loupe-floating-hud",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-zoom-loupe-floating-hud.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultZoomLoupeFloatingHud\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultZoomLoupeFloatingHud({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 backdrop-blur-md shadow-xs\">\n        <span>🔍</span>\n        <span className=\"text-xs font-semibold text-rose-500\">Micro Pixel Loupe</span>\n        <span className=\"w-2 h-2 rounded-full bg-rose-500 animate-pulse\" />\n      </div>\n    </div>\n  );\n}\nexport default CultZoomLoupeFloatingHud;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-zoom-loupe-floating-hud.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-zoom-loupe-floating-hud"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

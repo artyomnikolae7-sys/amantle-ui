@@ -1,0 +1,27 @@
+{
+  "name": "magic-marquee-ticker-rose",
+  "type": "registry:ui",
+  "title": "Magic Marquee Ticker Rose",
+  "description": "AMANTLE UI ui: magic-marquee-ticker-rose",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-marquee-ticker-rose.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicMarqueeTickerRose\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicMarqueeTickerRose({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-rose-400 border-rose-500/30 bg-rose-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">🎞️</span>\n        <span className=\"text-xs font-bold text-foreground\">Infinite Stream Marquee</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Rose Petal</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicMarqueeTickerRose;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-marquee-ticker-rose.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-marquee-ticker-rose"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "picker-scale-tooltip-slider",
+  "type": "registry:ui",
+  "title": "Picker Scale Tooltip Slider",
+  "description": "AMANTLE UI ui: picker-scale-tooltip-slider",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/picker-scale-tooltip-slider.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component PickerScaleTooltipSlider\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function PickerScaleTooltipSlider({ className = \"\" }: { className?: string }) {\n  const [val, setVal] = useState(2);\n\n  return (\n    <div className={`p-3 rounded-xl border border-border/60 bg-card/60 w-full max-w-xs space-y-2 ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-medium text-foreground\">Transform Zoom</span>\n        <span className=\"font-mono text-primary font-bold\">{val}x</span>\n      </div>\n      <input\n        type=\"range\"\n        min=\"1\"\n        max=\"4\"\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"w-full accent-primary h-1.5 bg-muted rounded-lg cursor-pointer\"\n      />\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono\">\n        <span>1x</span>\n        <span>4x</span>\n      </div>\n    </div>\n  );\n}\nexport default PickerScaleTooltipSlider;\n",
+      "type": "registry:ui",
+      "target": "components/ui/picker-scale-tooltip-slider.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "picker-scale-tooltip-slider"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

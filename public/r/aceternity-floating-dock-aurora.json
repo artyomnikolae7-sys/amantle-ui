@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-floating-dock-aurora",
+  "type": "registry:ui",
+  "title": "Aceternity Floating Dock Aurora",
+  "description": "AMANTLE UI ui: aceternity-floating-dock-aurora",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-floating-dock-aurora.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityFloatingDockAurora\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityFloatingDockAurora({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-emerald-950/20 border-emerald-500/30 text-emerald-400\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">⚓</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Polar Aurora</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Floating Spring Dock</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityFloatingDockAurora;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-floating-dock-aurora.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-floating-dock-aurora"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

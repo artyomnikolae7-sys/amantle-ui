@@ -1,0 +1,27 @@
+{
+  "name": "list-git-merge-status-indicator",
+  "type": "registry:ui",
+  "title": "List Git Merge Status Indicator",
+  "description": "AMANTLE UI ui: list-git-merge-status-indicator",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/list-git-merge-status-indicator.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ListGitMergeStatusIndicator\n * @source https://raw.tremor.so\n * @author Tremor Raw\n * @license MIT\n */\nexport function ListGitMergeStatusIndicator({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`flex items-center justify-between p-3 rounded-xl border border-border/60 bg-card hover:bg-muted/30 transition-colors w-full max-w-sm ${className}`}>\n      <div className=\"flex items-center gap-3\">\n        <span className=\"text-base\">🔀</span>\n        <div>\n          <p className=\"text-xs font-semibold text-foreground\">Pull Request #412 Merged</p>\n          <p className=\"text-[10px] text-muted-foreground font-mono\">artyomnikolae7</p>\n        </div>\n      </div>\n      <span className=\"text-[10px] px-2 py-0.5 rounded-full bg-muted font-mono text-muted-foreground\">\n        Status Indicator Card\n      </span>\n    </div>\n  );\n}\nexport default ListGitMergeStatusIndicator;\n",
+      "type": "registry:ui",
+      "target": "components/ui/list-git-merge-status-indicator.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "list-git-merge-status-indicator"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Raw",
+    "license": "MIT"
+  }
+}

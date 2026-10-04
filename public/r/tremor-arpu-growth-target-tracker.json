@@ -1,0 +1,27 @@
+{
+  "name": "tremor-arpu-growth-target-tracker",
+  "type": "registry:ui",
+  "title": "Tremor Arpu Growth Target Tracker",
+  "description": "AMANTLE UI ui: tremor-arpu-growth-target-tracker",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-arpu-growth-target-tracker.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorArpuGrowthTargetTracker\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorArpuGrowthTargetTracker({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"space-y-1 w-full\">\n        <div className=\"flex justify-between text-xs font-medium\">\n          <span className=\"text-muted-foreground\">ARPU Global</span>\n          <span className=\"text-emerald-500 font-bold\">92% Target</span>\n        </div>\n        <div className=\"w-full bg-secondary h-2 rounded-full overflow-hidden\">\n          <div className=\"bg-gradient-to-r from-indigo-500 to-emerald-400 h-full w-[92%] rounded-full\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorArpuGrowthTargetTracker;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-arpu-growth-target-tracker.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-arpu-growth-target-tracker"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hover-clip-text-emerald",
+  "type": "registry:ui",
+  "title": "Hover Clip Text Emerald",
+  "description": "AMANTLE UI ui: hover-clip-text-emerald",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-clip-text-emerald.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverClipTextEmerald\n * @source https://hover.dev\n * @author Tom Is Loading\n * @license MIT\n */\nexport function HoverClipTextEmerald({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setActive(true)}\n      onMouseLeave={() => setActive(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${\"border-emerald-500/40 bg-emerald-500/5 text-emerald-400\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">✂️</span>\n        <span className=\"text-[10px] font-mono uppercase font-bold tracking-wider\">Emerald Surge</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-2\">Slanted Geometry Reveal</div>\n      <div className=\"text-xs text-muted-foreground mt-1 flex justify-between\">\n        <span>Hover.dev Physics</span>\n        <span className=\"font-mono text-[10px]\">{active ? \"Engaged ⚡\" : \"Damped\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default HoverClipTextEmerald;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-clip-text-emerald.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-clip-text-emerald"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Tom Is Loading",
+    "license": "MIT"
+  }
+}

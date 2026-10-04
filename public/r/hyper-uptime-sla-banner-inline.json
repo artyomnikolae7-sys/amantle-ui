@@ -1,0 +1,27 @@
+{
+  "name": "hyper-uptime-sla-banner-inline",
+  "type": "registry:ui",
+  "title": "Hyper Uptime Sla Banner Inline",
+  "description": "AMANTLE UI ui: hyper-uptime-sla-banner-inline",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-uptime-sla-banner-inline.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperUptimeSlaBannerInline\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperUptimeSlaBannerInline({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"flex items-center justify-between p-3 rounded-xl bg-secondary/50 border border-border gap-4\">\n        <div className=\"flex items-center gap-2\">\n          <span>⚡</span>\n          <span className=\"text-xs font-semibold\">High Availability 99.99%</span>\n        </div>\n        <button className=\"text-[11px] font-bold text-teal-600 hover:underline\">Explore →</button>\n      </div>\n    </div>\n  );\n}\nexport default HyperUptimeSlaBannerInline;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-uptime-sla-banner-inline.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-uptime-sla-banner-inline"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cult-pro-handle-node-glass-frost",
+  "type": "registry:ui",
+  "title": "Cult Pro Handle Node Glass Frost",
+  "description": "AMANTLE UI ui: cult-pro-handle-node-glass-frost",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-pro-handle-node-glass-frost.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultProHandleNodeGlassFrost\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultProHandleNodeGlassFrost({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-3.5 rounded-xl transition-all ${\"border border-border/50 bg-card/40 backdrop-blur-md text-foreground\"} ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-lg\">〽️</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">Tangent Spline Vector</div>\n            <div className=\"text-[10px] text-muted-foreground\">Frosted Acrylic Interface</div>\n          </div>\n        </div>\n        <span className=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-secondary text-secondary-foreground\">PRO</span>\n      </div>\n    </div>\n  );\n}\nexport default CultProHandleNodeGlassFrost;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-pro-handle-node-glass-frost.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-pro-handle-node-glass-frost"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "picker-volume-level-tooltip-slider",
+  "type": "registry:ui",
+  "title": "Picker Volume Level Tooltip Slider",
+  "description": "AMANTLE UI ui: picker-volume-level-tooltip-slider",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/picker-volume-level-tooltip-slider.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component PickerVolumeLevelTooltipSlider\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function PickerVolumeLevelTooltipSlider({ className = \"\" }: { className?: string }) {\n  const [val, setVal] = useState(65);\n\n  return (\n    <div className={`p-3 rounded-xl border border-border/60 bg-card/60 w-full max-w-xs space-y-2 ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-medium text-foreground\">Sound Intensity</span>\n        <span className=\"font-mono text-primary font-bold\">{val}dB</span>\n      </div>\n      <input\n        type=\"range\"\n        min=\"0\"\n        max=\"100\"\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"w-full accent-primary h-1.5 bg-muted rounded-lg cursor-pointer\"\n      />\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono\">\n        <span>0dB</span>\n        <span>100dB</span>\n      </div>\n    </div>\n  );\n}\nexport default PickerVolumeLevelTooltipSlider;\n",
+      "type": "registry:ui",
+      "target": "components/ui/picker-volume-level-tooltip-slider.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "picker-volume-level-tooltip-slider"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}

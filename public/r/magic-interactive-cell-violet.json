@@ -1,0 +1,27 @@
+{
+  "name": "magic-interactive-cell-violet",
+  "type": "registry:ui",
+  "title": "Magic Interactive Cell Violet",
+  "description": "AMANTLE UI ui: magic-interactive-cell-violet",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magic-interactive-cell-violet.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagicInteractiveCellViolet\n * @source https://magicui.design\n * @author Dillion Verma\n * @license MIT\n */\nexport function MagicInteractiveCellViolet({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [shining, setShining] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setShining(true)}\n      onMouseLeave={() => setShining(false)}\n      className={`p-4 rounded-2xl border transition-all duration-300 relative overflow-hidden ${\"text-purple-400 border-purple-500/30 bg-purple-500/5\"} ${className}`}\n    >\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-lg\">🔳</span>\n        <span className=\"text-xs font-bold text-foreground\">Illuminated Grid Cell</span>\n      </div>\n      <div className=\"flex items-center justify-between text-[11px] text-muted-foreground mt-2\">\n        <span>Ultra Violet</span>\n        <span className=\"font-mono text-[10px]\">{shining ? \"Shining ✨\" : \"Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MagicInteractiveCellViolet;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magic-interactive-cell-violet.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magic-interactive-cell-violet"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Dillion Verma",
+    "license": "MIT"
+  }
+}

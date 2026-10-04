@@ -1,0 +1,27 @@
+{
+  "name": "cult-keyframe-track-dock-lens",
+  "type": "registry:ui",
+  "title": "Cult Keyframe Track Dock Lens",
+  "description": "AMANTLE UI ui: cult-keyframe-track-dock-lens",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/cult-keyframe-track-dock-lens.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CultKeyframeTrackDockLens\n * @source https://cult-ui.com\n * @author Cult UI Team\n * @license MIT\n */\nexport function CultKeyframeTrackDockLens({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`${className}`}>\n      \n      <div className=\"flex items-center gap-1.5 p-1 rounded-xl bg-card border border-border shadow-sm\">\n        <button className=\"p-2 rounded-lg hover:bg-rose-500/10 text-sm transition-transform active:scale-95\">📈</button>\n        <span className=\"text-xs font-medium px-1 text-foreground\">Interpolation Spline</span>\n      </div>\n    </div>\n  );\n}\nexport default CultKeyframeTrackDockLens;\n",
+      "type": "registry:ui",
+      "target": "components/ui/cult-keyframe-track-dock-lens.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "cult-keyframe-track-dock-lens"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI Team",
+    "license": "MIT"
+  }
+}

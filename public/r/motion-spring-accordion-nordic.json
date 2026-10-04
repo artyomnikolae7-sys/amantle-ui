@@ -1,0 +1,27 @@
+{
+  "name": "motion-spring-accordion-nordic",
+  "type": "registry:ui",
+  "title": "Motion Spring Accordion Nordic",
+  "description": "AMANTLE UI ui: motion-spring-accordion-nordic",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/motion-spring-accordion-nordic.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MotionSpringAccordionNordic\n * @source https://reactbits.dev\n * @author David Hckh\n * @license MIT\n */\nexport function MotionSpringAccordionNordic({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`p-4 rounded-2xl border ${\"border-cyan-500/20\"} bg-gradient-to-br ${\"from-cyan-900/20 to-slate-800/30\"} transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer ${className}`}\n    >\n      <div className=\"flex items-center justify-between gap-3\">\n        <span className=\"text-xl\">📂</span>\n        <span className={`text-xs font-bold ${\"text-cyan-400\"}`}>Damped Accordion Slice</span>\n      </div>\n      <div className=\"text-[11px] text-muted-foreground mt-2 flex items-center justify-between\">\n        <span>Nordic Glacier Scheme</span>\n        <span className=\"font-mono text-[10px]\">{hovered ? \"Active Motion ⚡\" : \"Damped Idle\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default MotionSpringAccordionNordic;\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-spring-accordion-nordic.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "motion-spring-accordion-nordic"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "David Hckh",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "tremor-cloud-spend-sparkline",
+  "type": "registry:ui",
+  "title": "Tremor Cloud Spend Sparkline",
+  "description": "AMANTLE UI ui: tremor-cloud-spend-sparkline",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-cloud-spend-sparkline.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorCloudSpendSparkline\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorCloudSpendSparkline({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"flex items-center justify-between gap-4\">\n        <div>\n          <span className=\"text-[10px] uppercase font-bold tracking-wider text-muted-foreground\">Fleet Compute Cost</span>\n          <div className=\"text-xl font-bold tracking-tight text-foreground\">$18,400</div>\n        </div>\n        <svg className=\"w-20 h-8 stroke-emerald-500 fill-emerald-500/10\" viewBox=\"0 0 100 40\">\n          <path d=\"M0,35 Q20,10 40,25 T70,12 T100,5\" fill=\"none\" strokeWidth=\"2.5\" strokeLinecap=\"round\" />\n        </svg>\n      </div>\n    </div>\n  );\n}\nexport default TremorCloudSpendSparkline;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-cloud-spend-sparkline.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-cloud-spend-sparkline"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

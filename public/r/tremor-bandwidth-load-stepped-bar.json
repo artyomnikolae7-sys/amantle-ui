@@ -1,0 +1,27 @@
+{
+  "name": "tremor-bandwidth-load-stepped-bar",
+  "type": "registry:ui",
+  "title": "Tremor Bandwidth Load Stepped Bar",
+  "description": "AMANTLE UI ui: tremor-bandwidth-load-stepped-bar",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-bandwidth-load-stepped-bar.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorBandwidthLoadSteppedBar\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorBandwidthLoadSteppedBar({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"space-y-1.5 w-full\">\n        <div className=\"flex justify-between text-xs\">\n          <span className=\"font-medium text-muted-foreground\">Edge Throughput</span>\n          <span className=\"font-bold text-foreground\">TB842.1</span>\n        </div>\n        <div className=\"grid grid-cols-6 gap-1 h-1.5\">\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500/30\" />\n          <div className=\"rounded-full bg-indigo-500/30\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorBandwidthLoadSteppedBar;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-bandwidth-load-stepped-bar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-bandwidth-load-stepped-bar"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

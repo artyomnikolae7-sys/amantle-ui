@@ -1,0 +1,27 @@
+{
+  "name": "hyper-cloud-mesh-stat-card",
+  "type": "registry:ui",
+  "title": "Hyper Cloud Mesh Stat Card",
+  "description": "AMANTLE UI ui: hyper-cloud-mesh-stat-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-cloud-mesh-stat-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperCloudMeshStatCard\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperCloudMeshStatCard({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`w-full max-w-sm ${className}`}>\n      \n      <div className=\"p-4 rounded-xl border border-border bg-card hover:border-teal-500/40 transition-colors\">\n        <div className=\"text-2xl\">🌐</div>\n        <div className=\"text-sm font-bold text-foreground mt-2\">Edge Distributed Nodes</div>\n        <div className=\"text-xs text-muted-foreground mt-0.5\">Engineered with 35 Regions precision.</div>\n      </div>\n    </div>\n  );\n}\nexport default HyperCloudMeshStatCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-cloud-mesh-stat-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-cloud-mesh-stat-card"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

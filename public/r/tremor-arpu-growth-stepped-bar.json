@@ -1,0 +1,27 @@
+{
+  "name": "tremor-arpu-growth-stepped-bar",
+  "type": "registry:ui",
+  "title": "Tremor Arpu Growth Stepped Bar",
+  "description": "AMANTLE UI ui: tremor-arpu-growth-stepped-bar",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-arpu-growth-stepped-bar.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorArpuGrowthSteppedBar\n * @source https://raw.tremor.so\n * @author Tremor Team\n * @license MIT\n */\nexport function TremorArpuGrowthSteppedBar({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-xs shadow-xs min-w-[200px] ${className}`}>\n      \n      <div className=\"space-y-1.5 w-full\">\n        <div className=\"flex justify-between text-xs\">\n          <span className=\"font-medium text-muted-foreground\">ARPU Global</span>\n          <span className=\"font-bold text-foreground\">$84.50</span>\n        </div>\n        <div className=\"grid grid-cols-6 gap-1 h-1.5\">\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500\" />\n          <div className=\"rounded-full bg-indigo-500/30\" />\n          <div className=\"rounded-full bg-indigo-500/30\" />\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default TremorArpuGrowthSteppedBar;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-arpu-growth-stepped-bar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-arpu-growth-stepped-bar"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor Team",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ai-stream-telemetry-matrix",
+  "type": "registry:ui",
+  "title": "Ai Stream Telemetry Matrix",
+  "description": "AMANTLE UI ui: ai-stream-telemetry-matrix",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/ai-stream-telemetry-matrix.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AiStreamTelemetryMatrix\n * @source https://21st.dev\n * @author 21st.dev / Kokonut\n * @license MIT\n */\nexport function AiStreamTelemetryMatrix({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div className={`p-3 rounded-xl border border-emerald-500/30 bg-card/90 ${className}`}>\n      <div className=\"flex items-center justify-between gap-3\">\n        <div className=\"flex items-center gap-2\">\n          <span className=\"text-base\">⏱️</span>\n          <div>\n            <div className=\"text-xs font-bold text-foreground\">TTFT Stream Monitor</div>\n            <div className=\"text-[10px] text-muted-foreground\">Real-time output velocity and token/sec badge</div>\n          </div>\n        </div>\n        <button\n          onClick={() => setActive(!active)}\n          className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all active:scale-95 ${\n            active\n              ? \"bg-violet-600 text-white shadow-xs\"\n              : \"bg-secondary text-secondary-foreground hover:bg-secondary/80\"\n          }`}\n        >\n          {active ? \"Active ✓\" : \"Enable\"}\n        </button>\n      </div>\n    </div>\n  );\n}\nexport default AiStreamTelemetryMatrix;\n",
+      "type": "registry:ui",
+      "target": "components/ui/ai-stream-telemetry-matrix.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "ai-stream-telemetry-matrix"
+  ],
+  "meta": {
+    "source": "https://21st.dev",
+    "author": "21st.dev / Kokonut",
+    "license": "MIT"
+  }
+}

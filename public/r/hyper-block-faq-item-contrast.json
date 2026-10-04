@@ -1,0 +1,27 @@
+{
+  "name": "hyper-block-faq-item-contrast",
+  "type": "registry:ui",
+  "title": "Hyper Block Faq Item Contrast",
+  "description": "AMANTLE UI ui: hyper-block-faq-item-contrast",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-block-faq-item-contrast.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperBlockFaqItemContrast\n * @source https://hyperui.dev\n * @author HyperUI / Float UI\n * @license MIT\n */\nexport function HyperBlockFaqItemContrast({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  return (\n    <div className={`p-4 rounded-2xl transition-all ${\"border-2 border-foreground/30 bg-card\"} ${className}`}>\n      <div className=\"flex items-center gap-2.5\">\n        <span className=\"text-xl\">❓</span>\n        <div>\n          <div className=\"text-sm font-bold text-foreground\">Expandable Accordion FAQ</div>\n          <div className=\"text-xs text-muted-foreground\">High Contrast Style Block</div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperBlockFaqItemContrast;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-block-faq-item-contrast.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-block-faq-item-contrast"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI / Float UI",
+    "license": "MIT"
+  }
+}

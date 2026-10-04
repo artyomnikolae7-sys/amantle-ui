@@ -1,0 +1,27 @@
+{
+  "name": "aceternity-directional-slide-titanium",
+  "type": "registry:ui",
+  "title": "Aceternity Directional Slide Titanium",
+  "description": "AMANTLE UI ui: aceternity-directional-slide-titanium",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aceternity-directional-slide-titanium.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component AceternityDirectionalSlideTitanium\n * @source https://ui.aceternity.com\n * @author Manu Arora\n * @license MIT\n */\nexport function AceternityDirectionalSlideTitanium({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [active, setActive] = useState(false);\n\n  return (\n    <div\n      onClick={() => setActive(!active)}\n      className={`p-4 rounded-2xl border backdrop-blur-md transition-all duration-300 cursor-pointer hover:shadow-lg active:scale-[0.98] ${\"bg-zinc-900/50 border-zinc-600/40 text-zinc-300\"} ${className}`}\n    >\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-xl\">🧭</span>\n        <span className=\"text-[10px] uppercase tracking-widest font-mono font-bold\">Titanium Alloy</span>\n      </div>\n      <div className=\"text-sm font-bold text-foreground mt-3\">Directional Hover Card</div>\n      <div className=\"text-xs text-muted-foreground mt-1\">High-fidelity ambient UI component.</div>\n    </div>\n  );\n}\nexport default AceternityDirectionalSlideTitanium;\n",
+      "type": "registry:ui",
+      "target": "components/ui/aceternity-directional-slide-titanium.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aceternity-directional-slide-titanium"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Manu Arora",
+    "license": "MIT"
+  }
+}

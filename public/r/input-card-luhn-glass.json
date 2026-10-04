@@ -1,0 +1,27 @@
+{
+  "name": "input-card-luhn-glass",
+  "type": "registry:ui",
+  "title": "Input Card Luhn Glass",
+  "description": "AMANTLE UI ui: input-card-luhn-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-card-luhn-glass.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component InputCardLuhnGlass\n * @source https://originui.com\n * @author Origin UI Team\n * @license MIT\n */\nexport function InputCardLuhnGlass({\n  className = \"\",\n}: {\n  className?: string;\n}) {\n  const [val, setVal] = useState(\"\");\n\n  return (\n    <div className={`w-full max-w-sm space-y-1.5 ${className}`}>\n      <label className=\"text-xs font-semibold text-foreground flex items-center gap-1.5\">\n        <span>💳</span>\n        <span>PCI Card Number</span>\n      </label>\n      <div className={`flex items-center px-3 py-2 rounded-xl border bg-card transition-all ${\"border-border/40 bg-card/40 backdrop-blur-sm\"}`}>\n        <input\n          type=\"text\"\n          value={val}\n          onChange={(e) => setVal(e.target.value)}\n          placeholder=\"4242 •••• •••• 4242\"\n          className=\"w-full bg-transparent text-xs font-medium focus:outline-hidden placeholder:text-muted-foreground/60\"\n        />\n        <span className=\"text-[10px] font-bold text-muted-foreground ml-2 uppercase\">glass</span>\n      </div>\n    </div>\n  );\n}\nexport default InputCardLuhnGlass;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-card-luhn-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-card-luhn-glass"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI Team",
+    "license": "MIT"
+  }
+}
