@@ -57,7 +57,7 @@ const CATEGORY_CONFIG: Record<
 
 const FAMILY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   MousePointerClick,
-  FormInput: MousePointerClick, // fallback safe
+  FormInput: MousePointerClick,
   LayoutTemplate,
   Compass,
   Type,
@@ -74,14 +74,321 @@ const FAMILY_ICONS: Record<string, React.ComponentType<{ className?: string }>> 
   FolderTree,
 };
 
+export type VirtualSidebarRow =
+  | {
+      type: "category";
+      id: string;
+      category: string;
+      label: string;
+      icon: React.ComponentType<{ className?: string }>;
+      count: number;
+      isCollapsed: boolean;
+      height: number;
+    }
+  | {
+      type: "family";
+      id: string;
+      category: string;
+      famId: string;
+      family: ComponentFamily;
+      count: number;
+      isCollapsed: boolean;
+      height: number;
+    }
+  | {
+      type: "item";
+      id: string;
+      category: string;
+      item: CatalogItemMeta;
+      isActive: boolean;
+      height: number;
+    };
+
+function findStartIndex(offsets: Float64Array, targetScrollTop: number): number {
+  let low = 0;
+  let high = offsets.length - 2;
+  let ans = 0;
+  while (low <= high) {
+    const mid = (low + high) >> 1;
+    if (offsets[mid + 1] > targetScrollTop) {
+      ans = mid;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return ans;
+}
+
+function findEndIndex(offsets: Float64Array, targetBottom: number): number {
+  let low = 0;
+  let high = offsets.length - 2;
+  let ans = offsets.length - 2;
+  while (low <= high) {
+    const mid = (low + high) >> 1;
+    if (offsets[mid] >= targetBottom) {
+      ans = mid;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return ans;
+}
+
+interface VirtualizedCatalogListProps {
+  visibleRows: VirtualSidebarRow[];
+  rowOffsets: Float64Array;
+  totalHeight: number;
+  activeItemName: string;
+  onToggleCategory: (cat: string) => void;
+  onToggleFamily: (famId: string) => void;
+  onItemClick: () => void;
+}
+
+function VirtualizedCatalogList({
+  visibleRows,
+  rowOffsets,
+  totalHeight,
+  activeItemName,
+  onToggleCategory,
+  onToggleFamily,
+  onItemClick,
+}: VirtualizedCatalogListProps) {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const [scrollTop, setScrollTop] = React.useState(0);
+  const [viewportHeight, setViewportHeight] = React.useState(600);
+
+  // Measure container height
+  React.useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    setViewportHeight(el.clientHeight || 600);
+
+    const ro = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect.height > 0) {
+          setViewportHeight(entry.contentRect.height);
+        }
+      }
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  // Handle scroll with requestAnimationFrame for 60fps smoothness
+  const rafId = React.useRef<number | null>(null);
+  const handleScroll = React.useCallback((e: React.UIEvent<HTMLDivElement>) => {
+    const newTop = e.currentTarget.scrollTop;
+    if (rafId.current !== null) {
+      cancelAnimationFrame(rafId.current);
+    }
+    rafId.current = requestAnimationFrame(() => {
+      setScrollTop(newTop);
+      rafId.current = null;
+    });
+  }, []);
+
+  React.useEffect(() => {
+    return () => {
+      if (rafId.current !== null) {
+        cancelAnimationFrame(rafId.current);
+      }
+    };
+  }, []);
+
+  // Bounds check when totalHeight shrinks (e.g., search/tab filter)
+  React.useEffect(() => {
+    if (containerRef.current && containerRef.current.scrollTop > totalHeight) {
+      containerRef.current.scrollTop = 0;
+      setScrollTop(0);
+    }
+  }, [totalHeight]);
+
+  // Smoothly center the active item into view on page load or navigation
+  const prevActiveName = React.useRef(activeItemName);
+  React.useEffect(() => {
+    if (!activeItemName) return;
+    const isNewActive = prevActiveName.current !== activeItemName;
+    prevActiveName.current = activeItemName;
+
+    if (containerRef.current && visibleRows.length > 0) {
+      const idx = visibleRows.findIndex(
+        (r) => r.type === "item" && r.item.name === activeItemName
+      );
+      if (idx !== -1 && rowOffsets.length > idx) {
+        const itemTop = rowOffsets[idx];
+        const vHeight = containerRef.current.clientHeight || 600;
+        const currentScroll = containerRef.current.scrollTop;
+        if (
+          isNewActive ||
+          itemTop < currentScroll ||
+          itemTop > currentScroll + vHeight - 40
+        ) {
+          containerRef.current.scrollTo({
+            top: Math.max(0, itemTop - vHeight / 2 + 14),
+            behavior: "smooth",
+          });
+        }
+      }
+    }
+  }, [activeItemName, visibleRows, rowOffsets]);
+
+  if (visibleRows.length === 0) {
+    return (
+      <div className="flex-1 min-h-0 flex items-center justify-center text-center py-8 text-muted-foreground text-xs">
+        Ничего не найдено
+      </div>
+    );
+  }
+
+  const OVERSCAN = 12;
+  const startIndex = Math.max(0, findStartIndex(rowOffsets, scrollTop) - OVERSCAN);
+  const endIndex = Math.min(
+    visibleRows.length,
+    findEndIndex(rowOffsets, scrollTop + viewportHeight) + OVERSCAN
+  );
+
+  return (
+    <div
+      ref={containerRef}
+      onScroll={handleScroll}
+      className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1.5 py-2.5 custom-scrollbar text-xs relative"
+    >
+      <div style={{ height: totalHeight, width: "100%", position: "relative" }}>
+        {visibleRows.slice(startIndex, endIndex).map((row, sliceIdx) => {
+          const globalIdx = startIndex + sliceIdx;
+          const top = rowOffsets[globalIdx];
+
+          if (row.type === "category") {
+            const CatIcon = row.icon;
+            return (
+              <div
+                key={row.id}
+                style={{
+                  position: "absolute",
+                  top,
+                  left: 0,
+                  right: 0,
+                  height: row.height,
+                }}
+                className="pr-1 flex items-center"
+              >
+                <button
+                  type="button"
+                  onClick={() => onToggleCategory(row.category)}
+                  className="w-full h-[34px] flex items-center justify-between py-1 px-2 rounded-lg font-bold text-foreground bg-muted/20 hover:bg-muted/50 transition-colors text-left select-none group cursor-pointer border border-border/40"
+                >
+                  <div className="flex items-center gap-2">
+                    <CatIcon className="h-3.5 w-3.5 text-primary" />
+                    <span className="tracking-tight text-xs">{row.label}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-mono text-muted-foreground bg-muted/60 px-1 rounded">
+                      {row.count}
+                    </span>
+                    {row.isCollapsed ? (
+                      <ChevronRight className="h-3.5 w-3.5 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+                    )}
+                  </div>
+                </button>
+              </div>
+            );
+          }
+
+          if (row.type === "family") {
+            const FamIcon = FAMILY_ICONS[row.family.iconName] || FolderTree;
+            return (
+              <div
+                key={row.id}
+                style={{
+                  position: "absolute",
+                  top,
+                  left: 0,
+                  right: 0,
+                  height: row.height,
+                }}
+                className="pl-1.5 pr-1 flex items-center"
+              >
+                <button
+                  type="button"
+                  onClick={() => onToggleFamily(row.famId)}
+                  className="w-full h-[28px] flex items-center justify-between py-0.5 px-2 text-[11px] font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-left select-none cursor-pointer rounded-md border border-border/30 bg-card/40"
+                >
+                  <div className="flex items-center gap-1.5 truncate pr-1">
+                    <FamIcon className="h-3 w-3 text-primary/70 shrink-0" />
+                    <span className="truncate">{row.family.name}</span>
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0">
+                    <span className="text-[9px] font-mono text-muted-foreground/80">
+                      {row.count}
+                    </span>
+                    {row.isCollapsed ? (
+                      <ChevronRight className="h-2.5 w-2.5 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="h-2.5 w-2.5 text-muted-foreground" />
+                    )}
+                  </div>
+                </button>
+              </div>
+            );
+          }
+
+          // row.type === "item"
+          const item = row.item;
+          const itemUrl = `/${row.category}/${item.name}`;
+          const eco = getComponentEcosystem(item.name);
+
+          return (
+            <div
+              key={row.id}
+              style={{
+                position: "absolute",
+                top,
+                left: 0,
+                right: 0,
+                height: row.height,
+              }}
+              className="pl-3.5 pr-1 flex items-center"
+            >
+              <Link
+                href={itemUrl}
+                onClick={onItemClick}
+                className={`w-full h-[26px] flex items-center justify-between px-2 rounded-md transition-all text-[11px] ${
+                  row.isActive
+                    ? "bg-primary text-primary-foreground font-semibold shadow-xs"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                }`}
+              >
+                <span className="truncate">{item.title || item.name}</span>
+                {eco && (
+                  <span
+                    className={`text-[8px] px-1 py-0.2 rounded font-mono border shrink-0 ml-1.5 ${
+                      row.isActive
+                        ? "bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30"
+                        : eco.badgeColor
+                    }`}
+                  >
+                    {eco.name}
+                  </span>
+                )}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export function SidebarCatalog({ items }: SidebarCatalogProps) {
   const pathname = usePathname();
   const [search, setSearch] = React.useState("");
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [selectedTab, setSelectedTab] = React.useState<"all" | "ui" | "blocks" | "templates">("all");
   const [selectedEcosystem, setSelectedEcosystem] = React.useState<string>("all");
-
-  const activeItemRef = React.useRef<HTMLAnchorElement>(null);
 
   // Identify current category and item from URL
   const { currentCategory, currentItemName } = React.useMemo(() => {
@@ -122,13 +429,6 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     }
   }, [currentCategory, activeFamilyId]);
 
-  // Auto-scroll active component into view
-  React.useEffect(() => {
-    if (activeItemRef.current) {
-      activeItemRef.current.scrollIntoView({ block: "nearest", behavior: "smooth" });
-    }
-  }, [pathname]);
-
   // Group items by category and then by family
   const groupedData = React.useMemo(() => {
     const topLevel: Record<string, Record<string, { family: ComponentFamily; items: CatalogItemMeta[] }>> = {
@@ -160,19 +460,19 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     return topLevel;
   }, [items]);
 
-  const toggleCategory = (cat: string) => {
+  const toggleCategory = React.useCallback((cat: string) => {
     setCollapsedCategories((prev) => ({
       ...prev,
       [cat]: !prev[cat],
     }));
-  };
+  }, []);
 
-  const toggleFamily = (famId: string) => {
+  const toggleFamily = React.useCallback((famId: string) => {
     setCollapsedFamilies((prev) => ({
       ...prev,
       [famId]: !prev[famId],
     }));
-  };
+  }, []);
 
   const collapseAll = () => {
     setCollapsedCategories({ ui: true, blocks: true, templates: true });
@@ -240,6 +540,99 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     return result;
   }, [groupedData, search, selectedTab, selectedEcosystem]);
 
+  // Flatten the visible tree into an array of virtual rows
+  const visibleRows = React.useMemo<VirtualSidebarRow[]>(() => {
+    const rows: VirtualSidebarRow[] = [];
+    const entries = Object.entries(filteredData);
+    if (entries.length === 0) return rows;
+
+    for (const [category, famMap] of entries) {
+      const config = CATEGORY_CONFIG[category] || {
+        label: category,
+        icon: Layers,
+      };
+      const isCatCollapsed = !search && selectedTab === "all" && !!collapsedCategories[category];
+      const totalCategoryItems = Object.values(famMap).reduce(
+        (acc, f) => acc + f.items.length,
+        0
+      );
+
+      // Level 1: Category
+      rows.push({
+        type: "category",
+        id: `cat:${category}`,
+        category,
+        label: config.label,
+        icon: config.icon,
+        count: totalCategoryItems,
+        isCollapsed: isCatCollapsed,
+        height: 38,
+      });
+
+      if (isCatCollapsed) continue;
+
+      // Level 2: Families
+      for (const [famId, famObj] of Object.entries(famMap)) {
+        const isFamCollapsed =
+          !search &&
+          famId !== activeFamilyId &&
+          collapsedFamilies[famId] === true;
+
+        rows.push({
+          type: "family",
+          id: `fam:${category}:${famId}`,
+          category,
+          famId,
+          family: famObj.family,
+          count: famObj.items.length,
+          isCollapsed: isFamCollapsed,
+          height: 32,
+        });
+
+        if (isFamCollapsed) continue;
+
+        // Level 3: Component items
+        for (const item of famObj.items) {
+          const itemUrl = `/${item.category || "ui"}/${item.name}`;
+          const isActive = pathname === itemUrl;
+
+          rows.push({
+            type: "item",
+            id: `item:${category}:${item.name}`,
+            category: item.category || "ui",
+            item,
+            isActive,
+            height: 28,
+          });
+        }
+      }
+    }
+
+    return rows;
+  }, [
+    filteredData,
+    search,
+    selectedTab,
+    collapsedCategories,
+    collapsedFamilies,
+    activeFamilyId,
+    pathname,
+  ]);
+
+  // Compute exact row top offsets and total list height
+  const rowOffsets = React.useMemo(() => {
+    const offsets = new Float64Array(visibleRows.length + 1);
+    let acc = 0;
+    for (let i = 0; i < visibleRows.length; i++) {
+      offsets[i] = acc;
+      acc += visibleRows[i].height;
+    }
+    offsets[visibleRows.length] = acc;
+    return offsets;
+  }, [visibleRows]);
+
+  const totalHeight = rowOffsets.length > 0 ? rowOffsets[rowOffsets.length - 1] : 0;
+
   // Calculate counts for tabs
   const tabCounts = React.useMemo(() => {
     let ui = 0;
@@ -260,7 +653,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     { id: "templates", label: "Шаблоны", count: tabCounts.templates },
   ];
 
-  const sidebarContent = (
+  const renderSidebarContent = (isMobile: boolean = false) => (
     <div className="flex flex-col h-full min-h-0">
       {/* Header and Quick Stats */}
       <div className="shrink-0 space-y-2.5 pb-2.5 border-b border-border/60">
@@ -282,7 +675,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
           <Input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Поиск по 259 компонентам..."
+            placeholder={`Поиск по ${items.length} компонентам...`}
             className="h-8 pl-8 pr-14 text-xs bg-muted/30 border-border focus-visible:ring-primary/30"
           />
           {search && (
@@ -350,143 +743,18 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
         </div>
       </div>
 
-      {/* Categories & Hierarchical Families Scrollable List */}
-      <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1.5 py-2.5 space-y-3 custom-scrollbar text-xs">
-        {Object.entries(filteredData).length === 0 ? (
-          <div className="text-center py-8 text-muted-foreground text-xs">
-            Ничего не найдено
-          </div>
-        ) : (
-          Object.entries(filteredData).map(([category, famMap]) => {
-            const config = CATEGORY_CONFIG[category] || {
-              label: category,
-              icon: Layers,
-            };
-            const CatIcon = config.icon;
-            const isCatCollapsed = !search && selectedTab === "all" && !!collapsedCategories[category];
-
-            const totalCategoryItems = Object.values(famMap).reduce(
-              (acc, f) => acc + f.items.length,
-              0
-            );
-
-            return (
-              <div key={category} className="space-y-1.5">
-                {/* Level 1: Category Header */}
-                <button
-                  type="button"
-                  onClick={() => toggleCategory(category)}
-                  className="w-full flex items-center justify-between py-1.5 px-2 rounded-lg font-bold text-foreground bg-muted/20 hover:bg-muted/50 transition-colors text-left select-none group cursor-pointer border border-border/40"
-                >
-                  <div className="flex items-center gap-2">
-                    <CatIcon className="h-3.5 w-3.5 text-primary" />
-                    <span className="tracking-tight">{config.label}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] font-mono text-muted-foreground bg-muted/60 px-1 rounded">
-                      {totalCategoryItems}
-                    </span>
-                    {isCatCollapsed ? (
-                      <ChevronRight className="h-3.5 w-3.5 text-muted-foreground" />
-                    ) : (
-                      <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
-                    )}
-                  </div>
-                </button>
-
-                {/* Level 2: Component Families Inside Category */}
-                {!isCatCollapsed && (
-                  <div className="pl-1.5 space-y-1.5">
-                    {Object.entries(famMap).map(([famId, famObj]) => {
-                      const isFamCollapsed =
-                        !search &&
-                        famId !== activeFamilyId &&
-                        collapsedFamilies[famId] === true;
-
-                      const FamIcon =
-                        FAMILY_ICONS[famObj.family.iconName] || FolderTree;
-
-                      return (
-                        <div
-                          key={famId}
-                          className="rounded-lg border border-border/30 bg-card/40 overflow-hidden"
-                        >
-                          {/* Family Header */}
-                          <button
-                            type="button"
-                            onClick={() => toggleFamily(famId)}
-                            className="w-full flex items-center justify-between py-1 px-2 text-[11px] font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-left select-none cursor-pointer"
-                          >
-                            <div className="flex items-center gap-1.5 truncate pr-1">
-                              <FamIcon className="h-3 w-3 text-primary/70 shrink-0" />
-                              <span className="truncate">{famObj.family.name}</span>
-                            </div>
-                            <div className="flex items-center gap-1 shrink-0">
-                              <span className="text-[9px] font-mono text-muted-foreground/80">
-                                {famObj.items.length}
-                              </span>
-                              {isFamCollapsed ? (
-                                <ChevronRight className="h-2.5 w-2.5 text-muted-foreground" />
-                              ) : (
-                                <ChevronDown className="h-2.5 w-2.5 text-muted-foreground" />
-                              )}
-                            </div>
-                          </button>
-
-                          {/* Level 3: Components in Family */}
-                          {!isFamCollapsed && (
-                            <div className="p-1 space-y-0.5 border-t border-border/20 bg-background/30">
-                              {famObj.items.map((item) => {
-                                const itemUrl = `/${item.category || "ui"}/${item.name}`;
-                                const isActive = pathname === itemUrl;
-
-                                return (
-                                  <Link
-                                    key={item.name}
-                                    href={itemUrl}
-                                    ref={isActive ? activeItemRef : undefined}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`flex items-center justify-between py-1 px-2 rounded-md transition-all text-[11px] ${
-                                      isActive
-                                        ? "bg-primary text-primary-foreground font-semibold shadow-xs"
-                                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                                    }`}
-                                  >
-                                    <span className="truncate">
-                                      {item.title || item.name}
-                                    </span>
-                                    {(() => {
-                                      const eco = getComponentEcosystem(item.name);
-                                      if (eco) {
-                                        return (
-                                          <span
-                                            className={`text-[8px] px-1 py-0.2 rounded font-mono border ${
-                                              isActive
-                                                ? "bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30"
-                                                : eco.badgeColor
-                                            }`}
-                                          >
-                                            {eco.name}
-                                          </span>
-                                        );
-                                      }
-                                      return null;
-                                    })()}
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            );
-          })
-        )}
-      </div>
+      {/* 60FPS Virtualized Catalog List */}
+      <VirtualizedCatalogList
+        visibleRows={visibleRows}
+        rowOffsets={rowOffsets}
+        totalHeight={totalHeight}
+        activeItemName={currentItemName}
+        onToggleCategory={toggleCategory}
+        onToggleFamily={toggleFamily}
+        onItemClick={() => {
+          if (isMobile) setMobileOpen(false);
+        }}
+      />
 
       {/* Footer Info & Quick Actions */}
       <div className="shrink-0 pt-2 border-t border-border/60 text-[11px] text-muted-foreground flex items-center justify-between">
@@ -541,12 +809,12 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {sidebarContent}
+        {mobileOpen && renderSidebarContent(true)}
       </aside>
 
-      {/* Desktop Sticky Sidebar with Guaranteed Scroll */}
+      {/* Desktop Sticky Sidebar with 60FPS Virtualization */}
       <aside className="hidden md:flex flex-col w-72 shrink-0 self-start sticky top-20 h-[calc(100vh-6rem)] rounded-xl border border-border bg-card/60 backdrop-blur-md p-3.5 shadow-xs overflow-hidden">
-        {sidebarContent}
+        {renderSidebarContent(false)}
       </aside>
     </>
   );
