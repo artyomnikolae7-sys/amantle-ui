@@ -1,0 +1,30 @@
+{
+  "name": "card-neubrutalist-shadow",
+  "type": "registry:ui",
+  "title": "Card Neubrutalist Shadow",
+  "description": "AMANTLE UI ui: card-neubrutalist-shadow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-neubrutalist-shadow.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-neubrutalist-shadow\n * @author AMANTLE UI\n * @license MIT\n * @modified Neubrutalist 6px hard shadow card\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Terminal } from \"lucide-react\";\n\nexport function CardNeubrutalistShadow() {\n  return (\n    <div className=\"p-6 rounded-xl border-2 border-black bg-amber-200 text-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-sm w-full\">\n      <Terminal className=\"w-6 h-6 mb-3\" />\n      <h4 className=\"font-mono font-bold text-base mb-1\">Neubrutalist Карточка</h4>\n      <p className=\"font-mono text-xs opacity-90 leading-relaxed\">\n        Максимальная выразительность и тактильный отклик для контентных блоков.\n      </p>\n    </div>\n  );\n}\nexport default CardNeubrutalistShadow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-neubrutalist-shadow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-neubrutalist-shadow"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-neubrutalist-shadow",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Neubrutalist 6px hard shadow card"
+  }
+}

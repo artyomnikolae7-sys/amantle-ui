@@ -1,0 +1,32 @@
+{
+  "name": "hero-floating-mockup",
+  "type": "registry:block",
+  "title": "Hero Floating Mockup",
+  "description": "AMANTLE UI block: hero-floating-mockup",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/hero-floating-mockup.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Centered hero with floating dashboard mockup\n */\n\nimport * as React from \"react\";\nimport { Sparkles, ArrowRight, ShieldCheck } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function HeroFloatingMockup() {\n  return (\n    <section className=\"relative overflow-hidden py-20 bg-background text-foreground text-center\">\n      <div className=\"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/15 blur-[120px] rounded-full pointer-events-none\" />\n\n      <div className=\"container mx-auto px-4 max-w-5xl relative z-10 space-y-6\">\n        <div className=\"inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card/80 text-xs text-muted-foreground\">\n          <Sparkles className=\"h-3.5 w-3.5 text-primary\" />\n          <span>Новое поколение дизайн-систем</span>\n        </div>\n\n        <h1 className=\"text-4xl sm:text-6xl font-extrabold tracking-tight\">\n          Интерфейсы, которые <span className=\"bg-gradient-to-r from-primary via-violet-400 to-rose-400 bg-clip-text text-transparent\">вдохновляют</span>\n        </h1>\n\n        <p className=\"text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto leading-relaxed\">\n          Готовые архитектурные блоки для создания SaaS, лендингов и дашбордов премиум-уровня в единой гармоничной стилистике.\n        </p>\n\n        <div className=\"flex justify-center gap-4 pt-2\">\n          <Button size=\"lg\" className=\"gap-2 shadow-lg shadow-primary/25\">\n            <span>Изучить каталог</span>\n            <ArrowRight className=\"h-4 w-4\" />\n          </Button>\n          <Button size=\"lg\" variant=\"outline\">\n            GitHub\n          </Button>\n        </div>\n\n        <div className=\"pt-12\">\n          <div className=\"rounded-2xl border border-border bg-card/90 shadow-2xl p-4 max-w-4xl mx-auto backdrop-blur-xl\">\n            <div className=\"rounded-xl border border-border/60 bg-background p-8 flex flex-col items-center justify-center min-h-[220px] text-muted-foreground text-xs font-mono\">\n              <ShieldCheck className=\"h-8 w-8 text-primary mb-2\" />\n              <span>AMANTLE UI Workspace Canvas Preview</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-floating-mockup.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-floating-mockup"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Centered hero with floating dashboard mockup"
+  }
+}

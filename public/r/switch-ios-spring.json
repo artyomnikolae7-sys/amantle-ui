@@ -1,0 +1,28 @@
+{
+  "name": "switch-ios-spring",
+  "type": "registry:ui",
+  "title": "Switch Ios Spring",
+  "description": "AMANTLE UI ui: switch-ios-spring",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/switch-ios-spring.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/switch-ios-spring\n * @author AMANTLE UI\n * @license MIT\n * @modified iOS style spring toggle physics\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function SwitchIosSpring({\n  defaultChecked = true,\n  onChange,\n}: {\n  defaultChecked?: boolean;\n  onChange?: (checked: boolean) => void;\n}) {\n  const [checked, setChecked] = React.useState(defaultChecked);\n\n  const toggle = () => {\n    const next = !checked;\n    setChecked(next);\n    onChange?.(next);\n  };\n\n  return (\n    <button\n      type=\"button\"\n      role=\"switch\"\n      aria-checked={checked}\n      onClick={toggle}\n      className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none ${\n        checked ? \"bg-emerald-500\" : \"bg-muted\"\n      }`}\n    >\n      <span\n        className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] active:w-7 ${\n          checked ? \"translate-x-5\" : \"translate-x-0\"\n        }`}\n      />\n    </button>\n  );\n}\nexport default SwitchIosSpring;\n",
+      "type": "registry:ui",
+      "target": "components/ui/switch-ios-spring.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "switch-ios-spring"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/switch-ios-spring",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "iOS style spring toggle physics"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "interactive-grid-pattern",
+  "type": "registry:ui",
+  "title": "Interactive Grid Pattern",
+  "description": "AMANTLE UI ui: interactive-grid-pattern",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/interactive-grid-pattern.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/interactive-grid-pattern\n * @author AMANTLE UI Design Engineering\n * @license MIT\n * @modified Interactive SVG grid pattern that reacts to cursor position with illuminated squares\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InteractiveGridPatternProps extends React.SVGProps<SVGSVGElement> {\n  width?: number;\n  height?: number;\n  squares?: [number, number];\n  className?: string;\n  squaresClassName?: string;\n}\n\nexport function InteractiveGridPattern({\n  width = 40,\n  height = 40,\n  squares = [24, 24],\n  className,\n  squaresClassName,\n  ...props\n}: InteractiveGridPatternProps) {\n  const [horizontal, vertical] = squares;\n  const [hoveredSquare, setHoveredSquare] = React.useState<number | null>(null);\n\n  return (\n    <svg\n      width={width * horizontal}\n      height={height * vertical}\n      className={cn(\n        \"absolute inset-0 h-full w-full stroke-border/40 pointer-events-auto [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]\",\n        className\n      )}\n      {...props}\n    >\n      <defs>\n        <pattern\n          id=\"grid-pattern\"\n          width={width}\n          height={height}\n          patternUnits=\"userSpaceOnUse\"\n          x={-1}\n          y={-1}\n        >\n          <path\n            d={`M.5 ${height}V.5H${width}`}\n            fill=\"none\"\n            strokeDasharray=\"0\"\n          />\n        </pattern>\n      </defs>\n      <rect width=\"100%\" height=\"100%\" fill=\"url(#grid-pattern)\" />\n      <svg x={-1} y={-1} className=\"overflow-visible\">\n        {Array.from({ length: horizontal * vertical }).map((_, index) => {\n          const x = (index % horizontal) * width;\n          const y = Math.floor(index / horizontal) * height;\n          const isHovered = hoveredSquare === index;\n\n          return (\n            <rect\n              key={index}\n              x={x + 1}\n              y={y + 1}\n              width={width - 1}\n              height={height - 1}\n              className={cn(\n                \"cursor-pointer fill-transparent stroke-transparent transition-[fill,opacity] duration-300\",\n                isHovered && \"fill-primary/20 stroke-primary/40 opacity-100\",\n                squaresClassName\n              )}\n              onMouseEnter={() => setHoveredSquare(index)}\n              onMouseLeave={() => setHoveredSquare(null)}\n            />\n          );\n        })}\n      </svg>\n    </svg>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/interactive-grid-pattern.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "interactive-grid-pattern"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/interactive-grid-pattern",
+    "author": "AMANTLE UI Design Engineering",
+    "license": "MIT",
+    "modified": "Interactive SVG grid pattern that reacts to cursor position with illuminated squares"
+  }
+}

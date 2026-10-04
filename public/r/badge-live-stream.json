@@ -1,0 +1,28 @@
+{
+  "name": "badge-live-stream",
+  "type": "registry:ui",
+  "title": "Badge Live Stream",
+  "description": "AMANTLE UI ui: badge-live-stream",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-live-stream.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/badge-live-stream\n * @author AMANTLE UI\n * @license MIT\n * @modified Broadcast live equalizer bars\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function BadgeLiveStream() {\n  return (\n    <span className=\"inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-rose-600/15 border border-rose-600/30 text-rose-500 text-xs font-bold tracking-wider uppercase\">\n      <span className=\"flex items-end gap-0.5 h-3\">\n        <span className=\"w-0.5 h-2 bg-rose-500 rounded-full animate-bounce motion-reduce:animate-none\" style={{ animationDelay: \"0ms\" }} />\n        <span className=\"w-0.5 h-3 bg-rose-500 rounded-full animate-bounce motion-reduce:animate-none\" style={{ animationDelay: \"150ms\" }} />\n        <span className=\"w-0.5 h-1.5 bg-rose-500 rounded-full animate-bounce motion-reduce:animate-none\" style={{ animationDelay: \"300ms\" }} />\n      </span>\n      <span>LIVE</span>\n    </span>\n  );\n}\nexport default BadgeLiveStream;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-live-stream.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-live-stream"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/badge-live-stream",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Broadcast live equalizer bars"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-quick-actions",
+  "type": "registry:block",
+  "title": "Dashboard Quick Actions",
+  "description": "AMANTLE UI block: dashboard-quick-actions",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/dashboard-quick-actions.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Quick actions panel for dashboard\n */\n\nimport * as React from \"react\";\nimport { Plus, Download, Share2, Settings } from \"lucide-react\";\n\nexport default function DashboardQuickActions() {\n  const actions = [\n    { icon: Plus, label: \"Новый проект\", desc: \"Создать проект\" },\n    { icon: Download, label: \"Экспорт\", desc: \"Выгрузить JSON\" },\n    { icon: Share2, label: \"Поделиться\", desc: \"Доступ по ссылке\" },\n    { icon: Settings, label: \"Настройки\", desc: \"Параметры API\" },\n  ];\n\n  return (\n    <div className=\"p-6 max-w-lg mx-auto rounded-2xl border border-border bg-card shadow-sm space-y-4\">\n      <h3 className=\"text-sm font-bold text-foreground\">Быстрые действия</h3>\n      <div className=\"grid grid-cols-2 sm:grid-cols-4 gap-3\">\n        {actions.map((act, i) => {\n          const Icon = act.icon;\n          return (\n            <button\n              key={i}\n              type=\"button\"\n              className=\"p-3 rounded-xl border border-border/60 bg-muted/30 hover:bg-muted hover:border-primary/40 transition-[color,background-color,border-color,box-shadow,transform] text-center flex flex-col items-center justify-center gap-2 group\"\n            >\n              <div className=\"h-8 w-8 rounded-lg bg-background border border-border flex items-center justify-center text-primary group-hover:scale-110 transition-transform\">\n                <Icon className=\"h-4 w-4\" />\n              </div>\n              <div>\n                <span className=\"text-xs font-bold text-foreground block\">{act.label}</span>\n                <span className=\"text-[10px] text-muted-foreground block\">{act.desc}</span>\n              </div>\n            </button>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/dashboard-quick-actions.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "dashboard-quick-actions"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Quick actions panel for dashboard"
+  }
+}

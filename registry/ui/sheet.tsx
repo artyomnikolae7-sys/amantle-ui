@@ -118,7 +118,7 @@ const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
     if (!ctx?.open) return null;
 
     return (
-      <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-in fade-in-0">
+      <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-in motion-reduce:animate-none fade-in-0">
         <div
           ref={ref}
           role="dialog"

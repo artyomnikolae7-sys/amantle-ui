@@ -1,0 +1,35 @@
+{
+  "name": "settings-account-page",
+  "type": "registry:template",
+  "title": "Settings Account Page",
+  "description": "AMANTLE UI template: settings-account-page",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "switch",
+    "tabs-vertical"
+  ],
+  "files": [
+    {
+      "path": "templates/settings-account-page.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Account settings profile page template\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { User, Shield, CreditCard, Bell, Save } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Input } from \"@/registry/ui/input\";\nimport { Switch } from \"@/registry/ui/switch\";\nimport { TabsVertical } from \"@/registry/ui/tabs-vertical\";\n\nexport default function SettingsAccountPage() {\n  const [activeTab, setActiveTab] = React.useState(\"profile\");\n\n  return (\n    <div className=\"min-h-screen bg-background text-foreground py-12 px-4\">\n      <div className=\"container mx-auto max-w-5xl space-y-8\">\n        <div className=\"border-b border-border/80 pb-4\">\n          <h1 className=\"text-2xl font-bold\">Настройки аккаунта</h1>\n          <p className=\"text-xs text-muted-foreground mt-1\">Управляйте личными данными, безопасностью и уведомлениями</p>\n        </div>\n\n        <div className=\"flex flex-col md:flex-row gap-8 items-start\">\n          <div className=\"w-full md:w-64 shrink-0\">\n            <TabsVertical\n              activeId={activeTab}\n              onChange={setActiveTab}\n              items={[\n                { id: \"profile\", label: \"Профиль\", icon: <User className=\"h-4 w-4\" /> },\n                { id: \"security\", label: \"Безопасность\", icon: <Shield className=\"h-4 w-4\" /> },\n                { id: \"billing\", label: \"Подписка и биллинг\", icon: <CreditCard className=\"h-4 w-4\" /> },\n                { id: \"notifications\", label: \"Уведомления\", icon: <Bell className=\"h-4 w-4\" /> },\n              ]}\n            />\n          </div>\n\n          <div className=\"flex-1 w-full rounded-2xl border border-border bg-card p-6 shadow-xs space-y-6\">\n            {activeTab === \"profile\" && (\n              <div className=\"space-y-4\">\n                <h2 className=\"text-base font-bold\">Публичный профиль</h2>\n                <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs\">\n                  <div className=\"space-y-1.5\">\n                    <label className=\"font-semibold text-muted-foreground\">Имя пользователя</label>\n                    <Input defaultValue=\"alex_frontend\" />\n                  </div>\n                  <div className=\"space-y-1.5\">\n                    <label className=\"font-semibold text-muted-foreground\">Email</label>\n                    <Input defaultValue=\"alex@company.com\" type=\"email\" />\n                  </div>\n                </div>\n                <Button className=\"gap-2\">\n                  <Save className=\"h-4 w-4\" />\n                  <span>Сохранить изменения</span>\n                </Button>\n              </div>\n            )}\n\n            {activeTab === \"security\" && (\n              <div className=\"space-y-4 text-xs\">\n                <h2 className=\"text-base font-bold\">Безопасность и пароли</h2>\n                <div className=\"flex items-center justify-between border-b border-border/60 pb-3\">\n                  <div>\n                    <span className=\"font-semibold block text-foreground\">Двухфакторная аутентификация (2FA)</span>\n                    <span className=\"text-muted-foreground\">Защитите аккаунт с помощью SMS или Authenticator</span>\n                  </div>\n                  <Switch checked />\n                </div>\n              </div>\n            )}\n\n            {activeTab === \"billing\" && (\n              <div className=\"space-y-3 text-xs\">\n                <h2 className=\"text-base font-bold\">Текущий тариф</h2>\n                <p className=\"text-muted-foreground\">Вы используете тариф Pro. Следующее списание 1 ноября 2026.</p>\n                <Button variant=\"outline\">Управление подпиской</Button>\n              </div>\n            )}\n\n            {activeTab === \"notifications\" && (\n              <div className=\"space-y-3 text-xs\">\n                <h2 className=\"text-base font-bold\">Email уведомления</h2>\n                <p className=\"text-muted-foreground\">Получать дайджест новых компонентов и обновлений безопасности.</p>\n                <Switch checked />\n              </div>\n            )}\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/settings-account-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "settings-account-page"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Account settings profile page template"
+  }
+}

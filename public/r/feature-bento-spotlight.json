@@ -1,0 +1,30 @@
+{
+  "name": "feature-bento-spotlight",
+  "type": "registry:block",
+  "title": "Feature Bento Spotlight",
+  "description": "AMANTLE UI block: feature-bento-spotlight",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/feature-bento-spotlight.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Bento grid with spotlight mouse tracking\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Zap, Shield, Cpu, Gauge } from \"lucide-react\";\n\nexport default function FeatureBentoSpotlight() {\n  const items = [\n    {\n      icon: Zap,\n      title: \"Мгновенный рендеринг\",\n      desc: \"Next.js 15 Server Components без клиентского оверхеда.\",\n      colSpan: \"col-span-1 md:col-span-2\",\n    },\n    {\n      icon: Shield,\n      title: \"Типобезопасность\",\n      desc: \"100% строгий TypeScript с автогенерацией схем Zod.\",\n      colSpan: \"col-span-1\",\n    },\n    {\n      icon: Cpu,\n      title: \"AI-Native MCP\",\n      desc: \"Прямой доступ к компонентам для агентов Cursor и Claude.\",\n      colSpan: \"col-span-1\",\n    },\n    {\n      icon: Gauge,\n      title: \"Ультралегкий стек\",\n      desc: \"Никаких лишних npm-библиотек, только чистые Tailwind v4 токены.\",\n      colSpan: \"col-span-1 md:col-span-2\",\n    },\n  ];\n\n  return (\n    <div className=\"p-8 max-w-4xl mx-auto space-y-6\">\n      <div className=\"text-center space-y-2\">\n        <h3 className=\"text-2xl font-extrabold text-foreground\">Архитектурные преимущества</h3>\n        <p className=\"text-xs text-muted-foreground\">Каждая деталь выверена для максимальной производительности</p>\n      </div>\n\n      <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\">\n        {items.map((it, idx) => {\n          const Icon = it.icon;\n          return (\n            <div\n              key={idx}\n              className={`rounded-2xl border border-border bg-card p-6 shadow-xs transition-[color,background-color,border-color,box-shadow,transform] hover:border-primary/50 hover:shadow-lg ${it.colSpan}`}\n            >\n              <div className=\"h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-4\">\n                <Icon className=\"h-5 w-5\" />\n              </div>\n              <h4 className=\"text-base font-bold text-foreground mb-1\">{it.title}</h4>\n              <p className=\"text-xs text-muted-foreground leading-relaxed\">{it.desc}</p>\n            </div>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/feature-bento-spotlight.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "feature-bento-spotlight"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Bento grid with spotlight mouse tracking"
+  }
+}

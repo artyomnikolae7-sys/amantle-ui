@@ -1,0 +1,28 @@
+{
+  "name": "avatar-group",
+  "type": "registry:ui",
+  "title": "Avatar Group",
+  "description": "AMANTLE UI ui: avatar-group",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/avatar-group.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Overlapping avatar stack\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface AvatarGroupProps {\n  users: Array<{ name: string; avatar?: string }>;\n  max?: number;\n  className?: string;\n}\n\nexport function AvatarGroup({ users, max = 4, className }: AvatarGroupProps) {\n  const visible = users.slice(0, max);\n  const remaining = users.length - max;\n\n  return (\n    <div className={cn(\"flex items-center -space-x-2.5\", className)}>\n      {visible.map((user, i) => (\n        <div\n          key={i}\n          className=\"relative inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-muted text-xs font-bold text-foreground overflow-hidden shadow-2xs\"\n          title={user.name}\n        >\n          {user.avatar ? (\n            <img src={user.avatar} alt={user.name} className=\"h-full w-full object-cover\" />\n          ) : (\n            user.name.slice(0, 2).toUpperCase()\n          )}\n        </div>\n      ))}\n      {remaining > 0 && (\n        <div className=\"relative inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-primary/10 text-primary text-xs font-bold shadow-2xs\">\n          +{remaining}\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/avatar-group.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "avatar-group"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Overlapping avatar stack"
+  }
+}

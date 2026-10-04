@@ -1,0 +1,28 @@
+{
+  "name": "aspect-ratio",
+  "type": "registry:ui",
+  "title": "Aspect Ratio",
+  "description": "AMANTLE UI ui: aspect-ratio",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/aspect-ratio.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/aspect-ratio\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface AspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {\n  ratio?: number; // e.g. 16/9 = 1.777\n  children?: React.ReactNode;\n}\n\nexport function AspectRatio({ className, ratio = 16 / 9, children, style, ...props }: AspectRatioProps) {\n  return (\n    <div\n      style={{ position: \"relative\", width: \"100%\", paddingBottom: `${(1 / ratio) * 100}%`, ...style }}\n      className={cn(\"overflow-hidden rounded-xl bg-muted/40\", className)}\n      {...props}\n    >\n      <div className=\"absolute inset-0 flex items-center justify-center\">{children}</div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/aspect-ratio.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "aspect-ratio"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/aspect-ratio",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "tree-view",
+  "type": "registry:ui",
+  "title": "Tree View",
+  "description": "AMANTLE UI ui: tree-view",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tree-view.tsx",
+      "content": "/**\n * @source https://shadcnui-expansions.typecraft.dev/docs/tree-view\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Folder, FolderOpen, File, ChevronRight } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TreeViewProps {\n  className?: string;\n}\n\nexport function TreeView({ className }: TreeViewProps) {\n  const [openFolders, setOpenFolders] = React.useState<Record<string, boolean>>({\n    src: true,\n    components: true,\n  });\n\n  const toggle = (id: string) => {\n    setOpenFolders((prev) => ({ ...prev, [id]: !prev[id] }));\n  };\n\n  return (\n    <div className={cn(\"w-64 rounded-xl border border-border bg-card p-3 font-mono text-xs shadow-md\", className)}>\n      <div className=\"space-y-1\">\n        <div>\n          <button\n            onClick={() => toggle(\"src\")}\n            className=\"flex items-center gap-1.5 w-full text-left py-1 px-1.5 rounded hover:bg-muted text-foreground cursor-pointer\"\n          >\n            <ChevronRight className={cn(\"h-3.5 w-3.5 transition-transform\", openFolders.src && \"rotate-90\")} />\n            {openFolders.src ? <FolderOpen className=\"h-4 w-4 text-primary\" /> : <Folder className=\"h-4 w-4 text-primary\" />}\n            <span className=\"font-semibold\">src</span>\n          </button>\n\n          {openFolders.src && (\n            <div className=\"pl-4 space-y-1 mt-1 border-l border-border/50 ml-2\">\n              <button\n                onClick={() => toggle(\"components\")}\n                className=\"flex items-center gap-1.5 w-full text-left py-1 px-1.5 rounded hover:bg-muted text-foreground cursor-pointer\"\n              >\n                <ChevronRight className={cn(\"h-3.5 w-3.5 transition-transform\", openFolders.components && \"rotate-90\")} />\n                {openFolders.components ? <FolderOpen className=\"h-4 w-4 text-amber-500\" /> : <Folder className=\"h-4 w-4 text-amber-500\" />}\n                <span>components</span>\n              </button>\n\n              {openFolders.components && (\n                <div className=\"pl-4 space-y-1 mt-1 border-l border-border/50 ml-2\">\n                  <div className=\"flex items-center gap-1.5 py-1 px-1.5 rounded hover:bg-muted text-muted-foreground hover:text-foreground\">\n                    <File className=\"h-3.5 w-3.5 text-blue-400\" /> button.tsx\n                  </div>\n                  <div className=\"flex items-center gap-1.5 py-1 px-1.5 rounded hover:bg-muted text-muted-foreground hover:text-foreground\">\n                    <File className=\"h-3.5 w-3.5 text-blue-400\" /> card.tsx\n                  </div>\n                </div>\n              )}\n\n              <div className=\"flex items-center gap-1.5 py-1 px-1.5 rounded hover:bg-muted text-muted-foreground hover:text-foreground\">\n                <File className=\"h-3.5 w-3.5 text-emerald-400\" /> main.tsx\n              </div>\n            </div>\n          )}\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/tree-view.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tree-view"
+  ],
+  "meta": {
+    "source": "https://shadcnui-expansions.typecraft.dev/docs/tree-view",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

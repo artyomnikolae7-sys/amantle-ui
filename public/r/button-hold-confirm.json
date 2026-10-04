@@ -1,0 +1,30 @@
+{
+  "name": "button-hold-confirm",
+  "type": "registry:ui",
+  "title": "Button Hold Confirm",
+  "description": "AMANTLE UI ui: button-hold-confirm",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-hold-confirm.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-hold-confirm\n * @author AMANTLE UI\n * @license MIT\n * @modified Long-press progress fill confirmation logic\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Trash2, CheckCircle2 } from \"lucide-react\";\n\nexport function ButtonHoldConfirm({\n  duration = 1500,\n  onConfirm,\n  label = \"Удерживайте для удаления\",\n}: {\n  duration?: number;\n  onConfirm?: () => void;\n  label?: string;\n}) {\n  const [progress, setProgress] = React.useState(0);\n  const [completed, setCompleted] = React.useState(false);\n  const timerRef = React.useRef<any>(null);\n  const startTimeRef = React.useRef<number>(0);\n\n  const startHold = () => {\n    if (completed) return;\n    startTimeRef.current = Date.now();\n    timerRef.current = setInterval(() => {\n      const elapsed = Date.now() - startTimeRef.current;\n      const pct = Math.min(100, (elapsed / duration) * 100);\n      setProgress(pct);\n      if (pct >= 100) {\n        clearInterval(timerRef.current);\n        setCompleted(true);\n        onConfirm?.();\n        setTimeout(() => {\n          setCompleted(false);\n          setProgress(0);\n        }, 2000);\n      }\n    }, 20);\n  };\n\n  const endHold = () => {\n    if (completed) return;\n    clearInterval(timerRef.current);\n    setProgress(0);\n  };\n\n  return (\n    <button\n      onMouseDown={startHold}\n      onMouseUp={endHold}\n      onMouseLeave={endHold}\n      onTouchStart={startHold}\n      onTouchEnd={endHold}\n      className=\"relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl border border-destructive/40 bg-destructive/10 text-destructive font-medium text-sm select-none transition-[color,background-color,border-color,box-shadow,transform] active:scale-[0.98]\"\n    >\n      <div\n        className=\"absolute inset-0 bg-destructive/30 transition-[color,background-color,border-color,box-shadow,transform] duration-75 ease-linear\"\n        style={{ width: `${progress}%` }}\n      />\n      <span className=\"relative z-10 flex items-center gap-2\">\n        {completed ? (\n          <>\n            <CheckCircle2 className=\"w-4 h-4 text-emerald-500 animate-bounce motion-reduce:animate-none\" />\n            <span className=\"text-emerald-500 font-semibold\">Успешно!</span>\n          </>\n        ) : (\n          <>\n            <Trash2 className=\"w-4 h-4\" />\n            <span>{label}</span>\n          </>\n        )}\n      </span>\n    </button>\n  );\n}\nexport default ButtonHoldConfirm;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-hold-confirm.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-hold-confirm"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-hold-confirm",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Long-press progress fill confirmation logic"
+  }
+}

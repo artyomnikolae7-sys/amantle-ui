@@ -1,0 +1,28 @@
+{
+  "name": "checkbox-animated-check",
+  "type": "registry:ui",
+  "title": "Checkbox Animated Check",
+  "description": "AMANTLE UI ui: checkbox-animated-check",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/checkbox-animated-check.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/checkbox-animated-check\n * @author AMANTLE UI\n * @license MIT\n * @modified SVG vector path-draw animation\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function CheckboxAnimatedCheck({\n  label = \"Принимаю условия соглашения\",\n}: {\n  label?: string;\n}) {\n  const [checked, setChecked] = React.useState(true);\n\n  return (\n    <label className=\"inline-flex items-center gap-2.5 cursor-pointer select-none\">\n      <div\n        onClick={() => setChecked(!checked)}\n        className={`w-5 h-5 rounded-lg border flex items-center justify-center transition-[color,background-color,border-color,box-shadow,transform] duration-200 ${\n          checked ? \"bg-primary border-primary shadow-sm\" : \"border-border bg-card\"\n        }`}\n      >\n        <svg\n          viewBox=\"0 0 24 24\"\n          className={`w-3.5 h-3.5 stroke-primary-foreground fill-none stroke-[3] transition-[color,background-color,border-color,box-shadow,transform] duration-300 ${\n            checked ? \"opacity-100 scale-100\" : \"opacity-0 scale-50\"\n          }`}\n        >\n          <polyline points=\"20 6 9 17 4 12\" />\n        </svg>\n      </div>\n      <span className=\"text-sm font-medium text-foreground\">{label}</span>\n    </label>\n  );\n}\nexport default CheckboxAnimatedCheck;\n",
+      "type": "registry:ui",
+      "target": "components/ui/checkbox-animated-check.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "checkbox-animated-check"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/checkbox-animated-check",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "SVG vector path-draw animation"
+  }
+}

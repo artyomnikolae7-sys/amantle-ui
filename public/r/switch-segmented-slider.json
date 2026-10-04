@@ -1,0 +1,28 @@
+{
+  "name": "switch-segmented-slider",
+  "type": "registry:ui",
+  "title": "Switch Segmented Slider",
+  "description": "AMANTLE UI ui: switch-segmented-slider",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/switch-segmented-slider.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/switch-segmented-slider\n * @author AMANTLE UI\n * @license MIT\n * @modified 3-position sliding segment pill\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function SwitchSegmentedSlider() {\n  const [active, setActive] = React.useState(0);\n  const options = [\"День\", \"Неделя\", \"Месяц\"];\n\n  return (\n    <div className=\"relative inline-flex rounded-xl bg-muted p-1 border border-border\">\n      <div\n        className=\"absolute top-1 bottom-1 rounded-lg bg-card shadow-sm transition-[color,background-color,border-color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]\"\n        style={{\n          width: `calc(${100 / options.length}% - 4px)`,\n          left: `calc(${(active * 100) / options.length}% + 2px)`,\n        }}\n      />\n      {options.map((opt, i) => (\n        <button\n          key={opt}\n          onClick={() => setActive(i)}\n          className={`relative z-10 px-4 py-1.5 text-xs font-semibold rounded-lg transition-colors ${\n            active === i ? \"text-foreground\" : \"text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {opt}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport default SwitchSegmentedSlider;\n",
+      "type": "registry:ui",
+      "target": "components/ui/switch-segmented-slider.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "switch-segmented-slider"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/switch-segmented-slider",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "3-position sliding segment pill"
+  }
+}

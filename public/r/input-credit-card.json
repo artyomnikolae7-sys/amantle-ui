@@ -1,0 +1,30 @@
+{
+  "name": "input-credit-card",
+  "type": "registry:ui",
+  "title": "Input Credit Card",
+  "description": "AMANTLE UI ui: input-credit-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-credit-card.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-credit-card\n * @author AMANTLE UI\n * @license MIT\n * @modified Card number grouping with 4-digit spacers\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { CreditCard } from \"lucide-react\";\n\nexport function InputCreditCard() {\n  const [val, setVal] = React.useState(\"\");\n\n  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const raw = e.target.value.replace(/\\D/g, \"\").slice(0, 16);\n    const formatted = raw.replace(/(\\d{4})(?=\\d)/g, \"$1 \");\n    setVal(formatted);\n  };\n\n  return (\n    <div className=\"max-w-sm w-full\">\n      <div className=\"relative flex items-center\">\n        <CreditCard className=\"w-4 h-4 absolute left-3.5 text-muted-foreground\" />\n        <input\n          type=\"text\"\n          value={val}\n          onChange={handleChange}\n          placeholder=\"0000 0000 0000 0000\"\n          className=\"w-full bg-card border border-border rounded-xl pl-10 pr-4 py-2.5 text-sm font-mono text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20\"\n        />\n      </div>\n    </div>\n  );\n}\nexport default InputCreditCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-credit-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-credit-card"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-credit-card",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Card number grouping with 4-digit spacers"
+  }
+}

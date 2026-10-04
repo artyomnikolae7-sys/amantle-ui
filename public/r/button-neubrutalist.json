@@ -1,0 +1,30 @@
+{
+  "name": "button-neubrutalist",
+  "type": "registry:ui",
+  "title": "Button Neubrutalist",
+  "description": "AMANTLE UI ui: button-neubrutalist",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-neubrutalist.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-neubrutalist\n * @author AMANTLE UI\n * @license MIT\n * @modified Neubrutalist hard offset shadow translation\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { SquareTerminal } from \"lucide-react\";\n\nexport function ButtonNeubrutalist({\n  children = \"Компиляция\",\n  className = \"\",\n  ...props\n}: React.ButtonHTMLAttributes<HTMLButtonElement>) {\n  return (\n    <button\n      className={`inline-flex items-center gap-2 px-5 py-2.5 bg-amber-300 text-black border-2 border-black font-mono font-bold text-sm rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-[color,background-color,border-color,box-shadow,transform] ${className}`}\n      {...props}\n    >\n      <SquareTerminal className=\"w-4 h-4\" />\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonNeubrutalist;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-neubrutalist.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-neubrutalist"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-neubrutalist",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Neubrutalist hard offset shadow translation"
+  }
+}

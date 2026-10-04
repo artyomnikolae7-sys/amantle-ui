@@ -1,0 +1,32 @@
+{
+  "name": "feature-timeline",
+  "type": "registry:block",
+  "title": "Feature Timeline",
+  "description": "AMANTLE UI block: feature-timeline",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/feature-timeline.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Vertical timeline feature roadmap\n */\n\nimport * as React from \"react\";\nimport { CheckCircle2, Clock, Sparkles } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport default function FeatureTimeline() {\n  const milestones = [\n    {\n      period: \"Q1 2026\",\n      status: \"completed\",\n      title: \"Запуск экосистемы AMANTLE UI\",\n      desc: \"50 базовых UI-примитивов, полная типизация, интеграция с Tailwind CSS v4.\",\n    },\n    {\n      period: \"Q2 2026\",\n      status: \"active\",\n      title: \"Релиз 100 компонентов и Showcase Playground\",\n      desc: \"Интерактивная витрина, тулбар устройств, A/B сравнение и собственный MCP сервер.\",\n    },\n    {\n      period: \"Q3 2026\",\n      status: \"upcoming\",\n      title: \"Визуальный конструктор страниц (Composer)\",\n      desc: \"Drag-and-drop сборка лендингов и дашбордов с экспортом готового Next.js кода.\",\n    },\n  ];\n\n  return (\n    <div className=\"p-8 max-w-2xl mx-auto space-y-6\">\n      <h3 className=\"text-xl font-bold text-foreground text-center\">Дорожная карта продукта</h3>\n      <div className=\"relative border-l-2 border-border/80 ml-4 space-y-8 pl-6\">\n        {milestones.map((m, idx) => (\n          <div key={idx} className=\"relative group\">\n            <div\n              className={`absolute -left-[31px] top-0.5 h-6 w-6 rounded-full border-2 border-background flex items-center justify-center text-xs ${\n                m.status === \"completed\"\n                  ? \"bg-primary text-primary-foreground\"\n                  : m.status === \"active\"\n                  ? \"bg-primary text-primary-foreground ring-4 ring-primary/20\"\n                  : \"bg-muted text-muted-foreground border-border\"\n              }`}\n            >\n              {m.status === \"completed\" ? (\n                <CheckCircle2 className=\"h-3.5 w-3.5\" />\n              ) : m.status === \"active\" ? (\n                <Sparkles className=\"h-3.5 w-3.5\" />\n              ) : (\n                <Clock className=\"h-3.5 w-3.5\" />\n              )}\n            </div>\n            <div className=\"space-y-1\">\n              <Badge variant=\"outline\" className=\"text-[10px] font-mono\">\n                {m.period}\n              </Badge>\n              <h4 className=\"text-sm font-bold text-foreground\">{m.title}</h4>\n              <p className=\"text-xs text-muted-foreground leading-relaxed\">{m.desc}</p>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/feature-timeline.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "feature-timeline"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Vertical timeline feature roadmap"
+  }
+}

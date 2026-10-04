@@ -58,7 +58,7 @@ export function FeatureCardsGrid() {
           {features.map((feat) => {
             const Icon = feat.icon;
             return (
-              <Card key={feat.title} className="transition-all hover:border-primary/50 hover:shadow-lg">
+              <Card key={feat.title} className="transition-[color,background-color,border-color,box-shadow,transform] hover:border-primary/50 hover:shadow-lg">
                 <CardHeader>
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
                     <Icon className="h-5 w-5" />

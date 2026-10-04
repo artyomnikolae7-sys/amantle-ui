@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-server-monitoring",
+  "type": "registry:block",
+  "title": "Dashboard Server Monitoring",
+  "description": "AMANTLE UI block: dashboard-server-monitoring",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/dashboard-server-monitoring.tsx",
+      "content": "/**\n * @source https://tremor.so\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Server, Activity, HardDrive, Cpu } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DashboardServerMonitoringProps {\n  className?: string;\n}\n\nexport function DashboardServerMonitoring({ className }: DashboardServerMonitoringProps) {\n  const metrics = [\n    { title: \"Загрузка CPU\", value: \"32%\", status: \"Норма\", icon: Cpu, progress: 32 },\n    { title: \"Использование RAM\", value: \"11.4 / 16 GB\", status: \"71%\", icon: HardDrive, progress: 71 },\n    { title: \"Network Latency\", value: \"14 ms\", status: \"Отлично\", icon: Activity, progress: 14 },\n    { title: \"Server Uptime\", value: \"99.99%\", status: \"34 дн.\", icon: Server, progress: 99 },\n  ];\n\n  return (\n    <div className={cn(\"w-full max-w-4xl mx-auto rounded-2xl border border-border bg-card p-6 shadow-xl space-y-6\", className)}>\n      <div className=\"flex items-center justify-between\">\n        <div>\n          <h3 className=\"text-lg font-bold text-foreground\">Мониторинг кластера</h3>\n          <p className=\"text-xs text-muted-foreground\">Пул серверов: production-eu-central-1</p>\n        </div>\n        <span className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-xs\">\n          <span className=\"h-2 w-2 rounded-full bg-emerald-400 animate-ping motion-reduce:animate-none\" /> Live\n        </span>\n      </div>\n\n      <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4\">\n        {metrics.map((m) => {\n          const Icon = m.icon;\n          return (\n            <div key={m.title} className=\"p-4 rounded-xl border border-border bg-muted/20 space-y-2\">\n              <div className=\"flex items-center justify-between text-muted-foreground\">\n                <span className=\"text-xs font-medium\">{m.title}</span>\n                <Icon className=\"h-4 w-4 text-primary\" />\n              </div>\n              <div className=\"flex items-baseline justify-between\">\n                <span className=\"text-xl font-bold text-foreground\">{m.value}</span>\n                <span className=\"text-[11px] font-mono text-muted-foreground\">{m.status}</span>\n              </div>\n              <div className=\"h-1.5 w-full bg-muted rounded-full overflow-hidden\">\n                <div style={{ width: `${m.progress}%` }} className=\"h-full bg-primary rounded-full\" />\n              </div>\n            </div>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/dashboard-server-monitoring.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "dashboard-server-monitoring"
+  ],
+  "meta": {
+    "source": "https://tremor.so",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

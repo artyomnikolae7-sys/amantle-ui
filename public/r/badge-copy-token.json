@@ -1,0 +1,30 @@
+{
+  "name": "badge-copy-token",
+  "type": "registry:ui",
+  "title": "Badge Copy Token",
+  "description": "AMANTLE UI ui: badge-copy-token",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-copy-token.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/badge-copy-token\n * @author AMANTLE UI\n * @license MIT\n * @modified Instant token copy with check feedback\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Copy, Check } from \"lucide-react\";\n\nexport function BadgeCopyToken({\n  token = \"sk_amantle_9a87f6b\",\n}: {\n  token?: string;\n}) {\n  const [copied, setCopied] = React.useState(false);\n\n  const copy = () => {\n    navigator.clipboard?.writeText(token);\n    setCopied(true);\n    setTimeout(() => setCopied(false), 2000);\n  };\n\n  return (\n    <button\n      onClick={copy}\n      className=\"inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-muted border border-border font-mono text-xs text-foreground hover:bg-muted/80 transition-colors\"\n    >\n      <span>{token}</span>\n      {copied ? <Check className=\"w-3 h-3 text-emerald-500\" /> : <Copy className=\"w-3 h-3 text-muted-foreground\" />}\n    </button>\n  );\n}\nexport default BadgeCopyToken;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-copy-token.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-copy-token"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/badge-copy-token",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Instant token copy with check feedback"
+  }
+}

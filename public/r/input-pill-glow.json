@@ -1,0 +1,30 @@
+{
+  "name": "input-pill-glow",
+  "type": "registry:ui",
+  "title": "Input Pill Glow",
+  "description": "AMANTLE UI ui: input-pill-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-pill-glow.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-pill-glow\n * @author AMANTLE UI\n * @license MIT\n * @modified Pill shaped input with glowing ring focus\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\n\nexport function InputPillGlow({\n  placeholder = \"Введите ваш email...\",\n  className = \"\",\n  ...props\n}: React.InputHTMLAttributes<HTMLInputElement>) {\n  return (\n    <div className=\"relative group max-w-sm w-full\">\n      <div className=\"absolute -inset-0.5 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 opacity-0 group-focus-within:opacity-100 blur-sm transition-opacity duration-300\" />\n      <div className=\"relative flex items-center bg-card rounded-full border border-border px-4 py-2 shadow-sm\">\n        <Sparkles className=\"w-4 h-4 text-muted-foreground mr-2 group-focus-within:text-violet-500 transition-colors\" />\n        <input\n          type=\"text\"\n          placeholder={placeholder}\n          className={`w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none ${className}`}\n          {...props}\n        />\n      </div>\n    </div>\n  );\n}\nexport default InputPillGlow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-pill-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-pill-glow"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-pill-glow",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Pill shaped input with glowing ring focus"
+  }
+}

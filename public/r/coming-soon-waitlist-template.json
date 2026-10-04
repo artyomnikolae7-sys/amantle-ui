@@ -1,0 +1,30 @@
+{
+  "name": "coming-soon-waitlist-template",
+  "type": "registry:template",
+  "title": "Coming Soon Waitlist Template",
+  "description": "AMANTLE UI template: coming-soon-waitlist-template",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "templates/coming-soon-waitlist-template.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ArrowRight, Sparkles, CheckCircle2 } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ComingSoonWaitlistTemplateProps {\n  className?: string;\n}\n\nexport default function ComingSoonWaitlistTemplate({ className }: ComingSoonWaitlistTemplateProps) {\n  const [email, setEmail] = React.useState(\"\");\n  const [submitted, setSubmitted] = React.useState(false);\n\n  const handleSubmit = (e: React.FormEvent) => {\n    e.preventDefault();\n    if (!email) return;\n    setSubmitted(true);\n  };\n\n  return (\n    <div className={cn(\"relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden rounded-3xl border border-border bg-card p-10 text-center max-w-4xl mx-auto w-full\", className)}>\n      <div className=\"absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent pointer-events-none\" />\n\n      <div className=\"relative z-10 max-w-xl space-y-6\">\n        <span className=\"inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1 text-xs font-bold text-primary\">\n          <Sparkles className=\"h-3.5 w-3.5\" /> Ранний доступ v3.0\n        </span>\n\n        <h1 className=\"text-3xl sm:text-5xl font-black text-foreground tracking-tight\">\n          Будущее дизайн-систем уже близко\n        </h1>\n\n        <p className=\"text-xs sm:text-sm text-muted-foreground leading-relaxed\">\n          Запишитесь в список раннего доступа, чтобы первыми получить эксклюзивный доступ к AI Composer и 150+ премиальным компонентам.\n        </p>\n\n        {submitted ? (\n          <div className=\"p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-semibold flex items-center justify-center gap-2\">\n            <CheckCircle2 className=\"h-5 w-5\" /> Спасибо! Вы успешно добавлены в лист ожидания (#1,429).\n          </div>\n        ) : (\n          <form onSubmit={handleSubmit} className=\"flex flex-col sm:flex-row gap-2 max-w-md mx-auto\">\n            <input\n              type=\"email\"\n              value={email}\n              onChange={(e) => setEmail(e.target.value)}\n              placeholder=\"Введите ваш рабочий email\"\n              required\n              className=\"flex-1 h-11 px-4 rounded-xl border border-border bg-muted/30 text-xs sm:text-sm text-foreground outline-none focus:border-primary\"\n            />\n            <button\n              type=\"submit\"\n              className=\"h-11 px-6 rounded-xl bg-primary text-primary-foreground font-bold text-xs sm:text-sm hover:opacity-90 shadow transition-opacity flex items-center justify-center gap-1.5\"\n            >\n              Вступить <ArrowRight className=\"h-4 w-4\" />\n            </button>\n          </form>\n        )}\n\n        <div className=\"flex items-center justify-center gap-4 text-xs font-mono text-muted-foreground pt-4 border-t border-border\">\n          <span>👥 1,428 уже в списке</span>\n          <span>•</span>\n          <span>⚡ Старт через 14 дней</span>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/coming-soon-waitlist-template.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "coming-soon-waitlist-template"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

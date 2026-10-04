@@ -1,0 +1,28 @@
+{
+  "name": "sticky-scroll-reveal",
+  "type": "registry:block",
+  "title": "Sticky Scroll Reveal",
+  "description": "AMANTLE UI block: sticky-scroll-reveal",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/sticky-scroll-reveal.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/sticky-scroll-reveal\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface StickyScrollRevealProps {\n  className?: string;\n}\n\nexport function StickyScrollReveal({ className }: StickyScrollRevealProps) {\n  const [activeCard, setActiveCard] = React.useState(0);\n\n  const content = [\n    { title: \"Совместная разработка\", desc: \"Синхронизируйте код компонентов в реальном времени между разработчиками и дизайнерами.\" },\n    { title: \"Интерактивный Playground\", desc: \"Мгновенно меняйте пропсы, размеры и цветовые темы прямо в браузере.\" },\n    { title: \"AI Composer\", desc: \"Создавайте новые секции и страницы за считанные минуты благодаря генеративным моделям.\" },\n  ];\n\n  return (\n    <div className={cn(\"grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto w-full p-8 rounded-2xl border border-border bg-card\", className)}>\n      <div className=\"space-y-6\">\n        {content.map((item, idx) => (\n          <div\n            key={item.title}\n            onClick={() => setActiveCard(idx)}\n            className={cn(\n              \"p-5 rounded-xl border transition-[color,background-color,border-color,box-shadow,transform] cursor-pointer\",\n              activeCard === idx ? \"border-primary bg-primary/5 shadow-md\" : \"border-border/60 hover:border-border\"\n            )}\n          >\n            <h4 className={cn(\"text-base font-bold\", activeCard === idx ? \"text-primary\" : \"text-foreground\")}>\n              {item.title}\n            </h4>\n            <p className=\"text-xs text-muted-foreground mt-2 leading-relaxed\">{item.desc}</p>\n          </div>\n        ))}\n      </div>\n\n      <div className=\"h-64 md:h-auto rounded-xl bg-gradient-to-br from-primary/20 via-primary/5 to-card border border-border flex items-center justify-center p-6 text-center\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-primary font-bold\">Слайд {activeCard + 1} из 3</span>\n          <h3 className=\"text-xl font-black text-foreground\">{content[activeCard].title}</h3>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/sticky-scroll-reveal.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "sticky-scroll-reveal"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/sticky-scroll-reveal",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

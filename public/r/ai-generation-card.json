@@ -1,0 +1,30 @@
+{
+  "name": "ai-generation-card",
+  "type": "registry:block",
+  "title": "Ai Generation Card",
+  "description": "AMANTLE UI block: ai-generation-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/ai-generation-card.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/animated-beam\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles, CheckCircle2, Copy } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface AiGenerationCardProps {\n  className?: string;\n  promptTitle?: string;\n  isCompleted?: boolean;\n}\n\nexport function AiGenerationCard({\n  className,\n  promptTitle = \"Генерация компонента PricingSlider.tsx\",\n  isCompleted = true,\n}: AiGenerationCardProps) {\n  return (\n    <div className={cn(\"w-full max-w-lg mx-auto rounded-2xl border border-border bg-card p-6 shadow-xl space-y-4\", className)}>\n      <div className=\"flex items-center justify-between\">\n        <div className=\"flex items-center gap-2\">\n          <div className=\"h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary\">\n            <Sparkles className=\"h-4 w-4 animate-spin-around motion-reduce:animate-none\" />\n          </div>\n          <div>\n            <h4 className=\"text-sm font-bold text-foreground\">{promptTitle}</h4>\n            <span className=\"text-[11px] text-muted-foreground\">Архитектурный конвейер AMANTLE</span>\n          </div>\n        </div>\n        {isCompleted && (\n          <span className=\"flex items-center gap-1 text-xs font-semibold text-emerald-500\">\n            <CheckCircle2 className=\"h-3.5 w-3.5\" /> Готово\n          </span>\n        )}\n      </div>\n\n      <div className=\"rounded-xl border border-border bg-muted/40 p-4 font-mono text-xs text-foreground space-y-1\">\n        <p className=\"text-muted-foreground\">// Автоматически сгенерированный код:</p>\n        <p><span className=\"text-primary\">export function</span> PricingSlider() &#123;</p>\n        <p className=\"pl-4 text-emerald-400\">const [plan, setPlan] = useState(\"pro\");</p>\n        <p className=\"pl-4\">return &lt;div className=\"pricing-grid\"&gt;...&lt;/div&gt;;</p>\n        <p>&#125;</p>\n      </div>\n\n      <div className=\"flex items-center justify-end gap-2\">\n        <button className=\"flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card text-xs font-medium text-foreground hover:bg-muted\">\n          <Copy className=\"h-3.5 w-3.5\" /> Копировать код\n        </button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/ai-generation-card.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "ai-generation-card"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/animated-beam",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

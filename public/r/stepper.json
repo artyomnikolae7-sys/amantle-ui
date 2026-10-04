@@ -1,0 +1,30 @@
+{
+  "name": "stepper",
+  "type": "registry:ui",
+  "title": "Stepper",
+  "description": "AMANTLE UI ui: stepper",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/stepper.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Multi-step wizard indicator\n */\n\nimport * as React from \"react\";\nimport { Check } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface StepperProps {\n  steps: string[];\n  currentStep: number;\n  className?: string;\n}\n\nexport function Stepper({ steps, currentStep = 1, className }: StepperProps) {\n  return (\n    <div className={cn(\"flex items-center w-full max-w-xl justify-between\", className)}>\n      {steps.map((label, idx) => {\n        const stepNum = idx + 1;\n        const isCompleted = stepNum < currentStep;\n        const isActive = stepNum === currentStep;\n\n        return (\n          <React.Fragment key={idx}>\n            <div className=\"flex flex-col items-center gap-1.5\">\n              <div\n                className={cn(\n                  \"flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold transition-[color,background-color,border-color,box-shadow,transform]\",\n                  isCompleted && \"bg-primary text-primary-foreground\",\n                  isActive && \"border-2 border-primary bg-background text-primary ring-4 ring-primary/20\",\n                  !isCompleted && !isActive && \"border border-border bg-muted text-muted-foreground\"\n                )}\n              >\n                {isCompleted ? <Check className=\"h-4 w-4\" /> : stepNum}\n              </div>\n              <span className={cn(\"text-xs font-medium\", isActive ? \"text-foreground font-semibold\" : \"text-muted-foreground\")}>\n                {label}\n              </span>\n            </div>\n            {idx < steps.length - 1 && (\n              <div\n                className={cn(\n                  \"flex-1 h-0.5 mx-2\",\n                  idx + 1 < currentStep ? \"bg-primary\" : \"bg-border\"\n                )}\n              />\n            )}\n          </React.Fragment>\n        );\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/stepper.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "stepper"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Multi-step wizard indicator"
+  }
+}

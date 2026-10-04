@@ -1,0 +1,30 @@
+{
+  "name": "button-glow-neon",
+  "type": "registry:ui",
+  "title": "Button Glow Neon",
+  "description": "AMANTLE UI ui: button-glow-neon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-glow-neon.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-glow-neon\n * @author AMANTLE UI\n * @license MIT\n * @modified Neon cyberpunk specular aura with blurred bloom\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Zap } from \"lucide-react\";\n\nexport function ButtonGlowNeon({\n  children = \"Активировать ядро\",\n  className = \"\",\n  ...props\n}: React.ButtonHTMLAttributes<HTMLButtonElement>) {\n  return (\n    <div className=\"relative group inline-block\">\n      <div className=\"absolute -inset-0.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 opacity-75 blur-md group-hover:opacity-100 transition duration-500 group-hover:duration-200 animate-pulse motion-reduce:animate-none\" />\n      <button\n        className={`relative inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-background/95 backdrop-blur-sm border border-cyan-500/50 text-cyan-300 font-semibold text-sm transition-[color,background-color,border-color,box-shadow,transform] duration-200 active:scale-95 ${className}`}\n        {...props}\n      >\n        <Zap className=\"w-4 h-4 text-cyan-400 animate-bounce motion-reduce:animate-none\" />\n        <span className=\"tracking-wide text-foreground\">{children}</span>\n      </button>\n    </div>\n  );\n}\nexport default ButtonGlowNeon;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-glow-neon.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-glow-neon"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-glow-neon",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Neon cyberpunk specular aura with blurred bloom"
+  }
+}

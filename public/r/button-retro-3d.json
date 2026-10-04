@@ -1,0 +1,30 @@
+{
+  "name": "button-retro-3d",
+  "type": "registry:ui",
+  "title": "Button Retro 3d",
+  "description": "AMANTLE UI ui: button-retro-3d",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-retro-3d.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-retro-3d\n * @author AMANTLE UI\n * @license MIT\n * @modified Arcade skeuomorphic mechanical displacement\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Gamepad2 } from \"lucide-react\";\n\nexport function ButtonRetro3D({\n  children = \"START GAME\",\n  className = \"\",\n  ...props\n}: React.ButtonHTMLAttributes<HTMLButtonElement>) {\n  return (\n    <button\n      className={`relative inline-flex items-center gap-2 px-6 py-3 font-extrabold text-xs tracking-widest text-white uppercase rounded-xl bg-rose-600 border-b-4 border-rose-800 shadow-[0_6px_0_0_#9f1239,0_10px_15px_-3px_rgba(0,0,0,0.4)] active:top-[4px] active:shadow-[0_2px_0_0_#9f1239] transition-[color,background-color,border-color,box-shadow,transform] ${className}`}\n      {...props}\n    >\n      <Gamepad2 className=\"w-4 h-4\" />\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonRetro3D;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-retro-3d.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-retro-3d"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-retro-3d",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Arcade skeuomorphic mechanical displacement"
+  }
+}

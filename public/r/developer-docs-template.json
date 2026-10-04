@@ -1,0 +1,32 @@
+{
+  "name": "developer-docs-template",
+  "type": "registry:template",
+  "title": "Developer Docs Template",
+  "description": "AMANTLE UI template: developer-docs-template",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "templates/developer-docs-template.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { BookOpen, Copy, Check, Terminal, ChevronRight } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DeveloperDocsTemplateProps {\n  className?: string;\n}\n\nexport default function DeveloperDocsTemplate({ className }: DeveloperDocsTemplateProps) {\n  const [copied, setCopied] = React.useState(false);\n\n  const handleCopy = () => {\n    setCopied(true);\n    setTimeout(() => setCopied(false), 2000);\n  };\n\n  return (\n    <div className={cn(\"flex flex-col md:flex-row gap-8 max-w-5xl mx-auto w-full p-8 rounded-2xl border border-border bg-card\", className)}>\n      {/* Left Nav */}\n      <nav className=\"w-52 space-y-4 shrink-0 hidden md:block border-r border-border pr-6 text-xs\">\n        <div className=\"font-bold text-foreground uppercase tracking-wider text-[11px]\">Начало работы</div>\n        <ul className=\"space-y-2 text-muted-foreground\">\n          <li className=\"font-semibold text-primary\">Быстрый старт</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Установка</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Дизайн-токены</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Темизация</li>\n        </ul>\n        <div className=\"font-bold text-foreground uppercase tracking-wider text-[11px] pt-2\">Компоненты</div>\n        <ul className=\"space-y-2 text-muted-foreground\">\n          <li className=\"hover:text-foreground cursor-pointer\">Buttons (Кнопки)</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Cards (Карточки)</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Navigation (Навбар)</li>\n        </ul>\n      </nav>\n\n      {/* Main Content */}\n      <article className=\"flex-1 space-y-6\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-primary font-bold\">Руководство</span>\n          <h1 className=\"text-3xl font-black text-foreground\">Быстрый старт с AMANTLE UI</h1>\n          <p className=\"text-xs sm:text-sm text-muted-foreground leading-relaxed\">\n            Подключите библиотеку компонентов с чистой архитектурой и полной поддержкой Tailwind v4 за минуту.\n          </p>\n        </div>\n\n        <div className=\"rounded-xl border border-border bg-muted/40 p-4 font-mono text-xs text-foreground flex items-center justify-between\">\n          <div className=\"flex items-center gap-2\">\n            <Terminal className=\"h-4 w-4 text-primary\" />\n            <span>npx amantle-ui@latest add button</span>\n          </div>\n          <button onClick={handleCopy} className=\"text-muted-foreground hover:text-foreground\">\n            {copied ? <Check className=\"h-4 w-4 text-emerald-500\" /> : <Copy className=\"h-4 w-4\" />}\n          </button>\n        </div>\n\n        <div className=\"space-y-3\">\n          <h3 className=\"text-lg font-bold text-foreground\">Использование в коде</h3>\n          <p className=\"text-xs text-muted-foreground\">Импортируйте компонент в ваш React/Next.js файл:</p>\n          <div className=\"rounded-xl border border-border bg-card p-4 font-mono text-xs text-foreground space-y-1\">\n            <p><span className=\"text-primary\">import</span> &#123; Button &#125; <span className=\"text-primary\">from</span> <span className=\"text-emerald-400\">\"@/components/ui/button\"</span>;</p>\n            <p><span className=\"text-primary\">export default function</span> Page() &#123;</p>\n            <p className=\"pl-4\">return &lt;<span className=\"text-primary\">Button</span> variant=\"primary\"&gt;Нажми меня&lt;/<span className=\"text-primary\">Button</span>&gt;;</p>\n            <p>&#125;</p>\n          </div>\n        </div>\n      </article>\n\n      {/* Right On this page */}\n      <aside className=\"w-48 shrink-0 hidden lg:block border-l border-border pl-6 space-y-2 text-xs\">\n        <span className=\"font-bold text-foreground uppercase tracking-wider text-[11px]\">На этой странице</span>\n        <ul className=\"space-y-1.5 text-muted-foreground\">\n          <li className=\"text-primary font-medium\">Введение</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Команда установки</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Использование в коде</li>\n          <li className=\"hover:text-foreground cursor-pointer\">Пропсы и варианты</li>\n        </ul>\n      </aside>\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/developer-docs-template.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "developer-docs-template"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

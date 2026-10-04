@@ -1,0 +1,30 @@
+{
+  "name": "badge-verified-tier",
+  "type": "registry:ui",
+  "title": "Badge Verified Tier",
+  "description": "AMANTLE UI ui: badge-verified-tier",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-verified-tier.tsx",
+      "content": "/**\n * @source AMANTLE UI Motion Engine\n * @author Open Source\n * @license MIT\n * @modified Tokenized for AMANTLE UI with Tailwind v4 semantic variables and spring motion\n */\n\nimport * as React from \"react\";\nimport { Check, ShieldCheck, Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BadgeVerifiedTierProps extends React.HTMLAttributes<HTMLDivElement> {\n  tier?: \"basic\" | \"verified\" | \"enterprise\";\n  verified?: boolean;\n}\n\nexport function BadgeVerifiedTier({\n  tier = \"verified\",\n  verified = true,\n  className,\n  children,\n  ...props\n}: BadgeVerifiedTierProps) {\n  const tierConfig = {\n    basic: {\n      label: \"Basic\",\n      icon: Check,\n      colors: \"bg-muted text-muted-foreground border-border\",\n    },\n    verified: {\n      label: \"Verified Pro\",\n      icon: ShieldCheck,\n      colors: \"bg-primary/10 text-primary border-primary/20\",\n    },\n    enterprise: {\n      label: \"Enterprise\",\n      icon: Sparkles,\n      colors: \"bg-primary text-primary-foreground border-primary shadow-sm\",\n    },\n  };\n\n  const config = tierConfig[tier];\n  const Icon = config.icon;\n\n  return (\n    <div\n      className={cn(\n        \"inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium border\",\n        \"transition-[color,background-color,border-color,box-shadow] duration-150 ease-out\",\n        config.colors,\n        className\n      )}\n      {...props}\n    >\n      {verified && <Icon className=\"w-3.5 h-3.5\" />}\n      <span>{children || config.label}</span>\n    </div>\n  );\n}",
+      "type": "registry:ui",
+      "target": "components/ui/badge-verified-tier.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-verified-tier"
+  ],
+  "meta": {
+    "source": "AMANTLE UI Motion Engine",
+    "author": "Open Source",
+    "license": "MIT",
+    "modified": "Tokenized for AMANTLE UI with Tailwind v4 semantic variables and spring motion"
+  }
+}

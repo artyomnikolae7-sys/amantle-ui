@@ -1,0 +1,32 @@
+{
+  "name": "cta-split-card",
+  "type": "registry:block",
+  "title": "Cta Split Card",
+  "description": "AMANTLE UI block: cta-split-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/cta-split-card.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Split CTA conversion card\n */\n\nimport * as React from \"react\";\nimport { Sparkles, ArrowRight } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function CtaSplitCard() {\n  return (\n    <div className=\"p-8 max-w-4xl mx-auto\">\n      <div className=\"rounded-3xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/10 p-8 sm:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8\">\n        <div className=\"space-y-3 max-w-md\">\n          <div className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold text-primary\">\n            <Sparkles className=\"h-3.5 w-3.5\" />\n            <span>Присоединяйтесь к экосистеме</span>\n          </div>\n          <h3 className=\"text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight\">\n            Готовы ускорить разработку вашего проекта?\n          </h3>\n          <p className=\"text-xs text-muted-foreground leading-relaxed\">\n            Получите доступ к обновлениям всех 100 компонентов и закрытому каналу контрибьюторов.\n          </p>\n        </div>\n\n        <div className=\"w-full md:w-auto flex flex-col sm:flex-row gap-2 shrink-0\">\n          <input\n            type=\"email\"\n            placeholder=\"Ваш рабочий email...\"\n            className=\"h-10 px-4 rounded-lg border border-input bg-background text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary w-full sm:w-64\"\n          />\n          <Button className=\"gap-2 shrink-0\">\n            <span>Подписаться</span>\n            <ArrowRight className=\"h-4 w-4\" />\n          </Button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/cta-split-card.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "cta-split-card"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Split CTA conversion card"
+  }
+}

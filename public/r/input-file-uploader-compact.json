@@ -1,0 +1,30 @@
+{
+  "name": "input-file-uploader-compact",
+  "type": "registry:ui",
+  "title": "Input File Uploader Compact",
+  "description": "AMANTLE UI ui: input-file-uploader-compact",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-file-uploader-compact.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-file-uploader-compact\n * @author AMANTLE UI\n * @license MIT\n * @modified Single line file drop progress pill\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { UploadCloud, CheckCircle, FileText } from \"lucide-react\";\n\nexport function InputFileUploaderCompact() {\n  const [file, setFile] = React.useState<{ name: string; size: string } | null>(null);\n  const [progress, setProgress] = React.useState(0);\n\n  const simulateUpload = () => {\n    setFile({ name: \"design-system-tokens.json\", size: \"240 KB\" });\n    setProgress(0);\n    const interval = setInterval(() => {\n      setProgress((prev) => {\n        if (prev >= 100) {\n          clearInterval(interval);\n          return 100;\n        }\n        return prev + 20;\n      });\n    }, 150);\n  };\n\n  return (\n    <div className=\"max-w-md w-full rounded-xl border border-dashed border-border hover:border-primary/50 bg-card p-3 transition-colors\">\n      {!file ? (\n        <button\n          onClick={simulateUpload}\n          className=\"w-full flex items-center justify-center gap-2 text-xs font-medium text-muted-foreground hover:text-foreground py-1\"\n        >\n          <UploadCloud className=\"w-4 h-4 text-primary\" />\n          <span>Нажмите для выбора файла (или перетащите сюда)</span>\n        </button>\n      ) : (\n        <div className=\"space-y-2\">\n          <div className=\"flex items-center justify-between text-xs\">\n            <span className=\"flex items-center gap-1.5 font-medium text-foreground\">\n              <FileText className=\"w-3.5 h-3.5 text-primary\" />\n              {file.name}\n            </span>\n            <span className=\"text-muted-foreground\">{progress === 100 ? \"Загружено\" : `${progress}%`}</span>\n          </div>\n          <div className=\"h-1.5 w-full bg-muted rounded-full overflow-hidden\">\n            <div\n              className=\"h-full bg-primary transition-[color,background-color,border-color,box-shadow,transform] duration-200 rounded-full\"\n              style={{ width: `${progress}%` }}\n            />\n          </div>\n        </div>\n      )}\n    </div>\n  );\n}\nexport default InputFileUploaderCompact;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-file-uploader-compact.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-file-uploader-compact"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-file-uploader-compact",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Single line file drop progress pill"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "confetti",
+  "type": "registry:ui",
+  "title": "Confetti",
+  "description": "AMANTLE UI ui: confetti",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/confetti.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/confetti\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Trophy } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ConfettiProps {\n  className?: string;\n  buttonText?: string;\n}\n\nexport function Confetti({ className, buttonText = \"🎉 Отпраздновать победу!\" }: ConfettiProps) {\n  const [particles, setParticles] = React.useState<Array<{ id: number; x: number; y: number; color: string; rotation: number }>>([]);\n\n  const triggerConfetti = () => {\n    const colors = [\"#6366f1\", \"#ec4899\", \"#f59e0b\", \"#10b981\", \"#3b82f6\", \"#8b5cf6\"];\n    const newParticles = Array.from({ length: 28 }).map((_, i) => ({\n      id: Date.now() + i,\n      x: (Math.random() - 0.5) * 200,\n      y: (Math.random() - 1) * 160,\n      color: colors[Math.floor(Math.random() * colors.length)],\n      rotation: Math.random() * 360,\n    }));\n    setParticles(newParticles);\n    setTimeout(() => setParticles([]), 1200);\n  };\n\n  return (\n    <div className={cn(\"relative inline-block\", className)}>\n      {particles.map((p) => (\n        <span\n          key={p.id}\n          style={{\n            transform: `translate(${p.x}px, ${p.y}px) rotate(${p.rotation}deg)`,\n            backgroundColor: p.color,\n          }}\n          className=\"absolute left-1/2 top-1/2 h-2.5 w-2 rounded-sm pointer-events-none transition-[color,background-color,border-color,box-shadow,transform] duration-700 ease-out animate-ping motion-reduce:animate-none\"\n        />\n      ))}\n\n      <button\n        onClick={triggerConfetti}\n        className=\"flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-lg hover:scale-105 active:scale-95 transition-[color,background-color,border-color,box-shadow,transform] cursor-pointer\"\n      >\n        <Trophy className=\"h-4 w-4\" />\n        {buttonText}\n      </button>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/confetti.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "confetti"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/confetti",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "testimonials-infinite-slider",
+  "type": "registry:block",
+  "title": "Testimonials Infinite Slider",
+  "description": "AMANTLE UI block: testimonials-infinite-slider",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/testimonials-infinite-slider.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/marquee\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Star } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TestimonialsInfiniteSliderProps {\n  className?: string;\n}\n\nexport function TestimonialsInfiniteSlider({ className }: TestimonialsInfiniteSliderProps) {\n  const reviews = [\n    { name: \"Алексей Иванов\", role: \"CTO, FinTech Lab\", text: \"AMANTLE UI сэкономил нам недели верстки. Компоненты просто летают!\" },\n    { name: \"Мария Смирнова\", role: \"Lead Product Designer\", text: \"Эстетика на уровне мировых лидеров. Токены и тёмная тема сделаны безупречно.\" },\n    { name: \"Дмитрий Козлов\", role: \"Fullstack Dev\", text: \"Никаких лишних библиотек, чистый TypeScript и Tailwind. Это то, чего не хватало.\" },\n  ];\n\n  return (\n    <div className={cn(\"w-full overflow-hidden space-y-4 py-6\", className)}>\n      <div className=\"flex gap-4 animate-[marquee_20s_linear_infinite]\">\n        {reviews.concat(reviews).map((r, i) => (\n          <div key={i} className=\"w-80 shrink-0 rounded-2xl border border-border bg-card p-5 shadow-sm space-y-3\">\n            <div className=\"flex gap-1 text-amber-400\">\n              {Array.from({ length: 5 }).map((_, idx) => (\n                <Star key={idx} className=\"h-3.5 w-3.5 fill-current\" />\n              ))}\n            </div>\n            <p className=\"text-xs text-foreground leading-relaxed\">\"{r.text}\"</p>\n            <div className=\"border-t border-border pt-2\">\n              <p className=\"text-xs font-bold text-foreground\">{r.name}</p>\n              <p className=\"text-[10px] text-muted-foreground\">{r.role}</p>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/testimonials-infinite-slider.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "testimonials-infinite-slider"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/marquee",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -98,13 +98,13 @@ const DialogContent = React.forwardRef<
   if (!ctx?.open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-0 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in motion-reduce:animate-none fade-in-0 p-4">
       <div
         ref={ref}
         role="dialog"
         aria-modal="true"
         className={cn(
-          "relative w-full max-w-lg rounded-xl border border-border bg-background p-6 shadow-2xl duration-200 animate-in zoom-in-95",
+          "relative w-full max-w-lg rounded-xl border border-border bg-background p-6 shadow-2xl duration-200 animate-in motion-reduce:animate-none zoom-in-95",
           className
         )}
         {...props}

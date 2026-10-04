@@ -1,0 +1,30 @@
+{
+  "name": "sparkles-text",
+  "type": "registry:ui",
+  "title": "Sparkles Text",
+  "description": "AMANTLE UI ui: sparkles-text",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/sparkles-text.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/sparkles-text\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface SparklesTextProps {\n  className?: string;\n  text?: string;\n}\n\nexport function SparklesText({ className, text = \"AMANTLE UI\" }: SparklesTextProps) {\n  return (\n    <div className={cn(\"relative inline-block text-3xl sm:text-4xl font-extrabold tracking-tight\", className)}>\n      <Sparkles className=\"absolute -top-3 -left-4 h-5 w-5 text-amber-400 animate-pulse motion-reduce:animate-none\" />\n      <span className=\"bg-gradient-to-r from-primary via-purple-400 to-pink-500 bg-clip-text text-transparent\">\n        {text}\n      </span>\n      <Sparkles className=\"absolute -bottom-2 -right-4 h-4 w-4 text-primary animate-bounce motion-reduce:animate-none\" />\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/sparkles-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "sparkles-text"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/sparkles-text",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

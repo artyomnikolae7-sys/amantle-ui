@@ -1,0 +1,33 @@
+{
+  "name": "hero-split-image",
+  "type": "registry:block",
+  "title": "Hero Split Image",
+  "description": "AMANTLE UI block: hero-split-image",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "blocks/hero-split-image.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Split hero with interactive preview\n */\n\nimport * as React from \"react\";\nimport { ArrowRight, CheckCircle2, Sparkles } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\nimport { Badge } from \"@/registry/ui/badge\";\n\nexport default function HeroSplitImage() {\n  return (\n    <section className=\"relative overflow-hidden py-16 md:py-24 bg-background text-foreground\">\n      <div className=\"container mx-auto px-4 max-w-7xl\">\n        <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center\">\n          <div className=\"space-y-6\">\n            <Badge variant=\"outline\" className=\"gap-1.5 py-1 px-3 text-xs border-primary/30 bg-primary/5 text-primary\">\n              <Sparkles className=\"h-3.5 w-3.5\" />\n              <span>Версия 2.0 уже доступна</span>\n            </Badge>\n\n            <h1 className=\"text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight\">\n              Создавайте интерфейсы быстрее с <span className=\"text-primary\">AMANTLE UI</span>\n            </h1>\n\n            <p className=\"text-muted-foreground text-base sm:text-lg leading-relaxed\">\n              Более 100 компонентов, блоков и шаблонов, оптимизированных для Next.js 15 и Tailwind CSS v4 с поддержкой светлой и тёмной темы.\n            </p>\n\n            <div className=\"flex flex-wrap gap-3 pt-2\">\n              <Button size=\"lg\" className=\"gap-2 shadow-lg shadow-primary/20\">\n                <span>Начать бесплатно</span>\n                <ArrowRight className=\"h-4 w-4\" />\n              </Button>\n              <Button size=\"lg\" variant=\"outline\">\n                Документация\n              </Button>\n            </div>\n\n            <div className=\"pt-4 flex flex-wrap gap-6 text-xs text-muted-foreground\">\n              <div className=\"flex items-center gap-1.5\">\n                <CheckCircle2 className=\"h-4 w-4 text-emerald-500\" />\n                <span>Без сторонних рантаймов</span>\n              </div>\n              <div className=\"flex items-center gap-1.5\">\n                <CheckCircle2 className=\"h-4 w-4 text-emerald-500\" />\n                <span>100% открытый код</span>\n              </div>\n            </div>\n          </div>\n\n          <div className=\"relative rounded-2xl border border-border bg-card/60 p-4 shadow-2xl backdrop-blur-md\">\n            <div className=\"rounded-xl border border-border/60 bg-background/80 p-6 space-y-4\">\n              <div className=\"flex items-center justify-between border-b border-border/40 pb-3\">\n                <div className=\"flex items-center gap-2\">\n                  <div className=\"h-3 w-3 rounded-full bg-rose-500/80\" />\n                  <div className=\"h-3 w-3 rounded-full bg-amber-500/80\" />\n                  <div className=\"h-3 w-3 rounded-full bg-emerald-500/80\" />\n                </div>\n                <span className=\"text-[11px] font-mono text-muted-foreground\">dashboard.tsx</span>\n              </div>\n              <div className=\"space-y-3 font-mono text-xs text-muted-foreground\">\n                <div className=\"h-4 bg-muted/60 rounded w-3/4 animate-pulse motion-reduce:animate-none\" />\n                <div className=\"h-4 bg-muted/40 rounded w-1/2\" />\n                <div className=\"h-20 bg-muted/20 rounded border border-border/40 p-3 text-[11px]\">\n                  &lt;ShowcaseViewer item=&#123;component&#125; /&gt;\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-split-image.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-split-image"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Split hero with interactive preview"
+  }
+}

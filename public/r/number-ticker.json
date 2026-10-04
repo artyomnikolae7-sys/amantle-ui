@@ -1,0 +1,28 @@
+{
+  "name": "number-ticker",
+  "type": "registry:ui",
+  "title": "Number Ticker",
+  "description": "AMANTLE UI ui: number-ticker",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/number-ticker.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/number-ticker\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface NumberTickerProps {\n  className?: string;\n  value?: number;\n  prefix?: string;\n  suffix?: string;\n}\n\nexport function NumberTicker({ className, value = 150, prefix = \"\", suffix = \"+\" }: NumberTickerProps) {\n  const [count, setCount] = React.useState(0);\n\n  React.useEffect(() => {\n    const duration = 1500;\n    const steps = 30;\n    const stepTime = duration / steps;\n    let step = 0;\n\n    const timer = setInterval(() => {\n      step++;\n      const current = Math.min(value, Math.round((step / steps) * value));\n      setCount(current);\n      if (step >= steps) clearInterval(timer);\n    }, stepTime);\n\n    return () => clearInterval(timer);\n  }, [value]);\n\n  return (\n    <span className={cn(\"font-mono text-4xl sm:text-5xl font-black text-foreground tracking-tight\", className)}>\n      {prefix}{count}{suffix}\n    </span>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/number-ticker.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "number-ticker"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/number-ticker",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

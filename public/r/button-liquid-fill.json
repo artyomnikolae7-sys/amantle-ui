@@ -1,0 +1,30 @@
+{
+  "name": "button-liquid-fill",
+  "type": "registry:ui",
+  "title": "Button Liquid Fill",
+  "description": "AMANTLE UI ui: button-liquid-fill",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-liquid-fill.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-liquid-fill\n * @author AMANTLE UI\n * @license MIT\n * @modified Wave liquid fill from bottom translateY\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Droplets } from \"lucide-react\";\n\nexport function ButtonLiquidFill({\n  children = \"Подписка Pro\",\n  className = \"\",\n  ...props\n}: React.ButtonHTMLAttributes<HTMLButtonElement>) {\n  return (\n    <button\n      className={`relative overflow-hidden inline-flex items-center gap-2 px-6 py-2.5 rounded-xl border border-primary/50 text-foreground font-medium text-sm group transition-[color,background-color,border-color,box-shadow,transform] active:scale-95 ${className}`}\n      {...props}\n    >\n      <div className=\"absolute inset-0 w-full h-full bg-primary translate-y-[102%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]\" />\n      <Droplets className=\"relative z-10 w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors duration-300\" />\n      <span className=\"relative z-10 group-hover:text-primary-foreground transition-colors duration-300 font-semibold\">\n        {children}\n      </span>\n    </button>\n  );\n}\nexport default ButtonLiquidFill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-liquid-fill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-liquid-fill"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-liquid-fill",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Wave liquid fill from bottom translateY"
+  }
+}

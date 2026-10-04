@@ -109,7 +109,7 @@ const SelectContent = React.forwardRef<
         ref={ref}
         role="listbox"
         className={cn(
-          "absolute z-50 mt-1 max-h-96 min-w-[8rem] w-full overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95",
+          "absolute z-50 mt-1 max-h-96 min-w-[8rem] w-full overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md animate-in motion-reduce:animate-none fade-in-0 zoom-in-95",
           className
         )}
         {...props}

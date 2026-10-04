@@ -1,0 +1,30 @@
+{
+  "name": "file-upload-dropzone",
+  "type": "registry:ui",
+  "title": "File Upload Dropzone",
+  "description": "AMANTLE UI ui: file-upload-dropzone",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/file-upload-dropzone.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/file-upload\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { UploadCloud, File, CheckCircle2 } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface FileUploadDropzoneProps {\n  className?: string;\n  accept?: string;\n  maxSizeMb?: number;\n}\n\nexport function FileUploadDropzone({ className, accept = \"PNG, JPG, PDF\", maxSizeMb = 10 }: FileUploadDropzoneProps) {\n  const [isDragOver, setIsDragOver] = React.useState(false);\n  const [fileName, setFileName] = React.useState<string | null>(null);\n\n  const handleDrop = (e: React.DragEvent) => {\n    e.preventDefault();\n    setIsDragOver(false);\n    if (e.dataTransfer.files?.[0]) {\n      setFileName(e.dataTransfer.files[0].name);\n    }\n  };\n\n  return (\n    <div\n      onDragOver={(e) => { e.preventDefault(); setIsDragOver(true); }}\n      onDragLeave={() => setIsDragOver(false)}\n      onDrop={handleDrop}\n      className={cn(\n        \"flex flex-col items-center justify-center w-full max-w-md p-8 rounded-2xl border-2 border-dashed transition-[color,background-color,border-color,box-shadow,transform] cursor-pointer\",\n        isDragOver ? \"border-primary bg-primary/5 scale-[1.01]\" : \"border-border bg-card/60 hover:bg-muted/30\",\n        className\n      )}\n    >\n      <div className=\"h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3\">\n        <UploadCloud className=\"h-6 w-6\" />\n      </div>\n      <h4 className=\"text-sm font-bold text-foreground\">Перетащите файлы сюда</h4>\n      <p className=\"text-xs text-muted-foreground mt-1\">Поддерживаются {accept} до {maxSizeMb} МБ</p>\n\n      {fileName && (\n        <div className=\"mt-4 flex items-center gap-2 rounded-lg bg-muted px-3 py-1.5 text-xs text-foreground font-mono\">\n          <File className=\"h-3.5 w-3.5 text-primary\" />\n          <span>{fileName}</span>\n          <CheckCircle2 className=\"h-3.5 w-3.5 text-emerald-500\" />\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/file-upload-dropzone.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "file-upload-dropzone"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/file-upload",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

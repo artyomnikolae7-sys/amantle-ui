@@ -1,0 +1,30 @@
+{
+  "name": "footer-columns-newsletter",
+  "type": "registry:block",
+  "title": "Footer Columns Newsletter",
+  "description": "AMANTLE UI block: footer-columns-newsletter",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/footer-columns-newsletter.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Send } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface FooterColumnsNewsletterProps {\n  className?: string;\n}\n\nexport function FooterColumnsNewsletter({ className }: FooterColumnsNewsletterProps) {\n  return (\n    <footer className={cn(\"w-full border-t border-border bg-card p-10 max-w-6xl mx-auto space-y-10\", className)}>\n      <div className=\"grid grid-cols-1 md:grid-cols-5 gap-8\">\n        <div className=\"md:col-span-2 space-y-3\">\n          <span className=\"font-black text-lg text-foreground\">AMANTLE UI</span>\n          <p className=\"text-xs text-muted-foreground leading-relaxed max-w-sm\">\n            Открытая дизайн-система и реестр компонентов для создания современных SaaS веб-приложений.\n          </p>\n          <div className=\"flex items-center gap-2 pt-2\">\n            <input\n              placeholder=\"Email для рассылки\"\n              className=\"h-9 px-3 rounded-lg border border-border bg-muted/30 text-xs text-foreground outline-none focus:border-primary\"\n            />\n            <button className=\"h-9 w-9 rounded-lg bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90\">\n              <Send className=\"h-3.5 w-3.5\" />\n            </button>\n          </div>\n        </div>\n\n        <div className=\"space-y-2 text-xs\">\n          <h5 className=\"font-bold text-foreground\">Реестр</h5>\n          <ul className=\"space-y-1.5 text-muted-foreground\">\n            <li><a href=\"#\" className=\"hover:text-foreground\">UI Primitives</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Блоки интерфейса</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Шаблоны страниц</a></li>\n          </ul>\n        </div>\n\n        <div className=\"space-y-2 text-xs\">\n          <h5 className=\"font-bold text-foreground\">Ресурсы</h5>\n          <ul className=\"space-y-1.5 text-muted-foreground\">\n            <li><a href=\"#\" className=\"hover:text-foreground\">Документация</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Figma Kit</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Changelog</a></li>\n          </ul>\n        </div>\n\n        <div className=\"space-y-2 text-xs\">\n          <h5 className=\"font-bold text-foreground\">Компания</h5>\n          <ul className=\"space-y-1.5 text-muted-foreground\">\n            <li><a href=\"#\" className=\"hover:text-foreground\">О проекте</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Политика</a></li>\n            <li><a href=\"#\" className=\"hover:text-foreground\">Контакты</a></li>\n          </ul>\n        </div>\n      </div>\n\n      <div className=\"flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground border-t border-border pt-6 gap-3\">\n        <span>© 2026 AMANTLE UI. Все права защищены.</span>\n        <span className=\"flex items-center gap-1.5\">\n          <span className=\"h-2 w-2 rounded-full bg-emerald-500 animate-pulse motion-reduce:animate-none\" /> Все сервисы работают в штатном режиме\n        </span>\n      </div>\n    </footer>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/footer-columns-newsletter.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "footer-columns-newsletter"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

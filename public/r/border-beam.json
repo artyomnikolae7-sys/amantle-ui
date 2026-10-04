@@ -1,0 +1,28 @@
+{
+  "name": "border-beam",
+  "type": "registry:ui",
+  "title": "Border Beam",
+  "description": "AMANTLE UI ui: border-beam",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/border-beam.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/border-beam\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BorderBeamProps {\n  className?: string;\n  size?: number;\n  duration?: number;\n  borderWidth?: number;\n  colorFrom?: string;\n  colorTo?: string;\n}\n\nexport function BorderBeam({\n  className,\n  size = 200,\n  duration = 15,\n  borderWidth = 1.5,\n  colorFrom = \"#ffaa40\",\n  colorTo = \"#9c40ff\",\n}: BorderBeamProps) {\n  return (\n    <div\n      style={{\n        [\"--size\" as any]: size,\n        [\"--duration\" as any]: duration,\n        [\"--border-width\" as any]: borderWidth,\n        [\"--color-from\" as any]: colorFrom,\n        [\"--color-to\" as any]: colorTo,\n      }}\n      className={cn(\n        \"pointer-events-none absolute inset-0 rounded-[inherit] [border:calc(var(--border-width)*1px)_solid_transparent]\",\n        \"![mask-clip:padding-box,border-box] ![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(white,white)]\",\n        \"after:absolute after:aspect-square after:w-[calc(var(--size)*1px)] after:animate-[border-beam_calc(var(--duration)*1s)_infinite_linear] after:[animation-delay:var(--delay,0s)] after:[background:linear-gradient(to_left,var(--color-from),var(--color-to),transparent)] after:[offset-anchor:calc(var(--size)*0.5px)_50%] after:[offset-path:rect(0_auto_auto_0_round_calc(var(--size)*1px))]\",\n        className\n      )}\n    />\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/border-beam.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "border-beam"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/border-beam",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

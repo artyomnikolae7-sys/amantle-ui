@@ -1,0 +1,28 @@
+{
+  "name": "menubar",
+  "type": "registry:ui",
+  "title": "Menubar",
+  "description": "AMANTLE UI ui: menubar",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/menubar.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/menubar\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface MenubarProps {\n  className?: string;\n}\n\nexport function Menubar({ className }: MenubarProps) {\n  const [activeMenu, setActiveMenu] = React.useState<string | null>(null);\n\n  const menus = [\n    {\n      name: \"File\",\n      items: [\"New Window (⌘N)\", \"Open File (⌘O)\", \"Save (⌘S)\", \"Exit\"],\n    },\n    {\n      name: \"Edit\",\n      items: [\"Undo (⌘Z)\", \"Redo (⇧⌘Z)\", \"Cut (⌘X)\", \"Copy (⌘C)\", \"Paste (⌘V)\"],\n    },\n    {\n      name: \"View\",\n      items: [\"Zoom In (⌘+)\", \"Zoom Out (⌘-)\", \"Toggle Sidebar (⌘B)\", \"Full Screen\"],\n    },\n    {\n      name: \"Help\",\n      items: [\"Documentation\", \"Release Notes\", \"About AMANTLE UI\"],\n    },\n  ];\n\n  return (\n    <div className={cn(\"inline-flex rounded-lg border border-border bg-card p-1 text-sm font-medium shadow-sm\", className)}>\n      {menus.map((m) => (\n        <div key={m.name} className=\"relative\">\n          <button\n            onClick={() => setActiveMenu(activeMenu === m.name ? null : m.name)}\n            className={cn(\n              \"px-3 py-1.5 rounded-md hover:bg-muted text-foreground transition-colors cursor-pointer\",\n              activeMenu === m.name && \"bg-muted\"\n            )}\n          >\n            {m.name}\n          </button>\n          {activeMenu === m.name && (\n            <div className=\"absolute top-full left-0 mt-1 w-48 rounded-lg border border-border bg-popover p-1 shadow-xl z-50 animate-in motion-reduce:animate-none fade-in-50\">\n              {m.items.map((item) => (\n                <button\n                  key={item}\n                  onClick={() => setActiveMenu(null)}\n                  className=\"flex w-full items-center justify-between rounded px-2.5 py-1.5 text-xs text-foreground hover:bg-accent hover:text-accent-foreground text-left\"\n                >\n                  {item}\n                </button>\n              ))}\n            </div>\n          )}\n        </div>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/menubar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "menubar"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/menubar",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

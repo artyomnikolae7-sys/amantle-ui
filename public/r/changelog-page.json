@@ -1,0 +1,33 @@
+{
+  "name": "changelog-page",
+  "type": "registry:template",
+  "title": "Changelog Page",
+  "description": "AMANTLE UI template: changelog-page",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "templates/changelog-page.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Clean changelog product release template\n */\n\nimport * as React from \"react\";\nimport { Sparkles, CheckCircle2, ArrowRight } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function ChangelogPage() {\n  const releases = [\n    {\n      version: \"v2.2.0\",\n      date: \"4 октября 2026\",\n      title: \"100 Компонентов и Быстрый Конвейер Онбординга\",\n      highlight: true,\n      changes: [\n        \"Добавлено 38 новых компонентов: интерактивные карточки, формы, блоки дашбордов и шаблоны.\",\n        \"Режим A/B Сравнения в витрине ShowcaseViewer с аудитом токенов Tailwind v4.\",\n        \"Автоматизированный CLI конвейер (npm run pipeline) с ускорением интеграции до 3 минут.\",\n      ],\n    },\n    {\n      version: \"v2.1.0\",\n      date: \"28 сентября 2026\",\n      title: \"Семейство Кнопок и Микро-Анимации\",\n      highlight: false,\n      changes: [\n        \"Пять новых интерактивных кнопок: Magnetic, Ripple, Shimmer, Expandable Icon, Tilt 3D.\",\n        \"Группы кнопок ButtonGroup, SplitButton и SegmentedControl.\",\n        \"Интерактивный таб Playground с живыми контролами пропсов.\",\n      ],\n    },\n    {\n      version: \"v2.0.0\",\n      date: \"15 сентября 2026\",\n      title: \"Первый публичный релиз AMANTLE UI\",\n      highlight: false,\n      changes: [\n        \"50 базовых UI-примитивов, полностью типизированных под Next.js 15 App Router.\",\n        \"Собственный MCP сервер для интеграции с Cursor и Claude Code.\",\n        \"Поддержка светлой и тёмной тем через семантические CSS-переменные.\",\n      ],\n    },\n  ];\n\n  return (\n    <div className=\"min-h-screen bg-background text-foreground py-16 px-4\">\n      <div className=\"container mx-auto max-w-4xl space-y-12\">\n        <div className=\"text-center space-y-3\">\n          <Badge variant=\"outline\" className=\"text-xs text-primary border-primary/30 bg-primary/10\">\n            История версий\n          </Badge>\n          <h1 className=\"text-4xl font-extrabold tracking-tight\">Журнал обновлений (Changelog)</h1>\n          <p className=\"text-muted-foreground text-sm max-w-md mx-auto\">\n            Следите за всеми улучшениями, новыми компонентами и исправлениями экосистемы AMANTLE UI.\n          </p>\n        </div>\n\n        <div className=\"relative border-l-2 border-border/80 ml-4 sm:ml-8 pl-6 sm:pl-8 space-y-12\">\n          {releases.map((rel, i) => (\n            <div key={i} className=\"relative group space-y-3\">\n              <div\n                className={`absolute -left-[35px] sm:-left-[43px] top-1 h-7 w-7 rounded-full border-2 border-background flex items-center justify-center ${\n                  rel.highlight\n                    ? \"bg-primary text-primary-foreground ring-4 ring-primary/20\"\n                    : \"bg-muted text-muted-foreground\"\n                }`}\n              >\n                {rel.highlight ? <Sparkles className=\"h-3.5 w-3.5\" /> : <CheckCircle2 className=\"h-3.5 w-3.5\" />}\n              </div>\n\n              <div className=\"flex flex-wrap items-center gap-3\">\n                <Badge variant={rel.highlight ? \"default\" : \"secondary\"} className=\"font-mono text-xs\">\n                  {rel.version}\n                </Badge>\n                <span className=\"text-xs text-muted-foreground\">{rel.date}</span>\n              </div>\n\n              <h2 className=\"text-xl font-bold text-foreground\">{rel.title}</h2>\n\n              <div className=\"rounded-2xl border border-border bg-card p-5 shadow-2xs space-y-2\">\n                <ul className=\"space-y-2 text-xs text-muted-foreground leading-relaxed\">\n                  {rel.changes.map((ch, idx) => (\n                    <li key={idx} className=\"flex items-start gap-2\">\n                      <span className=\"h-1.5 w-1.5 rounded-full bg-primary mt-1.5 shrink-0\" />\n                      <span>{ch}</span>\n                    </li>\n                  ))}\n                </ul>\n              </div>\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/changelog-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "changelog-page"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Clean changelog product release template"
+  }
+}

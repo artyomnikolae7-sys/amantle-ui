@@ -188,7 +188,7 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
               Золотой фонд AMANTLE UI
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Все 55 эталонных компонентов с интерактивным тестированием прямо в каталоге
+              Все {items.length} эталонных компонентов с интерактивным тестированием прямо в каталоге
             </p>
           </div>
 

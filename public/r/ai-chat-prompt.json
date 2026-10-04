@@ -1,0 +1,30 @@
+{
+  "name": "ai-chat-prompt",
+  "type": "registry:block",
+  "title": "Ai Chat Prompt",
+  "description": "AMANTLE UI block: ai-chat-prompt",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/ai-chat-prompt.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/textarea\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ArrowUp, Sparkles, Paperclip, Mic, Bot } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface AiChatPromptProps {\n  className?: string;\n  placeholder?: string;\n  modelName?: string;\n}\n\nexport function AiChatPrompt({\n  className,\n  placeholder = \"Спросите что-нибудь у AMANTLE AI...\",\n  modelName = \"Gemini 2.5 Pro\",\n}: AiChatPromptProps) {\n  const [val, setVal] = React.useState(\"\");\n  const chips = [\"Сгенерируй Hero блок\", \"Добавь A/B тест\", \"Оптимизируй CSS переменные\"];\n\n  return (\n    <div className={cn(\"w-full max-w-2xl mx-auto rounded-2xl border border-border bg-card p-4 shadow-2xl space-y-3\", className)}>\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground border-b border-border/60 pb-2\">\n        <div className=\"flex items-center gap-1.5 font-medium text-foreground\">\n          <Bot className=\"h-4 w-4 text-primary\" />\n          <span>{modelName}</span>\n        </div>\n        <span className=\"text-[11px] font-mono\">Контекст: 128k</span>\n      </div>\n\n      <textarea\n        value={val}\n        onChange={(e) => setVal(e.target.value)}\n        placeholder={placeholder}\n        rows={2}\n        className=\"w-full resize-none bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground\"\n      />\n\n      <div className=\"flex items-center justify-between pt-1\">\n        <div className=\"flex items-center gap-1\">\n          <button className=\"p-2 rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-colors\">\n            <Paperclip className=\"h-4 w-4\" />\n          </button>\n          <button className=\"p-2 rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-colors\">\n            <Mic className=\"h-4 w-4\" />\n          </button>\n        </div>\n\n        <button\n          disabled={!val.trim()}\n          className=\"flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-90 shadow transition-opacity\"\n        >\n          <ArrowUp className=\"h-4 w-4\" />\n        </button>\n      </div>\n\n      <div className=\"flex flex-wrap gap-1.5 pt-1\">\n        {chips.map((c) => (\n          <button\n            key={c}\n            onClick={() => setVal(c)}\n            className=\"flex items-center gap-1 rounded-full border border-border bg-muted/40 px-2.5 py-1 text-[11px] text-muted-foreground hover:bg-muted hover:text-foreground transition-colors cursor-pointer\"\n          >\n            <Sparkles className=\"h-3 w-3 text-primary\" /> {c}\n          </button>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/ai-chat-prompt.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "ai-chat-prompt"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/textarea",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "button-gradient-flow",
+  "type": "registry:ui",
+  "title": "Button Gradient Flow",
+  "description": "AMANTLE UI ui: button-gradient-flow",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-gradient-flow.tsx",
+      "content": "/**\n * @source AMANTLE UI Motion Engine\n * @author Open Source\n * @license MIT\n * @modified Tokenized for AMANTLE UI with Tailwind v4 semantic variables and spring motion\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ButtonGradientFlowProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  glow?: boolean;\n}\n\nexport const ButtonGradientFlow = React.forwardRef<\n  HTMLButtonElement,\n  ButtonGradientFlowProps\n>(({ className, children, glow = true, ...props }, ref) => {\n  return (\n    <button\n      ref={ref}\n      className={cn(\n        \"relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-primary-foreground\",\n        \"rounded-lg overflow-hidden group cursor-pointer\",\n        \"bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-gradient\",\n        \"active:scale-[0.97] duration-150 ease-out\",\n        \"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\",\n        \"motion-reduce:animate-none motion-reduce:active:scale-100\",\n        glow && \"shadow-[0_0_20px_-5px_var(--color-primary)]\",\n        className\n      )}\n      {...props}\n    >\n      <span className=\"relative z-10 flex items-center gap-2\">{children}</span>\n    </button>\n  );\n});\n\nButtonGradientFlow.displayName = \"ButtonGradientFlow\";",
+      "type": "registry:ui",
+      "target": "components/ui/button-gradient-flow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-gradient-flow"
+  ],
+  "meta": {
+    "source": "AMANTLE UI Motion Engine",
+    "author": "Open Source",
+    "license": "MIT",
+    "modified": "Tokenized for AMANTLE UI with Tailwind v4 semantic variables and spring motion"
+  }
+}

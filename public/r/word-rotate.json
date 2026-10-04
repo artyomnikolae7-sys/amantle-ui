@@ -1,0 +1,28 @@
+{
+  "name": "word-rotate",
+  "type": "registry:ui",
+  "title": "Word Rotate",
+  "description": "AMANTLE UI ui: word-rotate",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/word-rotate.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/word-rotate\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface WordRotateProps {\n  className?: string;\n  words?: string[];\n  duration?: number;\n}\n\nexport function WordRotate({\n  className,\n  words = [\"Быстрый\", \"Интеллектуальный\", \"Масштабируемый\", \"Эстетичный\"],\n  duration = 2500,\n}: WordRotateProps) {\n  const [index, setIndex] = React.useState(0);\n\n  React.useEffect(() => {\n    const timer = setInterval(() => {\n      setIndex((prev) => (prev + 1) % words.length);\n    }, duration);\n    return () => clearInterval(timer);\n  }, [words.length, duration]);\n\n  return (\n    <div className={cn(\"text-2xl sm:text-3xl font-bold text-foreground inline-flex items-center gap-2\", className)}>\n      <span>Дизайн:</span>\n      <span className=\"text-primary transition-[color,background-color,border-color,box-shadow,transform] duration-300 transform inline-block\">\n        {words[index]}\n      </span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/word-rotate.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "word-rotate"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/word-rotate",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

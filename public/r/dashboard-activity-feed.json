@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-activity-feed",
+  "type": "registry:block",
+  "title": "Dashboard Activity Feed",
+  "description": "AMANTLE UI block: dashboard-activity-feed",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/dashboard-activity-feed.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Recent activity feed for dashboard\n */\n\nimport * as React from \"react\";\nimport { GitCommit, UserPlus, CheckCircle2 } from \"lucide-react\";\n\nexport default function DashboardActivityFeed() {\n  const events = [\n    { icon: GitCommit, title: \"Опубликован новый релиз v2.1.0\", time: \"10 минут назад\", user: \"Артем С.\" },\n    { icon: UserPlus, title: \"Новый участник добавлен в команду\", time: \"1 час назад\", user: \"Елена В.\" },\n    { icon: CheckCircle2, title: \"Пройден аудит безопасности реестра\", time: \"3 часа назад\", user: \"CI Bot\" },\n  ];\n\n  return (\n    <div className=\"p-6 max-w-md mx-auto rounded-2xl border border-border bg-card shadow-sm space-y-4\">\n      <h3 className=\"text-sm font-bold text-foreground\">Лента активности</h3>\n      <div className=\"space-y-3\">\n        {events.map((ev, i) => {\n          const Icon = ev.icon;\n          return (\n            <div key={i} className=\"flex items-start gap-3 text-xs\">\n              <div className=\"h-7 w-7 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5\">\n                <Icon className=\"h-3.5 w-3.5\" />\n              </div>\n              <div className=\"space-y-0.5\">\n                <span className=\"font-semibold text-foreground block\">{ev.title}</span>\n                <span className=\"text-[11px] text-muted-foreground block\">{ev.user} • {ev.time}</span>\n              </div>\n            </div>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/dashboard-activity-feed.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "dashboard-activity-feed"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Recent activity feed for dashboard"
+  }
+}

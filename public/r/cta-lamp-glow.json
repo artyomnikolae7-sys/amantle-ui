@@ -1,0 +1,30 @@
+{
+  "name": "cta-lamp-glow",
+  "type": "registry:block",
+  "title": "Cta Lamp Glow",
+  "description": "AMANTLE UI block: cta-lamp-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/cta-lamp-glow.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/lamp\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ArrowRight } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CtaLampGlowProps {\n  className?: string;\n  title?: string;\n}\n\nexport function CtaLampGlow({ className, title = \"Готовы поднять качество вашего UI?\" }: CtaLampGlowProps) {\n  return (\n    <div className={cn(\"relative overflow-hidden rounded-3xl border border-border bg-card p-10 sm:p-14 text-center max-w-4xl mx-auto w-full\", className)}>\n      <div className=\"absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-44 w-96 rounded-full bg-primary/30 blur-3xl pointer-events-none\" />\n\n      <div className=\"relative z-10 space-y-4 max-w-xl mx-auto\">\n        <h2 className=\"text-2xl sm:text-4xl font-black text-foreground\">{title}</h2>\n        <p className=\"text-xs sm:text-sm text-muted-foreground\">\n          Присоединяйтесь к тысячам инженеров, создающих быстрые и красивые веб-приложения на AMANTLE UI.\n        </p>\n\n        <div className=\"flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2\">\n          <input\n            type=\"email\"\n            placeholder=\"ваш.email@domain.com\"\n            className=\"flex-1 h-11 px-4 rounded-xl border border-border bg-muted/40 text-sm text-foreground outline-none focus:border-primary\"\n          />\n          <button className=\"h-11 px-6 rounded-xl bg-primary text-primary-foreground font-bold text-sm hover:opacity-90 transition-opacity cursor-pointer\">\n            Начать\n          </button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/cta-lamp-glow.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "cta-lamp-glow"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/lamp",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

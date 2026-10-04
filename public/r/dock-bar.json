@@ -1,0 +1,30 @@
+{
+  "name": "dock-bar",
+  "type": "registry:ui",
+  "title": "Dock Bar",
+  "description": "AMANTLE UI ui: dock-bar",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dock-bar.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/dock\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Home, Compass, Layers, Settings, Bell, Search, Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DockBarProps {\n  className?: string;\n}\n\nexport function DockBar({ className }: DockBarProps) {\n  const items = [\n    { icon: Home, label: \"Home\" },\n    { icon: Compass, label: \"Explore\" },\n    { icon: Layers, label: \"Components\" },\n    { icon: Sparkles, label: \"AI Tools\" },\n    { icon: Bell, label: \"Alerts\" },\n    { icon: Settings, label: \"Settings\" },\n  ];\n\n  return (\n    <div className={cn(\"inline-flex items-center gap-3 px-4 py-2.5 rounded-2xl border border-border bg-card/80 backdrop-blur-xl shadow-2xl\", className)}>\n      {items.map((item) => {\n        const Icon = item.icon;\n        return (\n          <button\n            key={item.label}\n            title={item.label}\n            className=\"group relative flex h-11 w-11 items-center justify-center rounded-xl bg-muted/50 hover:bg-primary hover:text-primary-foreground transition-[color,background-color,border-color,box-shadow,transform] duration-200 hover:-translate-y-2 hover:scale-125 shadow cursor-pointer text-foreground\"\n          >\n            <Icon className=\"h-5 w-5 transition-transform\" />\n          </button>\n        );\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/dock-bar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dock-bar"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/dock",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

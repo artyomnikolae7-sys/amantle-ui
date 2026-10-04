@@ -1,0 +1,30 @@
+{
+  "name": "input-command-filter",
+  "type": "registry:ui",
+  "title": "Input Command Filter",
+  "description": "AMANTLE UI ui: input-command-filter",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-command-filter.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-command-filter\n * @author AMANTLE UI\n * @license MIT\n * @modified Filter tag pills embedded inside input container\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Search, X } from \"lucide-react\";\n\nexport function InputCommandFilter() {\n  const [filter, setFilter] = React.useState(\"Все\");\n  const [query, setQuery] = React.useState(\"\");\n\n  const tags = [\"Все\", \"Компоненты\", \"Хуки\", \"Блоки\"];\n\n  return (\n    <div className=\"max-w-md w-full rounded-xl border border-border bg-card p-1.5 shadow-sm space-y-2\">\n      <div className=\"flex items-center gap-2 px-2\">\n        <Search className=\"w-4 h-4 text-muted-foreground\" />\n        <input\n          type=\"text\"\n          value={query}\n          onChange={(e) => setQuery(e.target.value)}\n          placeholder=\"Поиск по тегам...\"\n          className=\"w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none\"\n        />\n        {query && (\n          <button onClick={() => setQuery(\"\")}>\n            <X className=\"w-3.5 h-3.5 text-muted-foreground hover:text-foreground\" />\n          </button>\n        )}\n      </div>\n      <div className=\"flex items-center gap-1.5 pt-1 border-t border-border/50\">\n        {tags.map((t) => (\n          <button\n            key={t}\n            onClick={() => setFilter(t)}\n            className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${\n              filter === t\n                ? \"bg-primary text-primary-foreground font-semibold\"\n                : \"text-muted-foreground hover:bg-muted\"\n            }`}\n          >\n            {t}\n          </button>\n        ))}\n      </div>\n    </div>\n  );\n}\nexport default InputCommandFilter;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-command-filter.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-command-filter"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-command-filter",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Filter tag pills embedded inside input container"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "drawer-bottom",
+  "type": "registry:ui",
+  "title": "Drawer Bottom",
+  "description": "AMANTLE UI ui: drawer-bottom",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/drawer-bottom.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/drawer\n * @author Emil Kowalski / shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { X, Check } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DrawerBottomProps {\n  className?: string;\n  isOpen?: boolean;\n  onClose?: () => void;\n  title?: string;\n  description?: string;\n  children?: React.ReactNode;\n}\n\nexport function DrawerBottom({\n  className,\n  isOpen = true,\n  onClose,\n  title = \"Быстрые действия\",\n  description = \"Выберите необходимую операцию или подтвердите выбор\",\n  children,\n}: DrawerBottomProps) {\n  return (\n    <div className={cn(\"relative w-full max-w-md mx-auto rounded-t-2xl border-t border-x border-border bg-card p-6 shadow-2xl\", className)}>\n      <div className=\"mx-auto w-12 h-1.5 rounded-full bg-muted-foreground/30 mb-5\" />\n      <div className=\"flex items-start justify-between mb-4\">\n        <div>\n          <h3 className=\"text-lg font-bold text-foreground\">{title}</h3>\n          <p className=\"text-xs text-muted-foreground mt-1\">{description}</p>\n        </div>\n        {onClose && (\n          <button onClick={onClose} className=\"rounded-full p-1 text-muted-foreground hover:bg-muted hover:text-foreground\">\n            <X className=\"h-4 w-4\" />\n          </button>\n        )}\n      </div>\n      {children || (\n        <div className=\"space-y-3 py-2\">\n          <div className=\"rounded-lg border border-border bg-muted/40 p-3 text-sm flex items-center justify-between\">\n            <span>Синхронизация данных</span>\n            <Check className=\"h-4 w-4 text-primary\" />\n          </div>\n          <button className=\"w-full h-10 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity\">\n            Подтвердить\n          </button>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/drawer-bottom.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "drawer-bottom"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/drawer",
+    "author": "Emil Kowalski / shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

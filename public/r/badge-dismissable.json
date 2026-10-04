@@ -1,0 +1,30 @@
+{
+  "name": "badge-dismissable",
+  "type": "registry:ui",
+  "title": "Badge Dismissable",
+  "description": "AMANTLE UI ui: badge-dismissable",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-dismissable.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/badge-dismissable\n * @author AMANTLE UI\n * @license MIT\n * @modified Collapsible tag removal animation\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { X } from \"lucide-react\";\n\nexport function BadgeDismissable({\n  label = \"Фильтр: Активные\",\n}: {\n  label?: string;\n}) {\n  const [visible, setVisible] = React.useState(true);\n\n  if (!visible) return null;\n\n  return (\n    <span className=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium border border-border transition-[color,background-color,border-color,box-shadow,transform]\">\n      <span>{label}</span>\n      <button onClick={() => setVisible(false)} className=\"hover:text-destructive transition-colors\">\n        <X className=\"w-3 h-3\" />\n      </button>\n    </span>\n  );\n}\nexport default BadgeDismissable;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-dismissable.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-dismissable"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/badge-dismissable",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Collapsible tag removal animation"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "button-pulse-ring",
+  "type": "registry:ui",
+  "title": "Button Pulse Ring",
+  "description": "AMANTLE UI ui: button-pulse-ring",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-pulse-ring.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-pulse-ring\n * @author AMANTLE UI\n * @license MIT\n * @modified Radar beacon expanding rings\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Radio } from \"lucide-react\";\n\nexport function ButtonPulseRing() {\n  return (\n    <div className=\"relative inline-flex items-center justify-center\">\n      <span className=\"absolute inline-flex h-full w-full rounded-xl bg-primary opacity-30 animate-ping motion-reduce:animate-none\" />\n      <button className=\"relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm shadow-lg\">\n        <Radio className=\"w-4 h-4\" />\n        <span>Подключить радар</span>\n      </button>\n    </div>\n  );\n}\nexport default ButtonPulseRing;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-pulse-ring.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-pulse-ring"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-pulse-ring",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Radar beacon expanding rings"
+  }
+}

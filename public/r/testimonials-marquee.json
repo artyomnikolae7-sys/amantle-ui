@@ -1,0 +1,30 @@
+{
+  "name": "testimonials-marquee",
+  "type": "registry:block",
+  "title": "Testimonials Marquee",
+  "description": "AMANTLE UI block: testimonials-marquee",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/testimonials-marquee.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/marquee\n * @author Magic UI\n * @license MIT\n * @modified Endless marquee reviews strip\n */\n\nimport * as React from \"react\";\nimport { Star } from \"lucide-react\";\n\nexport default function TestimonialsMarquee() {\n  const reviews = [\n    { name: \"Артем Смирнов\", role: \"CTO в FinTech\", text: \"Перенесли все дашборды на AMANTLE UI за 2 дня. Чистый восторг от Tailwind токенов!\" },\n    { name: \"Анна Мельникова\", role: \"Product Designer\", text: \"Режим A/B сравнения токенов сэкономил нам недели дизайн-ревью.\" },\n    { name: \"Денис Ковалев\", role: \"Fullstack Dev\", text: \"Конвейер импорта компонентов работает как швейцарские часы. Рекомендую!\" },\n    { name: \"Мария Соколова\", role: \"Frontend Lead\", text: \"Лучшая реализация кнопок и микро-анимаций, что я видела в React.\" },\n  ];\n\n  return (\n    <div className=\"py-12 overflow-hidden bg-background text-foreground space-y-6\">\n      <h3 className=\"text-xl font-bold text-center\">Что говорят разработчики</h3>\n      <div className=\"flex gap-4 w-max animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused]\">\n        {[...reviews, ...reviews].map((r, i) => (\n          <div\n            key={i}\n            className=\"w-72 rounded-xl border border-border bg-card p-4 shadow-2xs space-y-2 shrink-0\"\n          >\n            <div className=\"flex items-center gap-1 text-amber-400\">\n              {Array.from({ length: 5 }).map((_, idx) => (\n                <Star key={idx} className=\"h-3.5 w-3.5 fill-amber-400\" />\n              ))}\n            </div>\n            <p className=\"text-xs text-muted-foreground leading-relaxed\">«{r.text}»</p>\n            <div>\n              <span className=\"text-xs font-bold text-foreground block\">{r.name}</span>\n              <span className=\"text-[10px] text-muted-foreground block\">{r.role}</span>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/testimonials-marquee.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "testimonials-marquee"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/marquee",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Endless marquee reviews strip"
+  }
+}

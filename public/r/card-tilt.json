@@ -1,0 +1,28 @@
+{
+  "name": "card-tilt",
+  "type": "registry:ui",
+  "title": "Card Tilt",
+  "description": "AMANTLE UI ui: card-tilt",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-tilt.tsx",
+      "content": "/**\n * @source https://21st.dev/community/card-tilt\n * @author 21st.dev\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CardTiltProps extends React.HTMLAttributes<HTMLDivElement> {\n  maxTilt?: number;\n  perspective?: number;\n}\n\nexport function CardTilt({\n  className,\n  children,\n  maxTilt = 12,\n  perspective = 1000,\n  ...props\n}: CardTiltProps) {\n  const cardRef = React.useRef<HTMLDivElement>(null);\n  const [rotate, setRotate] = React.useState({ x: 0, y: 0 });\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!cardRef.current) return;\n    const rect = cardRef.current.getBoundingClientRect();\n    const x = e.clientX - rect.left - rect.width / 2;\n    const y = e.clientY - rect.top - rect.height / 2;\n    const rotateX = -(y / (rect.height / 2)) * maxTilt;\n    const rotateY = (x / (rect.width / 2)) * maxTilt;\n    setRotate({ x: rotateX, y: rotateY });\n  };\n\n  const handleMouseLeave = () => {\n    setRotate({ x: 0, y: 0 });\n  };\n\n  return (\n    <div\n      style={{ perspective: `${perspective}px` }}\n      className=\"inline-block\"\n    >\n      <div\n        ref={cardRef}\n        onMouseMove={handleMouseMove}\n        onMouseLeave={handleMouseLeave}\n        style={{\n          transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,\n          transition: \"transform 0.15s ease-out\",\n        }}\n        className={cn(\n          \"rounded-xl border border-border bg-card p-6 text-card-foreground shadow-md transition-shadow hover:shadow-xl motion-reduce:transform-none\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-tilt.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-tilt"
+  ],
+  "meta": {
+    "source": "https://21st.dev/community/card-tilt",
+    "author": "21st.dev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

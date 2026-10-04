@@ -1,0 +1,30 @@
+{
+  "name": "comparison-slider-image",
+  "type": "registry:block",
+  "title": "Comparison Slider Image",
+  "description": "AMANTLE UI block: comparison-slider-image",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/comparison-slider-image.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/compare\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { GripVertical } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ComparisonSliderImageProps {\n  className?: string;\n  defaultPosition?: number;\n}\n\nexport function ComparisonSliderImage({ className, defaultPosition = 50 }: ComparisonSliderImageProps) {\n  const [position, setPosition] = React.useState(defaultPosition);\n\n  return (\n    <div className={cn(\"relative w-full max-w-lg h-64 rounded-2xl overflow-hidden border border-border bg-card select-none\", className)}>\n      {/* Before */}\n      <div className=\"absolute inset-0 bg-gradient-to-tr from-slate-900 to-slate-800 flex items-center justify-center\">\n        <span className=\"font-bold text-xl text-white/50\">ДО ОПТИМИЗАЦИИ</span>\n      </div>\n\n      {/* After with clip path */}\n      <div\n        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}\n        className=\"absolute inset-0 bg-gradient-to-tr from-primary to-purple-600 flex items-center justify-center\"\n      >\n        <span className=\"font-black text-xl text-white\">AMANTLE UI ПОСЛЕ</span>\n      </div>\n\n      {/* Slider handle */}\n      <div\n        style={{ left: `${position}%` }}\n        className=\"absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center\"\n      >\n        <div className=\"h-8 w-8 rounded-full bg-white shadow-xl flex items-center justify-center text-slate-900\">\n          <GripVertical className=\"h-4 w-4\" />\n        </div>\n      </div>\n\n      <input\n        type=\"range\"\n        min={0}\n        max={100}\n        value={position}\n        onChange={(e) => setPosition(Number(e.target.value))}\n        className=\"absolute inset-0 opacity-0 cursor-ew-resize w-full h-full\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/comparison-slider-image.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "comparison-slider-image"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/compare",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

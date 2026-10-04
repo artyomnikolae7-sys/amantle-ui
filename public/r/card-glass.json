@@ -1,0 +1,28 @@
+{
+  "name": "card-glass",
+  "type": "registry:ui",
+  "title": "Card Glass",
+  "description": "AMANTLE UI ui: card-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-glass.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Glassmorphism preset with Tailwind v4 backdrop-blur\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface CardGlassProps extends React.HTMLAttributes<HTMLDivElement> {\n  glow?: boolean;\n}\n\nexport function CardGlass({ className, children, glow = true, ...props }: CardGlassProps) {\n  return (\n    <div\n      className={cn(\n        \"relative rounded-2xl border border-white/20 dark:border-white/10 bg-background/40 dark:bg-card/40 backdrop-blur-xl p-6 shadow-xl text-foreground\",\n        glow && \"before:absolute before:-inset-px before:rounded-2xl before:bg-gradient-to-b before:from-primary/20 before:to-transparent before:pointer-events-none\",\n        className\n      )}\n      {...props}\n    >\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-glass.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-glass"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Glassmorphism preset with Tailwind v4 backdrop-blur"
+  }
+}

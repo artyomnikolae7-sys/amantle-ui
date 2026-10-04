@@ -31,7 +31,7 @@ export function MetricsGraphCard() {
           {bars.map((height, i) => (
             <div
               key={i}
-              className="flex-1 bg-primary/20 hover:bg-primary transition-all rounded-t-xs"
+              className="flex-1 bg-primary/20 hover:bg-primary transition-[color,background-color,border-color,box-shadow,transform] rounded-t-xs"
               style={{ height: `${height}%` }}
               title={`Интервал ${i + 1}: ${height}%`}
             />

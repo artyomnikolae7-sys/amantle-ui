@@ -1,0 +1,28 @@
+{
+  "name": "scroll-area",
+  "type": "registry:ui",
+  "title": "Scroll Area",
+  "description": "AMANTLE UI ui: scroll-area",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/scroll-area.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Custom styled scroll area\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ScrollAreaProps extends React.HTMLAttributes<HTMLDivElement> {\n  maxHeight?: string;\n}\n\nexport function ScrollArea({ className, maxHeight = \"240px\", children, ...props }: ScrollAreaProps) {\n  return (\n    <div\n      style={{ maxHeight }}\n      className={cn(\n        \"overflow-y-auto rounded-lg border border-border p-4 text-xs text-foreground [scrollbar-width:thin] [scrollbar-color:var(--border)_transparent]\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/scroll-area.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "scroll-area"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Custom styled scroll area"
+  }
+}

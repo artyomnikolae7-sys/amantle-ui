@@ -1,0 +1,30 @@
+{
+  "name": "context-menu",
+  "type": "registry:ui",
+  "title": "Context Menu",
+  "description": "AMANTLE UI ui: context-menu",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/context-menu.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/context-menu\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Copy, Scissors, Trash, Share2, Sparkles, Eye } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ContextMenuProps {\n  className?: string;\n  triggerText?: string;\n}\n\nexport function ContextMenu({ className, triggerText = \"Правый клик в этой области\" }: ContextMenuProps) {\n  const [visible, setVisible] = React.useState(false);\n  const [pos, setPos] = React.useState({ x: 40, y: 40 });\n\n  const handleContextMenu = (e: React.MouseEvent) => {\n    e.preventDefault();\n    const rect = e.currentTarget.getBoundingClientRect();\n    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });\n    setVisible(true);\n  };\n\n  return (\n    <div\n      onContextMenu={handleContextMenu}\n      onClick={() => setVisible(false)}\n      className={cn(\n        \"relative flex h-52 w-full max-w-md items-center justify-center rounded-xl border border-dashed border-border bg-card/60 p-6 text-center select-none cursor-context-menu\",\n        className\n      )}\n    >\n      <div className=\"space-y-1\">\n        <p className=\"text-sm font-medium text-foreground\">{triggerText}</p>\n        <p className=\"text-xs text-muted-foreground\">Или нажмите в любом месте для вызова меню</p>\n      </div>\n\n      {visible && (\n        <div\n          style={{ top: pos.y, left: pos.x }}\n          className=\"absolute z-50 w-48 rounded-lg border border-border bg-popover p-1 shadow-xl animate-in motion-reduce:animate-none fade-in-80 text-left\"\n        >\n          <button className=\"flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-xs text-foreground hover:bg-accent transition-colors\">\n            <Eye className=\"h-3.5 w-3.5 text-muted-foreground\" /> Просмотр\n          </button>\n          <button className=\"flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-xs text-foreground hover:bg-accent transition-colors\">\n            <Copy className=\"h-3.5 w-3.5 text-muted-foreground\" /> Копировать\n          </button>\n          <button className=\"flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-xs text-foreground hover:bg-accent transition-colors\">\n            <Share2 className=\"h-3.5 w-3.5 text-muted-foreground\" /> Поделиться\n          </button>\n          <div className=\"my-1 h-px bg-border\" />\n          <button className=\"flex w-full items-center gap-2 rounded px-2.5 py-1.5 text-xs text-destructive hover:bg-destructive/10 transition-colors\">\n            <Trash className=\"h-3.5 w-3.5\" /> Удалить\n          </button>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/context-menu.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "context-menu"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/context-menu",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

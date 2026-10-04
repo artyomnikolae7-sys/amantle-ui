@@ -1,0 +1,28 @@
+{
+  "name": "badge-status-dot",
+  "type": "registry:ui",
+  "title": "Badge Status Dot",
+  "description": "AMANTLE UI ui: badge-status-dot",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-status-dot.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/badge-status-dot\n * @author AMANTLE UI\n * @license MIT\n * @modified Pulsing radar beacon dot\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function BadgeStatusDot({\n  status = \"online\",\n  label = \"Сервер активен\",\n}: {\n  status?: \"online\" | \"idle\" | \"error\";\n  label?: string;\n}) {\n  const styles = {\n    online: \"bg-emerald-500/10 text-emerald-500 border-emerald-500/20 beacon-bg-emerald-500\",\n    idle: \"bg-amber-500/10 text-amber-500 border-amber-500/20 beacon-bg-amber-500\",\n    error: \"bg-rose-500/10 text-rose-500 border-rose-500/20 beacon-bg-rose-500\",\n  };\n\n  const dotColor = {\n    online: \"bg-emerald-500\",\n    idle: \"bg-amber-500\",\n    error: \"bg-rose-500\",\n  }[status];\n\n  return (\n    <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium border ${styles[status]}`}>\n      <span className=\"relative flex h-2 w-2\">\n        <span className={`animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full opacity-75 ${dotColor}`} />\n        <span className={`relative inline-flex rounded-full h-2 w-2 ${dotColor}`} />\n      </span>\n      <span>{label}</span>\n    </span>\n  );\n}\nexport default BadgeStatusDot;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-status-dot.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-status-dot"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/badge-status-dot",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Pulsing radar beacon dot"
+  }
+}

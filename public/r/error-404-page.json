@@ -1,0 +1,32 @@
+{
+  "name": "error-404-page",
+  "type": "registry:template",
+  "title": "Error 404 Page",
+  "description": "AMANTLE UI template: error-404-page",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "templates/error-404-page.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Clean modern 404 error page template\n */\n\nimport * as React from \"react\";\nimport Link from \"next/link\";\nimport { ArrowLeft, Home, Compass } from \"lucide-react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function Error404Page() {\n  return (\n    <div className=\"min-h-screen bg-background text-foreground flex items-center justify-center p-4 text-center\">\n      <div className=\"max-w-md space-y-6\">\n        <div className=\"relative\">\n          <span className=\"text-8xl sm:text-9xl font-black bg-gradient-to-r from-primary via-violet-500 to-rose-500 bg-clip-text text-transparent select-none\">\n            404\n          </span>\n          <div className=\"absolute inset-0 bg-primary/10 blur-3xl -z-10 rounded-full\" />\n        </div>\n\n        <div className=\"space-y-2\">\n          <h1 className=\"text-2xl font-bold tracking-tight\">Страница не найдена</h1>\n          <p className=\"text-xs text-muted-foreground leading-relaxed\">\n            Запрашиваемый компонент или раздел был перемещён, удалён или никогда не существовал в реестре.\n          </p>\n        </div>\n\n        <div className=\"flex flex-wrap justify-center gap-3 pt-2\">\n          <Button asChild className=\"gap-2\">\n            <Link href=\"/\">\n              <Home className=\"h-4 w-4\" />\n              <span>На главную</span>\n            </Link>\n          </Button>\n          <Button variant=\"outline\" asChild className=\"gap-2\">\n            <Link href=\"/ui/button\">\n              <Compass className=\"h-4 w-4\" />\n              <span>Каталог компонентов</span>\n            </Link>\n          </Button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/error-404-page.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "error-404-page"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Clean modern 404 error page template"
+  }
+}

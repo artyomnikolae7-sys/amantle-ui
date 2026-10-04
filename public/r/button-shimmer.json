@@ -1,0 +1,30 @@
+{
+  "name": "button-shimmer",
+  "type": "registry:ui",
+  "title": "Button Shimmer",
+  "description": "AMANTLE UI ui: button-shimmer",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-shimmer.tsx",
+      "content": "/**\n * @source https://reactbits.dev/components/shimmer-button / Magic UI / AMANTLE UI\n * @author AMANTLE UI\n * @license MIT\n * @modified Premium shimmer CTA button with rotating border beam and luminous surface sweep\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst shimmerButtonVariants = cva(\n  \"group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-lg text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground shadow hover:shadow-primary/25\",\n        secondary: \"bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90\",\n        outline: \"border border-input bg-background/80 backdrop-blur-sm text-foreground hover:bg-accent\",\n        dark: \"bg-background text-zinc-100 border border-border shadow-xl hover:border-border\",\n        glass: \"bg-background/60 backdrop-blur-md border border-border/80 text-foreground shadow-sm hover:border-primary/50\",\n      },\n      size: {\n        default: \"h-10 px-5 py-2\",\n        sm: \"h-8 rounded-md px-3 text-xs\",\n        lg: \"h-12 rounded-xl px-8 text-base\",\n        icon: \"h-10 w-10 p-0\",\n      },\n    },\n    defaultVariants: {\n      variant: \"dark\",\n      size: \"default\",\n    },\n  }\n);\n\nexport interface ButtonShimmerProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof shimmerButtonVariants> {\n  shimmerColor?: string;\n  shimmerDuration?: string;\n  effect?: \"beam\" | \"sweep\" | \"both\";\n}\n\nexport const ButtonShimmer = React.forwardRef<HTMLButtonElement, ButtonShimmerProps>(\n  (\n    {\n      className,\n      variant,\n      size,\n      shimmerColor = \"hsl(var(--primary))\",\n      shimmerDuration = \"3s\",\n      effect = \"both\",\n      children,\n      ...props\n    },\n    ref\n  ) => {\n    return (\n      <button\n        ref={ref}\n        className={cn(shimmerButtonVariants({ variant, size, className }))}\n        {...props}\n      >\n        <style>{`\n          @keyframes amantle-beam-spin {\n            0% { transform: rotate(0deg); }\n            100% { transform: rotate(360deg); }\n          }\n          @keyframes amantle-shimmer-sweep {\n            0% { transform: translateX(-150%) skewX(-20deg); }\n            100% { transform: translateX(250%) skewX(-20deg); }\n          }\n        `}</style>\n\n        {/* 1. Border Beam Effect (rotating conic gradient background) */}\n        {(effect === \"beam\" || effect === \"both\") && (\n          <span\n            aria-hidden=\"true\"\n            className=\"absolute inset-[-150%] pointer-events-none motion-reduce:hidden\"\n            style={{\n              animation: `amantle-beam-spin ${shimmerDuration} linear infinite`,\n              background: `conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 320deg, ${shimmerColor} 340deg, transparent 360deg)`,\n            }}\n          />\n        )}\n\n        {/* Button inner container masking the border */}\n        <span\n          className={cn(\n            \"relative z-10 inline-flex h-[calc(100%-2px)] w-[calc(100%-2px)] items-center justify-center gap-2 rounded-[inherit] px-[inherit] py-[inherit] pointer-events-none\",\n            variant === \"dark\" && \"bg-background/95\",\n            variant === \"default\" && \"bg-primary/95\",\n            variant === \"secondary\" && \"bg-secondary/95\",\n            variant === \"outline\" && \"bg-background/95\",\n            variant === \"glass\" && \"bg-background/70 backdrop-blur-md\"\n          )}\n        >\n          {children}\n\n          {/* 2. Linear Surface Shimmer Sweep */}\n          {(effect === \"sweep\" || effect === \"both\") && (\n            <span\n              aria-hidden=\"true\"\n              className=\"absolute inset-0 -top-full -bottom-full w-1/2 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity motion-reduce:hidden\"\n              style={{\n                animation: `amantle-shimmer-sweep calc(${shimmerDuration} * 1.2) cubic-bezier(0.4, 0, 0.2, 1) infinite`,\n                background: `linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%)`,\n              }}\n            />\n          )}\n        </span>\n      </button>\n    );\n  }\n);\n\nButtonShimmer.displayName = \"ButtonShimmer\";\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-shimmer.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-shimmer"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/shimmer-button / Magic UI / AMANTLE UI",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Premium shimmer CTA button with rotating border beam and luminous surface sweep"
+  }
+}

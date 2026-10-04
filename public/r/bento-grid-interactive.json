@@ -1,0 +1,30 @@
+{
+  "name": "bento-grid-interactive",
+  "type": "registry:block",
+  "title": "Bento Grid Interactive",
+  "description": "AMANTLE UI block: bento-grid-interactive",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/bento-grid-interactive.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/bento-grid\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles, Activity, ShieldCheck, Zap, Globe } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BentoGridInteractiveProps {\n  className?: string;\n}\n\nexport function BentoGridInteractive({ className }: BentoGridInteractiveProps) {\n  return (\n    <div className={cn(\"grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto w-full\", className)}>\n      <div className=\"md:col-span-2 rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-primary font-bold\">Performance</span>\n          <h3 className=\"text-xl font-bold text-foreground\">Мгновенный отклик интерфейса</h3>\n          <p className=\"text-xs text-muted-foreground\">Оптимизированные компоненты без просадок FPS с аппаратным ускорением GPU.</p>\n        </div>\n        <div className=\"mt-6 h-24 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent flex items-center px-4\">\n          <Activity className=\"h-8 w-8 text-primary\" />\n          <span className=\"ml-3 font-mono font-bold text-lg text-foreground\">99.98% Latency &lt; 16ms</span>\n        </div>\n      </div>\n\n      <div className=\"rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-emerald-400 font-bold\">Security</span>\n          <h3 className=\"text-lg font-bold text-foreground\">Enterprise защита</h3>\n          <p className=\"text-xs text-muted-foreground\">Строгая типизация TypeScript и нулевой вектор уязвимостей.</p>\n        </div>\n        <ShieldCheck className=\"h-12 w-12 text-emerald-500 self-end mt-4\" />\n      </div>\n\n      <div className=\"rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-amber-400 font-bold\">Speed</span>\n          <h3 className=\"text-lg font-bold text-foreground\">Быстрый старт</h3>\n          <p className=\"text-xs text-muted-foreground\">Копируйте и настраивайте компоненты в пару кликов.</p>\n        </div>\n        <Zap className=\"h-12 w-12 text-amber-500 self-end mt-4\" />\n      </div>\n\n      <div className=\"md:col-span-2 rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-primary/50 transition-colors\">\n        <div className=\"space-y-2\">\n          <span className=\"text-xs font-mono text-primary font-bold\">Ecosystem</span>\n          <h3 className=\"text-xl font-bold text-foreground\">Глобальная сеть компонентов</h3>\n          <p className=\"text-xs text-muted-foreground\">Сотни готовых блоков и шаблонов страниц для любых потребностей продукта.</p>\n        </div>\n        <div className=\"mt-6 flex items-center justify-between text-xs text-muted-foreground border-t border-border pt-3\">\n          <span className=\"flex items-center gap-1.5\"><Globe className=\"h-4 w-4\" /> 150+ Компонентов</span>\n          <span className=\"font-semibold text-primary\">Исследовать каталог →</span>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/bento-grid-interactive.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "bento-grid-interactive"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/bento-grid",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

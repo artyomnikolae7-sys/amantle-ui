@@ -90,7 +90,7 @@ const AccordionTrigger = React.forwardRef<
       data-state={isOpen ? "open" : "closed"}
       onClick={() => item && acc?.toggleItem(item.value)}
       className={cn(
-        "flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left",
+        "flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform] hover:underline text-left",
         className
       )}
       {...props}
@@ -122,7 +122,7 @@ const AccordionContent = React.forwardRef<
       ref={ref}
       data-state={isOpen ? "open" : "closed"}
       className={cn(
-        "overflow-hidden text-sm transition-all pb-4 pt-0 text-muted-foreground animate-in fade-in-50",
+        "overflow-hidden text-sm transition-[color,background-color,border-color,box-shadow,transform] pb-4 pt-0 text-muted-foreground animate-in motion-reduce:animate-none fade-in-50",
         className
       )}
       {...props}

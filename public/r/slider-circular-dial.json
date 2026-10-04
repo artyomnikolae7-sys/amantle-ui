@@ -1,0 +1,28 @@
+{
+  "name": "slider-circular-dial",
+  "type": "registry:ui",
+  "title": "Slider Circular Dial",
+  "description": "AMANTLE UI ui: slider-circular-dial",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/slider-circular-dial.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/slider-circular-dial\n * @author AMANTLE UI\n * @license MIT\n * @modified Circular rotary SVG gauge dial\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function SliderCircularDial() {\n  const [val, setVal] = React.useState(65);\n\n  const radius = 38;\n  const circ = 2 * Math.PI * radius;\n  const offset = circ - (val / 100) * circ;\n\n  return (\n    <div className=\"inline-flex flex-col items-center\">\n      <div className=\"relative w-24 h-24 flex items-center justify-center\">\n        <svg className=\"w-full h-full -rotate-90\">\n          <circle cx=\"48\" cy=\"48\" r={radius} className=\"stroke-muted\" strokeWidth=\"6\" fill=\"transparent\" />\n          <circle\n            cx=\"48\"\n            cy=\"48\"\n            r={radius}\n            className=\"stroke-primary transition-[color,background-color,border-color,box-shadow,transform] duration-300\"\n            strokeWidth=\"6\"\n            strokeDasharray={circ}\n            strokeDashoffset={offset}\n            strokeLinecap=\"round\"\n            fill=\"transparent\"\n          />\n        </svg>\n        <span className=\"absolute font-bold text-sm text-foreground\">{val}%</span>\n      </div>\n      <input\n        type=\"range\"\n        min={0}\n        max={100}\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"mt-2 w-28 accent-primary cursor-pointer\"\n      />\n    </div>\n  );\n}\nexport default SliderCircularDial;\n",
+      "type": "registry:ui",
+      "target": "components/ui/slider-circular-dial.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "slider-circular-dial"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/slider-circular-dial",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Circular rotary SVG gauge dial"
+  }
+}

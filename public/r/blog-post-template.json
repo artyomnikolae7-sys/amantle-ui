@@ -1,0 +1,33 @@
+{
+  "name": "blog-post-template",
+  "type": "registry:template",
+  "title": "Blog Post Template",
+  "description": "AMANTLE UI template: blog-post-template",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "templates/blog-post-template.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Blog post and documentation article template\n */\n\nimport * as React from \"react\";\nimport { Calendar, Clock, User, ArrowLeft, Share2 } from \"lucide-react\";\nimport { Badge } from \"@/registry/ui/badge\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function BlogPostTemplate() {\n  return (\n    <article className=\"min-h-screen bg-background text-foreground py-16 px-4\">\n      <div className=\"container mx-auto max-w-3xl space-y-8\">\n        <div className=\"flex items-center justify-between border-b border-border/60 pb-4\">\n          <Button variant=\"ghost\" size=\"sm\" className=\"gap-1.5 text-xs text-muted-foreground hover:text-foreground\">\n            <ArrowLeft className=\"h-3.5 w-3.5\" />\n            <span>Назад ко всем статьям</span>\n          </Button>\n          <Button variant=\"ghost\" size=\"sm\" className=\"h-8 gap-1.5 text-xs\">\n            <Share2 className=\"h-3.5 w-3.5\" />\n            <span>Поделиться</span>\n          </Button>\n        </div>\n\n        <div className=\"space-y-4\">\n          <div className=\"flex flex-wrap gap-2\">\n            <Badge variant=\"outline\" className=\"text-xs text-primary border-primary/30\">\n              Архитектура UI\n            </Badge>\n            <Badge variant=\"secondary\" className=\"text-xs\">\n              Tailwind CSS v4\n            </Badge>\n          </div>\n\n          <h1 className=\"text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight\">\n            Как мы построили экосистему из 100 компонентов без лишних npm-зависимостей\n          </h1>\n\n          <div className=\"flex flex-wrap items-center gap-4 text-xs text-muted-foreground border-y border-border/40 py-3\">\n            <div className=\"flex items-center gap-1.5\">\n              <User className=\"h-3.5 w-3.5\" />\n              <span className=\"font-semibold text-foreground\">Команда AMANTLE</span>\n            </div>\n            <div className=\"flex items-center gap-1.5\">\n              <Calendar className=\"h-3.5 w-3.5\" />\n              <span>4 октября 2026</span>\n            </div>\n            <div className=\"flex items-center gap-1.5\">\n              <Clock className=\"h-3.5 w-3.5\" />\n              <span>5 мин чтения</span>\n            </div>\n          </div>\n        </div>\n\n        <div className=\"prose prose-sm dark:prose-invert max-w-none text-muted-foreground text-sm leading-relaxed space-y-4\">\n          <p>\n            В современном фронтенде одной из главных проблем остаётся раздувание бандла из-за сотен мелких npm-пакетов. В AMANTLE UI мы выбрали другой путь — философию Code Ownership: код компонентов принадлежит вам.\n          </p>\n\n          <h2 className=\"text-lg font-bold text-foreground pt-4\">1. Сила CSS-переменных и токенов</h2>\n          <p>\n            Вместо того чтобы жестко прописывать hex-значения или классы вроде <code className=\"text-xs bg-muted px-1.5 py-0.5 rounded text-foreground\">bg-zinc-900</code>, каждый компонент в нашей системе привязан к семантическим переменным темы.\n          </p>\n\n          <div className=\"rounded-xl border border-border bg-card p-4 font-mono text-xs text-foreground bg-background/80\">\n            <code>export const component = &quot;bg-primary text-primary-foreground&quot;;</code>\n          </div>\n\n          <h2 className=\"text-lg font-bold text-foreground pt-4\">2. AI-Native поддержка через MCP</h2>\n          <p>\n            Любой компонент можно не только просмотреть в браузере, но и скопировать подготовленный системный промпт для Cursor или Claude Code, исключающий галлюцинации по стилям.\n          </p>\n        </div>\n      </div>\n    </article>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/blog-post-template.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "blog-post-template"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Blog post and documentation article template"
+  }
+}

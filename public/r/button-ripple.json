@@ -1,0 +1,30 @@
+{
+  "name": "button-ripple",
+  "type": "registry:ui",
+  "title": "Button Ripple",
+  "description": "AMANTLE UI ui: button-ripple",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-ripple.tsx",
+      "content": "/**\n * @source https://reactbits.dev/components/ripple / Material Design\n * @author AMANTLE UI\n * @license MIT\n * @modified Interactive ripple button with dynamic coordinate calculation and automatic cleanup\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst rippleButtonVariants = cva(\n  \"relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-md text-sm font-medium select-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98] transition-[color,background-color,border-color,box-shadow,transform]\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground shadow hover:bg-primary/90\",\n        secondary: \"bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80\",\n        outline: \"border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground\",\n        destructive: \"bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        glass: \"bg-background/50 backdrop-blur-md border border-border/80 text-foreground shadow-sm hover:bg-background/80\",\n        glow: \"bg-gradient-to-r from-primary via-violet-500 to-rose-500 text-white shadow-lg shadow-primary/25 hover:shadow-primary/40\",\n      },\n      size: {\n        default: \"h-10 px-5 py-2\",\n        sm: \"h-8 rounded-md px-3 text-xs\",\n        lg: \"h-12 rounded-lg px-8 text-base\",\n        icon: \"h-10 w-10 p-0\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\ninterface Ripple {\n  x: number;\n  y: number;\n  size: number;\n  id: number;\n}\n\nexport interface ButtonRippleProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof rippleButtonVariants> {\n  rippleColor?: string;\n  duration?: number;\n}\n\nexport const ButtonRipple = React.forwardRef<HTMLButtonElement, ButtonRippleProps>(\n  (\n    {\n      className,\n      variant,\n      size,\n      rippleColor,\n      duration = 600,\n      children,\n      onClick,\n      ...props\n    },\n    forwardedRef\n  ) => {\n    const internalRef = React.useRef<HTMLButtonElement>(null);\n    const buttonRef = (forwardedRef as React.RefObject<HTMLButtonElement>) || internalRef;\n    const [ripples, setRipples] = React.useState<Ripple[]>([]);\n\n    const createRipple = (e: React.MouseEvent<HTMLButtonElement>) => {\n      const button = buttonRef.current;\n      if (!button) return;\n\n      const rect = button.getBoundingClientRect();\n      const diameter = Math.max(rect.width, rect.height) * 2;\n      \n      const isKeyboardTrigger = e.clientX === 0 && e.clientY === 0;\n      const x = isKeyboardTrigger ? rect.width / 2 : e.clientX - rect.left;\n      const y = isKeyboardTrigger ? rect.height / 2 : e.clientY - rect.top;\n\n      const newRipple: Ripple = {\n        x: x - diameter / 2,\n        y: y - diameter / 2,\n        size: diameter,\n        id: Date.now() + Math.random(),\n      };\n\n      setRipples((prev) => [...prev, newRipple]);\n\n      setTimeout(() => {\n        setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));\n      }, duration);\n\n      onClick?.(e);\n    };\n\n    return (\n      <button\n        ref={buttonRef}\n        className={cn(rippleButtonVariants({ variant, size, className }))}\n        onClick={createRipple}\n        {...props}\n      >\n        <span className=\"relative z-10 inline-flex items-center justify-center gap-2 pointer-events-none\">\n          {children}\n        </span>\n\n        {/* Ripple container */}\n        <span className=\"pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit] motion-reduce:hidden\">\n          {ripples.map((ripple) => (\n            <span\n              key={ripple.id}\n              className=\"absolute rounded-full animate-ripple pointer-events-none\"\n              style={{\n                top: ripple.y,\n                left: ripple.x,\n                width: ripple.size,\n                height: ripple.size,\n                backgroundColor: rippleColor || \"currentColor\",\n                opacity: 0.28,\n                animationDuration: `${duration}ms`,\n              }}\n            />\n          ))}\n        </span>\n      </button>\n    );\n  }\n);\n\nButtonRipple.displayName = \"ButtonRipple\";\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-ripple.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-ripple"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/ripple / Material Design",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Interactive ripple button with dynamic coordinate calculation and automatic cleanup"
+  }
+}

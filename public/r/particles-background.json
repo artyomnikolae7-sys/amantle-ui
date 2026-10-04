@@ -1,0 +1,28 @@
+{
+  "name": "particles-background",
+  "type": "registry:ui",
+  "title": "Particles Background",
+  "description": "AMANTLE UI ui: particles-background",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/particles-background.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/particles\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ParticlesBackgroundProps {\n  className?: string;\n  quantity?: number;\n  color?: string;\n}\n\nexport function ParticlesBackground({ className, quantity = 30, color = \"#6366f1\" }: ParticlesBackgroundProps) {\n  const canvasRef = React.useRef<HTMLCanvasElement>(null);\n\n  React.useEffect(() => {\n    const canvas = canvasRef.current;\n    if (!canvas) return;\n    const ctx = canvas.getContext(\"2d\");\n    if (!ctx) return;\n\n    let animationFrameId: number;\n    canvas.width = canvas.offsetWidth;\n    canvas.height = canvas.offsetHeight;\n\n    const particles: Array<{ x: number; y: number; vx: number; vy: number; radius: number }> = [];\n    for (let i = 0; i < quantity; i++) {\n      particles.push({\n        x: Math.random() * canvas.width,\n        y: Math.random() * canvas.height,\n        vx: (Math.random() - 0.5) * 0.8,\n        vy: (Math.random() - 0.5) * 0.8,\n        radius: Math.random() * 2 + 1,\n      });\n    }\n\n    const render = () => {\n      ctx.clearRect(0, 0, canvas.width, canvas.height);\n      ctx.fillStyle = color;\n\n      particles.forEach((p) => {\n        p.x += p.vx;\n        p.y += p.vy;\n        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;\n        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;\n\n        ctx.beginPath();\n        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);\n        ctx.fill();\n      });\n\n      animationFrameId = requestAnimationFrame(render);\n    };\n\n    render();\n\n    return () => cancelAnimationFrame(animationFrameId);\n  }, [quantity, color]);\n\n  return (\n    <div className={cn(\"relative w-full h-48 rounded-xl border border-border bg-card overflow-hidden flex items-center justify-center\", className)}>\n      <canvas ref={canvasRef} className=\"absolute inset-0 w-full h-full pointer-events-none\" />\n      <span className=\"relative z-10 text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest\">\n        Particles Network\n      </span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/particles-background.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "particles-background"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/particles",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "navigation-menu",
+  "type": "registry:ui",
+  "title": "Navigation Menu",
+  "description": "AMANTLE UI ui: navigation-menu",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/navigation-menu.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/navigation-menu\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ChevronDown, Sparkles, Layers, Box } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface NavigationMenuProps {\n  className?: string;\n}\n\nexport function NavigationMenu({ className }: NavigationMenuProps) {\n  const [open, setOpen] = React.useState<string | null>(null);\n\n  return (\n    <nav className={cn(\"relative inline-flex items-center gap-1 rounded-xl border border-border bg-card p-1 shadow-sm\", className)}>\n      <div className=\"relative\" onMouseEnter={() => setOpen(\"components\")} onMouseLeave={() => setOpen(null)}>\n        <button className=\"flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors\">\n          <span>Компоненты</span>\n          <ChevronDown className=\"h-3.5 w-3.5 text-muted-foreground\" />\n        </button>\n\n        {open === \"components\" && (\n          <div className=\"absolute top-full left-0 mt-2 w-[420px] grid grid-cols-2 gap-2 rounded-xl border border-border bg-popover p-3 shadow-2xl z-50 animate-in motion-reduce:animate-none fade-in-50\">\n            <a href=\"#\" className=\"flex flex-col p-2.5 rounded-lg hover:bg-muted transition-colors group\">\n              <span className=\"flex items-center gap-1.5 font-bold text-xs text-foreground group-hover:text-primary\">\n                <Box className=\"h-3.5 w-3.5\" /> UI Primitives\n              </span>\n              <span className=\"text-[11px] text-muted-foreground mt-1\">Кнопки, карточки, инпуты и переключатели</span>\n            </a>\n            <a href=\"#\" className=\"flex flex-col p-2.5 rounded-lg hover:bg-muted transition-colors group\">\n              <span className=\"flex items-center gap-1.5 font-bold text-xs text-foreground group-hover:text-primary\">\n                <Layers className=\"h-3.5 w-3.5\" /> Blocks\n              </span>\n              <span className=\"text-[11px] text-muted-foreground mt-1\">Hero, Pricing, Bento, Testimonials</span>\n            </a>\n          </div>\n        )}\n      </div>\n\n      <a href=\"#\" className=\"px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors\">\n        Документация\n      </a>\n      <a href=\"#\" className=\"px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors\">\n        Цены\n      </a>\n    </nav>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/navigation-menu.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "navigation-menu"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/navigation-menu",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "input-auto-grow-textarea",
+  "type": "registry:ui",
+  "title": "Input Auto Grow Textarea",
+  "description": "AMANTLE UI ui: input-auto-grow-textarea",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-auto-grow-textarea.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-auto-grow-textarea\n * @author AMANTLE UI\n * @license MIT\n * @modified Dynamic scrollHeight expansion\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function InputAutoGrowTextarea({\n  placeholder = \"Начните печатать длинный текст, поле расширится само...\",\n  ...props\n}: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {\n  const ref = React.useRef<HTMLTextAreaElement>(null);\n\n  const handleInput = () => {\n    if (ref.current) {\n      ref.current.style.height = \"auto\";\n      ref.current.style.height = `${ref.current.scrollHeight}px`;\n    }\n  };\n\n  return (\n    <div className=\"max-w-md w-full\">\n      <textarea\n        ref={ref}\n        rows={2}\n        onInput={handleInput}\n        placeholder={placeholder}\n        className=\"w-full bg-card border border-border rounded-xl p-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none overflow-hidden transition-[color,background-color,border-color,box-shadow,transform] duration-150\"\n        {...props}\n      />\n    </div>\n  );\n}\nexport default InputAutoGrowTextarea;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-auto-grow-textarea.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-auto-grow-textarea"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-auto-grow-textarea",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Dynamic scrollHeight expansion"
+  }
+}

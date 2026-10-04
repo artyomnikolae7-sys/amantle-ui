@@ -1,0 +1,28 @@
+{
+  "name": "input-otp",
+  "type": "registry:ui",
+  "title": "Input Otp",
+  "description": "AMANTLE UI ui: input-otp",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-otp.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Tokenized OTP input cells\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputOtpProps {\n  length?: number;\n  value?: string;\n  onChange?: (value: string) => void;\n  className?: string;\n}\n\nexport function InputOtp({ length = 6, value = \"\", onChange, className }: InputOtpProps) {\n  const [internalVal, setInternalVal] = React.useState(value);\n  const currentVal = value ?? internalVal;\n\n  const handleChange = (index: number, char: string) => {\n    const chars = currentVal.padEnd(length, \" \").split(\"\");\n    chars[index] = char.slice(-1);\n    const updated = chars.join(\"\").trimEnd();\n    setInternalVal(updated);\n    onChange?.(updated);\n\n    if (char && index < length - 1) {\n      const nextInput = document.getElementById(`otp-cell-${index + 1}`);\n      nextInput?.focus();\n    }\n  };\n\n  return (\n    <div className={cn(\"flex items-center gap-2\", className)}>\n      {Array.from({ length }).map((_, i) => (\n        <input\n          key={i}\n          id={`otp-cell-${i}`}\n          type=\"text\"\n          maxLength={1}\n          value={currentVal[i] || \"\"}\n          onChange={(e) => handleChange(i, e.target.value)}\n          className=\"h-12 w-10 text-center font-mono text-lg font-bold rounded-md border border-input bg-background text-foreground shadow-xs transition-[color,background-color,border-color,box-shadow,transform] focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none\"\n        />\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-otp.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-otp"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Tokenized OTP input cells"
+  }
+}

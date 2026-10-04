@@ -1,0 +1,30 @@
+{
+  "name": "faq-searchable",
+  "type": "registry:block",
+  "title": "Faq Searchable",
+  "description": "AMANTLE UI block: faq-searchable",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/faq-searchable.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Searchable FAQ accordion\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Search, ChevronDown } from \"lucide-react\";\n\nexport default function FaqSearchable() {\n  const [query, setQuery] = React.useState(\"\");\n  const [openIdx, setOpenIdx] = React.useState<number | null>(0);\n\n  const questions = [\n    { q: \"Как начать использовать AMANTLE UI?\", a: \"Вы можете скопировать готовый код компонента или воспользоваться командой npx shadcn add для автоматической установки.\" },\n    { q: \"Поддерживается ли Tailwind CSS v4?\", a: \"Да! Все компоненты используют нативные CSS-переменные и директивы Tailwind v4.\" },\n    { q: \"Как работает MCP сервер?\", a: \"Сервер предоставляет AI-инструменты поиска по реестру, извлечения чистого TSX-кода и токенов темы прямо в IDE.\" },\n    { q: \"Бесплатна ли библиотека?\", a: \"Да, весь код распространяется под свободной лицензией MIT с сохранением атрибуции автора.\" },\n  ];\n\n  const filtered = questions.filter(\n    (item) => item.q.toLowerCase().includes(query.toLowerCase()) || item.a.toLowerCase().includes(query.toLowerCase())\n  );\n\n  return (\n    <div className=\"p-8 max-w-2xl mx-auto space-y-6\">\n      <div className=\"text-center space-y-2\">\n        <h3 className=\"text-2xl font-extrabold text-foreground\">Часто задаваемые вопросы</h3>\n        <p className=\"text-xs text-muted-foreground\">Ответы на популярные вопросы о внедрении и лицензии</p>\n      </div>\n\n      <div className=\"relative\">\n        <Search className=\"absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground\" />\n        <input\n          type=\"text\"\n          value={query}\n          onChange={(e) => setQuery(e.target.value)}\n          placeholder=\"Поиск по вопросам...\"\n          className=\"w-full h-10 rounded-lg border border-input bg-background pl-9 pr-4 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary\"\n        />\n      </div>\n\n      <div className=\"space-y-2\">\n        {filtered.map((item, idx) => {\n          const isOpen = openIdx === idx;\n          return (\n            <div key={idx} className=\"rounded-xl border border-border bg-card overflow-hidden\">\n              <button\n                type=\"button\"\n                onClick={() => setOpenIdx(isOpen ? null : idx)}\n                className=\"w-full p-4 text-left flex justify-between items-center text-xs font-bold text-foreground hover:bg-muted/40 transition-colors\"\n              >\n                <span>{item.q}</span>\n                <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? \"rotate-180\" : \"\"}`} />\n              </button>\n              {isOpen && <div className=\"p-4 pt-0 text-xs text-muted-foreground leading-relaxed border-t border-border/40\">{item.a}</div>}\n            </div>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/faq-searchable.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "faq-searchable"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Searchable FAQ accordion"
+  }
+}

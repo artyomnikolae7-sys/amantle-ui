@@ -1,0 +1,30 @@
+{
+  "name": "rating",
+  "type": "registry:ui",
+  "title": "Rating",
+  "description": "AMANTLE UI ui: rating",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/rating.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Interactive star rating\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Star } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface RatingProps {\n  max?: number;\n  value?: number;\n  onChange?: (value: number) => void;\n  className?: string;\n}\n\nexport function Rating({ max = 5, value = 4, onChange, className }: RatingProps) {\n  const [internalValue, setInternalValue] = React.useState(value);\n  const [hoverValue, setHoverValue] = React.useState<number | null>(null);\n\n  const active = hoverValue ?? (value ?? internalValue);\n\n  return (\n    <div className={cn(\"inline-flex items-center gap-1\", className)}>\n      {Array.from({ length: max }).map((_, idx) => {\n        const starNum = idx + 1;\n        const isFilled = starNum <= active;\n\n        return (\n          <button\n            key={idx}\n            type=\"button\"\n            onClick={() => {\n              setInternalValue(starNum);\n              onChange?.(starNum);\n            }}\n            onMouseEnter={() => setHoverValue(starNum)}\n            onMouseLeave={() => setHoverValue(null)}\n            className=\"p-0.5 text-muted-foreground transition-transform hover:scale-110 focus:outline-none\"\n          >\n            <Star\n              className={cn(\n                \"h-5 w-5 transition-colors\",\n                isFilled ? \"fill-amber-400 text-amber-400\" : \"text-muted-foreground/40\"\n              )}\n            />\n          </button>\n        );\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/rating.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "rating"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Interactive star rating"
+  }
+}

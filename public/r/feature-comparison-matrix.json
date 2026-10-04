@@ -1,0 +1,30 @@
+{
+  "name": "feature-comparison-matrix",
+  "type": "registry:block",
+  "title": "Feature Comparison Matrix",
+  "description": "AMANTLE UI block: feature-comparison-matrix",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/feature-comparison-matrix.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Comparison table against competitors\n */\n\nimport * as React from \"react\";\nimport { Check, X } from \"lucide-react\";\n\nexport default function FeatureComparisonMatrix() {\n  const rows = [\n    { feature: \"Tailwind CSS v4 Variables\", us: true, them: false },\n    { feature: \"AI / MCP Сервер\", us: true, them: false },\n    { feature: \"Интерактивный Playground\", us: true, them: true },\n    { feature: \"Режим A/B сравнения токенов\", us: true, them: false },\n    { feature: \"Source Provenance JSDoc\", us: true, them: false },\n    { feature: \"Code Ownership (без npm-bloat)\", us: true, them: true },\n  ];\n\n  return (\n    <div className=\"p-8 max-w-3xl mx-auto rounded-2xl border border-border bg-card shadow-sm space-y-4\">\n      <h3 className=\"text-lg font-bold text-foreground text-center\">Сравнение с аналогами</h3>\n      <div className=\"overflow-x-auto\">\n        <table className=\"w-full text-xs text-left\">\n          <thead>\n            <tr className=\"border-b border-border/80 text-muted-foreground\">\n              <th className=\"pb-3 font-semibold\">Функциональность</th>\n              <th className=\"pb-3 font-bold text-primary text-center\">AMANTLE UI</th>\n              <th className=\"pb-3 font-semibold text-center\">Другие библиотеки</th>\n            </tr>\n          </thead>\n          <tbody className=\"divide-y divide-border/40\">\n            {rows.map((r, i) => (\n              <tr key={i} className=\"hover:bg-muted/30 transition-colors\">\n                <td className=\"py-2.5 font-medium text-foreground\">{r.feature}</td>\n                <td className=\"py-2.5 text-center text-emerald-500 font-bold\">\n                  {r.us ? <Check className=\"h-4 w-4 mx-auto text-primary\" /> : <X className=\"h-4 w-4 mx-auto text-rose-500\" />}\n                </td>\n                <td className=\"py-2.5 text-center text-muted-foreground\">\n                  {r.them ? <Check className=\"h-4 w-4 mx-auto text-muted-foreground\" /> : <X className=\"h-4 w-4 mx-auto text-muted-foreground/40\" />}\n                </td>\n              </tr>\n            ))}\n          </tbody>\n        </table>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/feature-comparison-matrix.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "feature-comparison-matrix"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Comparison table against competitors"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "amantle-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "build:registry": "node scripts/build-registry.mjs",
+    "import:component": "node scripts/import-component.mjs",
+    "pipeline": "node scripts/pipeline.mjs",
     "mcp": "node scripts/mcp-server.mjs",
     "test:mcp": "node --experimental-strip-types scripts/test-mcp.mjs",
     "test": "node --experimental-strip-types scripts/test-mcp.mjs"

@@ -1,0 +1,30 @@
+{
+  "name": "color-picker",
+  "type": "registry:ui",
+  "title": "Color Picker",
+  "description": "AMANTLE UI ui: color-picker",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/color-picker.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/color-picker\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Check } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ColorPickerProps {\n  className?: string;\n  defaultColor?: string;\n  onChange?: (color: string) => void;\n}\n\nconst PRESET_COLORS = [\n  \"#6366f1\", \"#8b5cf6\", \"#ec4899\", \"#ef4444\", \"#f97316\", \"#eab308\", \"#10b981\", \"#06b6d4\", \"#3b82f6\", \"#0f172a\"\n];\n\nexport function ColorPicker({ className, defaultColor = \"#6366f1\", onChange }: ColorPickerProps) {\n  const [color, setColor] = React.useState(defaultColor);\n\n  const handleSelect = (c: string) => {\n    setColor(c);\n    onChange?.(c);\n  };\n\n  return (\n    <div className={cn(\"w-64 rounded-xl border border-border bg-card p-4 shadow-xl space-y-3\", className)}>\n      <div className=\"flex items-center gap-3\">\n        <div style={{ backgroundColor: color }} className=\"h-10 w-10 rounded-lg border border-border shadow-inner shrink-0\" />\n        <div className=\"flex-1\">\n          <label className=\"text-[11px] font-semibold text-muted-foreground uppercase\">Цвет HEX</label>\n          <input\n            value={color}\n            onChange={(e) => handleSelect(e.target.value)}\n            className=\"w-full font-mono text-sm uppercase bg-transparent text-foreground outline-none font-bold\"\n          />\n        </div>\n      </div>\n\n      <div className=\"grid grid-cols-5 gap-2 pt-2 border-t border-border\">\n        {PRESET_COLORS.map((c) => (\n          <button\n            key={c}\n            onClick={() => handleSelect(c)}\n            style={{ backgroundColor: c }}\n            className=\"h-8 w-8 rounded-md flex items-center justify-center transition-transform hover:scale-110 shadow-sm cursor-pointer\"\n          >\n            {color.toLowerCase() === c.toLowerCase() && <Check className=\"h-4 w-4 text-white drop-shadow\" />}\n          </button>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/color-picker.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "color-picker"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/color-picker",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "meteors",
+  "type": "registry:ui",
+  "title": "Meteors",
+  "description": "AMANTLE UI ui: meteors",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/meteors.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/meteors\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface MeteorsProps {\n  className?: string;\n  number?: number;\n}\n\nexport function Meteors({ className, number = 16 }: MeteorsProps) {\n  const meteors = new Array(number).fill(true);\n\n  return (\n    <div className={cn(\"relative w-full max-w-sm overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-2xl\", className)}>\n      <div className=\"absolute inset-0 pointer-events-none overflow-hidden\">\n        {meteors.map((_, el) => (\n          <span\n            key={\"meteor\" + el}\n            style={{\n              top: Math.floor(Math.random() * 80) + \"%\",\n              left: Math.floor(Math.random() * 90) + \"%\",\n              animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + \"s\",\n              animationDuration: Math.floor(Math.random() * (8 - 2) + 2) + \"s\",\n            }}\n            className={cn(\n              \"animate-[meteor_5s_linear_infinite] absolute top-1/2 left-1/2 h-0.5 w-0.5 rounded-[9999px] bg-slate-400 shadow-[0_0_0_1px_#ffffff10] rotate-[215deg]\",\n              \"before:content-[''] before:absolute before:top-1/2 before:transform before:-translate-y-[50%] before:w-[50px] before:h-[1px] before:bg-gradient-to-r before:from-[#64748b] before:to-transparent\"\n            )}\n          />\n        ))}\n      </div>\n\n      <div className=\"relative z-10 space-y-2\">\n        <span className=\"text-xs font-mono text-primary font-bold\">Space Tech</span>\n        <h3 className=\"text-lg font-bold text-foreground\">Метеорный поток</h3>\n        <p className=\"text-xs text-muted-foreground leading-relaxed\">\n          Фоновая анимация метеоров создаёт эффект космической глубины для карточек фичей и анонсов.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/meteors.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "meteors"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/meteors",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

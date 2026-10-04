@@ -1,0 +1,30 @@
+{
+  "name": "input-stepper-number",
+  "type": "registry:ui",
+  "title": "Input Stepper Number",
+  "description": "AMANTLE UI ui: input-stepper-number",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-stepper-number.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-stepper-number\n * @author AMANTLE UI\n * @license MIT\n * @modified Plus-minus stepper with limits\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Plus, Minus } from \"lucide-react\";\n\nexport function InputStepperNumber({\n  min = 1,\n  max = 20,\n}: {\n  min?: number;\n  max?: number;\n}) {\n  const [val, setVal] = React.useState(3);\n\n  return (\n    <div className=\"inline-flex items-center rounded-xl border border-border bg-card p-1 shadow-sm\">\n      <button\n        onClick={() => setVal(Math.max(min, val - 1))}\n        className=\"p-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors\"\n      >\n        <Minus className=\"w-3.5 h-3.5\" />\n      </button>\n      <span className=\"w-10 text-center font-mono font-bold text-sm text-foreground\">{val}</span>\n      <button\n        onClick={() => setVal(Math.min(max, val + 1))}\n        className=\"p-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors\"\n      >\n        <Plus className=\"w-3.5 h-3.5\" />\n      </button>\n    </div>\n  );\n}\nexport default InputStepperNumber;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-stepper-number.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-stepper-number"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-stepper-number",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Plus-minus stepper with limits"
+  }
+}

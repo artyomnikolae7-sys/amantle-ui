@@ -1,0 +1,30 @@
+{
+  "name": "hero-lamp",
+  "type": "registry:block",
+  "title": "Hero Lamp",
+  "description": "AMANTLE UI block: hero-lamp",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/hero-lamp.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/lamp\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ArrowRight, Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface HeroLampProps {\n  className?: string;\n  badge?: string;\n  title?: string;\n  description?: string;\n}\n\nexport function HeroLamp({\n  className,\n  badge = \"Новое поколение веб-интерфейсов\",\n  title = \"Создавайте эстетику света с AMANTLE UI\",\n  description = \"Готовые компоненты, кинетическая типографика и интеллектуальный composer для ваших SaaS продуктов.\",\n}: HeroLampProps) {\n  return (\n    <div className={cn(\"relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-card border border-border px-6 py-20 text-center\", className)}>\n      {/* Lamp cone */}\n      <div className=\"absolute top-0 z-0 h-48 w-[40rem] -translate-y-1/2 rounded-full bg-primary/20 blur-3xl\" />\n      <div className=\"absolute top-0 z-0 h-32 w-80 -translate-y-1/2 rounded-full bg-primary/40 blur-2xl\" />\n\n      <div className=\"relative z-10 max-w-3xl space-y-6\">\n        <span className=\"inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary backdrop-blur-md\">\n          <Sparkles className=\"h-3.5 w-3.5\" /> {badge}\n        </span>\n\n        <h1 className=\"text-3xl sm:text-5xl font-black tracking-tight text-foreground bg-gradient-to-b from-foreground via-foreground/90 to-foreground/60 bg-clip-text\">\n          {title}\n        </h1>\n\n        <p className=\"mx-auto max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed\">\n          {description}\n        </p>\n\n        <div className=\"flex flex-wrap items-center justify-center gap-3 pt-2\">\n          <button className=\"flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 shadow-lg shadow-primary/25 transition-[color,background-color,border-color,box-shadow,transform]\">\n            Начать работу <ArrowRight className=\"h-4 w-4\" />\n          </button>\n          <button className=\"px-6 py-3 rounded-xl border border-border bg-card/60 text-foreground font-semibold text-sm hover:bg-muted transition-colors\">\n            Документация\n          </button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-lamp.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-lamp"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/lamp",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

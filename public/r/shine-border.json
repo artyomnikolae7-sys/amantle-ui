@@ -1,0 +1,28 @@
+{
+  "name": "shine-border",
+  "type": "registry:ui",
+  "title": "Shine Border",
+  "description": "AMANTLE UI ui: shine-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/shine-border.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/shine-border\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ShineBorderProps {\n  className?: string;\n  borderRadius?: number;\n  borderWidth?: number;\n  duration?: number;\n  color?: string[];\n  children?: React.ReactNode;\n}\n\nexport function ShineBorder({\n  className,\n  borderRadius = 16,\n  borderWidth = 1,\n  duration = 8,\n  color = [\"#A07CFE\", \"#FE8FB5\", \"#FFBE7B\"],\n  children,\n}: ShineBorderProps) {\n  return (\n    <div\n      style={{\n        [\"--border-radius\" as any]: `${borderRadius}px`,\n      }}\n      className={cn(\"relative rounded-[--border-radius] p-[1px] overflow-hidden\", className)}\n    >\n      <div\n        style={{\n          background: `conic-gradient(from 0deg, ${color.join(\", \")}, ${color[0]})`,\n          animation: `spin ${duration}s linear infinite`,\n        }}\n        className=\"absolute -inset-[100%] pointer-events-none\"\n      />\n      <div className=\"relative rounded-[calc(var(--border-radius)-1px)] bg-card p-6\">\n        {children || (\n          <div className=\"space-y-2\">\n            <h4 className=\"text-base font-bold text-foreground\">Shine Border Card</h4>\n            <p className=\"text-xs text-muted-foreground\">Вращающийся конический градиент на границе элемента.</p>\n          </div>\n        )}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/shine-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "shine-border"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/shine-border",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

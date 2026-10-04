@@ -1,0 +1,30 @@
+{
+  "name": "pagination",
+  "type": "registry:ui",
+  "title": "Pagination",
+  "description": "AMANTLE UI ui: pagination",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pagination.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/pagination\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { ChevronLeft, ChevronRight, MoreHorizontal } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface PaginationProps {\n  className?: string;\n  currentPage?: number;\n  totalPages?: number;\n  onPageChange?: (page: number) => void;\n}\n\nexport function Pagination({\n  className,\n  currentPage = 2,\n  totalPages = 5,\n  onPageChange,\n}: PaginationProps) {\n  const [page, setPage] = React.useState(currentPage);\n\n  const handleSelect = (p: number) => {\n    if (p < 1 || p > totalPages) return;\n    setPage(p);\n    onPageChange?.(p);\n  };\n\n  return (\n    <nav className={cn(\"flex items-center gap-1.5\", className)}>\n      <button\n        onClick={() => handleSelect(page - 1)}\n        disabled={page === 1}\n        className=\"flex items-center gap-1 h-9 px-3 rounded-lg border border-border bg-card text-xs font-medium text-foreground hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition-colors\"\n      >\n        <ChevronLeft className=\"h-4 w-4\" /> Назад\n      </button>\n\n      {Array.from({ length: totalPages }).map((_, idx) => {\n        const p = idx + 1;\n        const isActive = p === page;\n        return (\n          <button\n            key={p}\n            onClick={() => handleSelect(p)}\n            className={cn(\n              \"h-9 w-9 rounded-lg text-xs font-semibold transition-colors\",\n              isActive ? \"bg-primary text-primary-foreground shadow\" : \"border border-border bg-card text-foreground hover:bg-muted\"\n            )}\n          >\n            {p}\n          </button>\n        );\n      })}\n\n      <button\n        onClick={() => handleSelect(page + 1)}\n        disabled={page === totalPages}\n        className=\"flex items-center gap-1 h-9 px-3 rounded-lg border border-border bg-card text-xs font-medium text-foreground hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition-colors\"\n      >\n        Вперёд <ChevronRight className=\"h-4 w-4\" />\n      </button>\n    </nav>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/pagination.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pagination"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/pagination",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

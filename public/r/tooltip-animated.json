@@ -1,0 +1,28 @@
+{
+  "name": "tooltip-animated",
+  "type": "registry:ui",
+  "title": "Tooltip Animated",
+  "description": "AMANTLE UI ui: tooltip-animated",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tooltip-animated.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Animated tooltip with trigger\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TooltipAnimatedProps {\n  content: string;\n  children: React.ReactNode;\n  className?: string;\n}\n\nexport function TooltipAnimated({ content, children, className }: TooltipAnimatedProps) {\n  const [visible, setVisible] = React.useState(false);\n\n  return (\n    <div\n      className=\"relative inline-flex\"\n      onMouseEnter={() => setVisible(true)}\n      onMouseLeave={() => setVisible(false)}\n    >\n      {children}\n      {visible && (\n        <div\n          className={cn(\n            \"absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-2.5 py-1 rounded-md bg-foreground text-background text-[11px] font-medium shadow-md whitespace-nowrap animate-in motion-reduce:animate-none fade-in zoom-in-95 duration-150\",\n            className\n          )}\n        >\n          {content}\n          <div className=\"absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-foreground\" />\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/tooltip-animated.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tooltip-animated"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Animated tooltip with trigger"
+  }
+}

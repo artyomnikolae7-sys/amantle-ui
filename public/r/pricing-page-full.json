@@ -1,0 +1,28 @@
+{
+  "name": "pricing-page-full",
+  "type": "registry:template",
+  "title": "Pricing Page Full",
+  "description": "AMANTLE UI template: pricing-page-full",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "templates/pricing-page-full.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Comprehensive pricing page template\n */\n\nimport * as React from \"react\";\nimport PricingToggleAnnual from \"@/registry/blocks/pricing-toggle-annual\";\nimport PricingSlider from \"@/registry/blocks/pricing-slider\";\nimport FeatureComparisonMatrix from \"@/registry/blocks/feature-comparison-matrix\";\nimport FaqSearchable from \"@/registry/blocks/faq-searchable\";\nimport CtaSplitCard from \"@/registry/blocks/cta-split-card\";\n\nexport default function PricingPageFull() {\n  return (\n    <div className=\"min-h-screen bg-background text-foreground space-y-16 pb-16\">\n      <PricingToggleAnnual />\n      <PricingSlider />\n      <FeatureComparisonMatrix />\n      <FaqSearchable />\n      <CtaSplitCard />\n    </div>\n  );\n}\n",
+      "type": "registry:template",
+      "target": "components/templates/pricing-page-full.tsx"
+    }
+  ],
+  "category": "templates",
+  "tags": [
+    "templates",
+    "pricing-page-full"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Comprehensive pricing page template"
+  }
+}

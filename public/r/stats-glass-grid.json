@@ -1,0 +1,30 @@
+{
+  "name": "stats-glass-grid",
+  "type": "registry:block",
+  "title": "Stats Glass Grid",
+  "description": "AMANTLE UI block: stats-glass-grid",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/stats-glass-grid.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/card\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { TrendingUp, Users, ArrowUpRight } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface StatsGlassGridProps {\n  className?: string;\n}\n\nexport function StatsGlassGrid({ className }: StatsGlassGridProps) {\n  const stats = [\n    { title: \"Активных разработчиков\", value: \"48.2k\", change: \"+24.5%\", icon: Users },\n    { title: \"Загрузок компонентов\", value: \"1.2M\", change: \"+38.1%\", icon: TrendingUp },\n    { title: \"GitHub Stars\", value: \"18.5k\", change: \"+12.0%\", icon: ArrowUpRight },\n  ];\n\n  return (\n    <div className={cn(\"grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto w-full\", className)}>\n      {stats.map((s) => {\n        const Icon = s.icon;\n        return (\n          <div key={s.title} className=\"rounded-2xl border border-border/80 bg-card/70 backdrop-blur-xl p-6 shadow-xl space-y-3\">\n            <div className=\"flex items-center justify-between text-muted-foreground\">\n              <span className=\"text-xs font-semibold\">{s.title}</span>\n              <Icon className=\"h-4 w-4 text-primary\" />\n            </div>\n            <div className=\"flex items-baseline justify-between\">\n              <span className=\"text-3xl font-black text-foreground\">{s.value}</span>\n              <span className=\"text-xs font-bold text-emerald-400\">{s.change}</span>\n            </div>\n          </div>\n        );\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/stats-glass-grid.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "stats-glass-grid"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/card",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

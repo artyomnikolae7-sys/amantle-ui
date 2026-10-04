@@ -1,0 +1,28 @@
+{
+  "name": "footer-minimal-centered",
+  "type": "registry:block",
+  "title": "Footer Minimal Centered",
+  "description": "AMANTLE UI block: footer-minimal-centered",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/footer-minimal-centered.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Clean minimal centered footer\n */\n\nimport * as React from \"react\";\n\nexport default function FooterMinimalCentered() {\n  return (\n    <footer className=\"border-t border-border/80 bg-background text-foreground py-12 text-center text-xs\">\n      <div className=\"container mx-auto px-4 max-w-4xl space-y-4\">\n        <div className=\"flex items-center justify-center gap-2 font-extrabold text-sm tracking-tight\">\n          <span className=\"h-2 w-2 rounded-full bg-primary\" />\n          <span>AMANTLE UI</span>\n        </div>\n        <div className=\"flex flex-wrap justify-center gap-6 text-muted-foreground\">\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Компоненты</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Блоки</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Шаблоны</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Документация</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Лицензия MIT</a>\n        </div>\n        <p className=\"text-muted-foreground/60 text-[11px]\">\n          © {new Date().getFullYear()} AMANTLE UI. Все права защищены.\n        </p>\n      </div>\n    </footer>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/footer-minimal-centered.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "footer-minimal-centered"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Clean minimal centered footer"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "card-metric-trend",
+  "type": "registry:ui",
+  "title": "Card Metric Trend",
+  "description": "AMANTLE UI ui: card-metric-trend",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-metric-trend.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-metric-trend\n * @author AMANTLE UI\n * @license MIT\n * @modified KPI metric trend indicator\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { TrendingUp, Users } from \"lucide-react\";\n\nexport function CardMetricTrend({\n  title = \"Активные пользователи\",\n  value = \"48 920\",\n  trend = \"+14.8%\",\n}: {\n  title?: string;\n  value?: string;\n  trend?: string;\n}) {\n  return (\n    <div className=\"p-5 rounded-2xl bg-card border border-border shadow-sm max-w-xs w-full\">\n      <div className=\"flex items-center justify-between mb-2\">\n        <span className=\"text-xs font-medium text-muted-foreground\">{title}</span>\n        <Users className=\"w-4 h-4 text-muted-foreground\" />\n      </div>\n      <div className=\"text-2xl font-extrabold text-foreground mb-2\">{value}</div>\n      <div className=\"flex items-center gap-1.5 text-xs font-semibold text-emerald-500\">\n        <TrendingUp className=\"w-3.5 h-3.5\" />\n        <span>{trend} за этот месяц</span>\n      </div>\n    </div>\n  );\n}\nexport default CardMetricTrend;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-metric-trend.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-metric-trend"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-metric-trend",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "KPI metric trend indicator"
+  }
+}

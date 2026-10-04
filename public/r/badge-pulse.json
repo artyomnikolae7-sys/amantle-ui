@@ -1,0 +1,28 @@
+{
+  "name": "badge-pulse",
+  "type": "registry:ui",
+  "title": "Badge Pulse",
+  "description": "AMANTLE UI ui: badge-pulse",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-pulse.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Status badge with ping animation\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BadgePulseProps extends React.HTMLAttributes<HTMLDivElement> {\n  status?: \"online\" | \"busy\" | \"offline\" | \"warning\";\n  label?: string;\n}\n\nexport function BadgePulse({ status = \"online\", label, className, ...props }: BadgePulseProps) {\n  const colors = {\n    online: \"bg-emerald-500\",\n    busy: \"bg-rose-500\",\n    offline: \"bg-muted-foreground\",\n    warning: \"bg-amber-500\",\n  };\n\n  const defaultLabels = {\n    online: \"В сети\",\n    busy: \"Занят\",\n    offline: \"Офлайн\",\n    warning: \"Внимание\",\n  };\n\n  const dotColor = colors[status] || colors.online;\n\n  return (\n    <div\n      className={cn(\n        \"inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-foreground shadow-2xs\",\n        className\n      )}\n      {...props}\n    >\n      <span className=\"relative flex h-2 w-2\">\n        <span className={cn(\"animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 motion-reduce:animate-none\", dotColor)} />\n        <span className={cn(\"relative inline-flex rounded-full h-2 w-2\", dotColor)} />\n      </span>\n      <span>{label || defaultLabels[status]}</span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-pulse.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-pulse"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Status badge with ping animation"
+  }
+}

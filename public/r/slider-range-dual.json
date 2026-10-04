@@ -1,0 +1,28 @@
+{
+  "name": "slider-range-dual",
+  "type": "registry:ui",
+  "title": "Slider Range Dual",
+  "description": "AMANTLE UI ui: slider-range-dual",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/slider-range-dual.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/slider-range-dual\n * @author AMANTLE UI\n * @license MIT\n * @modified Dual-thumb range slider with interactive track\n */\n\"use client\";\n\nimport * as React from \"react\";\n\nexport function SliderRangeDual() {\n  const [min, setMin] = React.useState(25);\n  const [max, setMax] = React.useState(75);\n\n  return (\n    <div className=\"max-w-xs w-full space-y-3\">\n      <div className=\"flex justify-between text-xs font-medium text-foreground\">\n        <span>От {min} $</span>\n        <span>До {max} $</span>\n      </div>\n      <div className=\"relative h-2 bg-muted rounded-full flex items-center\">\n        <div\n          className=\"absolute h-full bg-primary rounded-full\"\n          style={{ left: `${min}%`, width: `${max - min}%` }}\n        />\n        <input\n          type=\"range\"\n          min={0}\n          max={100}\n          value={min}\n          onChange={(e) => setMin(Math.min(Number(e.target.value), max - 5))}\n          className=\"absolute w-full appearance-none bg-transparent pointer-events-auto h-2 cursor-pointer\"\n        />\n        <input\n          type=\"range\"\n          min={0}\n          max={100}\n          value={max}\n          onChange={(e) => setMax(Math.max(Number(e.target.value), min + 5))}\n          className=\"absolute w-full appearance-none bg-transparent pointer-events-auto h-2 cursor-pointer\"\n        />\n      </div>\n    </div>\n  );\n}\nexport default SliderRangeDual;\n",
+      "type": "registry:ui",
+      "target": "components/ui/slider-range-dual.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "slider-range-dual"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/slider-range-dual",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Dual-thumb range slider with interactive track"
+  }
+}

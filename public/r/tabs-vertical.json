@@ -1,0 +1,28 @@
+{
+  "name": "tabs-vertical",
+  "type": "registry:ui",
+  "title": "Tabs Vertical",
+  "description": "AMANTLE UI ui: tabs-vertical",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tabs-vertical.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Vertical tabs component\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TabsVerticalProps {\n  items: Array<{ id: string; label: string; icon?: React.ReactNode }>;\n  activeId?: string;\n  onChange?: (id: string) => void;\n  className?: string;\n}\n\nexport function TabsVertical({ items, activeId, onChange, className }: TabsVerticalProps) {\n  const [selected, setSelected] = React.useState(activeId || items[0]?.id);\n\n  return (\n    <div className={cn(\"flex flex-col space-y-1 w-full max-w-[220px]\", className)}>\n      {items.map((item) => {\n        const isActive = (activeId ?? selected) === item.id;\n        return (\n          <button\n            key={item.id}\n            type=\"button\"\n            onClick={() => {\n              setSelected(item.id);\n              onChange?.(item.id);\n            }}\n            className={cn(\n              \"flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-left transition-colors\",\n              isActive\n                ? \"bg-accent text-accent-foreground font-semibold\"\n                : \"text-muted-foreground hover:bg-muted hover:text-foreground\"\n            )}\n          >\n            {item.icon}\n            <span>{item.label}</span>\n          </button>\n        );\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/tabs-vertical.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tabs-vertical"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Vertical tabs component"
+  }
+}

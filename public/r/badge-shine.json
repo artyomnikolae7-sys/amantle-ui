@@ -1,0 +1,30 @@
+{
+  "name": "badge-shine",
+  "type": "registry:ui",
+  "title": "Badge Shine",
+  "description": "AMANTLE UI ui: badge-shine",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-shine.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/animated-shiny-text\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BadgeShineProps {\n  className?: string;\n  label?: string;\n}\n\nexport function BadgeShine({ className, label = \"✨ Новый релиз v2.4\" }: BadgeShineProps) {\n  return (\n    <div\n      className={cn(\n        \"relative inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-border bg-card/80 text-xs font-semibold overflow-hidden shadow-sm backdrop-blur-md\",\n        className\n      )}\n    >\n      <div className=\"absolute inset-0 -translate-x-full animate-[shimmer_2.5s_infinite] bg-gradient-to-r from-transparent via-white/15 to-transparent pointer-events-none\" />\n      <span className=\"text-foreground\">{label}</span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-shine.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-shine"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/animated-shiny-text",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

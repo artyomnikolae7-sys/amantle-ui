@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-kanban-board",
+  "type": "registry:block",
+  "title": "Dashboard Kanban Board",
+  "description": "AMANTLE UI block: dashboard-kanban-board",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/dashboard-kanban-board.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Plus, MoreHorizontal } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DashboardKanbanBoardProps {\n  className?: string;\n}\n\nexport function DashboardKanbanBoard({ className }: DashboardKanbanBoardProps) {\n  const columns = [\n    { title: \"К выполнению\", count: 3, cards: [\"Обновить Tailwind до v4\", \"Добавить A/B сравнение\"] },\n    { title: \"В работе\", count: 2, cards: [\"Онбординг 50 новых компонентов\", \"Синхронизация карты Playground\"] },\n    { title: \"Готово\", count: 4, cards: [\"Сборка 100 компонентов\", \"Проверка роутов превью\"] },\n  ];\n\n  return (\n    <div className={cn(\"grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto w-full\", className)}>\n      {columns.map((col) => (\n        <div key={col.title} className=\"rounded-2xl border border-border bg-card p-4 space-y-3\">\n          <div className=\"flex items-center justify-between\">\n            <div className=\"flex items-center gap-2\">\n              <h4 className=\"text-xs font-bold text-foreground\">{col.title}</h4>\n              <span className=\"h-5 w-5 rounded-full bg-muted flex items-center justify-center font-mono text-[10px] text-muted-foreground\">\n                {col.count}\n              </span>\n            </div>\n            <button className=\"text-muted-foreground hover:text-foreground\">\n              <Plus className=\"h-4 w-4\" />\n            </button>\n          </div>\n\n          <div className=\"space-y-2\">\n            {col.cards.map((card, i) => (\n              <div key={i} className=\"p-3 rounded-xl border border-border bg-muted/40 hover:border-primary/50 text-xs font-medium text-foreground transition-colors cursor-pointer shadow-sm\">\n                {card}\n              </div>\n            ))}\n          </div>\n        </div>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/dashboard-kanban-board.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "dashboard-kanban-board"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

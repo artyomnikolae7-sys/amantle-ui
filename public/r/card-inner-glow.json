@@ -1,0 +1,30 @@
+{
+  "name": "card-inner-glow",
+  "type": "registry:ui",
+  "title": "Card Inner Glow",
+  "description": "AMANTLE UI ui: card-inner-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-inner-glow.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-inner-glow\n * @author AMANTLE UI\n * @license MIT\n * @modified Inner rim lighting effect\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Layers } from \"lucide-react\";\n\nexport function CardInnerGlow({\n  title = \"Высокоскоростное ядро\",\n  description = \"Архитектура с нулевым оверхедом и аппаратным ускорением.\",\n}: {\n  title?: string;\n  description?: string;\n}) {\n  return (\n    <div className=\"relative rounded-3xl p-6 bg-card border border-border shadow-2xl overflow-hidden max-w-sm w-full group\">\n      <div className=\"absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none\" />\n      <div className=\"w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4\">\n        <Layers className=\"w-5 h-5\" />\n      </div>\n      <h4 className=\"font-bold text-base text-foreground mb-1\">{title}</h4>\n      <p className=\"text-xs text-muted-foreground leading-relaxed\">{description}</p>\n    </div>\n  );\n}\nexport default CardInnerGlow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-inner-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-inner-glow"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-inner-glow",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Inner rim lighting effect"
+  }
+}

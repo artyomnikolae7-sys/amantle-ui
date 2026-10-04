@@ -1,0 +1,30 @@
+{
+  "name": "toggle-group",
+  "type": "registry:ui",
+  "title": "Toggle Group",
+  "description": "AMANTLE UI ui: toggle-group",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/toggle-group.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Connected toggle button group\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Bold, Italic, Underline } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface ToggleGroupProps {\n  className?: string;\n}\n\nexport function ToggleGroup({ className }: ToggleGroupProps) {\n  const [active, setActive] = React.useState<Record<string, boolean>>({ bold: true });\n\n  const toggle = (key: string) => {\n    setActive((prev) => ({ ...prev, [key]: !prev[key] }));\n  };\n\n  return (\n    <div className={cn(\"inline-flex rounded-lg border border-border bg-card p-1 shadow-2xs\", className)}>\n      <button\n        type=\"button\"\n        onClick={() => toggle(\"bold\")}\n        className={cn(\n          \"h-8 w-8 rounded flex items-center justify-center text-xs transition-colors\",\n          active.bold ? \"bg-accent text-accent-foreground font-bold\" : \"text-muted-foreground hover:text-foreground\"\n        )}\n      >\n        <Bold className=\"h-4 w-4\" />\n      </button>\n      <button\n        type=\"button\"\n        onClick={() => toggle(\"italic\")}\n        className={cn(\n          \"h-8 w-8 rounded flex items-center justify-center text-xs transition-colors\",\n          active.italic ? \"bg-accent text-accent-foreground font-bold\" : \"text-muted-foreground hover:text-foreground\"\n        )}\n      >\n        <Italic className=\"h-4 w-4\" />\n      </button>\n      <button\n        type=\"button\"\n        onClick={() => toggle(\"underline\")}\n        className={cn(\n          \"h-8 w-8 rounded flex items-center justify-center text-xs transition-colors\",\n          active.underline ? \"bg-accent text-accent-foreground font-bold\" : \"text-muted-foreground hover:text-foreground\"\n        )}\n      >\n        <Underline className=\"h-4 w-4\" />\n      </button>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/toggle-group.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "toggle-group"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Connected toggle button group"
+  }
+}

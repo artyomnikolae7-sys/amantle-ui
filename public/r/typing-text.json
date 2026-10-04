@@ -1,0 +1,28 @@
+{
+  "name": "typing-text",
+  "type": "registry:ui",
+  "title": "Typing Text",
+  "description": "AMANTLE UI ui: typing-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/typing-text.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/typing-animation\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface TypingTextProps {\n  className?: string;\n  text?: string;\n  speed?: number;\n}\n\nexport function TypingText({ className, text = \"Соберите дизайн-систему за считанные минуты.\", speed = 50 }: TypingTextProps) {\n  const [displayedText, setDisplayedText] = React.useState(\"\");\n\n  React.useEffect(() => {\n    let i = 0;\n    const interval = setInterval(() => {\n      if (i <= text.length) {\n        setDisplayedText(text.slice(0, i));\n        i++;\n      } else {\n        clearInterval(interval);\n      }\n    }, speed);\n\n    return () => clearInterval(interval);\n  }, [text, speed]);\n\n  return (\n    <div className={cn(\"font-mono text-base sm:text-lg text-foreground inline-flex items-center\", className)}>\n      <span>{displayedText}</span>\n      <span className=\"ml-1 inline-block w-2 h-5 bg-primary animate-[pulse_0.8s_infinite]\" />\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/typing-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "typing-text"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/typing-animation",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

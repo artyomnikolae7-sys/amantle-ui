@@ -1,0 +1,30 @@
+{
+  "name": "input-voice-dictation",
+  "type": "registry:ui",
+  "title": "Input Voice Dictation",
+  "description": "AMANTLE UI ui: input-voice-dictation",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-voice-dictation.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-voice-dictation\n * @author AMANTLE UI\n * @license MIT\n * @modified Voice listening waveform simulation\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Mic, MicOff, Send } from \"lucide-react\";\n\nexport function InputVoiceDictation() {\n  const [isRecording, setIsRecording] = React.useState(false);\n  const [text, setText] = React.useState(\"\");\n\n  const toggleRecording = () => {\n    if (!isRecording) {\n      setIsRecording(true);\n      setTimeout(() => {\n        setText(\"Создай адаптивный hero-блок с градиентом\");\n        setIsRecording(false);\n      }, 2500);\n    } else {\n      setIsRecording(false);\n    }\n  };\n\n  return (\n    <div className=\"max-w-md w-full rounded-2xl border border-border bg-card p-2 shadow-sm\">\n      <div className=\"flex items-center gap-2\">\n        <button\n          onClick={toggleRecording}\n          className={`p-2 rounded-xl transition-[color,background-color,border-color,box-shadow,transform] ${\n            isRecording\n              ? \"bg-rose-500 text-white animate-pulse motion-reduce:animate-none\"\n              : \"bg-muted text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {isRecording ? <MicOff className=\"w-4 h-4\" /> : <Mic className=\"w-4 h-4\" />}\n        </button>\n\n        {isRecording ? (\n          <div className=\"flex-1 flex items-center gap-1 h-8 px-2\">\n            {[40, 70, 100, 50, 85, 30, 95, 60].map((h, i) => (\n              <div\n                key={i}\n                className=\"w-1 bg-rose-500 rounded-full animate-bounce motion-reduce:animate-none\"\n                style={{\n                  height: `${h}%`,\n                  animationDelay: `${i * 0.1}s`,\n                }}\n              />\n            ))}\n            <span className=\"text-xs text-rose-500 font-medium ml-2\">Слушаю...</span>\n          </div>\n        ) : (\n          <input\n            type=\"text\"\n            value={text}\n            onChange={(e) => setText(e.target.value)}\n            placeholder=\"Нажмите на микрофон или введите промпт...\"\n            className=\"flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none px-2\"\n          />\n        )}\n\n        <button className=\"p-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors\">\n          <Send className=\"w-4 h-4\" />\n        </button>\n      </div>\n    </div>\n  );\n}\nexport default InputVoiceDictation;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-voice-dictation.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-voice-dictation"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-voice-dictation",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Voice listening waveform simulation"
+  }
+}

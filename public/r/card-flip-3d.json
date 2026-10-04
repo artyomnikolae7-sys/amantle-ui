@@ -1,0 +1,30 @@
+{
+  "name": "card-flip-3d",
+  "type": "registry:ui",
+  "title": "Card Flip 3d",
+  "description": "AMANTLE UI ui: card-flip-3d",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-flip-3d.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-flip-3d\n * @author AMANTLE UI\n * @license MIT\n * @modified 3D perspective flip on click\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { RotateCw, Sparkles, Code2 } from \"lucide-react\";\n\nexport function CardFlip3D() {\n  const [flipped, setFlipped] = React.useState(false);\n\n  return (\n    <div className=\"w-72 h-44 [perspective:1000px] cursor-pointer\" onClick={() => setFlipped(!flipped)}>\n      <div\n        className={`relative w-full h-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] shadow-xl ${\n          flipped ? \"[transform:rotateY(180deg)]\" : \"\"\n        }`}\n      >\n        <div className=\"absolute inset-0 rounded-2xl p-5 bg-card border border-border [backface-visibility:hidden] flex flex-col justify-between\">\n          <div className=\"flex items-center justify-between\">\n            <Sparkles className=\"w-5 h-5 text-primary\" />\n            <RotateCw className=\"w-4 h-4 text-muted-foreground\" />\n          </div>\n          <div>\n            <h4 className=\"font-bold text-foreground\">Лицевая сторона</h4>\n            <p className=\"text-xs text-muted-foreground mt-1\">Нажмите, чтобы перевернуть карту</p>\n          </div>\n        </div>\n\n        <div className=\"absolute inset-0 rounded-2xl p-5 bg-primary text-primary-foreground [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-between\">\n          <Code2 className=\"w-5 h-5\" />\n          <div>\n            <h4 className=\"font-bold\">Оборотная сторона</h4>\n            <p className=\"text-xs opacity-80 mt-1\">Интерактивный 3D flip поворот</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default CardFlip3D;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-flip-3d.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-flip-3d"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-flip-3d",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "3D perspective flip on click"
+  }
+}

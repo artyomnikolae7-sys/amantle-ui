@@ -1,0 +1,28 @@
+{
+  "name": "kbd",
+  "type": "registry:ui",
+  "title": "Kbd",
+  "description": "AMANTLE UI ui: kbd",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/kbd.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Semantic tokenized kbd component\n */\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface KbdProps extends React.HTMLAttributes<HTMLElement> {}\n\nexport function Kbd({ className, children, ...props }: KbdProps) {\n  return (\n    <kbd\n      className={cn(\n        \"inline-flex items-center justify-center gap-1 rounded border border-border bg-muted/60 px-2 py-0.5 font-mono text-xs font-semibold text-muted-foreground shadow-2xs select-none\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </kbd>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/kbd.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "kbd"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Semantic tokenized kbd component"
+  }
+}

@@ -781,7 +781,7 @@ export function InteractiveShowcase() {
                       <CardContent className="space-y-2 text-xs text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-emerald-500" />
-                          <span>55 базовых компонентов</span>
+                          <span>150+ компонентов каталога</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-emerald-500" />
@@ -823,7 +823,7 @@ export function InteractiveShowcase() {
                       <CardContent className="space-y-2 text-xs text-muted-foreground">
                         <div className="flex items-center gap-2 text-foreground font-medium">
                           <Check className="w-4 h-4 text-primary" />
-                          <span>Все 55+ компонентов и шаблонов</span>
+                          <span>Все 150+ компонентов и шаблонов</span>
                         </div>
                         <div className="flex items-center gap-2 text-foreground font-medium">
                           <Check className="w-4 h-4 text-primary" />
@@ -863,7 +863,7 @@ export function InteractiveShowcase() {
                 href="#catalog"
                 className="text-primary hover:underline flex items-center gap-1 font-medium"
               >
-                <span>Смотреть все 55 компонентов в каталоге</span>
+                <span>Смотреть все 150+ компонентов в каталоге</span>
                 <ArrowRight className="w-3 h-3" />
               </a>
             </div>

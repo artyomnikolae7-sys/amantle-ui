@@ -1,0 +1,30 @@
+{
+  "name": "ai-code-diff",
+  "type": "registry:block",
+  "title": "Ai Code Diff",
+  "description": "AMANTLE UI block: ai-code-diff",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/ai-code-diff.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { GitCommit, Check } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface AiCodeDiffProps {\n  className?: string;\n  filename?: string;\n}\n\nexport function AiCodeDiff({ className, filename = \"registry/ui/button.tsx\" }: AiCodeDiffProps) {\n  const diffLines = [\n    { type: \"normal\", line: \"import * as React from 'react';\" },\n    { type: \"removed\", line: \"- const variant = 'default';\" },\n    { type: \"added\", line: \"+ const variant = props.variant || 'default';\" },\n    { type: \"added\", line: \"+ const isMagnetic = props.magnetic ?? false;\" },\n    { type: \"normal\", line: \"return <button className={cn(styles)}>{children}</button>;\" },\n  ];\n\n  return (\n    <div className={cn(\"w-full max-w-xl mx-auto rounded-xl border border-border bg-card overflow-hidden shadow-lg font-mono text-xs\", className)}>\n      <div className=\"flex items-center justify-between px-4 py-2 bg-muted/40 border-b border-border\">\n        <div className=\"flex items-center gap-2 text-foreground font-semibold\">\n          <GitCommit className=\"h-4 w-4 text-primary\" />\n          <span>{filename}</span>\n        </div>\n        <span className=\"text-[11px] text-muted-foreground\">+2 / -1</span>\n      </div>\n\n      <div className=\"p-2 space-y-0.5\">\n        {diffLines.map((l, i) => (\n          <div\n            key={i}\n            className={cn(\n              \"px-3 py-1 rounded\",\n              l.type === \"added\" && \"bg-emerald-500/10 text-emerald-400 font-medium\",\n              l.type === \"removed\" && \"bg-destructive/10 text-destructive line-through opacity-80\",\n              l.type === \"normal\" && \"text-muted-foreground\"\n            )}\n          >\n            {l.line}\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/ai-code-diff.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "ai-code-diff"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

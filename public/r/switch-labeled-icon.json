@@ -1,0 +1,30 @@
+{
+  "name": "switch-labeled-icon",
+  "type": "registry:ui",
+  "title": "Switch Labeled Icon",
+  "description": "AMANTLE UI ui: switch-labeled-icon",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/switch-labeled-icon.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/switch-labeled-icon\n * @author AMANTLE UI\n * @license MIT\n * @modified Day-Night icon morphing switch\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sun, Moon } from \"lucide-react\";\n\nexport function SwitchLabeledIcon() {\n  const [isDark, setIsDark] = React.useState(false);\n\n  return (\n    <button\n      onClick={() => setIsDark(!isDark)}\n      className={`relative inline-flex h-8 w-16 items-center rounded-full p-1 transition-colors duration-300 ${\n        isDark ? \"bg-slate-900 border border-slate-700\" : \"bg-amber-100 border border-amber-300\"\n      }`}\n    >\n      <div\n        className={`flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${\n          isDark\n            ? \"translate-x-8 bg-slate-800 text-indigo-300\"\n            : \"translate-x-0 bg-white text-amber-500\"\n        }`}\n      >\n        {isDark ? <Moon className=\"w-3.5 h-3.5\" /> : <Sun className=\"w-3.5 h-3.5\" />}\n      </div>\n    </button>\n  );\n}\nexport default SwitchLabeledIcon;\n",
+      "type": "registry:ui",
+      "target": "components/ui/switch-labeled-icon.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "switch-labeled-icon"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/switch-labeled-icon",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Day-Night icon morphing switch"
+  }
+}

@@ -11,7 +11,7 @@ import { Button } from "@/registry/ui/button";
 
 export function EmptyStateCard() {
   return (
-    <div className="flex min-h-[400px] flex-col items-center justify-center rounded-xl border border-dashed border-border p-8 text-center animate-in fade-in-50">
+    <div className="flex min-h-[400px] flex-col items-center justify-center rounded-xl border border-dashed border-border p-8 text-center animate-in motion-reduce:animate-none fade-in-50">
       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-muted">
         <FolderPlus className="h-8 w-8 text-muted-foreground" />
       </div>

@@ -1,0 +1,30 @@
+{
+  "name": "hover-card",
+  "type": "registry:ui",
+  "title": "Hover Card",
+  "description": "AMANTLE UI ui: hover-card",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-card.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/docs/components/hover-card\n * @author shadcn\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { CalendarDays, MapPin } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface HoverCardProps {\n  className?: string;\n  triggerText?: string;\n  title?: string;\n  handle?: string;\n  bio?: string;\n}\n\nexport function HoverCard({\n  className,\n  triggerText = \"@amantledesign\",\n  title = \"AMANTLE Design System\",\n  handle = \"@amantledesign\",\n  bio = \"Интеллектуальный реестр UI компонентов уровня shadcn с живым Playground и AI Composer.\",\n}: HoverCardProps) {\n  const [isOpen, setIsOpen] = React.useState(false);\n\n  return (\n    <div className=\"relative inline-block\" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>\n      <span className=\"font-semibold text-primary underline decoration-primary/40 underline-offset-4 cursor-pointer\">\n        {triggerText}\n      </span>\n\n      {isOpen && (\n        <div className={cn(\"absolute bottom-full left-0 mb-2 w-72 rounded-xl border border-border bg-popover p-4 shadow-2xl z-50 animate-in motion-reduce:animate-none fade-in-50 zoom-in-95\", className)}>\n          <div className=\"flex gap-3\">\n            <div className=\"h-10 w-10 shrink-0 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary\">\n              AM\n            </div>\n            <div className=\"space-y-1\">\n              <h4 className=\"text-sm font-bold text-foreground leading-none\">{title}</h4>\n              <p className=\"text-xs text-muted-foreground\">{handle}</p>\n            </div>\n          </div>\n          <p className=\"text-xs text-muted-foreground mt-3 leading-relaxed\">{bio}</p>\n          <div className=\"flex items-center gap-3 text-[11px] text-muted-foreground mt-3 pt-2 border-t border-border\">\n            <span className=\"flex items-center gap-1\"><MapPin className=\"h-3 w-3\" /> Global</span>\n            <span className=\"flex items-center gap-1\"><CalendarDays className=\"h-3 w-3\" /> Присоединился в 2026</span>\n          </div>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-card"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/docs/components/hover-card",
+    "author": "shadcn",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

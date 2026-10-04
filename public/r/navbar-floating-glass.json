@@ -1,0 +1,30 @@
+{
+  "name": "navbar-floating-glass",
+  "type": "registry:block",
+  "title": "Navbar Floating Glass",
+  "description": "AMANTLE UI block: navbar-floating-glass",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/navbar-floating-glass.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Floating island glassmorphism navbar\n */\n\nimport * as React from \"react\";\nimport { Button } from \"@/registry/ui/button\";\n\nexport default function NavbarFloatingGlass() {\n  return (\n    <div className=\"p-6 flex justify-center\">\n      <header className=\"w-full max-w-4xl rounded-full border border-border/80 bg-background/70 backdrop-blur-xl px-5 py-2.5 shadow-lg flex items-center justify-between text-xs\">\n        <div className=\"flex items-center gap-2 font-bold text-foreground\">\n          <span className=\"h-2.5 w-2.5 rounded-full bg-primary\" />\n          <span>AMANTLE</span>\n        </div>\n\n        <nav className=\"hidden md:flex items-center gap-6 font-medium text-muted-foreground\">\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Каталог</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">Playground</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">A/B Сравнение</a>\n          <a href=\"#\" className=\"hover:text-foreground transition-colors\">MCP Server</a>\n        </nav>\n\n        <div className=\"flex items-center gap-2\">\n          <Button size=\"sm\" variant=\"ghost\" className=\"h-8 text-xs\">\n            Войти\n          </Button>\n          <Button size=\"sm\" className=\"h-8 text-xs\">\n            Скачать\n          </Button>\n        </div>\n      </header>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/navbar-floating-glass.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "navbar-floating-glass"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Floating island glassmorphism navbar"
+  }
+}

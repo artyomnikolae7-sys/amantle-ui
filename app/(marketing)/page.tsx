@@ -52,7 +52,7 @@ export default async function HomePage() {
             href="#catalog"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition-opacity gap-2"
           >
-            <span>Исследовать каталог (55)</span>
+            <span>Исследовать каталог ({items.length > 0 ? items.length : "150+"})</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
@@ -68,7 +68,7 @@ export default async function HomePage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <Layers className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">50+ компонентов «Золотого фонда»</h3>
+            <h3 className="text-lg font-bold text-foreground">150+ компонентов «Золотого фонда»</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Отполированные атомарные примитивы Radix UI, готовые продакшн-блоки Hero, Pricing, Bento и полноценные шаблоны страниц.
             </p>

@@ -1,0 +1,30 @@
+{
+  "name": "badge-counter-notification",
+  "type": "registry:ui",
+  "title": "Badge Counter Notification",
+  "description": "AMANTLE UI ui: badge-counter-notification",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-counter-notification.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/badge-counter-notification\n * @author AMANTLE UI\n * @license MIT\n * @modified Bouncing spring counter pill\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Bell } from \"lucide-react\";\n\nexport function BadgeCounterNotification({\n  count = 7,\n}: {\n  count?: number;\n}) {\n  return (\n    <div className=\"relative inline-flex items-center p-2 rounded-xl bg-card border border-border\">\n      <Bell className=\"w-5 h-5 text-muted-foreground\" />\n      <span className=\"absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-bold text-white shadow-md animate-pulse motion-reduce:animate-none\">\n        {count}\n      </span>\n    </div>\n  );\n}\nexport default BadgeCounterNotification;\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-counter-notification.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-counter-notification"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/badge-counter-notification",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Bouncing spring counter pill"
+  }
+}

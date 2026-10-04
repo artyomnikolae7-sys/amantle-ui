@@ -1,0 +1,30 @@
+{
+  "name": "hero-canvas-reveal",
+  "type": "registry:block",
+  "title": "Hero Canvas Reveal",
+  "description": "AMANTLE UI block: hero-canvas-reveal",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/hero-canvas-reveal.tsx",
+      "content": "/**\n * @source https://ui.aceternity.com/components/canvas-reveal-effect\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Cpu, Zap, Shield } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface HeroCanvasRevealProps {\n  className?: string;\n  title?: string;\n}\n\nexport function HeroCanvasReveal({ className, title = \"Интеллект в каждом пикселе\" }: HeroCanvasRevealProps) {\n  const cards = [\n    { icon: Cpu, title: \"AI Генерация\", desc: \"Синтез UI компонентов по текстовому описанию\" },\n    { icon: Zap, title: \"Zero Runtime\", desc: \"Чистый CSS и TypeScript без избыточных зависимостей\" },\n    { icon: Shield, title: \"100% Provenance\", desc: \"Проверенная лицензия и чистая архитектура кода\" },\n  ];\n\n  return (\n    <div className={cn(\"w-full rounded-2xl border border-border bg-card p-8 sm:p-12 space-y-8\", className)}>\n      <div className=\"text-center max-w-xl mx-auto space-y-3\">\n        <h2 className=\"text-2xl sm:text-3xl font-black text-foreground\">{title}</h2>\n        <p className=\"text-xs sm:text-sm text-muted-foreground\">Платформа с открытым исходным кодом для разработки продуктов будущего</p>\n      </div>\n\n      <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\">\n        {cards.map((c) => {\n          const Icon = c.icon;\n          return (\n            <div key={c.title} className=\"p-6 rounded-xl border border-border bg-muted/20 hover:border-primary/50 transition-colors space-y-3 group\">\n              <div className=\"h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform\">\n                <Icon className=\"h-5 w-5\" />\n              </div>\n              <h4 className=\"font-bold text-sm text-foreground\">{c.title}</h4>\n              <p className=\"text-xs text-muted-foreground leading-relaxed\">{c.desc}</p>\n            </div>\n          );\n        })}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-canvas-reveal.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "hero-canvas-reveal"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/canvas-reveal-effect",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

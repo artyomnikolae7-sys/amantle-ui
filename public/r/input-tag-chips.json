@@ -1,0 +1,30 @@
+{
+  "name": "input-tag-chips",
+  "type": "registry:ui",
+  "title": "Input Tag Chips",
+  "description": "AMANTLE UI ui: input-tag-chips",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-tag-chips.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-tag-chips\n * @author AMANTLE UI\n * @license MIT\n * @modified Pill chip management with Enter hotkey\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { X, Tag } from \"lucide-react\";\n\nexport function InputTagChips() {\n  const [tags, setTags] = React.useState([\"React\", \"Tailwind\", \"DesignSystem\"]);\n  const [input, setInput] = React.useState(\"\");\n\n  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {\n    if (e.key === \"Enter\" && input.trim()) {\n      e.preventDefault();\n      if (!tags.includes(input.trim())) {\n        setTags([...tags, input.trim()]);\n      }\n      setInput(\"\");\n    }\n  };\n\n  const removeTag = (t: string) => {\n    setTags(tags.filter((item) => item !== t));\n  };\n\n  return (\n    <div className=\"max-w-md w-full rounded-xl border border-border bg-card p-2 flex flex-wrap gap-1.5 items-center\">\n      <Tag className=\"w-4 h-4 text-muted-foreground ml-1\" />\n      {tags.map((tag) => (\n        <span\n          key={tag}\n          className=\"inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-secondary text-secondary-foreground text-xs font-medium\"\n        >\n          <span>{tag}</span>\n          <button onClick={() => removeTag(tag)} className=\"hover:text-destructive\">\n            <X className=\"w-3 h-3\" />\n          </button>\n        </span>\n      ))}\n      <input\n        type=\"text\"\n        value={input}\n        onChange={(e) => setInput(e.target.value)}\n        onKeyDown={handleKeyDown}\n        placeholder=\"Добавить тег...\"\n        className=\"flex-1 min-w-[100px] bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none px-2 py-1\"\n      />\n    </div>\n  );\n}\nexport default InputTagChips;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-tag-chips.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-tag-chips"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-tag-chips",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Pill chip management with Enter hotkey"
+  }
+}

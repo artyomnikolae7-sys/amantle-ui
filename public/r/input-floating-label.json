@@ -1,0 +1,28 @@
+{
+  "name": "input-floating-label",
+  "type": "registry:ui",
+  "title": "Input Floating Label",
+  "description": "AMANTLE UI ui: input-floating-label",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-floating-label.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Material / Modern SaaS Floating Label Input\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputFloatingLabelProps extends React.InputHTMLAttributes<HTMLInputElement> {\n  label: string;\n}\n\nexport function InputFloatingLabel({\n  id,\n  className,\n  label,\n  value,\n  onChange,\n  ...props\n}: InputFloatingLabelProps) {\n  const [internalValue, setInternalValue] = React.useState(\"\");\n  const inputId = id || React.useId();\n  const isFilled = Boolean(value ?? internalValue);\n\n  return (\n    <div className=\"relative w-full\">\n      <input\n        id={inputId}\n        value={value ?? internalValue}\n        onChange={(e) => {\n          setInternalValue(e.target.value);\n          onChange?.(e);\n        }}\n        placeholder=\" \"\n        className={cn(\n          \"peer h-12 w-full rounded-md border border-input bg-background px-3 pt-4 pb-1 text-sm text-foreground shadow-xs transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary disabled:cursor-not-allowed disabled:opacity-50\",\n          className\n        )}\n        {...props}\n      />\n      <label\n        htmlFor={inputId}\n        className={cn(\n          \"absolute left-3 top-3.5 text-xs text-muted-foreground transition-[color,background-color,border-color,box-shadow,transform] duration-150 pointer-events-none peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-primary\",\n          isFilled && \"top-1.5 text-[10px] text-muted-foreground\"\n        )}\n      >\n        {label}\n      </label>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-floating-label.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-floating-label"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Material / Modern SaaS Floating Label Input"
+  }
+}

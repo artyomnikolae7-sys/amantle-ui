@@ -1,0 +1,30 @@
+{
+  "name": "badge-glow",
+  "type": "registry:ui",
+  "title": "Badge Glow",
+  "description": "AMANTLE UI ui: badge-glow",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/badge-glow.tsx",
+      "content": "/**\n * @source https://magicui.design/docs/components/shine-border\n * @author AMANTLE UI\n * @license MIT\n * @modified Adapted for AMANTLE UI with Tailwind v4 semantic tokens\n */\n\n\"use client\";\n\nimport * as React from \"react\";\nimport { Flame } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BadgeGlowProps {\n  className?: string;\n  label?: string;\n  variant?: \"primary\" | \"emerald\" | \"amber\";\n}\n\nexport function BadgeGlow({ className, label = \"Популярный выбор\", variant = \"primary\" }: BadgeGlowProps) {\n  const glowStyles = {\n    primary: \"border-primary/40 text-primary shadow-[0_0_15px_rgba(99,102,241,0.35)]\",\n    emerald: \"border-emerald-500/40 text-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.35)]\",\n    amber: \"border-amber-500/40 text-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.35)]\",\n  };\n\n  return (\n    <span\n      className={cn(\n        \"inline-flex items-center gap-1.5 px-3 py-1 rounded-full border bg-card/90 text-xs font-bold uppercase tracking-wider backdrop-blur-md\",\n        glowStyles[variant],\n        className\n      )}\n    >\n      <Flame className=\"h-3.5 w-3.5\" />\n      {label}\n    </span>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/badge-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "badge-glow"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/shine-border",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI with Tailwind v4 semantic tokens"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "button-elastic-bounce",
+  "type": "registry:ui",
+  "title": "Button Elastic Bounce",
+  "description": "AMANTLE UI ui: button-elastic-bounce",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-elastic-bounce.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-elastic-bounce\n * @author AMANTLE UI / Emil Kowalski\n * @license MIT\n * @modified Physics-based elastic spring release curve\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Sparkles } from \"lucide-react\";\n\nexport function ButtonElasticBounce({\n  children = \"Нажми меня\",\n  className = \"\",\n  ...props\n}: React.ButtonHTMLAttributes<HTMLButtonElement>) {\n  return (\n    <button\n      className={`relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm bg-primary text-primary-foreground hover:bg-primary/90 shadow-md transition-[color,background-color,border-color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] active:scale-90 hover:scale-105 hover:-translate-y-0.5 ${className}`}\n      {...props}\n    >\n      <Sparkles className=\"w-4 h-4 transition-transform duration-300 group-hover:rotate-12\" />\n      <span>{children}</span>\n    </button>\n  );\n}\nexport default ButtonElasticBounce;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-elastic-bounce.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-elastic-bounce"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-elastic-bounce",
+    "author": "AMANTLE UI / Emil Kowalski",
+    "license": "MIT",
+    "modified": "Physics-based elastic spring release curve"
+  }
+}

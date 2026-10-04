@@ -1,0 +1,30 @@
+{
+  "name": "input-verification-code",
+  "type": "registry:ui",
+  "title": "Input Verification Code",
+  "description": "AMANTLE UI ui: input-verification-code",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/input-verification-code.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/input-verification-code\n * @author AMANTLE UI\n * @license MIT\n * @modified Alphanumeric token formatter with hyphen separator\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { KeyRound } from \"lucide-react\";\n\nexport function InputVerificationCode() {\n  const [code, setCode] = React.useState(\"\");\n\n  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    let clean = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, \"\").slice(0, 6);\n    if (clean.length > 3) {\n      clean = clean.slice(0, 3) + \"-\" + clean.slice(3);\n    }\n    setCode(clean);\n  };\n\n  return (\n    <div className=\"max-w-xs w-full\">\n      <div className=\"relative flex items-center\">\n        <KeyRound className=\"w-4 h-4 absolute left-3 text-muted-foreground\" />\n        <input\n          type=\"text\"\n          value={code}\n          onChange={handleChange}\n          placeholder=\"ABC-123\"\n          className=\"w-full bg-card border border-border rounded-xl pl-9 pr-4 py-2.5 text-center font-mono font-bold tracking-widest text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20\"\n        />\n      </div>\n    </div>\n  );\n}\nexport default InputVerificationCode;\n",
+      "type": "registry:ui",
+      "target": "components/ui/input-verification-code.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "input-verification-code"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/input-verification-code",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Alphanumeric token formatter with hyphen separator"
+  }
+}

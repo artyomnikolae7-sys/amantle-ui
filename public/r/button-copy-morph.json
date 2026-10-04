@@ -1,0 +1,30 @@
+{
+  "name": "button-copy-morph",
+  "type": "registry:ui",
+  "title": "Button Copy Morph",
+  "description": "AMANTLE UI ui: button-copy-morph",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-copy-morph.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-copy-morph\n * @author AMANTLE UI\n * @license MIT\n * @modified Icon morphing copy animation\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Copy, Check } from \"lucide-react\";\n\nexport function ButtonCopyMorph({\n  value = \"npm i @amantle/ui\",\n  label = \"Копировать\",\n}: {\n  value?: string;\n  label?: string;\n}) {\n  const [copied, setCopied] = React.useState(false);\n\n  const handleCopy = async () => {\n    try {\n      await navigator.clipboard.writeText(value);\n      setCopied(true);\n      setTimeout(() => setCopied(false), 2000);\n    } catch {\n      setCopied(true);\n      setTimeout(() => setCopied(false), 2000);\n    }\n  };\n\n  return (\n    <button\n      onClick={handleCopy}\n      className=\"inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-card border border-border text-foreground hover:bg-muted text-sm font-mono transition-[color,background-color,border-color,box-shadow,transform] duration-200 active:scale-95\"\n    >\n      <div className=\"relative w-4 h-4\">\n        <Copy\n          className={`w-4 h-4 absolute inset-0 text-muted-foreground transition-[color,background-color,border-color,box-shadow,transform] duration-300 ${\n            copied ? \"opacity-0 scale-50 rotate-45\" : \"opacity-100 scale-100 rotate-0\"\n          }`}\n        />\n        <Check\n          className={`w-4 h-4 absolute inset-0 text-emerald-500 transition-[color,background-color,border-color,box-shadow,transform] duration-300 ${\n            copied ? \"opacity-100 scale-100 rotate-0\" : \"opacity-0 scale-50 -rotate-45\"\n          }`}\n        />\n      </div>\n      <span>{copied ? \"Скопировано!\" : label}</span>\n    </button>\n  );\n}\nexport default ButtonCopyMorph;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-copy-morph.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-copy-morph"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-copy-morph",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Icon morphing copy animation"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "testimonials-grid-masonry",
+  "type": "registry:block",
+  "title": "Testimonials Grid Masonry",
+  "description": "AMANTLE UI block: testimonials-grid-masonry",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "blocks/testimonials-grid-masonry.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Masonry grid testimonials\n */\n\nimport * as React from \"react\";\nimport { Star, Quote } from \"lucide-react\";\n\nexport default function TestimonialsGridMasonry() {\n  const cards = [\n    { name: \"Сергей Лазарев\", role: \"SaaS Founder\", text: \"Наш конверт на лендинге вырос на 24% после интеграции Magnetic и Shimmer кнопок.\" },\n    { name: \"Ольга Волкова\", role: \"Design System Lead\", text: \"Единый источник истины для дизайнеров и разработчиков. Поддержка Dark Mode идеальная.\" },\n    { name: \"Илья Романов\", role: \"AI Engineer\", text: \"MCP сервер позволяет Cursor мгновенно находить нужные блоки и вставлять без ошибок.\" },\n  ];\n\n  return (\n    <div className=\"p-8 max-w-4xl mx-auto space-y-6\">\n      <h3 className=\"text-2xl font-extrabold text-foreground text-center\">Истории успеха</h3>\n      <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\">\n        {cards.map((c, i) => (\n          <div key={i} className=\"rounded-2xl border border-border bg-card p-5 shadow-xs flex flex-col justify-between space-y-4\">\n            <Quote className=\"h-6 w-6 text-primary/40\" />\n            <p className=\"text-xs text-muted-foreground leading-relaxed\">«{c.text}»</p>\n            <div className=\"border-t border-border/40 pt-3\">\n              <span className=\"text-xs font-bold text-foreground block\">{c.name}</span>\n              <span className=\"text-[11px] text-muted-foreground block\">{c.role}</span>\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/testimonials-grid-masonry.tsx"
+    }
+  ],
+  "category": "blocks",
+  "tags": [
+    "blocks",
+    "testimonials-grid-masonry"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Masonry grid testimonials"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "breadcrumbs",
+  "type": "registry:ui",
+  "title": "Breadcrumbs",
+  "description": "AMANTLE UI ui: breadcrumbs",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/breadcrumbs.tsx",
+      "content": "/**\n * @source https://ui.shadcn.com/\n * @author AMANTLE UI\n * @license MIT\n * @modified Accessible breadcrumb component\n */\n\nimport * as React from \"react\";\nimport { ChevronRight } from \"lucide-react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface BreadcrumbsProps {\n  items: Array<{ label: string; href?: string }>;\n  className?: string;\n}\n\nexport function Breadcrumbs({ items, className }: BreadcrumbsProps) {\n  return (\n    <nav aria-label=\"Breadcrumb\" className={cn(\"flex items-center text-xs text-muted-foreground\", className)}>\n      <ol className=\"flex items-center gap-1.5\">\n        {items.map((item, idx) => {\n          const isLast = idx === items.length - 1;\n          return (\n            <li key={idx} className=\"flex items-center gap-1.5\">\n              {item.href && !isLast ? (\n                <a href={item.href} className=\"hover:text-foreground transition-colors\">\n                  {item.label}\n                </a>\n              ) : (\n                <span className={cn(isLast && \"text-foreground font-semibold\")}>{item.label}</span>\n              )}\n              {!isLast && <ChevronRight className=\"h-3 w-3 text-muted-foreground/60\" />}\n            </li>\n          );\n        })}\n      </ol>\n    </nav>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/breadcrumbs.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "breadcrumbs"
+  ],
+  "meta": {
+    "source": "https://ui.shadcn.com/",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Accessible breadcrumb component"
+  }
+}

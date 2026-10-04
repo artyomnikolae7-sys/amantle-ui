@@ -1,0 +1,30 @@
+{
+  "name": "checkbox-tree-hierarchical",
+  "type": "registry:ui",
+  "title": "Checkbox Tree Hierarchical",
+  "description": "AMANTLE UI ui: checkbox-tree-hierarchical",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/checkbox-tree-hierarchical.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/checkbox-tree-hierarchical\n * @author AMANTLE UI\n * @license MIT\n * @modified Indeterminate parent state propagation\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { ChevronRight } from \"lucide-react\";\n\nexport function CheckboxTreeHierarchical() {\n  const [items, setItems] = React.useState({\n    docs: true,\n    components: true,\n    templates: false,\n  });\n\n  const allChecked = items.docs && items.components && items.templates;\n  const isIndeterminate = !allChecked && (items.docs || items.components || items.templates);\n\n  const toggleAll = () => {\n    const next = !allChecked;\n    setItems({ docs: next, components: next, templates: next });\n  };\n\n  return (\n    <div className=\"p-3 bg-card rounded-2xl border border-border max-w-xs w-full space-y-2\">\n      <div className=\"flex items-center gap-2\">\n        <input\n          type=\"checkbox\"\n          checked={allChecked}\n          ref={(el) => {\n            if (el) el.indeterminate = isIndeterminate;\n          }}\n          onChange={toggleAll}\n          className=\"rounded border-border accent-primary cursor-pointer\"\n        />\n        <span className=\"text-xs font-bold text-foreground\">Выбрать все модули</span>\n      </div>\n      <div className=\"pl-5 space-y-1.5 border-l border-border/60 ml-2\">\n        {Object.entries(items).map(([k, v]) => (\n          <label key={k} className=\"flex items-center gap-2 cursor-pointer\">\n            <input\n              type=\"checkbox\"\n              checked={v}\n              onChange={() => setItems({ ...items, [k]: !v })}\n              className=\"rounded border-border accent-primary\"\n            />\n            <span className=\"text-xs text-muted-foreground capitalize\">{k}</span>\n          </label>\n        ))}\n      </div>\n    </div>\n  );\n}\nexport default CheckboxTreeHierarchical;\n",
+      "type": "registry:ui",
+      "target": "components/ui/checkbox-tree-hierarchical.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "checkbox-tree-hierarchical"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/checkbox-tree-hierarchical",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Indeterminate parent state propagation"
+  }
+}

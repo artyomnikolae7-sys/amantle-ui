@@ -1,6 +1,8 @@
 import * as React from "react";
+import fs from "node:fs";
+import path from "node:path";
 import { notFound } from "next/navigation";
-import { componentMap } from "@/lib/components-map";
+import { PreviewClient } from "./preview-client";
 
 interface PreviewPageProps {
   params: Promise<{
@@ -11,9 +13,9 @@ interface PreviewPageProps {
 
 export default async function PreviewPage({ params }: PreviewPageProps) {
   const { category, slug } = await params;
-  const Component = componentMap[slug];
+  const manifestPath = path.join(process.cwd(), "public", "r", `${slug}.json`);
 
-  if (!Component) {
+  if (!fs.existsSync(manifestPath)) {
     notFound();
   }
 
@@ -26,7 +28,7 @@ export default async function PreviewPage({ params }: PreviewPageProps) {
       }`}
     >
       <div className="w-full max-w-full">
-        <Component />
+        <PreviewClient slug={slug} />
       </div>
     </div>
   );

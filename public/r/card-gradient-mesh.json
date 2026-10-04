@@ -1,0 +1,30 @@
+{
+  "name": "card-gradient-mesh",
+  "type": "registry:ui",
+  "title": "Card Gradient Mesh",
+  "description": "AMANTLE UI ui: card-gradient-mesh",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-gradient-mesh.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/card-gradient-mesh\n * @author AMANTLE UI\n * @license MIT\n * @modified Fluid animated mesh backdrop\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { Cpu } from \"lucide-react\";\n\nexport function CardGradientMesh() {\n  return (\n    <div className=\"relative rounded-3xl p-6 bg-card border border-border/80 overflow-hidden max-w-sm w-full shadow-lg\">\n      <div className=\"absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-pink-500/30 to-violet-600/30 rounded-full blur-2xl animate-pulse motion-reduce:animate-none\" />\n      <div className=\"relative z-10\">\n        <div className=\"w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4\">\n          <Cpu className=\"w-5 h-5\" />\n        </div>\n        <h4 className=\"font-bold text-base text-foreground mb-1\">Mesh Градиент</h4>\n        <p className=\"text-xs text-muted-foreground\">Глубокие визуальные акценты для SaaS дашбордов.</p>\n      </div>\n    </div>\n  );\n}\nexport default CardGradientMesh;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-gradient-mesh.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-gradient-mesh"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/card-gradient-mesh",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Fluid animated mesh backdrop"
+  }
+}

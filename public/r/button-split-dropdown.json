@@ -1,0 +1,30 @@
+{
+  "name": "button-split-dropdown",
+  "type": "registry:ui",
+  "title": "Button Split Dropdown",
+  "description": "AMANTLE UI ui: button-split-dropdown",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/button-split-dropdown.tsx",
+      "content": "/**\n * @source https://amantle.dev/components/button-split-dropdown\n * @author AMANTLE UI\n * @license MIT\n * @modified Split main action and popover trigger\n */\n\"use client\";\n\nimport * as React from \"react\";\nimport { ChevronDown, GitFork, Sparkles } from \"lucide-react\";\n\nexport function ButtonSplitDropdown({\n  label = \"Смерджить PR\",\n}: {\n  label?: string;\n}) {\n  const [open, setOpen] = React.useState(false);\n\n  return (\n    <div className=\"relative inline-flex items-stretch rounded-xl shadow-sm\">\n      <button\n        className=\"inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-l-xl transition-colors active:scale-[0.98]\"\n      >\n        <GitFork className=\"w-4 h-4\" />\n        <span>{label}</span>\n      </button>\n      <button\n        onClick={() => setOpen(!open)}\n        className=\"inline-flex items-center px-2.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-r-xl border-l border-emerald-500/40 transition-colors\"\n      >\n        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? \"rotate-180\" : \"\"}`} />\n      </button>\n\n      {open && (\n        <div className=\"absolute right-0 top-full mt-2 w-48 rounded-xl bg-card border border-border shadow-xl p-1.5 z-50 flex flex-col gap-1\">\n          <button\n            onClick={() => setOpen(false)}\n            className=\"flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg text-foreground hover:bg-muted text-left transition-colors\"\n          >\n            <GitFork className=\"w-3.5 h-3.5 text-muted-foreground\" />\n            <span>Merge commit</span>\n          </button>\n          <button\n            onClick={() => setOpen(false)}\n            className=\"flex items-center gap-2 px-3 py-2 text-xs font-medium rounded-lg text-foreground hover:bg-muted text-left transition-colors\"\n          >\n            <Sparkles className=\"w-3.5 h-3.5 text-muted-foreground\" />\n            <span>Squash and merge</span>\n          </button>\n        </div>\n      )}\n    </div>\n  );\n}\nexport default ButtonSplitDropdown;\n",
+      "type": "registry:ui",
+      "target": "components/ui/button-split-dropdown.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "button-split-dropdown"
+  ],
+  "meta": {
+    "source": "https://amantle.dev/components/button-split-dropdown",
+    "author": "AMANTLE UI",
+    "license": "MIT",
+    "modified": "Split main action and popover trigger"
+  }
+}
