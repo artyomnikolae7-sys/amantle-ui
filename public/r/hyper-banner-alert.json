@@ -1,0 +1,27 @@
+{
+  "name": "hyper-banner-alert",
+  "type": "registry:ui",
+  "title": "Hyper Banner Alert",
+  "description": "AMANTLE UI ui: hyper-banner-alert",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-banner-alert.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HyperBannerAlert\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperBannerAlert({ className = \"\" }: { className?: string }) {\n  const [visible, setVisible] = useState(true);\n  if (!visible) return null;\n\n  return (\n    <div className={`flex items-center justify-between gap-3 px-3.5 py-2 rounded-xl bg-card border border-border/80 text-xs shadow-sm max-w-md ${className}`}>\n      <div className=\"flex items-center gap-2\">\n        <span className=\"text-primary font-bold\">✨</span>\n        <span className=\"text-foreground\">Over 360+ components available in Registry v0.5.0!</span>\n      </div>\n      <button onClick={() => setVisible(false)} className=\"text-muted-foreground hover:text-foreground font-mono\">\n        ✕\n      </button>\n    </div>\n  );\n}\nexport default HyperBannerAlert;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-banner-alert.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-banner-alert"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

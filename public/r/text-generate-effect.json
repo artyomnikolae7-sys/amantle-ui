@@ -1,0 +1,27 @@
+{
+  "name": "text-generate-effect",
+  "type": "registry:ui",
+  "title": "Text Generate Effect",
+  "description": "AMANTLE UI ui: text-generate-effect",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/text-generate-effect.tsx",
+      "content": "\"use client\";\nimport React, { useState, useEffect } from \"react\";\n/**\n * @component TextGenerateEffect\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function TextGenerateEffect({ text = \"Synthesizing UI with multi-agent velocity.\", className = \"\" }: { text?: string; className?: string }) {\n  const [displayed, setDisplayed] = useState(\"\");\n  useEffect(() => {\n    let cur = 0;\n    const t = setInterval(() => {\n      setDisplayed(text.substring(0, cur));\n      cur++;\n      if (cur > text.length) clearInterval(t);\n    }, 40);\n    return () => clearInterval(t);\n  }, [text]);\n  return <p className={`font-mono text-xs font-semibold text-foreground ${className}`}>{displayed}<span className=\"animate-pulse\">|</span></p>;\n}\nexport default TextGenerateEffect;\n",
+      "type": "registry:ui",
+      "target": "components/ui/text-generate-effect.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "text-generate-effect"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

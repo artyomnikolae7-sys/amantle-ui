@@ -1,0 +1,27 @@
+{
+  "name": "dock-interactive",
+  "type": "registry:ui",
+  "title": "Dock Interactive",
+  "description": "AMANTLE UI ui: dock-interactive",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dock-interactive.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component DockInteractive\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function DockInteractive({ className = \"\" }: { className?: string }) {\n  const [active, setActive] = useState(0);\n  const items = [\"🔥\", \"⚡\", \"✨\", \"🎯\", \"🛡️\"];\n  return (\n    <div className={`inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-card p-1.5 shadow-lg ${className}`}>\n      {items.map((it, i) => (\n        <button\n          key={i}\n          onClick={() => setActive(i)}\n          className={`flex h-9 w-9 items-center justify-center rounded-full text-sm transition-all ${\n            active === i ? \"bg-primary text-primary-foreground scale-110 shadow-xs\" : \"hover:bg-muted\"\n          }`}\n        >\n          {it}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport default DockInteractive;\n",
+      "type": "registry:ui",
+      "target": "components/ui/dock-interactive.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dock-interactive"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

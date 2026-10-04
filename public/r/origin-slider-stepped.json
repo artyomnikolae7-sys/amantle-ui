@@ -1,0 +1,27 @@
+{
+  "name": "origin-slider-stepped",
+  "type": "registry:ui",
+  "title": "Origin Slider Stepped",
+  "description": "AMANTLE UI ui: origin-slider-stepped",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-slider-stepped.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginSliderStepped\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginSliderStepped({ className = \"\" }: { className?: string }) {\n  const [value, setValue] = useState(60);\n\n  return (\n    <div className={`w-full max-w-xs space-y-2 ${className}`}>\n      <div className=\"flex justify-between text-xs font-medium\">\n        <span className=\"text-muted-foreground\">Capacity Allocation</span>\n        <span className=\"text-foreground font-semibold font-mono\">{value}%</span>\n      </div>\n      <input\n        type=\"range\"\n        min=\"0\"\n        max=\"100\"\n        step=\"10\"\n        value={value}\n        onChange={(e) => setValue(Number(e.target.value))}\n        className=\"w-full accent-primary cursor-pointer h-1.5 bg-muted rounded-lg\"\n      />\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono px-0.5\">\n        <span>0</span>\n        <span>50</span>\n        <span>100</span>\n      </div>\n    </div>\n  );\n}\nexport default OriginSliderStepped;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-slider-stepped.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-slider-stepped"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

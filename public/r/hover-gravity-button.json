@@ -1,0 +1,27 @@
+{
+  "name": "hover-gravity-button",
+  "type": "registry:ui",
+  "title": "Hover Gravity Button",
+  "description": "AMANTLE UI ui: hover-gravity-button",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-gravity-button.tsx",
+      "content": "\"use client\";\nimport React, { useRef, useState } from \"react\";\n/**\n * @component HoverGravityButton\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverGravityButton({ children = \"Magnetic Spring\", className = \"\" }: { children?: React.ReactNode; className?: string }) {\n  const btnRef = useRef<HTMLButtonElement>(null);\n  const [trans, setTrans] = useState({ x: 0, y: 0 });\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {\n    if (!btnRef.current) return;\n    const rect = btnRef.current.getBoundingClientRect();\n    const x = (e.clientX - rect.left - rect.width / 2) * 0.3;\n    const y = (e.clientY - rect.top - rect.height / 2) * 0.3;\n    setTrans({ x, y });\n  };\n\n  return (\n    <button\n      ref={btnRef}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={() => setTrans({ x: 0, y: 0 })}\n      style={{\n        transform: `translate3d(${trans.x}px, ${trans.y}px, 0)`,\n        transition: \"transform 150ms cubic-bezier(0.23, 1, 0.32, 1)\",\n      }}\n      className={`px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-xs shadow-md active:scale-90 ${className}`}\n    >\n      {children}\n    </button>\n  );\n}\nexport default HoverGravityButton;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-gravity-button.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-gravity-button"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

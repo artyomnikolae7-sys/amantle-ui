@@ -1,0 +1,27 @@
+{
+  "name": "hyper-stats-pill",
+  "type": "registry:ui",
+  "title": "Hyper Stats Pill",
+  "description": "AMANTLE UI ui: hyper-stats-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-stats-pill.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperStatsPill\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperStatsPill({\n  label = \"Monthly Active Registries\",\n  count = \"361\",\n  delta = \"+38%\",\n  className = \"\",\n}: {\n  label?: string;\n  count?: string;\n  delta?: string;\n  className?: string;\n}) {\n  return (\n    <div className={`inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-border/70 bg-card/90 shadow-sm ${className}`}>\n      <span className=\"text-xs font-bold text-foreground font-mono\">{count}</span>\n      <span className=\"text-xs text-muted-foreground\">{label}</span>\n      <span className=\"text-[11px] font-semibold text-emerald-500 bg-emerald-500/10 px-1.5 py-0.5 rounded-md font-mono\">{delta}</span>\n    </div>\n  );\n}\nexport default HyperStatsPill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-stats-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-stats-pill"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

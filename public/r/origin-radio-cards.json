@@ -1,0 +1,27 @@
+{
+  "name": "origin-radio-cards",
+  "type": "registry:ui",
+  "title": "Origin Radio Cards",
+  "description": "AMANTLE UI ui: origin-radio-cards",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-radio-cards.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginRadioCards\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginRadioCards({ className = \"\" }: { className?: string }) {\n  const [selected, setSelected] = useState(\"pro\");\n\n  const plans = [\n    { id: \"starter\", name: \"Starter\", price: \"$0\", desc: \"For hobby developers\" },\n    { id: \"pro\", name: \"Pro\", price: \"$29\", desc: \"For high-scale apps\" },\n  ];\n\n  return (\n    <div className={`grid grid-cols-2 gap-3 max-w-sm ${className}`}>\n      {plans.map((p) => {\n        const isSel = selected === p.id;\n        return (\n          <div\n            key={p.id}\n            onClick={() => setSelected(p.id)}\n            className={`cursor-pointer p-4 rounded-xl border text-left transition-all duration-200 active:scale-95 ${\n              isSel ? \"border-primary bg-primary/5 shadow-sm\" : \"border-border/60 hover:border-border\"\n            }`}\n          >\n            <div className=\"flex justify-between items-center\">\n              <span className=\"text-xs font-semibold text-foreground\">{p.name}</span>\n              <span className=\"text-xs font-bold text-primary font-mono\">{p.price}</span>\n            </div>\n            <p className=\"mt-1 text-[11px] text-muted-foreground\">{p.desc}</p>\n          </div>\n        );\n      })}\n    </div>\n  );\n}\nexport default OriginRadioCards;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-radio-cards.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-radio-cards"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "direction-aware-hover",
+  "type": "registry:ui",
+  "title": "Direction Aware Hover",
+  "description": "AMANTLE UI ui: direction-aware-hover",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/direction-aware-hover.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component DirectionAwareHover\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function DirectionAwareHover({ className = \"\" }: { className?: string }) {\n  const [hovered, setHovered] = useState(false);\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`relative h-40 w-52 overflow-hidden rounded-2xl border border-border/60 bg-card p-4 shadow-sm cursor-pointer flex items-center justify-center ${className}`}\n    >\n      <span className={`text-xs font-bold transition-all duration-300 ${hovered ? \"scale-115 text-primary\" : \"text-foreground\"}`}>\n        Directional Surface\n      </span>\n    </div>\n  );\n}\nexport default DirectionAwareHover;\n",
+      "type": "registry:ui",
+      "target": "components/ui/direction-aware-hover.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "direction-aware-hover"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

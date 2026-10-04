@@ -1,0 +1,27 @@
+{
+  "name": "word-fade-in",
+  "type": "registry:ui",
+  "title": "Word Fade In",
+  "description": "AMANTLE UI ui: word-fade-in",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/word-fade-in.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component WordFadeIn\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function WordFadeIn({ words = \"Kinetic user interfaces crafted for production\", className = \"\" }: { words?: string; className?: string }) {\n  return (\n    <p className={`flex flex-wrap gap-2 text-base font-semibold text-foreground ${className}`}>\n      {words.split(\" \").map((w, i) => (\n        <span\n          key={i}\n          style={{ animation: \"fadeIn 0.4s ease-out forwards\", animationDelay: `${i * 0.1}s` }}\n          className=\"inline-block\"\n        >\n          {w}\n        </span>\n      ))}\n    </p>\n  );\n}\nexport default WordFadeIn;\n",
+      "type": "registry:ui",
+      "target": "components/ui/word-fade-in.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "word-fade-in"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

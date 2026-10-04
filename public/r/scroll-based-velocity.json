@@ -1,0 +1,27 @@
+{
+  "name": "scroll-based-velocity",
+  "type": "registry:ui",
+  "title": "Scroll Based Velocity",
+  "description": "AMANTLE UI ui: scroll-based-velocity",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/scroll-based-velocity.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ScrollBasedVelocity\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function ScrollBasedVelocity({ defaultVelocity = 5, text = \"AUTONOMOUS SYNTHESIS • \", className = \"\" }: { defaultVelocity?: number; text?: string; className?: string }) {\n  return (\n    <div className={`overflow-hidden whitespace-nowrap py-2 text-xl font-black text-muted-foreground select-none ${className}`}>\n      <div className=\"inline-block animate-marquee\">\n        <span>{text}</span>\n        <span>{text}</span>\n        <span>{text}</span>\n      </div>\n    </div>\n  );\n}\nexport default ScrollBasedVelocity;\n",
+      "type": "registry:ui",
+      "target": "components/ui/scroll-based-velocity.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "scroll-based-velocity"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

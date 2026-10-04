@@ -1,0 +1,27 @@
+{
+  "name": "pin-container-3d",
+  "type": "registry:ui",
+  "title": "Pin Container 3d",
+  "description": "AMANTLE UI ui: pin-container-3d",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pin-container-3d.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component PinContainer3D\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function PinContainer3D({ title = \"Pin Location\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`flex flex-col items-center gap-1 rounded-2xl border border-border/60 bg-card p-4 shadow-sm ${className}`}>\n      <div className=\"flex h-3 w-3 rounded-full bg-primary animate-ping\" />\n      <span className=\"text-xs font-bold text-foreground\">{title}</span>\n    </div>\n  );\n}\nexport default PinContainer3D;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pin-container-3d.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pin-container-3d"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

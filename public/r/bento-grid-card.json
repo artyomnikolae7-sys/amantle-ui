@@ -1,0 +1,27 @@
+{
+  "name": "bento-grid-card",
+  "type": "registry:ui",
+  "title": "Bento Grid Card",
+  "description": "AMANTLE UI ui: bento-grid-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/bento-grid-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BentoGridCard\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function BentoGridCard({ title = \"Bento Feature Module\", desc = \"Compact modular cell designed for high-density modern layouts.\", className = \"\" }: { title?: string; desc?: string; className?: string }) {\n  return (\n    <div className={`flex flex-col justify-between rounded-2xl border border-border/60 bg-card p-6 shadow-sm hover:border-primary/40 hover:shadow-md transition-all ${className}`}>\n      <div className=\"flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary font-bold\">❖</div>\n      <div className=\"mt-4\">\n        <h4 className=\"text-sm font-bold text-foreground\">{title}</h4>\n        <p className=\"text-xs text-muted-foreground mt-1 leading-relaxed\">{desc}</p>\n      </div>\n    </div>\n  );\n}\nexport default BentoGridCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/bento-grid-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "bento-grid-card"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

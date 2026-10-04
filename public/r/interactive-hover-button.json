@@ -1,0 +1,27 @@
+{
+  "name": "interactive-hover-button",
+  "type": "registry:ui",
+  "title": "Interactive Hover Button",
+  "description": "AMANTLE UI ui: interactive-hover-button",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/interactive-hover-button.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component InteractiveHoverButton\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function InteractiveHoverButton({ text = \"Hover Me\", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <button className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-xl border border-border/60 bg-card px-6 py-2.5 text-xs font-bold text-foreground transition-all duration-300 hover:border-primary hover:text-primary active:scale-95 ${className}`}>\n      <span>{text}</span>\n      <span className=\"transition-transform duration-200 group-hover:translate-x-1\">→</span>\n    </button>\n  );\n}\nexport default InteractiveHoverButton;\n",
+      "type": "registry:ui",
+      "target": "components/ui/interactive-hover-button.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "interactive-hover-button"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

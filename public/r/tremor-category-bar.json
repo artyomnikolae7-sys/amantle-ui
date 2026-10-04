@@ -1,0 +1,27 @@
+{
+  "name": "tremor-category-bar",
+  "type": "registry:ui",
+  "title": "Tremor Category Bar",
+  "description": "AMANTLE UI ui: tremor-category-bar",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-category-bar.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorCategoryBar\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorCategoryBar({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`w-full max-w-sm space-y-2 ${className}`}>\n      <div className=\"flex justify-between text-xs font-medium\">\n        <span className=\"text-muted-foreground\">Storage Quota</span>\n        <span className=\"text-foreground font-mono\">78% used</span>\n      </div>\n      <div className=\"flex h-2.5 w-full rounded-full overflow-hidden gap-0.5 bg-muted p-0.5\">\n        <div className=\"h-full bg-primary rounded-l-full\" style={{ width: \"50%\" }} title=\"Registry items (50%)\" />\n        <div className=\"h-full bg-cyan-400\" style={{ width: \"20%\" }} title=\"Media assets (20%)\" />\n        <div className=\"h-full bg-amber-400\" style={{ width: \"8%\" }} title=\"Logs (8%)\" />\n      </div>\n    </div>\n  );\n}\nexport default TremorCategoryBar;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-category-bar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-category-bar"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

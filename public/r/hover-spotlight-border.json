@@ -1,0 +1,27 @@
+{
+  "name": "hover-spotlight-border",
+  "type": "registry:ui",
+  "title": "Hover Spotlight Border",
+  "description": "AMANTLE UI ui: hover-spotlight-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-spotlight-border.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HoverSpotlightBorder\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverSpotlightBorder({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`group relative rounded-2xl p-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent bg-[length:200%_auto] hover:animate-[spin_4s_linear_infinite] max-w-xs ${className}`}>\n      <div className=\"rounded-[14px] bg-card p-5\">\n        <h5 className=\"text-xs font-bold text-foreground\">Perimeter Spotlight</h5>\n        <p className=\"text-[11px] text-muted-foreground mt-1\">Conic border animation triggered on card focus.</p>\n      </div>\n    </div>\n  );\n}\nexport default HoverSpotlightBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-spotlight-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-spotlight-border"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "card-hover-effect-grid",
+  "type": "registry:ui",
+  "title": "Card Hover Effect Grid",
+  "description": "AMANTLE UI ui: card-hover-effect-grid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/card-hover-effect-grid.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component CardHoverEffectGrid\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function CardHoverEffectGrid({ className = \"\" }: { className?: string }) {\n  const [hovered, setHovered] = useState<number | null>(null);\n  const cards = [\"Next.js 15\", \"React 19\", \"Tailwind v4\"];\n  return (\n    <div className={`grid grid-cols-3 gap-2 w-full max-w-sm ${className}`}>\n      {cards.map((c, i) => (\n        <div\n          key={i}\n          onMouseEnter={() => setHovered(i)}\n          onMouseLeave={() => setHovered(null)}\n          className={`rounded-xl border p-3 text-center text-xs font-bold transition-all ${\n            hovered === i ? \"border-primary bg-primary/10 scale-105 shadow-md\" : \"border-border/60 bg-card\"\n          }`}\n        >\n          {c}\n        </div>\n      ))}\n    </div>\n  );\n}\nexport default CardHoverEffectGrid;\n",
+      "type": "registry:ui",
+      "target": "components/ui/card-hover-effect-grid.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "card-hover-effect-grid"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

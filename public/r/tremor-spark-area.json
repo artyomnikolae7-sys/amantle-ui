@@ -1,0 +1,27 @@
+{
+  "name": "tremor-spark-area",
+  "type": "registry:ui",
+  "title": "Tremor Spark Area",
+  "description": "AMANTLE UI ui: tremor-spark-area",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-spark-area.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorSparkArea\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorSparkArea({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`inline-flex items-center gap-3 px-3 py-2 rounded-xl border border-border/60 bg-card/80 ${className}`}>\n      <div>\n        <p className=\"text-[10px] text-muted-foreground uppercase font-mono\">Builds</p>\n        <p className=\"text-xs font-bold text-foreground font-mono\">1,402</p>\n      </div>\n      <div className=\"h-6 w-16\">\n        <svg viewBox=\"0 0 40 15\" className=\"w-full h-full\">\n          <path d=\"M 0,10 L 8,4 L 16,9 L 24,2 L 32,7 L 40,3\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.5\" className=\"text-primary\" />\n        </svg>\n      </div>\n    </div>\n  );\n}\nexport default TremorSparkArea;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-spark-area.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-spark-area"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

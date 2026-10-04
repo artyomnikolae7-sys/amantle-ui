@@ -1,0 +1,27 @@
+{
+  "name": "origin-switch-icon",
+  "type": "registry:ui",
+  "title": "Origin Switch Icon",
+  "description": "AMANTLE UI ui: origin-switch-icon",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-switch-icon.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginSwitchIcon\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginSwitchIcon({ className = \"\" }: { className?: string }) {\n  const [checked, setChecked] = useState(true);\n\n  return (\n    <button\n      type=\"button\"\n      role=\"switch\"\n      aria-checked={checked}\n      onClick={() => setChecked(!checked)}\n      className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${\n        checked ? \"bg-primary\" : \"bg-muted\"\n      } ${className}`}\n    >\n      <span\n        className={`pointer-events-none flex h-6 w-6 transform items-center justify-center rounded-full bg-background shadow-md transition duration-200 ease-in-out text-[11px] ${\n          checked ? \"translate-x-5 text-primary\" : \"translate-x-0 text-muted-foreground\"\n        }`}\n      >\n        {checked ? \"✓\" : \"✕\"}\n      </span>\n    </button>\n  );\n}\nexport default OriginSwitchIcon;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-switch-icon.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-switch-icon"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

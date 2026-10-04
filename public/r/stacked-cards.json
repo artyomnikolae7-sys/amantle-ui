@@ -1,0 +1,27 @@
+{
+  "name": "stacked-cards",
+  "type": "registry:ui",
+  "title": "Stacked Cards",
+  "description": "AMANTLE UI ui: stacked-cards",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/stacked-cards.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component StackedCards\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function StackedCards({ className = \"\" }: { className?: string }) {\n  const [hovered, setHovered] = useState(false);\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`relative h-48 w-56 cursor-pointer select-none ${className}`}\n    >\n      <div\n        style={{\n          transform: hovered ? \"translate(-12px, -8px) rotate(-6deg)\" : \"rotate(-3deg)\",\n          transition: \"transform 250ms cubic-bezier(0.16, 1, 0.3, 1)\",\n        }}\n        className=\"absolute inset-0 rounded-2xl border border-border/40 bg-muted/60 p-4 shadow-sm\"\n      />\n      <div\n        style={{\n          transform: hovered ? \"translate(12px, -4px) rotate(6deg)\" : \"rotate(3deg)\",\n          transition: \"transform 250ms cubic-bezier(0.16, 1, 0.3, 1)\",\n        }}\n        className=\"absolute inset-0 rounded-2xl border border-border/50 bg-card/80 p-4 shadow-md\"\n      />\n      <div className=\"absolute inset-0 flex flex-col justify-between rounded-2xl border border-border/80 bg-card p-4 shadow-xl\">\n        <span className=\"text-xs font-bold text-primary\">Deck Layer 01</span>\n        <span className=\"text-xs font-medium text-foreground\">Interactive Card Fan-out</span>\n      </div>\n    </div>\n  );\n}\nexport default StackedCards;\n",
+      "type": "registry:ui",
+      "target": "components/ui/stacked-cards.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "stacked-cards"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

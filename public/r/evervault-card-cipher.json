@@ -1,0 +1,27 @@
+{
+  "name": "evervault-card-cipher",
+  "type": "registry:ui",
+  "title": "Evervault Card Cipher",
+  "description": "AMANTLE UI ui: evervault-card-cipher",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/evervault-card-cipher.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component EvervaultCardCipher\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function EvervaultCardCipher({ className = \"\" }: { className?: string }) {\n  const [randomStr, setRandomStr] = useState(\"01101001 01101110\");\n  return (\n    <div\n      onMouseMove={() => setRandomStr(Math.random().toString(36).substring(2, 10))}\n      className={`relative flex h-40 w-60 flex-col items-center justify-center rounded-2xl border border-border/60 bg-card p-4 shadow-md font-mono select-none ${className}`}\n    >\n      <span className=\"text-[10px] text-muted-foreground opacity-50\">{randomStr}</span>\n      <span className=\"mt-2 text-sm font-black text-primary\">ENCRYPTED_VAULT</span>\n    </div>\n  );\n}\nexport default EvervaultCardCipher;\n",
+      "type": "registry:ui",
+      "target": "components/ui/evervault-card-cipher.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "evervault-card-cipher"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "staggered-list",
+  "type": "registry:ui",
+  "title": "Staggered List",
+  "description": "AMANTLE UI ui: staggered-list",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/staggered-list.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component StaggeredList\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function StaggeredList({ className = \"\" }: { className?: string }) {\n  const items = [\"Next.js 15 Integration\", \"React 19 Server Components\", \"Tailwind v4 Native Engine\", \"Emil Kowalski Springs\"];\n  return (\n    <div className={`flex flex-col gap-2 w-full max-w-xs ${className}`}>\n      {items.map((it, i) => (\n        <div\n          key={i}\n          style={{ animation: \"fadeIn 0.3s ease-out forwards\", animationDelay: `${i * 0.08}s` }}\n          className=\"flex items-center gap-2 rounded-xl border border-border/50 bg-card p-2.5 text-xs font-semibold shadow-xs\"\n        >\n          <span className=\"h-1.5 w-1.5 rounded-full bg-primary\" />\n          <span>{it}</span>\n        </div>\n      ))}\n    </div>\n  );\n}\nexport default StaggeredList;\n",
+      "type": "registry:ui",
+      "target": "components/ui/staggered-list.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "staggered-list"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

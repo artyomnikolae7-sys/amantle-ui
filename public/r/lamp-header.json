@@ -1,0 +1,27 @@
+{
+  "name": "lamp-header",
+  "type": "registry:ui",
+  "title": "Lamp Header",
+  "description": "AMANTLE UI ui: lamp-header",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/lamp-header.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component LampHeader\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function LampHeader({ title = \"Conical Luminary\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`relative flex h-36 w-full max-w-md flex-col items-center justify-center overflow-hidden rounded-2xl border border-border/60 bg-card ${className}`}>\n      <div className=\"absolute top-0 h-16 w-32 bg-primary/30 blur-2xl\" />\n      <h3 className=\"relative z-10 text-base font-black tracking-tight text-foreground\">{title}</h3>\n    </div>\n  );\n}\nexport default LampHeader;\n",
+      "type": "registry:ui",
+      "target": "components/ui/lamp-header.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "lamp-header"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

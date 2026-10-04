@@ -1,0 +1,27 @@
+{
+  "name": "flip-text",
+  "type": "registry:ui",
+  "title": "Flip Text",
+  "description": "AMANTLE UI ui: flip-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/flip-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component FlipText\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function FlipText({ word = \"AMANTLE\", className = \"\" }: { word?: string; className?: string }) {\n  return (\n    <div className={`inline-flex gap-1 text-2xl font-black text-foreground ${className}`}>\n      {word.split(\"\").map((c, i) => (\n        <span\n          key={i}\n          className=\"inline-block transition-transform duration-300 hover:[transform:rotateX(360deg)] cursor-pointer text-primary\"\n        >\n          {c}\n        </span>\n      ))}\n    </div>\n  );\n}\nexport default FlipText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/flip-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "flip-text"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

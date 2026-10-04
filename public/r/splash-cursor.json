@@ -1,0 +1,27 @@
+{
+  "name": "splash-cursor",
+  "type": "registry:ui",
+  "title": "Splash Cursor",
+  "description": "AMANTLE UI ui: splash-cursor",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/splash-cursor.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component SplashCursor\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function SplashCursor({ className = \"\" }: { className?: string }) {\n  const [ripples, setRipples] = useState<Array<{ id: number; x: number; y: number }>>([]);\n  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {\n    const rect = e.currentTarget.getBoundingClientRect();\n    const newRipple = { id: Date.now(), x: e.clientX - rect.left, y: e.clientY - rect.top };\n    setRipples(r => [...r.slice(-4), newRipple]);\n  };\n  return (\n    <div\n      onClick={handleClick}\n      className={`relative h-40 w-64 overflow-hidden rounded-2xl border border-border/60 bg-card p-4 shadow-sm cursor-crosshair select-none flex items-center justify-center ${className}`}\n    >\n      {ripples.map(r => (\n        <span\n          key={r.id}\n          style={{ left: r.x - 20, top: r.y - 20 }}\n          className=\"pointer-events-none absolute h-10 w-10 rounded-full border-2 border-primary animate-ping opacity-75\"\n        />\n      ))}\n      <span className=\"text-xs font-medium text-muted-foreground\">Click anywhere for kinetic ripple splash</span>\n    </div>\n  );\n}\nexport default SplashCursor;\n",
+      "type": "registry:ui",
+      "target": "components/ui/splash-cursor.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "splash-cursor"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

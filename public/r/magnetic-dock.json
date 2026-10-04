@@ -1,0 +1,27 @@
+{
+  "name": "magnetic-dock",
+  "type": "registry:ui",
+  "title": "Magnetic Dock",
+  "description": "AMANTLE UI ui: magnetic-dock",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magnetic-dock.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component MagneticDock\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function MagneticDock({ className = \"\" }: { className?: string }) {\n  const [hovered, setHovered] = useState<number | null>(null);\n  const icons = [\"🏠\", \"🔍\", \"⚡\", \"📁\", \"⚙️\"];\n  return (\n    <div className={`inline-flex items-center gap-2 rounded-2xl border border-border/60 bg-card/80 p-2 shadow-lg backdrop-blur-md ${className}`}>\n      {icons.map((ic, i) => {\n        const isHovered = hovered === i;\n        const isNeighbor = hovered !== null && Math.abs(hovered - i) === 1;\n        return (\n          <button\n            key={i}\n            onMouseEnter={() => setHovered(i)}\n            onMouseLeave={() => setHovered(null)}\n            style={{\n              transform: isHovered ? \"scale(1.3) translateY(-4px)\" : isNeighbor ? \"scale(1.15) translateY(-2px)\" : \"scale(1)\",\n              transition: \"transform 180ms cubic-bezier(0.16, 1, 0.3, 1)\",\n            }}\n            className=\"flex h-9 w-9 items-center justify-center rounded-xl bg-muted/60 text-sm shadow-xs\"\n          >\n            {ic}\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport default MagneticDock;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magnetic-dock.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magnetic-dock"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

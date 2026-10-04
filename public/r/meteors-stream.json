@@ -1,0 +1,27 @@
+{
+  "name": "meteors-stream",
+  "type": "registry:ui",
+  "title": "Meteors Stream",
+  "description": "AMANTLE UI ui: meteors-stream",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/meteors-stream.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component MeteorsStream\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function MeteorsStream({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`relative h-28 w-56 rounded-2xl border border-border/60 bg-card p-4 overflow-hidden flex items-center justify-center ${className}`}>\n      <span className=\"font-bold text-xs text-foreground\">Meteorite Track</span>\n      <span className=\"absolute -top-4 -right-4 h-12 w-0.5 rotate-45 bg-gradient-to-b from-primary to-transparent animate-ping\" />\n    </div>\n  );\n}\nexport default MeteorsStream;\n",
+      "type": "registry:ui",
+      "target": "components/ui/meteors-stream.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "meteors-stream"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

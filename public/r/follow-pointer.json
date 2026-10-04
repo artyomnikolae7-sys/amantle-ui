@@ -1,0 +1,27 @@
+{
+  "name": "follow-pointer",
+  "type": "registry:ui",
+  "title": "Follow Pointer",
+  "description": "AMANTLE UI ui: follow-pointer",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/follow-pointer.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component FollowPointer\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function FollowPointer({ className = \"\" }: { className?: string }) {\n  const [pos, setPos] = useState({ x: 50, y: 50 });\n  return (\n    <div\n      onMouseMove={(e) => {\n        const r = e.currentTarget.getBoundingClientRect();\n        setPos({ x: e.clientX - r.left, y: e.clientY - r.top });\n      }}\n      className={`relative h-40 w-64 overflow-hidden rounded-2xl border border-border/60 bg-card p-4 shadow-sm select-none flex items-center justify-center ${className}`}\n    >\n      <div\n        style={{\n          background: `radial-gradient(120px circle at ${pos.x}px ${pos.y}px, rgba(139,92,246,0.2), transparent 70%)`,\n        }}\n        className=\"pointer-events-none absolute inset-0\"\n      />\n      <span className=\"relative z-10 text-xs font-semibold text-foreground\">Follow Pointer Glow</span>\n    </div>\n  );\n}\nexport default FollowPointer;\n",
+      "type": "registry:ui",
+      "target": "components/ui/follow-pointer.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "follow-pointer"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hover-tilt-card",
+  "type": "registry:ui",
+  "title": "Hover Tilt Card",
+  "description": "AMANTLE UI ui: hover-tilt-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-tilt-card.tsx",
+      "content": "\"use client\";\nimport React, { useRef, useState } from \"react\";\n/**\n * @component HoverTiltCard\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverTiltCard({ className = \"\" }: { className?: string }) {\n  const cardRef = useRef<HTMLDivElement>(null);\n  const [rot, setRot] = useState({ x: 0, y: 0 });\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!cardRef.current) return;\n    const rect = cardRef.current.getBoundingClientRect();\n    const x = e.clientX - rect.left - rect.width / 2;\n    const y = e.clientY - rect.top - rect.height / 2;\n    setRot({ x: -(y / 8), y: x / 8 });\n  };\n\n  return (\n    <div\n      ref={cardRef}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={() => setRot({ x: 0, y: 0 })}\n      style={{\n        transform: `perspective(1000px) rotateX(${rot.x}deg) rotateY(${rot.y}deg)`,\n        transition: \"transform 100ms ease-out\",\n      }}\n      className={`cursor-pointer rounded-2xl border border-border/80 bg-gradient-to-br from-card via-card to-muted/50 p-6 shadow-xl max-w-xs select-none ${className}`}\n    >\n      <div className=\"h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-base mb-3\">\n        ◈\n      </div>\n      <h4 className=\"text-sm font-bold text-foreground\">Perspective Tilt</h4>\n      <p className=\"text-xs text-muted-foreground mt-1\">3D motion tracking using vanilla CSS transform matrices.</p>\n    </div>\n  );\n}\nexport default HoverTiltCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-tilt-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-tilt-card"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

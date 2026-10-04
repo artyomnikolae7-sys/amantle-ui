@@ -1,0 +1,27 @@
+{
+  "name": "hover-fuzzy-overlay",
+  "type": "registry:ui",
+  "title": "Hover Fuzzy Overlay",
+  "description": "AMANTLE UI ui: hover-fuzzy-overlay",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-fuzzy-overlay.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverFuzzyOverlay\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverFuzzyOverlay({ className = \"\" }: { className?: string }) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`relative overflow-hidden rounded-2xl border border-border/70 bg-card p-6 max-w-xs transition-all duration-300 ${className}`}\n    >\n      <div\n        className={`absolute inset-0 bg-primary/10 transition-opacity duration-300 pointer-events-none ${\n          hovered ? \"opacity-100\" : \"opacity-0\"\n        }`}\n      />\n      <h4 className=\"relative z-10 text-sm font-bold text-foreground\">Retro Texture Glow</h4>\n      <p className=\"relative z-10 text-xs text-muted-foreground mt-1\">Ambient glow reaction on hover triggers.</p>\n    </div>\n  );\n}\nexport default HoverFuzzyOverlay;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-fuzzy-overlay.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-fuzzy-overlay"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

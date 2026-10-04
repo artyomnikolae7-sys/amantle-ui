@@ -1,0 +1,27 @@
+{
+  "name": "bounce-text",
+  "type": "registry:ui",
+  "title": "Bounce Text",
+  "description": "AMANTLE UI ui: bounce-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/bounce-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BounceText\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function BounceText({ text = \"KINETIC\", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <div className={`inline-flex gap-1 text-2xl font-black ${className}`}>\n      {text.split(\"\").map((ch, i) => (\n        <span\n          key={i}\n          style={{ animation: \"bounce 1.5s infinite\", animationDelay: `${i * 0.1}s` }}\n          className=\"inline-block text-primary\"\n        >\n          {ch}\n        </span>\n      ))}\n    </div>\n  );\n}\nexport default BounceText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/bounce-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "bounce-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

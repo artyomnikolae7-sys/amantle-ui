@@ -1,0 +1,27 @@
+{
+  "name": "hyper-avatar-stack",
+  "type": "registry:ui",
+  "title": "Hyper Avatar Stack",
+  "description": "AMANTLE UI ui: hyper-avatar-stack",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-avatar-stack.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperAvatarStack\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperAvatarStack({ className = \"\" }: { className?: string }) {\n  const users = [\"bg-blue-500\", \"bg-purple-500\", \"bg-emerald-500\", \"bg-amber-500\"];\n\n  return (\n    <div className={`flex items-center -space-x-2 ${className}`}>\n      {users.map((c, i) => (\n        <div\n          key={i}\n          className={`h-8 w-8 rounded-full ring-2 ring-background flex items-center justify-center text-[10px] font-bold text-white transition-transform hover:-translate-y-1 hover:z-10 ${c}`}\n        >\n          {String.fromCharCode(65 + i)}\n        </div>\n      ))}\n      <div className=\"h-8 w-8 rounded-full ring-2 ring-background bg-muted flex items-center justify-center text-[10px] font-bold text-muted-foreground\">\n        +99\n      </div>\n    </div>\n  );\n}\nexport default HyperAvatarStack;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-avatar-stack.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-avatar-stack"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

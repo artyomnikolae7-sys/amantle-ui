@@ -1,0 +1,27 @@
+{
+  "name": "origin-phone-input",
+  "type": "registry:ui",
+  "title": "Origin Phone Input",
+  "description": "AMANTLE UI ui: origin-phone-input",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-phone-input.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginPhoneInput\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginPhoneInput({ className = \"\" }: { className?: string }) {\n  const [phone, setPhone] = useState(\"\");\n\n  return (\n    <div className={`flex items-center rounded-xl border border-border/70 bg-background overflow-hidden focus-within:ring-2 focus-within:ring-primary/40 focus-within:border-primary max-w-xs ${className}`}>\n      <span className=\"px-3 py-2 text-xs font-mono bg-muted/60 text-muted-foreground border-r border-border/60 select-none\">\n        +1 (US)\n      </span>\n      <input\n        type=\"tel\"\n        value={phone}\n        onChange={(e) => setPhone(e.target.value)}\n        placeholder=\"(555) 000-0000\"\n        className=\"w-full px-3 py-2 text-xs bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none\"\n      />\n    </div>\n  );\n}\nexport default OriginPhoneInput;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-phone-input.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-phone-input"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

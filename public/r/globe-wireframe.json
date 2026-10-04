@@ -1,0 +1,27 @@
+{
+  "name": "globe-wireframe",
+  "type": "registry:ui",
+  "title": "Globe Wireframe",
+  "description": "AMANTLE UI ui: globe-wireframe",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/globe-wireframe.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component GlobeWireframe\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function GlobeWireframe({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`relative flex h-40 w-40 items-center justify-center rounded-full border border-border/80 bg-card shadow-lg select-none ${className}`}>\n      <div className=\"absolute inset-2 rounded-full border border-dashed border-primary/40 animate-spin\" style={{ animationDuration: \"12s\" }} />\n      <div className=\"absolute inset-6 rounded-full border border-primary/20\" />\n      <span className=\"font-mono text-xs font-bold text-primary\">GLOBAL_NET</span>\n    </div>\n  );\n}\nexport default GlobeWireframe;\n",
+      "type": "registry:ui",
+      "target": "components/ui/globe-wireframe.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "globe-wireframe"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

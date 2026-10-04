@@ -1,0 +1,27 @@
+{
+  "name": "hyper-pricing-badge",
+  "type": "registry:ui",
+  "title": "Hyper Pricing Badge",
+  "description": "AMANTLE UI ui: hyper-pricing-badge",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-pricing-badge.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperPricingBadge\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperPricingBadge({ label = \"MOST POPULAR\", className = \"\" }: { label?: string; className?: string }) {\n  return (\n    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-primary text-primary-foreground shadow-md ring-2 ring-primary/20 ${className}`}>\n      ★ {label}\n    </span>\n  );\n}\nexport default HyperPricingBadge;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-pricing-badge.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-pricing-badge"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

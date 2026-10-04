@@ -1,0 +1,27 @@
+{
+  "name": "hover-slide-tabs",
+  "type": "registry:ui",
+  "title": "Hover Slide Tabs",
+  "description": "AMANTLE UI ui: hover-slide-tabs",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-slide-tabs.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverSlideTabs\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverSlideTabs({ className = \"\" }: { className?: string }) {\n  const [active, setActive] = useState(\"Design\");\n  const tabs = [\"Design\", \"Code\", \"Motion\", \"Docs\"];\n\n  return (\n    <div className={`flex items-center gap-1 p-1 rounded-full border border-border/60 bg-muted/50 max-w-fit ${className}`}>\n      {tabs.map((t) => (\n        <button\n          key={t}\n          onClick={() => setActive(t)}\n          className={`px-3.5 py-1 rounded-full text-xs font-medium transition-all duration-200 ${\n            active === t ? \"bg-primary text-primary-foreground shadow-sm\" : \"text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {t}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport default HoverSlideTabs;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-slide-tabs.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-slide-tabs"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

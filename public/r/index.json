@@ -3790,6 +3790,1944 @@
     }
   },
   {
+    "name": "fuzzy-text",
+    "type": "registry:ui",
+    "title": "Fuzzy Text",
+    "description": "AMANTLE UI ui: fuzzy-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "fuzzy-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "pixel-transition",
+    "type": "registry:ui",
+    "title": "Pixel Transition",
+    "description": "AMANTLE UI ui: pixel-transition",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pixel-transition"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "dither-card",
+    "type": "registry:ui",
+    "title": "Dither Card",
+    "description": "AMANTLE UI ui: dither-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dither-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "decay-card",
+    "type": "registry:ui",
+    "title": "Decay Card",
+    "description": "AMANTLE UI ui: decay-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "decay-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "stacked-cards",
+    "type": "registry:ui",
+    "title": "Stacked Cards",
+    "description": "AMANTLE UI ui: stacked-cards",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "stacked-cards"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "circular-gallery",
+    "type": "registry:ui",
+    "title": "Circular Gallery",
+    "description": "AMANTLE UI ui: circular-gallery",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "circular-gallery"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "counter-spring",
+    "type": "registry:ui",
+    "title": "Counter Spring",
+    "description": "AMANTLE UI ui: counter-spring",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "counter-spring"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "stepper-slider",
+    "type": "registry:ui",
+    "title": "Stepper Slider",
+    "description": "AMANTLE UI ui: stepper-slider",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "stepper-slider"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "blob-cursor",
+    "type": "registry:ui",
+    "title": "Blob Cursor",
+    "description": "AMANTLE UI ui: blob-cursor",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "blob-cursor"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "target-cursor",
+    "type": "registry:ui",
+    "title": "Target Cursor",
+    "description": "AMANTLE UI ui: target-cursor",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "target-cursor"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "splash-cursor",
+    "type": "registry:ui",
+    "title": "Splash Cursor",
+    "description": "AMANTLE UI ui: splash-cursor",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "splash-cursor"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "pixel-cursor",
+    "type": "registry:ui",
+    "title": "Pixel Cursor",
+    "description": "AMANTLE UI ui: pixel-cursor",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pixel-cursor"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "scroll-velocity",
+    "type": "registry:ui",
+    "title": "Scroll Velocity",
+    "description": "AMANTLE UI ui: scroll-velocity",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "scroll-velocity"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "curved-loop",
+    "type": "registry:ui",
+    "title": "Curved Loop",
+    "description": "AMANTLE UI ui: curved-loop",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "curved-loop"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "elastic-accordion",
+    "type": "registry:ui",
+    "title": "Elastic Accordion",
+    "description": "AMANTLE UI ui: elastic-accordion",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "elastic-accordion"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "morphing-dialog",
+    "type": "registry:ui",
+    "title": "Morphing Dialog",
+    "description": "AMANTLE UI ui: morphing-dialog",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "morphing-dialog"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "bubble-text",
+    "type": "registry:ui",
+    "title": "Bubble Text",
+    "description": "AMANTLE UI ui: bubble-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "bubble-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "glitch-card",
+    "type": "registry:ui",
+    "title": "Glitch Card",
+    "description": "AMANTLE UI ui: glitch-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "glitch-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "magnetic-dock",
+    "type": "registry:ui",
+    "title": "Magnetic Dock",
+    "description": "AMANTLE UI ui: magnetic-dock",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "magnetic-dock"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "follow-pointer",
+    "type": "registry:ui",
+    "title": "Follow Pointer",
+    "description": "AMANTLE UI ui: follow-pointer",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "follow-pointer"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "bounce-text",
+    "type": "registry:ui",
+    "title": "Bounce Text",
+    "description": "AMANTLE UI ui: bounce-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "bounce-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "staggered-list",
+    "type": "registry:ui",
+    "title": "Staggered List",
+    "description": "AMANTLE UI ui: staggered-list",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "staggered-list"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "magnetic-button",
+    "type": "registry:ui",
+    "title": "Magnetic Button",
+    "description": "AMANTLE UI ui: magnetic-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "magnetic-button"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "elastic-toggle",
+    "type": "registry:ui",
+    "title": "Elastic Toggle",
+    "description": "AMANTLE UI ui: elastic-toggle",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "elastic-toggle"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "fluid-pill",
+    "type": "registry:ui",
+    "title": "Fluid Pill",
+    "description": "AMANTLE UI ui: fluid-pill",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "fluid-pill"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev",
+      "author": "React Bits",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "animated-beam",
+    "type": "registry:ui",
+    "title": "Animated Beam",
+    "description": "AMANTLE UI ui: animated-beam",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "animated-beam"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "shine-button",
+    "type": "registry:ui",
+    "title": "Shine Button",
+    "description": "AMANTLE UI ui: shine-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "shine-button"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "pulsating-button",
+    "type": "registry:ui",
+    "title": "Pulsating Button",
+    "description": "AMANTLE UI ui: pulsating-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pulsating-button"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "interactive-hover-button",
+    "type": "registry:ui",
+    "title": "Interactive Hover Button",
+    "description": "AMANTLE UI ui: interactive-hover-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "interactive-hover-button"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "flip-text",
+    "type": "registry:ui",
+    "title": "Flip Text",
+    "description": "AMANTLE UI ui: flip-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "flip-text"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "word-fade-in",
+    "type": "registry:ui",
+    "title": "Word Fade In",
+    "description": "AMANTLE UI ui: word-fade-in",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "word-fade-in"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "scroll-based-velocity",
+    "type": "registry:ui",
+    "title": "Scroll Based Velocity",
+    "description": "AMANTLE UI ui: scroll-based-velocity",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "scroll-based-velocity"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "animated-shiny-text",
+    "type": "registry:ui",
+    "title": "Animated Shiny Text",
+    "description": "AMANTLE UI ui: animated-shiny-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "animated-shiny-text"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "dock-interactive",
+    "type": "registry:ui",
+    "title": "Dock Interactive",
+    "description": "AMANTLE UI ui: dock-interactive",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dock-interactive"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "globe-wireframe",
+    "type": "registry:ui",
+    "title": "Globe Wireframe",
+    "description": "AMANTLE UI ui: globe-wireframe",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "globe-wireframe"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "bento-grid-card",
+    "type": "registry:ui",
+    "title": "Bento Grid Card",
+    "description": "AMANTLE UI ui: bento-grid-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "bento-grid-card"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "ripple-button",
+    "type": "registry:ui",
+    "title": "Ripple Button",
+    "description": "AMANTLE UI ui: ripple-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "ripple-button"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "dot-pattern",
+    "type": "registry:ui",
+    "title": "Dot Pattern",
+    "description": "AMANTLE UI ui: dot-pattern",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dot-pattern"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "grid-pattern",
+    "type": "registry:ui",
+    "title": "Grid Pattern",
+    "description": "AMANTLE UI ui: grid-pattern",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "grid-pattern"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "magic-card",
+    "type": "registry:ui",
+    "title": "Magic Card",
+    "description": "AMANTLE UI ui: magic-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "magic-card"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "neon-border",
+    "type": "registry:ui",
+    "title": "Neon Border",
+    "description": "AMANTLE UI ui: neon-border",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "neon-border"
+    ],
+    "meta": {
+      "source": "https://magicui.design",
+      "author": "Magic UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "sparkles-core",
+    "type": "registry:ui",
+    "title": "Sparkles Core",
+    "description": "AMANTLE UI ui: sparkles-core",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "sparkles-core"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "moving-borders-glow",
+    "type": "registry:ui",
+    "title": "Moving Borders Glow",
+    "description": "AMANTLE UI ui: moving-borders-glow",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "moving-borders-glow"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "background-gradient-card",
+    "type": "registry:ui",
+    "title": "Background Gradient Card",
+    "description": "AMANTLE UI ui: background-gradient-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "background-gradient-card"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "card-hover-effect-grid",
+    "type": "registry:ui",
+    "title": "Card Hover Effect Grid",
+    "description": "AMANTLE UI ui: card-hover-effect-grid",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "card-hover-effect-grid"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "evervault-card-cipher",
+    "type": "registry:ui",
+    "title": "Evervault Card Cipher",
+    "description": "AMANTLE UI ui: evervault-card-cipher",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "evervault-card-cipher"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "lamp-header",
+    "type": "registry:ui",
+    "title": "Lamp Header",
+    "description": "AMANTLE UI ui: lamp-header",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "lamp-header"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "wavy-text-effect",
+    "type": "registry:ui",
+    "title": "Wavy Text Effect",
+    "description": "AMANTLE UI ui: wavy-text-effect",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "wavy-text-effect"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "flip-words-cycle",
+    "type": "registry:ui",
+    "title": "Flip Words Cycle",
+    "description": "AMANTLE UI ui: flip-words-cycle",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "flip-words-cycle"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "text-generate-effect",
+    "type": "registry:ui",
+    "title": "Text Generate Effect",
+    "description": "AMANTLE UI ui: text-generate-effect",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "text-generate-effect"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "meteors-stream",
+    "type": "registry:ui",
+    "title": "Meteors Stream",
+    "description": "AMANTLE UI ui: meteors-stream",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "meteors-stream"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "direction-aware-hover",
+    "type": "registry:ui",
+    "title": "Direction Aware Hover",
+    "description": "AMANTLE UI ui: direction-aware-hover",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "direction-aware-hover"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "focus-cards",
+    "type": "registry:ui",
+    "title": "Focus Cards",
+    "description": "AMANTLE UI ui: focus-cards",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "focus-cards"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "pin-container-3d",
+    "type": "registry:ui",
+    "title": "Pin Container 3d",
+    "description": "AMANTLE UI ui: pin-container-3d",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "pin-container-3d"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "glowing-stars-card",
+    "type": "registry:ui",
+    "title": "Glowing Stars Card",
+    "description": "AMANTLE UI ui: glowing-stars-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "glowing-stars-card"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com",
+      "author": "Aceternity UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "dock-lens",
+    "type": "registry:ui",
+    "title": "Dock Lens",
+    "description": "AMANTLE UI ui: dock-lens",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "dock-lens"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "shimmer-text",
+    "type": "registry:ui",
+    "title": "Shimmer Text",
+    "description": "AMANTLE UI ui: shimmer-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "shimmer-text"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "glow-border-card",
+    "type": "registry:ui",
+    "title": "Glow Border Card",
+    "description": "AMANTLE UI ui: glow-border-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "glow-border-card"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "spotlight-button",
+    "type": "registry:ui",
+    "title": "Spotlight Button",
+    "description": "AMANTLE UI ui: spotlight-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "spotlight-button"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "fluid-tabs",
+    "type": "registry:ui",
+    "title": "Fluid Tabs",
+    "description": "AMANTLE UI ui: fluid-tabs",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "fluid-tabs"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "interactive-avatar",
+    "type": "registry:ui",
+    "title": "Interactive Avatar",
+    "description": "AMANTLE UI ui: interactive-avatar",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "interactive-avatar"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "stacked-modal",
+    "type": "registry:ui",
+    "title": "Stacked Modal",
+    "description": "AMANTLE UI ui: stacked-modal",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "stacked-modal"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "reveal-card",
+    "type": "registry:ui",
+    "title": "Reveal Card",
+    "description": "AMANTLE UI ui: reveal-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "reveal-card"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tilt-media-card",
+    "type": "registry:ui",
+    "title": "Tilt Media Card",
+    "description": "AMANTLE UI ui: tilt-media-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tilt-media-card"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "particle-banner",
+    "type": "registry:ui",
+    "title": "Particle Banner",
+    "description": "AMANTLE UI ui: particle-banner",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "particle-banner"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com",
+      "author": "Cult UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-slider-stepped",
+    "type": "registry:ui",
+    "title": "Origin Slider Stepped",
+    "description": "AMANTLE UI ui: origin-slider-stepped",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-slider-stepped"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-switch-icon",
+    "type": "registry:ui",
+    "title": "Origin Switch Icon",
+    "description": "AMANTLE UI ui: origin-switch-icon",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-switch-icon"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-checkbox-tree",
+    "type": "registry:ui",
+    "title": "Origin Checkbox Tree",
+    "description": "AMANTLE UI ui: origin-checkbox-tree",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-checkbox-tree"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-phone-input",
+    "type": "registry:ui",
+    "title": "Origin Phone Input",
+    "description": "AMANTLE UI ui: origin-phone-input",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-phone-input"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-password-meter",
+    "type": "registry:ui",
+    "title": "Origin Password Meter",
+    "description": "AMANTLE UI ui: origin-password-meter",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-password-meter"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-badge-dot",
+    "type": "registry:ui",
+    "title": "Origin Badge Dot",
+    "description": "AMANTLE UI ui: origin-badge-dot",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-badge-dot"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-radio-cards",
+    "type": "registry:ui",
+    "title": "Origin Radio Cards",
+    "description": "AMANTLE UI ui: origin-radio-cards",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-radio-cards"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-file-drop",
+    "type": "registry:ui",
+    "title": "Origin File Drop",
+    "description": "AMANTLE UI ui: origin-file-drop",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-file-drop"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-number-stepper",
+    "type": "registry:ui",
+    "title": "Origin Number Stepper",
+    "description": "AMANTLE UI ui: origin-number-stepper",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-number-stepper"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "origin-color-palette-picker",
+    "type": "registry:ui",
+    "title": "Origin Color Palette Picker",
+    "description": "AMANTLE UI ui: origin-color-palette-picker",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-color-palette-picker"
+    ],
+    "meta": {
+      "source": "https://originui.com",
+      "author": "Origin UI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-area-chart-kpi",
+    "type": "registry:ui",
+    "title": "Tremor Area Chart Kpi",
+    "description": "AMANTLE UI ui: tremor-area-chart-kpi",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-area-chart-kpi"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-bar-list",
+    "type": "registry:ui",
+    "title": "Tremor Bar List",
+    "description": "AMANTLE UI ui: tremor-bar-list",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-bar-list"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-spark-area",
+    "type": "registry:ui",
+    "title": "Tremor Spark Area",
+    "description": "AMANTLE UI ui: tremor-spark-area",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-spark-area"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-tracker-status",
+    "type": "registry:ui",
+    "title": "Tremor Tracker Status",
+    "description": "AMANTLE UI ui: tremor-tracker-status",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-tracker-status"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-badge-delta-pill",
+    "type": "registry:ui",
+    "title": "Tremor Badge Delta Pill",
+    "description": "AMANTLE UI ui: tremor-badge-delta-pill",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-badge-delta-pill"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-category-bar",
+    "type": "registry:ui",
+    "title": "Tremor Category Bar",
+    "description": "AMANTLE UI ui: tremor-category-bar",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-category-bar"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-legend-indicator",
+    "type": "registry:ui",
+    "title": "Tremor Legend Indicator",
+    "description": "AMANTLE UI ui: tremor-legend-indicator",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-legend-indicator"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-metric-grid",
+    "type": "registry:ui",
+    "title": "Tremor Metric Grid",
+    "description": "AMANTLE UI ui: tremor-metric-grid",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-metric-grid"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-stat-card-progress",
+    "type": "registry:ui",
+    "title": "Tremor Stat Card Progress",
+    "description": "AMANTLE UI ui: tremor-stat-card-progress",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-stat-card-progress"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "tremor-callout-metric",
+    "type": "registry:ui",
+    "title": "Tremor Callout Metric",
+    "description": "AMANTLE UI ui: tremor-callout-metric",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tremor-callout-metric"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-tilt-card",
+    "type": "registry:ui",
+    "title": "Hover Tilt Card",
+    "description": "AMANTLE UI ui: hover-tilt-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-tilt-card"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-fuzzy-overlay",
+    "type": "registry:ui",
+    "title": "Hover Fuzzy Overlay",
+    "description": "AMANTLE UI ui: hover-fuzzy-overlay",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-fuzzy-overlay"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-slide-tabs",
+    "type": "registry:ui",
+    "title": "Hover Slide Tabs",
+    "description": "AMANTLE UI ui: hover-slide-tabs",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-slide-tabs"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-shutter-button",
+    "type": "registry:ui",
+    "title": "Hover Shutter Button",
+    "description": "AMANTLE UI ui: hover-shutter-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-shutter-button"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-clip-text",
+    "type": "registry:ui",
+    "title": "Hover Clip Text",
+    "description": "AMANTLE UI ui: hover-clip-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-clip-text"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-gravity-button",
+    "type": "registry:ui",
+    "title": "Hover Gravity Button",
+    "description": "AMANTLE UI ui: hover-gravity-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-gravity-button"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-liquid-card",
+    "type": "registry:ui",
+    "title": "Hover Liquid Card",
+    "description": "AMANTLE UI ui: hover-liquid-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-liquid-card"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-spotlight-border",
+    "type": "registry:ui",
+    "title": "Hover Spotlight Border",
+    "description": "AMANTLE UI ui: hover-spotlight-border",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-spotlight-border"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hover-glitch-border",
+    "type": "registry:ui",
+    "title": "Hover Glitch Border",
+    "description": "AMANTLE UI ui: hover-glitch-border",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-glitch-border"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-pricing-badge",
+    "type": "registry:ui",
+    "title": "Hyper Pricing Badge",
+    "description": "AMANTLE UI ui: hyper-pricing-badge",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-pricing-badge"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-stats-pill",
+    "type": "registry:ui",
+    "title": "Hyper Stats Pill",
+    "description": "AMANTLE UI ui: hyper-stats-pill",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-stats-pill"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-feature-icon-card",
+    "type": "registry:ui",
+    "title": "Hyper Feature Icon Card",
+    "description": "AMANTLE UI ui: hyper-feature-icon-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-feature-icon-card"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-testimonial-quote",
+    "type": "registry:ui",
+    "title": "Hyper Testimonial Quote",
+    "description": "AMANTLE UI ui: hyper-testimonial-quote",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-testimonial-quote"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-newsletter-compact",
+    "type": "registry:ui",
+    "title": "Hyper Newsletter Compact",
+    "description": "AMANTLE UI ui: hyper-newsletter-compact",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-newsletter-compact"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-banner-alert",
+    "type": "registry:ui",
+    "title": "Hyper Banner Alert",
+    "description": "AMANTLE UI ui: hyper-banner-alert",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-banner-alert"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-faq-card",
+    "type": "registry:ui",
+    "title": "Hyper Faq Card",
+    "description": "AMANTLE UI ui: hyper-faq-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-faq-card"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
+    "name": "hyper-avatar-stack",
+    "type": "registry:ui",
+    "title": "Hyper Avatar Stack",
+    "description": "AMANTLE UI ui: hyper-avatar-stack",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hyper-avatar-stack"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT"
+    }
+  },
+  {
     "name": "hero-simple",
     "type": "registry:block",
     "title": "Hero Simple",

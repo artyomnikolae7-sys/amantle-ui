@@ -1,0 +1,27 @@
+{
+  "name": "fluid-pill",
+  "type": "registry:ui",
+  "title": "Fluid Pill",
+  "description": "AMANTLE UI ui: fluid-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/fluid-pill.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component FluidPill\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function FluidPill({ className = \"\" }: { className?: string }) {\n  const [tab, setTab] = useState(0);\n  const tabs = [\"Overview\", \"Telemetry\", \"Audit\"];\n  return (\n    <div className={`inline-flex rounded-full border border-border/60 bg-muted/40 p-1 text-xs font-semibold ${className}`}>\n      {tabs.map((t, i) => (\n        <button\n          key={i}\n          onClick={() => setTab(i)}\n          className={`rounded-full px-3 py-1 transition-all ${\n            tab === i ? \"bg-primary text-primary-foreground shadow-xs font-bold\" : \"text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {t}\n        </button>\n      ))}\n    </div>\n  );\n}\nexport default FluidPill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/fluid-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "fluid-pill"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

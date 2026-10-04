@@ -1,0 +1,27 @@
+{
+  "name": "hover-shutter-button",
+  "type": "registry:ui",
+  "title": "Hover Shutter Button",
+  "description": "AMANTLE UI ui: hover-shutter-button",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-shutter-button.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HoverShutterButton\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverShutterButton({ children = \"Shutter Action\", className = \"\" }: { children?: React.ReactNode; className?: string }) {\n  return (\n    <button className={`group relative overflow-hidden rounded-xl border border-primary bg-background px-5 py-2.5 text-xs font-semibold text-primary transition-all duration-300 active:scale-95 ${className}`}>\n      <span className=\"absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out\" />\n      <span className=\"relative z-10 group-hover:text-primary-foreground transition-colors duration-200\">{children}</span>\n    </button>\n  );\n}\nexport default HoverShutterButton;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-shutter-button.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-shutter-button"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

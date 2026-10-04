@@ -1,0 +1,27 @@
+{
+  "name": "dither-card",
+  "type": "registry:ui",
+  "title": "Dither Card",
+  "description": "AMANTLE UI ui: dither-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dither-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component DitherCard\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function DitherCard({ title = \"Dither Matrix Surface\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`group relative flex h-48 w-72 flex-col justify-between overflow-hidden rounded-2xl border border-border/60 bg-card p-5 shadow-md hover:shadow-xl transition-all active:scale-[0.98] ${className}`}>\n      <div className=\"absolute inset-0 bg-[radial-gradient(#888_1px,transparent_1px)] [background-size:8px_8px] opacity-25 group-hover:opacity-40 transition-opacity\" />\n      <div className=\"relative z-10 flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-xs\">\n        ░\n      </div>\n      <div className=\"relative z-10\">\n        <h4 className=\"text-sm font-bold text-foreground\">{title}</h4>\n        <p className=\"text-xs text-muted-foreground mt-0.5\">High-frequency dither halftone shader</p>\n      </div>\n    </div>\n  );\n}\nexport default DitherCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/dither-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dither-card"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

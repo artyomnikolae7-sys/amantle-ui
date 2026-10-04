@@ -306,7 +306,627 @@ import { MarketingFeaturePill } from "@/registry/ui/marketing-feature-pill";
 
 import { StatsCardAccent } from "@/registry/ui/stats-card-accent";
 
+import { FuzzyText } from "@/registry/ui/fuzzy-text";
+import { PixelTransition } from "@/registry/ui/pixel-transition";
+import { DitherCard } from "@/registry/ui/dither-card";
+import { DecayCard } from "@/registry/ui/decay-card";
+import { StackedCards } from "@/registry/ui/stacked-cards";
+import { CircularGallery } from "@/registry/ui/circular-gallery";
+import { CounterSpring } from "@/registry/ui/counter-spring";
+import { StepperSlider } from "@/registry/ui/stepper-slider";
+import { BlobCursor } from "@/registry/ui/blob-cursor";
+import { TargetCursor } from "@/registry/ui/target-cursor";
+import { SplashCursor } from "@/registry/ui/splash-cursor";
+import { PixelCursor } from "@/registry/ui/pixel-cursor";
+import { ScrollVelocity } from "@/registry/ui/scroll-velocity";
+import { CurvedLoop } from "@/registry/ui/curved-loop";
+import { ElasticAccordion } from "@/registry/ui/elastic-accordion";
+import { MorphingDialog } from "@/registry/ui/morphing-dialog";
+import { BubbleText } from "@/registry/ui/bubble-text";
+import { GlitchCard } from "@/registry/ui/glitch-card";
+import { MagneticDock } from "@/registry/ui/magnetic-dock";
+import { FollowPointer } from "@/registry/ui/follow-pointer";
+import { BounceText } from "@/registry/ui/bounce-text";
+import { StaggeredList } from "@/registry/ui/staggered-list";
+import { MagneticButton } from "@/registry/ui/magnetic-button";
+import { ElasticToggle } from "@/registry/ui/elastic-toggle";
+import { FluidPill } from "@/registry/ui/fluid-pill";
+
+import { AnimatedBeam } from "@/registry/ui/animated-beam";
+import { ShineButton } from "@/registry/ui/shine-button";
+import { PulsatingButton } from "@/registry/ui/pulsating-button";
+import { InteractiveHoverButton } from "@/registry/ui/interactive-hover-button";
+import { FlipText } from "@/registry/ui/flip-text";
+import { WordFadeIn } from "@/registry/ui/word-fade-in";
+import { ScrollBasedVelocity } from "@/registry/ui/scroll-based-velocity";
+import { AnimatedShinyText } from "@/registry/ui/animated-shiny-text";
+import { DockInteractive } from "@/registry/ui/dock-interactive";
+import { GlobeWireframe } from "@/registry/ui/globe-wireframe";
+import { BentoGridCard } from "@/registry/ui/bento-grid-card";
+import { RippleButton } from "@/registry/ui/ripple-button";
+import { DotPattern } from "@/registry/ui/dot-pattern";
+import { GridPattern } from "@/registry/ui/grid-pattern";
+import { MagicCard } from "@/registry/ui/magic-card";
+import { NeonBorder } from "@/registry/ui/neon-border";
+import { SparklesCore } from "@/registry/ui/sparkles-core";
+import { MovingBordersGlow } from "@/registry/ui/moving-borders-glow";
+import { BackgroundGradientCard } from "@/registry/ui/background-gradient-card";
+import { CardHoverEffectGrid } from "@/registry/ui/card-hover-effect-grid";
+import { EvervaultCardCipher } from "@/registry/ui/evervault-card-cipher";
+import { LampHeader } from "@/registry/ui/lamp-header";
+import { WavyTextEffect } from "@/registry/ui/wavy-text-effect";
+import { FlipWordsCycle } from "@/registry/ui/flip-words-cycle";
+import { TextGenerateEffect } from "@/registry/ui/text-generate-effect";
+import { MeteorsStream } from "@/registry/ui/meteors-stream";
+import { DirectionAwareHover } from "@/registry/ui/direction-aware-hover";
+import { FocusCards } from "@/registry/ui/focus-cards";
+import { PinContainer3D } from "@/registry/ui/pin-container-3d";
+import { GlowingStarsCard } from "@/registry/ui/glowing-stars-card";
+
+import { DockLens } from "@/registry/ui/dock-lens";
+import { ShimmerText } from "@/registry/ui/shimmer-text";
+import { GlowBorderCard } from "@/registry/ui/glow-border-card";
+import { SpotlightButton } from "@/registry/ui/spotlight-button";
+import { FluidTabs } from "@/registry/ui/fluid-tabs";
+import { InteractiveAvatar } from "@/registry/ui/interactive-avatar";
+import { StackedModal } from "@/registry/ui/stacked-modal";
+import { RevealCard } from "@/registry/ui/reveal-card";
+import { TiltMediaCard } from "@/registry/ui/tilt-media-card";
+import { ParticleBanner } from "@/registry/ui/particle-banner";
+import { OriginSliderStepped } from "@/registry/ui/origin-slider-stepped";
+import { OriginSwitchIcon } from "@/registry/ui/origin-switch-icon";
+import { OriginCheckboxTree } from "@/registry/ui/origin-checkbox-tree";
+import { OriginPhoneInput } from "@/registry/ui/origin-phone-input";
+import { OriginPasswordMeter } from "@/registry/ui/origin-password-meter";
+import { OriginBadgeDot } from "@/registry/ui/origin-badge-dot";
+import { OriginRadioCards } from "@/registry/ui/origin-radio-cards";
+import { OriginFileDrop } from "@/registry/ui/origin-file-drop";
+import { OriginNumberStepper } from "@/registry/ui/origin-number-stepper";
+import { OriginColorPalettePicker } from "@/registry/ui/origin-color-palette-picker";
+
+import { TremorAreaChartKpi } from "@/registry/ui/tremor-area-chart-kpi";
+import { TremorBarList } from "@/registry/ui/tremor-bar-list";
+import { TremorSparkArea } from "@/registry/ui/tremor-spark-area";
+import { TremorTrackerStatus } from "@/registry/ui/tremor-tracker-status";
+import { TremorBadgeDeltaPill } from "@/registry/ui/tremor-badge-delta-pill";
+import { TremorCategoryBar } from "@/registry/ui/tremor-category-bar";
+import { TremorLegendIndicator } from "@/registry/ui/tremor-legend-indicator";
+import { TremorMetricGrid } from "@/registry/ui/tremor-metric-grid";
+import { TremorStatCardProgress } from "@/registry/ui/tremor-stat-card-progress";
+import { TremorCalloutMetric } from "@/registry/ui/tremor-callout-metric";
+import { HoverTiltCard } from "@/registry/ui/hover-tilt-card";
+import { HoverFuzzyOverlay } from "@/registry/ui/hover-fuzzy-overlay";
+import { HoverSlideTabs } from "@/registry/ui/hover-slide-tabs";
+import { HoverShutterButton } from "@/registry/ui/hover-shutter-button";
+import { HoverClipText } from "@/registry/ui/hover-clip-text";
+import { HoverGravityButton } from "@/registry/ui/hover-gravity-button";
+import { HoverLiquidCard } from "@/registry/ui/hover-liquid-card";
+import { HoverSpotlightBorder } from "@/registry/ui/hover-spotlight-border";
+import { HoverGlitchBorder } from "@/registry/ui/hover-glitch-border";
+import { HyperPricingBadge } from "@/registry/ui/hyper-pricing-badge";
+import { HyperStatsPill } from "@/registry/ui/hyper-stats-pill";
+import { HyperFeatureIconCard } from "@/registry/ui/hyper-feature-icon-card";
+import { HyperTestimonialQuote } from "@/registry/ui/hyper-testimonial-quote";
+import { HyperNewsletterCompact } from "@/registry/ui/hyper-newsletter-compact";
+import { HyperBannerAlert } from "@/registry/ui/hyper-banner-alert";
+import { HyperFaqCard } from "@/registry/ui/hyper-faq-card";
+import { HyperAvatarStack } from "@/registry/ui/hyper-avatar-stack";
+
 export const componentMap: Record<string, React.ComponentType<any>> = {
+  "tremor-area-chart-kpi": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorAreaChartKpi {...props} />
+    </div>
+  ),
+  "tremor-bar-list": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorBarList {...props} />
+    </div>
+  ),
+  "tremor-spark-area": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorSparkArea {...props} />
+    </div>
+  ),
+  "tremor-tracker-status": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorTrackerStatus {...props} />
+    </div>
+  ),
+  "tremor-badge-delta-pill": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorBadgeDeltaPill {...props} />
+    </div>
+  ),
+  "tremor-category-bar": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorCategoryBar {...props} />
+    </div>
+  ),
+  "tremor-legend-indicator": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorLegendIndicator {...props} />
+    </div>
+  ),
+  "tremor-metric-grid": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorMetricGrid {...props} />
+    </div>
+  ),
+  "tremor-stat-card-progress": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorStatCardProgress {...props} />
+    </div>
+  ),
+  "tremor-callout-metric": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TremorCalloutMetric {...props} />
+    </div>
+  ),
+  "hover-tilt-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverTiltCard {...props} />
+    </div>
+  ),
+  "hover-fuzzy-overlay": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverFuzzyOverlay {...props} />
+    </div>
+  ),
+  "hover-slide-tabs": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverSlideTabs {...props} />
+    </div>
+  ),
+  "hover-shutter-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverShutterButton {...props} />
+    </div>
+  ),
+  "hover-clip-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverClipText {...props} />
+    </div>
+  ),
+  "hover-gravity-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverGravityButton {...props} />
+    </div>
+  ),
+  "hover-liquid-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverLiquidCard {...props} />
+    </div>
+  ),
+  "hover-spotlight-border": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverSpotlightBorder {...props} />
+    </div>
+  ),
+  "hover-glitch-border": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverGlitchBorder {...props} />
+    </div>
+  ),
+  "hyper-pricing-badge": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperPricingBadge {...props} />
+    </div>
+  ),
+  "hyper-stats-pill": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperStatsPill {...props} />
+    </div>
+  ),
+  "hyper-feature-icon-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperFeatureIconCard {...props} />
+    </div>
+  ),
+  "hyper-testimonial-quote": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperTestimonialQuote {...props} />
+    </div>
+  ),
+  "hyper-newsletter-compact": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperNewsletterCompact {...props} />
+    </div>
+  ),
+  "hyper-banner-alert": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperBannerAlert {...props} />
+    </div>
+  ),
+  "hyper-faq-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperFaqCard {...props} />
+    </div>
+  ),
+  "hyper-avatar-stack": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HyperAvatarStack {...props} />
+    </div>
+  ),
+
+  "dock-lens": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DockLens {...props} />
+    </div>
+  ),
+  "shimmer-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ShimmerText {...props} />
+    </div>
+  ),
+  "glow-border-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GlowBorderCard {...props} />
+    </div>
+  ),
+  "spotlight-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <SpotlightButton {...props} />
+    </div>
+  ),
+  "fluid-tabs": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FluidTabs {...props} />
+    </div>
+  ),
+  "interactive-avatar": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <InteractiveAvatar {...props} />
+    </div>
+  ),
+  "stacked-modal": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StackedModal {...props} />
+    </div>
+  ),
+  "reveal-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <RevealCard {...props} />
+    </div>
+  ),
+  "tilt-media-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TiltMediaCard {...props} />
+    </div>
+  ),
+  "particle-banner": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ParticleBanner {...props} />
+    </div>
+  ),
+  "origin-slider-stepped": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginSliderStepped {...props} />
+    </div>
+  ),
+  "origin-switch-icon": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginSwitchIcon {...props} />
+    </div>
+  ),
+  "origin-checkbox-tree": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginCheckboxTree {...props} />
+    </div>
+  ),
+  "origin-phone-input": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginPhoneInput {...props} />
+    </div>
+  ),
+  "origin-password-meter": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginPasswordMeter {...props} />
+    </div>
+  ),
+  "origin-badge-dot": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginBadgeDot {...props} />
+    </div>
+  ),
+  "origin-radio-cards": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginRadioCards {...props} />
+    </div>
+  ),
+  "origin-file-drop": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginFileDrop {...props} />
+    </div>
+  ),
+  "origin-number-stepper": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginNumberStepper {...props} />
+    </div>
+  ),
+  "origin-color-palette-picker": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginColorPalettePicker {...props} />
+    </div>
+  ),
+
+  "animated-beam": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <AnimatedBeam {...props} />
+    </div>
+  ),
+  "shine-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ShineButton {...props} />
+    </div>
+  ),
+  "pulsating-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <PulsatingButton {...props} />
+    </div>
+  ),
+  "interactive-hover-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <InteractiveHoverButton {...props} />
+    </div>
+  ),
+  "flip-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FlipText {...props} />
+    </div>
+  ),
+  "word-fade-in": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <WordFadeIn {...props} />
+    </div>
+  ),
+  "scroll-based-velocity": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ScrollBasedVelocity {...props} />
+    </div>
+  ),
+  "animated-shiny-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <AnimatedShinyText {...props} />
+    </div>
+  ),
+  "dock-interactive": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DockInteractive {...props} />
+    </div>
+  ),
+  "globe-wireframe": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GlobeWireframe {...props} />
+    </div>
+  ),
+  "bento-grid-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <BentoGridCard {...props} />
+    </div>
+  ),
+  "ripple-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <RippleButton {...props} />
+    </div>
+  ),
+  "dot-pattern": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DotPattern {...props} />
+    </div>
+  ),
+  "grid-pattern": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GridPattern {...props} />
+    </div>
+  ),
+  "magic-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MagicCard {...props} />
+    </div>
+  ),
+  "neon-border": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <NeonBorder {...props} />
+    </div>
+  ),
+  "sparkles-core": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <SparklesCore {...props} />
+    </div>
+  ),
+  "moving-borders-glow": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MovingBordersGlow {...props} />
+    </div>
+  ),
+  "background-gradient-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <BackgroundGradientCard {...props} />
+    </div>
+  ),
+  "card-hover-effect-grid": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <CardHoverEffectGrid {...props} />
+    </div>
+  ),
+  "evervault-card-cipher": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <EvervaultCardCipher {...props} />
+    </div>
+  ),
+  "lamp-header": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <LampHeader {...props} />
+    </div>
+  ),
+  "wavy-text-effect": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <WavyTextEffect {...props} />
+    </div>
+  ),
+  "flip-words-cycle": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FlipWordsCycle {...props} />
+    </div>
+  ),
+  "text-generate-effect": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TextGenerateEffect {...props} />
+    </div>
+  ),
+  "meteors-stream": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MeteorsStream {...props} />
+    </div>
+  ),
+  "direction-aware-hover": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DirectionAwareHover {...props} />
+    </div>
+  ),
+  "focus-cards": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FocusCards {...props} />
+    </div>
+  ),
+  "pin-container-3d": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <PinContainer3D {...props} />
+    </div>
+  ),
+  "glowing-stars-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GlowingStarsCard {...props} />
+    </div>
+  ),
+
+  "fuzzy-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FuzzyText {...props} />
+    </div>
+  ),
+  "pixel-transition": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <PixelTransition {...props} />
+    </div>
+  ),
+  "dither-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DitherCard {...props} />
+    </div>
+  ),
+  "decay-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <DecayCard {...props} />
+    </div>
+  ),
+  "stacked-cards": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StackedCards {...props} />
+    </div>
+  ),
+  "circular-gallery": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <CircularGallery {...props} />
+    </div>
+  ),
+  "counter-spring": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <CounterSpring {...props} />
+    </div>
+  ),
+  "stepper-slider": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StepperSlider {...props} />
+    </div>
+  ),
+  "blob-cursor": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <BlobCursor {...props} />
+    </div>
+  ),
+  "target-cursor": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TargetCursor {...props} />
+    </div>
+  ),
+  "splash-cursor": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <SplashCursor {...props} />
+    </div>
+  ),
+  "pixel-cursor": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <PixelCursor {...props} />
+    </div>
+  ),
+  "scroll-velocity": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ScrollVelocity {...props} />
+    </div>
+  ),
+  "curved-loop": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <CurvedLoop {...props} />
+    </div>
+  ),
+  "elastic-accordion": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ElasticAccordion {...props} />
+    </div>
+  ),
+  "morphing-dialog": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MorphingDialog {...props} />
+    </div>
+  ),
+  "bubble-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <BubbleText {...props} />
+    </div>
+  ),
+  "glitch-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GlitchCard {...props} />
+    </div>
+  ),
+  "magnetic-dock": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MagneticDock {...props} />
+    </div>
+  ),
+  "follow-pointer": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FollowPointer {...props} />
+    </div>
+  ),
+  "bounce-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <BounceText {...props} />
+    </div>
+  ),
+  "staggered-list": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StaggeredList {...props} />
+    </div>
+  ),
+  "magnetic-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MagneticButton {...props} />
+    </div>
+  ),
+  "elastic-toggle": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ElasticToggle {...props} />
+    </div>
+  ),
+  "fluid-pill": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FluidPill {...props} />
+    </div>
+  ),
+
   "stats-card-accent": (props: any) => (
     <div className="flex items-center justify-center p-6">
       <StatsCardAccent {...props} />

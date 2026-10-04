@@ -1,0 +1,27 @@
+{
+  "name": "hover-glitch-border",
+  "type": "registry:ui",
+  "title": "Hover Glitch Border",
+  "description": "AMANTLE UI ui: hover-glitch-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-glitch-border.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HoverGlitchBorder\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverGlitchBorder({ className = \"\" }: { className?: string }) {\n  const [glitch, setGlitch] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setGlitch(true)}\n      onMouseLeave={() => setGlitch(false)}\n      className={`p-4 rounded-xl border max-w-xs cursor-pointer transition-all ${\n        glitch ? \"border-cyan-400 shadow-[2px_2px_0px_#ec4899]\" : \"border-border/70 bg-card\"\n      } ${className}`}\n    >\n      <p className=\"text-xs font-mono font-bold text-foreground\">CYBER_TRACE // 0x49</p>\n      <p className=\"text-[11px] text-muted-foreground mt-0.5\">High frequency chromatic offset feedback.</p>\n    </div>\n  );\n}\nexport default HoverGlitchBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-glitch-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-glitch-border"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

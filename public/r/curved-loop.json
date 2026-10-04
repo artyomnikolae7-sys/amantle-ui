@@ -1,0 +1,27 @@
+{
+  "name": "curved-loop",
+  "type": "registry:ui",
+  "title": "Curved Loop",
+  "description": "AMANTLE UI ui: curved-loop",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/curved-loop.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component CurvedLoop\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function CurvedLoop({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`relative flex items-center justify-center p-4 ${className}`}>\n      <svg className=\"w-56 h-20 overflow-visible\" viewBox=\"0 0 200 60\">\n        <path id=\"curvePath\" d=\"M 10 50 Q 100 0 190 50\" fill=\"transparent\" />\n        <text className=\"text-[11px] font-bold uppercase tracking-widest fill-primary\">\n          <textPath href=\"#curvePath\" startOffset=\"10%\">\n            Kinetic Curved Typography Flow\n          </textPath>\n        </text>\n      </svg>\n    </div>\n  );\n}\nexport default CurvedLoop;\n",
+      "type": "registry:ui",
+      "target": "components/ui/curved-loop.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "curved-loop"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

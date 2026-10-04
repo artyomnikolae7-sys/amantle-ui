@@ -1,0 +1,27 @@
+{
+  "name": "dot-pattern",
+  "type": "registry:ui",
+  "title": "Dot Pattern",
+  "description": "AMANTLE UI ui: dot-pattern",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dot-pattern.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component DotPattern\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function DotPattern({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`relative h-32 w-64 rounded-2xl border border-border/60 bg-card overflow-hidden flex items-center justify-center ${className}`}>\n      <div className=\"absolute inset-0 bg-[radial-gradient(#888_1px,transparent_1px)] [background-size:12px_12px] opacity-30\" />\n      <span className=\"relative z-10 text-xs font-bold text-foreground\">Dot Pattern Grid</span>\n    </div>\n  );\n}\nexport default DotPattern;\n",
+      "type": "registry:ui",
+      "target": "components/ui/dot-pattern.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dot-pattern"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

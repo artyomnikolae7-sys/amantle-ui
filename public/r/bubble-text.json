@@ -1,0 +1,27 @@
+{
+  "name": "bubble-text",
+  "type": "registry:ui",
+  "title": "Bubble Text",
+  "description": "AMANTLE UI ui: bubble-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/bubble-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BubbleText\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function BubbleText({ text = \"BUBBLE\", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <div className={`inline-flex gap-1 text-2xl font-black text-foreground ${className}`}>\n      {text.split(\"\").map((c, i) => (\n        <span\n          key={i}\n          className=\"inline-block transition-transform duration-200 hover:-translate-y-2 hover:scale-125 cursor-pointer text-primary\"\n        >\n          {c}\n        </span>\n      ))}\n    </div>\n  );\n}\nexport default BubbleText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/bubble-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "bubble-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

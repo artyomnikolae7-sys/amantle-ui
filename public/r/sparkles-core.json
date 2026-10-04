@@ -1,0 +1,27 @@
+{
+  "name": "sparkles-core",
+  "type": "registry:ui",
+  "title": "Sparkles Core",
+  "description": "AMANTLE UI ui: sparkles-core",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/sparkles-core.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component SparklesCore\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function SparklesCore({ title = \"Sparkle Stellar Field\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`relative flex h-36 w-64 items-center justify-center rounded-2xl border border-border/60 bg-card overflow-hidden ${className}`}>\n      <span className=\"text-xs font-black tracking-widest text-primary uppercase select-none\">✨ {title} ✨</span>\n    </div>\n  );\n}\nexport default SparklesCore;\n",
+      "type": "registry:ui",
+      "target": "components/ui/sparkles-core.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "sparkles-core"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

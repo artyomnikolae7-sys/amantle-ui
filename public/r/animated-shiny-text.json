@@ -1,0 +1,27 @@
+{
+  "name": "animated-shiny-text",
+  "type": "registry:ui",
+  "title": "Animated Shiny Text",
+  "description": "AMANTLE UI ui: animated-shiny-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/animated-shiny-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component AnimatedShinyText\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function AnimatedShinyText({ children = \"Introducing AMANTLE UI v0.4.0 ✨\", className = \"\" }: { children?: React.ReactNode; className?: string }) {\n  return (\n    <span className={`inline-block bg-[linear-gradient(110deg,#939393,45%,#fff,55%,#939393)] bg-[length:200%_100%] bg-clip-text text-xs font-semibold text-transparent animate-shimmer ${className}`}>\n      {children}\n    </span>\n  );\n}\nexport default AnimatedShinyText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/animated-shiny-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "animated-shiny-text"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "wavy-text-effect",
+  "type": "registry:ui",
+  "title": "Wavy Text Effect",
+  "description": "AMANTLE UI ui: wavy-text-effect",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/wavy-text-effect.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component WavyTextEffect\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function WavyTextEffect({ word = \"UNDULATING\", className = \"\" }: { word?: string; className?: string }) {\n  return (\n    <div className={`inline-flex gap-1 text-xl font-black text-primary ${className}`}>\n      {word.split(\"\").map((c, i) => (\n        <span key={i} style={{ animation: \"bounce 1.6s infinite\", animationDelay: `${i * 0.1}s` }}>\n          {c}\n        </span>\n      ))}\n    </div>\n  );\n}\nexport default WavyTextEffect;\n",
+      "type": "registry:ui",
+      "target": "components/ui/wavy-text-effect.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "wavy-text-effect"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

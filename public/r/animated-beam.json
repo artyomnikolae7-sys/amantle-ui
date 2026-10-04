@@ -1,0 +1,27 @@
+{
+  "name": "animated-beam",
+  "type": "registry:ui",
+  "title": "Animated Beam",
+  "description": "AMANTLE UI ui: animated-beam",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/animated-beam.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component AnimatedBeam\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function AnimatedBeam({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`flex items-center justify-between w-full max-w-sm rounded-2xl border border-border/60 bg-card p-6 shadow-sm ${className}`}>\n      <div className=\"flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary font-bold\">A</div>\n      <div className=\"flex-1 h-0.5 mx-4 bg-gradient-to-r from-primary via-cyan-400 to-primary animate-pulse\" />\n      <div className=\"flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground font-bold\">B</div>\n    </div>\n  );\n}\nexport default AnimatedBeam;\n",
+      "type": "registry:ui",
+      "target": "components/ui/animated-beam.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "animated-beam"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

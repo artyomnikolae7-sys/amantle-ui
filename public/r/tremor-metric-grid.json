@@ -1,0 +1,27 @@
+{
+  "name": "tremor-metric-grid",
+  "type": "registry:ui",
+  "title": "Tremor Metric Grid",
+  "description": "AMANTLE UI ui: tremor-metric-grid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-metric-grid.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorMetricGrid\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorMetricGrid({ className = \"\" }: { className?: string }) {\n  const stats = [\n    { label: \"Total Stars\", val: \"14.2k\", diff: \"+12%\" },\n    { label: \"Downloads\", val: \"89.4k\", diff: \"+28%\" },\n    { label: \"Components\", val: \"361\", diff: \"+102\" },\n  ];\n\n  return (\n    <div className={`grid grid-cols-3 gap-2 p-3 rounded-2xl border border-border/70 bg-card max-w-sm ${className}`}>\n      {stats.map((s) => (\n        <div key={s.label} className=\"text-center p-2 rounded-xl bg-muted/40\">\n          <p className=\"text-[10px] text-muted-foreground uppercase font-mono\">{s.label}</p>\n          <p className=\"text-base font-bold text-foreground font-mono mt-0.5\">{s.val}</p>\n          <span className=\"text-[10px] font-semibold text-emerald-500 font-mono\">{s.diff}</span>\n        </div>\n      ))}\n    </div>\n  );\n}\nexport default TremorMetricGrid;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-metric-grid.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-metric-grid"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "fuzzy-text",
+  "type": "registry:ui",
+  "title": "Fuzzy Text",
+  "description": "AMANTLE UI ui: fuzzy-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/fuzzy-text.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component FuzzyText\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function FuzzyText({ text = \"AMANTLE KINETIC\", className = \"\" }: { text?: string; className?: string }) {\n  const [hovered, setHovered] = useState(false);\n  return (\n    <div\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      className={`relative inline-block font-black tracking-tight text-3xl select-none cursor-pointer transition-all duration-300 ${className}`}\n      style={{\n        filter: hovered ? \"blur(3px)\" : \"blur(0px)\",\n        transition: \"filter 200ms cubic-bezier(0.23, 1, 0.32, 1)\",\n      }}\n    >\n      <span className=\"bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent\">\n        {text}\n      </span>\n    </div>\n  );\n}\nexport default FuzzyText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/fuzzy-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "fuzzy-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

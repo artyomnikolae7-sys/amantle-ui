@@ -1,0 +1,27 @@
+{
+  "name": "particle-banner",
+  "type": "registry:ui",
+  "title": "Particle Banner",
+  "description": "AMANTLE UI ui: particle-banner",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/particle-banner.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component ParticleBanner\n * @source https://cult-ui.com\n * @author Cult UI\n * @license MIT\n */\nexport function ParticleBanner({ className = \"\" }: { className?: string }) {\n  const [closed, setClosed] = useState(false);\n  if (closed) return null;\n\n  return (\n    <div className={`flex items-center justify-between gap-4 px-4 py-2.5 rounded-xl border border-primary/20 bg-primary/5 backdrop-blur-sm text-foreground ${className}`}>\n      <div className=\"flex items-center gap-2\">\n        <span className=\"flex h-2 w-2 rounded-full bg-primary animate-ping\" />\n        <p className=\"text-xs font-medium\">\n          New release <span className=\"font-semibold text-primary\">v0.5.0</span> is now deployed.\n        </p>\n      </div>\n      <button\n        onClick={() => setClosed(true)}\n        className=\"text-xs text-muted-foreground hover:text-foreground font-mono transition-colors\"\n      >\n        ✕\n      </button>\n    </div>\n  );\n}\nexport default ParticleBanner;\n",
+      "type": "registry:ui",
+      "target": "components/ui/particle-banner.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "particle-banner"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI",
+    "license": "MIT"
+  }
+}

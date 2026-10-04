@@ -1,0 +1,27 @@
+{
+  "name": "pixel-transition",
+  "type": "registry:ui",
+  "title": "Pixel Transition",
+  "description": "AMANTLE UI ui: pixel-transition",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pixel-transition.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component PixelTransition\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function PixelTransition({ className = \"\" }: { className?: string }) {\n  const [active, setActive] = useState(false);\n  return (\n    <div\n      onMouseEnter={() => setActive(true)}\n      onMouseLeave={() => setActive(false)}\n      className={`relative h-44 w-64 overflow-hidden rounded-2xl border border-border/60 bg-card p-4 shadow-lg cursor-pointer flex flex-col justify-between ${className}`}\n    >\n      <div className=\"grid grid-cols-8 gap-1 opacity-75\">\n        {Array.from({ length: 32 }).map((_, i) => (\n          <div\n            key={i}\n            className={`h-3 rounded-xs transition-colors duration-200 ${\n              active ? (i % 2 === 0 ? \"bg-primary\" : \"bg-primary/40\") : \"bg-muted\"\n            }`}\n          />\n        ))}\n      </div>\n      <div className=\"flex items-center justify-between text-xs font-semibold\">\n        <span>Pixel Grid Matrix</span>\n        <span className=\"font-mono text-primary\">{active ? \"ENGAGED\" : \"IDLE\"}</span>\n      </div>\n    </div>\n  );\n}\nexport default PixelTransition;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pixel-transition.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pixel-transition"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "elastic-toggle",
+  "type": "registry:ui",
+  "title": "Elastic Toggle",
+  "description": "AMANTLE UI ui: elastic-toggle",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/elastic-toggle.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component ElasticToggle\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function ElasticToggle({ className = \"\" }: { className?: string }) {\n  const [on, setOn] = useState(false);\n  return (\n    <button\n      onClick={() => setOn(!on)}\n      className={`relative h-7 w-12 rounded-full p-1 transition-colors duration-200 ${\n        on ? \"bg-primary\" : \"bg-muted\"\n      } ${className}`}\n    >\n      <div\n        style={{\n          transform: on ? \"translateX(20px)\" : \"translateX(0px)\",\n          transition: \"transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1)\",\n        }}\n        className=\"h-5 w-5 rounded-full bg-background shadow-md\"\n      />\n    </button>\n  );\n}\nexport default ElasticToggle;\n",
+      "type": "registry:ui",
+      "target": "components/ui/elastic-toggle.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "elastic-toggle"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

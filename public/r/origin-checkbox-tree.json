@@ -1,0 +1,27 @@
+{
+  "name": "origin-checkbox-tree",
+  "type": "registry:ui",
+  "title": "Origin Checkbox Tree",
+  "description": "AMANTLE UI ui: origin-checkbox-tree",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-checkbox-tree.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginCheckboxTree\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginCheckboxTree({ className = \"\" }: { className?: string }) {\n  const [selected, setSelected] = useState<string[]>([\"ui\", \"blocks\"]);\n\n  const toggle = (id: string) => {\n    setSelected((prev) => (prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]));\n  };\n\n  const items = [\n    { id: \"ui\", label: \"UI Primitives (140)\" },\n    { id: \"blocks\", label: \"Page Blocks (119)\" },\n    { id: \"templates\", label: \"Full Templates (45)\" },\n  ];\n\n  return (\n    <div className={`space-y-2 p-3 rounded-xl border border-border/60 bg-card/60 max-w-xs ${className}`}>\n      <p className=\"text-xs font-semibold text-foreground\">Registry Categories</p>\n      {items.map((item) => (\n        <label key={item.id} className=\"flex items-center gap-2 cursor-pointer text-xs select-none\">\n          <input\n            type=\"checkbox\"\n            checked={selected.includes(item.id)}\n            onChange={() => toggle(item.id)}\n            className=\"accent-primary h-4 w-4 rounded border-border\"\n          />\n          <span className={selected.includes(item.id) ? \"text-foreground font-medium\" : \"text-muted-foreground\"}>\n            {item.label}\n          </span>\n        </label>\n      ))}\n    </div>\n  );\n}\nexport default OriginCheckboxTree;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-checkbox-tree.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-checkbox-tree"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

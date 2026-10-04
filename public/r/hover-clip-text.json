@@ -1,0 +1,27 @@
+{
+  "name": "hover-clip-text",
+  "type": "registry:ui",
+  "title": "Hover Clip Text",
+  "description": "AMANTLE UI ui: hover-clip-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-clip-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HoverClipText\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverClipText({ text = \"KINETIC SYSTEM\", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <div className={`group relative inline-block cursor-pointer font-black text-2xl tracking-tighter uppercase select-none ${className}`}>\n      <span className=\"text-foreground transition-colors duration-200 group-hover:text-primary\">{text}</span>\n    </div>\n  );\n}\nexport default HoverClipText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-clip-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-clip-text"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

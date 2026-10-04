@@ -1,0 +1,27 @@
+{
+  "name": "focus-cards",
+  "type": "registry:ui",
+  "title": "Focus Cards",
+  "description": "AMANTLE UI ui: focus-cards",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/focus-cards.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component FocusCards\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function FocusCards({ className = \"\" }: { className?: string }) {\n  const [focused, setFocused] = useState<number | null>(null);\n  const items = [\"Alpha\", \"Beta\", \"Gamma\"];\n  return (\n    <div className={`flex gap-2 w-full max-w-xs ${className}`}>\n      {items.map((it, i) => (\n        <div\n          key={i}\n          onMouseEnter={() => setFocused(i)}\n          onMouseLeave={() => setFocused(null)}\n          className={`flex-1 rounded-xl border border-border/60 bg-card p-3 text-center text-xs font-bold transition-all ${\n            focused !== null && focused !== i ? \"blur-xs opacity-50\" : \"scale-105 shadow-md border-primary\"\n          }`}\n        >\n          {it}\n        </div>\n      ))}\n    </div>\n  );\n}\nexport default FocusCards;\n",
+      "type": "registry:ui",
+      "target": "components/ui/focus-cards.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "focus-cards"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

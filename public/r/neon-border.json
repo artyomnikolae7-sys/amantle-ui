@@ -1,0 +1,27 @@
+{
+  "name": "neon-border",
+  "type": "registry:ui",
+  "title": "Neon Border",
+  "description": "AMANTLE UI ui: neon-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/neon-border.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component NeonBorder\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function NeonBorder({ children = \"Neon Border Surface\", className = \"\" }: { children?: React.ReactNode; className?: string }) {\n  return (\n    <div className={`rounded-2xl border border-cyan-500/50 bg-card p-5 shadow-[0_0_15px_rgba(6,182,212,0.25)] text-center text-xs font-bold ${className}`}>\n      {children}\n    </div>\n  );\n}\nexport default NeonBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/neon-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "neon-border"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "elastic-accordion",
+  "type": "registry:ui",
+  "title": "Elastic Accordion",
+  "description": "AMANTLE UI ui: elastic-accordion",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/elastic-accordion.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component ElasticAccordion\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function ElasticAccordion({ className = \"\" }: { className?: string }) {\n  const [open, setOpen] = useState(false);\n  return (\n    <div className={`w-full max-w-sm rounded-2xl border border-border/60 bg-card p-4 shadow-sm ${className}`}>\n      <button\n        onClick={() => setOpen(!open)}\n        className=\"flex w-full items-center justify-between text-xs font-bold text-foreground cursor-pointer\"\n      >\n        <span>What makes AMANTLE UI special?</span>\n        <span className={`transition-transform duration-200 ${open ? \"rotate-180\" : \"\"}`}>▾</span>\n      </button>\n      {open && (\n        <p className=\"mt-3 text-xs text-muted-foreground leading-relaxed animate-in fade-in slide-in-from-top-1 duration-200\">\n          Pure zero-dependency spring animations, Tailwind v4 native CSS variables, and full provenance tracking.\n        </p>\n      )}\n    </div>\n  );\n}\nexport default ElasticAccordion;\n",
+      "type": "registry:ui",
+      "target": "components/ui/elastic-accordion.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "elastic-accordion"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "tremor-badge-delta-pill",
+  "type": "registry:ui",
+  "title": "Tremor Badge Delta Pill",
+  "description": "AMANTLE UI ui: tremor-badge-delta-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-badge-delta-pill.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorBadgeDeltaPill\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorBadgeDeltaPill({\n  value = \"+24.8%\",\n  isPositive = true,\n  className = \"\",\n}: {\n  value?: string;\n  isPositive?: boolean;\n  className?: string;\n}) {\n  return (\n    <span\n      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold font-mono border ${\n        isPositive\n          ? \"bg-emerald-500/10 text-emerald-500 border-emerald-500/20\"\n          : \"bg-rose-500/10 text-rose-500 border-rose-500/20\"\n      } ${className}`}\n    >\n      <span>{isPositive ? \"↑\" : \"↓\"}</span>\n      <span>{value}</span>\n    </span>\n  );\n}\nexport default TremorBadgeDeltaPill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-badge-delta-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-badge-delta-pill"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hover-liquid-card",
+  "type": "registry:ui",
+  "title": "Hover Liquid Card",
+  "description": "AMANTLE UI ui: hover-liquid-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-liquid-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HoverLiquidCard\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n */\nexport function HoverLiquidCard({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`group relative p-6 bg-card border border-border/70 rounded-2xl transition-all duration-500 hover:rounded-[2rem] max-w-xs shadow-sm hover:shadow-xl ${className}`}>\n      <h4 className=\"text-sm font-bold text-foreground\">Fluid Curvature</h4>\n      <p className=\"text-xs text-muted-foreground mt-1\">Dynamic organic border-radius morph on hover states.</p>\n    </div>\n  );\n}\nexport default HoverLiquidCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-liquid-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-liquid-card"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT"
+  }
+}

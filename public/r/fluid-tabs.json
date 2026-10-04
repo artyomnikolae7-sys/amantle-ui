@@ -1,0 +1,27 @@
+{
+  "name": "fluid-tabs",
+  "type": "registry:ui",
+  "title": "Fluid Tabs",
+  "description": "AMANTLE UI ui: fluid-tabs",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/fluid-tabs.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component FluidTabs\n * @source https://cult-ui.com\n * @author Cult UI\n * @license MIT\n */\nexport function FluidTabs({ className = \"\" }: { className?: string }) {\n  const tabs = [\"Overview\", \"Integrations\", \"Activity\", \"Settings\"];\n  const [active, setActive] = useState(\"Overview\");\n\n  return (\n    <div className={`flex items-center gap-1 p-1 rounded-xl bg-muted/60 border border-border/50 max-w-fit ${className}`}>\n      {tabs.map((tab) => {\n        const isActive = active === tab;\n        return (\n          <button\n            key={tab}\n            onClick={() => setActive(tab)}\n            className={`relative px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 active:scale-95 ${\n              isActive ? \"bg-background text-foreground shadow-sm font-semibold\" : \"text-muted-foreground hover:text-foreground\"\n            }`}\n          >\n            {tab}\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport default FluidTabs;\n",
+      "type": "registry:ui",
+      "target": "components/ui/fluid-tabs.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "fluid-tabs"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI",
+    "license": "MIT"
+  }
+}

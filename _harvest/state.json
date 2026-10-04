@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T18:10:35.717Z",
+  "updatedAt": "2026-10-04T18:35:03.355Z",
   "activeSite": "reactbits",
   "stats": {
     "totalSites": 4,
@@ -296,6 +296,822 @@
       "family": "cards-surfaces",
       "status": "COMPLETED",
       "timestamp": "2026-10-04T18:10:27.694Z"
+    },
+    "fuzzy-text": {
+      "title": "Fuzzy Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "pixel-transition": {
+      "title": "Pixel Transition",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "dither-card": {
+      "title": "Dither Card",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "decay-card": {
+      "title": "Decay Card",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "stacked-cards": {
+      "title": "Stacked Cards",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "circular-gallery": {
+      "title": "Circular Gallery",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "counter-spring": {
+      "title": "Counter Spring",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "stepper-slider": {
+      "title": "Stepper Slider",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "blob-cursor": {
+      "title": "Blob Cursor",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "target-cursor": {
+      "title": "Target Cursor",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "splash-cursor": {
+      "title": "Splash Cursor",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "pixel-cursor": {
+      "title": "Pixel Cursor",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "scroll-velocity": {
+      "title": "Scroll Velocity",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "curved-loop": {
+      "title": "Curved Loop",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "elastic-accordion": {
+      "title": "Elastic Accordion",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "morphing-dialog": {
+      "title": "Morphing Dialog",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "bubble-text": {
+      "title": "Bubble Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "glitch-card": {
+      "title": "Glitch Card",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "magnetic-dock": {
+      "title": "Magnetic Dock",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "follow-pointer": {
+      "title": "Follow Pointer",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "bounce-text": {
+      "title": "Bounce Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "staggered-list": {
+      "title": "Staggered List",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "magnetic-button": {
+      "title": "Magnetic Button",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "elastic-toggle": {
+      "title": "Elastic Toggle",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "fluid-pill": {
+      "title": "Fluid Pill",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:29.676Z"
+    },
+    "animated-beam": {
+      "title": "Animated Beam",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "shine-button": {
+      "title": "Shine Button",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "pulsating-button": {
+      "title": "Pulsating Button",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "interactive-hover-button": {
+      "title": "Interactive Hover Button",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "flip-text": {
+      "title": "Flip Text",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "word-fade-in": {
+      "title": "Word Fade In",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "scroll-based-velocity": {
+      "title": "Scroll Based Velocity",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "animated-shiny-text": {
+      "title": "Animated Shiny Text",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "dock-interactive": {
+      "title": "Dock Interactive",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "globe-wireframe": {
+      "title": "Globe Wireframe",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "bento-grid-card": {
+      "title": "Bento Grid Card",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "ripple-button": {
+      "title": "Ripple Button",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "dot-pattern": {
+      "title": "Dot Pattern",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "grid-pattern": {
+      "title": "Grid Pattern",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "magic-card": {
+      "title": "Magic Card",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "neon-border": {
+      "title": "Neon Border",
+      "site": "magicui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "sparkles-core": {
+      "title": "Sparkles Core",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "moving-borders-glow": {
+      "title": "Moving Borders Glow",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "background-gradient-card": {
+      "title": "Background Gradient Card",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "card-hover-effect-grid": {
+      "title": "Card Hover Effect Grid",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "evervault-card-cipher": {
+      "title": "Evervault Card Cipher",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "lamp-header": {
+      "title": "Lamp Header",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "wavy-text-effect": {
+      "title": "Wavy Text Effect",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "flip-words-cycle": {
+      "title": "Flip Words Cycle",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "text-generate-effect": {
+      "title": "Text Generate Effect",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "meteors-stream": {
+      "title": "Meteors Stream",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "direction-aware-hover": {
+      "title": "Direction Aware Hover",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "focus-cards": {
+      "title": "Focus Cards",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "pin-container-3d": {
+      "title": "Pin Container 3D",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "glowing-stars-card": {
+      "title": "Glowing Stars Card",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:41.194Z"
+    },
+    "dock-lens": {
+      "title": "Dock Lens",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "shimmer-text": {
+      "title": "Shimmer Text",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "glow-border-card": {
+      "title": "Glow Border Card",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "spotlight-button": {
+      "title": "Spotlight Button",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "fluid-tabs": {
+      "title": "Fluid Tabs",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "interactive-avatar": {
+      "title": "Interactive Avatar",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "stacked-modal": {
+      "title": "Stacked Modal Card",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "reveal-card": {
+      "title": "Reveal Card",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "tilt-media-card": {
+      "title": "Tilt Media Card",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "particle-banner": {
+      "title": "Particle Banner",
+      "site": "cultui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-slider-stepped": {
+      "title": "Origin Stepped Slider",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-switch-icon": {
+      "title": "Origin Switch Icon",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-checkbox-tree": {
+      "title": "Origin Checkbox Tree",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-phone-input": {
+      "title": "Origin Phone Input",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-password-meter": {
+      "title": "Origin Password Meter",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-badge-dot": {
+      "title": "Origin Status Badge",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-radio-cards": {
+      "title": "Origin Radio Cards",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-file-drop": {
+      "title": "Origin File Dropzone",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-number-stepper": {
+      "title": "Origin Number Stepper",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "origin-color-palette-picker": {
+      "title": "Origin Color Palette Picker",
+      "site": "originui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:34:53.330Z"
+    },
+    "tremor-area-chart-kpi": {
+      "title": "Tremor Area KPI Card",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-bar-list": {
+      "title": "Tremor Bar List",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-spark-area": {
+      "title": "Tremor Spark Area",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-tracker-status": {
+      "title": "Tremor Tracker Status",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-badge-delta-pill": {
+      "title": "Tremor Badge Delta Pill",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-category-bar": {
+      "title": "Tremor Category Bar",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-legend-indicator": {
+      "title": "Tremor Legend Indicator",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-metric-grid": {
+      "title": "Tremor Metric Grid",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-stat-card-progress": {
+      "title": "Tremor Stat Progress Card",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "tremor-callout-metric": {
+      "title": "Tremor Callout Metric",
+      "site": "tremor",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-tilt-card": {
+      "title": "Hover Tilt Card",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-fuzzy-overlay": {
+      "title": "Hover Fuzzy Overlay",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-slide-tabs": {
+      "title": "Hover Slide Tabs",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-shutter-button": {
+      "title": "Hover Shutter Button",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-clip-text": {
+      "title": "Hover Clip Text",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-gravity-button": {
+      "title": "Hover Gravity Button",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-liquid-card": {
+      "title": "Hover Liquid Card",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-spotlight-border": {
+      "title": "Hover Spotlight Border",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hover-glitch-border": {
+      "title": "Hover Glitch Border",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-pricing-badge": {
+      "title": "HyperUI Pricing Badge",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-stats-pill": {
+      "title": "HyperUI Stats Pill",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-feature-icon-card": {
+      "title": "HyperUI Feature Icon Card",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-testimonial-quote": {
+      "title": "HyperUI Testimonial Quote",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-newsletter-compact": {
+      "title": "HyperUI Newsletter Compact",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-banner-alert": {
+      "title": "HyperUI Banner Alert",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-faq-card": {
+      "title": "HyperUI FAQ Card",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
+    },
+    "hyper-avatar-stack": {
+      "title": "HyperUI Avatar Stack",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "kinetic-interactive",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:35:03.355Z"
     }
   }
 }

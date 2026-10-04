@@ -1,0 +1,27 @@
+{
+  "name": "tremor-callout-metric",
+  "type": "registry:ui",
+  "title": "Tremor Callout Metric",
+  "description": "AMANTLE UI ui: tremor-callout-metric",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-callout-metric.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorCalloutMetric\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorCalloutMetric({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`p-3.5 rounded-xl border border-primary/20 bg-primary/5 flex items-start gap-3 max-w-sm ${className}`}>\n      <span className=\"text-base\">⚡</span>\n      <div>\n        <h5 className=\"text-xs font-bold text-foreground\">Zero Runtime Overhead</h5>\n        <p className=\"text-[11px] text-muted-foreground mt-0.5 leading-relaxed\">\n          Amantle components operate with zero heavy 3D canvas libraries for maximum 60fps throughput.\n        </p>\n      </div>\n    </div>\n  );\n}\nexport default TremorCalloutMetric;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-callout-metric.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-callout-metric"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

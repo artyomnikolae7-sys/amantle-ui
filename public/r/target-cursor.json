@@ -1,0 +1,27 @@
+{
+  "name": "target-cursor",
+  "type": "registry:ui",
+  "title": "Target Cursor",
+  "description": "AMANTLE UI ui: target-cursor",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/target-cursor.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component TargetCursor\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function TargetCursor({ className = \"\" }: { className?: string }) {\n  const [locked, setLocked] = useState(false);\n  return (\n    <div\n      onClick={() => setLocked(!locked)}\n      className={`inline-flex items-center gap-2 rounded-xl border border-border/60 bg-card px-4 py-2 text-xs font-semibold shadow-sm hover:border-primary cursor-pointer active:scale-95 transition-all ${className}`}\n    >\n      <span className={`h-3 w-3 rounded-full border-2 border-primary flex items-center justify-center transition-transform ${locked ? \"scale-125 bg-primary/20\" : \"\"}`}>\n        <span className=\"h-1 w-1 rounded-full bg-primary\" />\n      </span>\n      <span>{locked ? \"TARGET LOCKED\" : \"TARGET ACQUIRE\"}</span>\n    </div>\n  );\n}\nexport default TargetCursor;\n",
+      "type": "registry:ui",
+      "target": "components/ui/target-cursor.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "target-cursor"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

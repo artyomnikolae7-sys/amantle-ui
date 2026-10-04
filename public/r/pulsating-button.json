@@ -1,0 +1,27 @@
+{
+  "name": "pulsating-button",
+  "type": "registry:ui",
+  "title": "Pulsating Button",
+  "description": "AMANTLE UI ui: pulsating-button",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pulsating-button.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component PulsatingButton\n * @source https://magicui.design\n * @author Magic UI\n * @license MIT\n */\nexport function PulsatingButton({ children = \"Live Stream Engaged\", className = \"\" }: { children?: React.ReactNode; className?: string }) {\n  return (\n    <button className={`relative inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-lg hover:bg-primary/90 active:scale-95 transition-all ${className}`}>\n      <span className=\"absolute -inset-1 rounded-xl bg-primary/30 animate-ping opacity-60\" />\n      <span className=\"relative h-2 w-2 rounded-full bg-emerald-400\" />\n      <span className=\"relative z-10\">{children}</span>\n    </button>\n  );\n}\nexport default PulsatingButton;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pulsating-button.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pulsating-button"
+  ],
+  "meta": {
+    "source": "https://magicui.design",
+    "author": "Magic UI",
+    "license": "MIT"
+  }
+}

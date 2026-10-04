@@ -1,0 +1,27 @@
+{
+  "name": "stepper-slider",
+  "type": "registry:ui",
+  "title": "Stepper Slider",
+  "description": "AMANTLE UI ui: stepper-slider",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/stepper-slider.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component StepperSlider\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function StepperSlider({ steps = 5, className = \"\" }: { steps?: number; className?: string }) {\n  const [step, setStep] = useState(2);\n  return (\n    <div className={`flex w-full max-w-xs flex-col gap-2 ${className}`}>\n      <div className=\"flex justify-between text-xs font-semibold text-muted-foreground\">\n        <span>Step Progress</span>\n        <span className=\"font-mono text-foreground font-bold\">{step + 1}/{steps}</span>\n      </div>\n      <div className=\"flex gap-1.5\">\n        {Array.from({ length: steps }).map((_, i) => (\n          <button\n            key={i}\n            onClick={() => setStep(i)}\n            className={`h-2 flex-1 rounded-full transition-all duration-200 active:scale-95 ${\n              i <= step ? \"bg-primary\" : \"bg-muted\"\n            }`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}\nexport default StepperSlider;\n",
+      "type": "registry:ui",
+      "target": "components/ui/stepper-slider.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "stepper-slider"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

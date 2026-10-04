@@ -1,0 +1,27 @@
+{
+  "name": "hyper-newsletter-compact",
+  "type": "registry:ui",
+  "title": "Hyper Newsletter Compact",
+  "description": "AMANTLE UI ui: hyper-newsletter-compact",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-newsletter-compact.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component HyperNewsletterCompact\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperNewsletterCompact({ className = \"\" }: { className?: string }) {\n  const [email, setEmail] = useState(\"\");\n  const [subscribed, setSubscribed] = useState(false);\n\n  return (\n    <form\n      onSubmit={(e) => {\n        e.preventDefault();\n        if (email) setSubscribed(true);\n      }}\n      className={`flex items-center gap-1.5 p-1 rounded-xl border border-border/70 bg-card max-w-sm ${className}`}\n    >\n      <input\n        type=\"email\"\n        value={email}\n        onChange={(e) => setEmail(e.target.value)}\n        placeholder=\"Enter your work email...\"\n        className=\"flex-1 px-3 py-1.5 text-xs bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none\"\n      />\n      <button\n        type=\"submit\"\n        className=\"px-3 py-1.5 rounded-lg bg-primary text-primary-foreground font-semibold text-xs active:scale-95 transition-all\"\n      >\n        {subscribed ? \"Joined ✓\" : \"Subscribe\"}\n      </button>\n    </form>\n  );\n}\nexport default HyperNewsletterCompact;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-newsletter-compact.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-newsletter-compact"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "origin-number-stepper",
+  "type": "registry:ui",
+  "title": "Origin Number Stepper",
+  "description": "AMANTLE UI ui: origin-number-stepper",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-number-stepper.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component OriginNumberStepper\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginNumberStepper({ min = 1, max = 99, className = \"\" }: { min?: number; max?: number; className?: string }) {\n  const [count, setCount] = useState(1);\n\n  return (\n    <div className={`inline-flex items-center rounded-xl border border-border/70 bg-card p-1 shadow-sm ${className}`}>\n      <button\n        onClick={() => setCount((c) => Math.max(min, c - 1))}\n        className=\"h-7 w-7 rounded-lg bg-muted/60 hover:bg-muted text-foreground flex items-center justify-center font-bold text-xs transition-transform active:scale-90\"\n      >\n        −\n      </button>\n      <span className=\"w-10 text-center text-xs font-mono font-semibold text-foreground select-none\">{count}</span>\n      <button\n        onClick={() => setCount((c) => Math.min(max, c + 1))}\n        className=\"h-7 w-7 rounded-lg bg-muted/60 hover:bg-muted text-foreground flex items-center justify-center font-bold text-xs transition-transform active:scale-90\"\n      >\n        +\n      </button>\n    </div>\n  );\n}\nexport default OriginNumberStepper;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-number-stepper.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-number-stepper"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

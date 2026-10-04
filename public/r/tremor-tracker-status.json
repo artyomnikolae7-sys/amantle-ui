@@ -1,0 +1,27 @@
+{
+  "name": "tremor-tracker-status",
+  "type": "registry:ui",
+  "title": "Tremor Tracker Status",
+  "description": "AMANTLE UI ui: tremor-tracker-status",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-tracker-status.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorTrackerStatus\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorTrackerStatus({ className = \"\" }: { className?: string }) {\n  const blocks = Array.from({ length: 30 }, (_, i) => ({\n    status: i === 14 ? \"degraded\" : i === 22 ? \"outage\" : \"operational\",\n  }));\n\n  const color: Record<string, string> = {\n    operational: \"bg-emerald-500\",\n    degraded: \"bg-amber-500\",\n    outage: \"bg-rose-500\",\n  };\n\n  return (\n    <div className={`w-full max-w-sm space-y-2 p-4 rounded-xl border border-border/60 bg-card ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-semibold text-foreground\">API System Uptime</span>\n        <span className=\"text-emerald-500 font-mono text-[11px] font-bold\">99.94%</span>\n      </div>\n      <div className=\"flex gap-1\">\n        {blocks.map((b, idx) => (\n          <div\n            key={idx}\n            className={`h-7 flex-1 rounded-sm transition-opacity hover:opacity-80 ${color[b.status]}`}\n            title={`Day ${idx + 1}: ${b.status}`}\n          />\n        ))}\n      </div>\n      <div className=\"flex justify-between text-[10px] text-muted-foreground font-mono\">\n        <span>30 days ago</span>\n        <span>Today</span>\n      </div>\n    </div>\n  );\n}\nexport default TremorTrackerStatus;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-tracker-status.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-tracker-status"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

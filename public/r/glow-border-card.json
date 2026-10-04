@@ -1,0 +1,27 @@
+{
+  "name": "glow-border-card",
+  "type": "registry:ui",
+  "title": "Glow Border Card",
+  "description": "AMANTLE UI ui: glow-border-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/glow-border-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component GlowBorderCard\n * @source https://cult-ui.com\n * @author Cult UI\n * @license MIT\n */\nexport function GlowBorderCard({\n  title = \"Ambient Card\",\n  description = \"Fluid micro-interaction with subtle radial border illumination.\",\n  className = \"\",\n}: {\n  title?: string;\n  description?: string;\n  className?: string;\n}) {\n  return (\n    <div className={`group relative rounded-2xl p-[1px] overflow-hidden transition-all duration-300 hover:shadow-[0_0_25px_-5px_rgba(var(--primary),0.3)] ${className}`}>\n      <div className=\"absolute inset-0 bg-gradient-to-r from-primary/30 via-cyan-500/20 to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500\" />\n      <div className=\"relative rounded-2xl bg-card p-6 border border-border/60 group-hover:border-transparent transition-colors\">\n        <div className=\"h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3 font-mono font-bold text-xs\">\n          01\n        </div>\n        <h4 className=\"font-semibold text-foreground text-sm tracking-tight\">{title}</h4>\n        <p className=\"mt-1 text-xs text-muted-foreground leading-relaxed\">{description}</p>\n      </div>\n    </div>\n  );\n}\nexport default GlowBorderCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/glow-border-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "glow-border-card"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI",
+    "license": "MIT"
+  }
+}

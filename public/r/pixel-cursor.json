@@ -1,0 +1,27 @@
+{
+  "name": "pixel-cursor",
+  "type": "registry:ui",
+  "title": "Pixel Cursor",
+  "description": "AMANTLE UI ui: pixel-cursor",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/pixel-cursor.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component PixelCursor\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function PixelCursor({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`inline-flex items-center gap-2 rounded-xl border border-dashed border-border/80 bg-muted/20 px-4 py-2 font-mono text-xs font-bold ${className}`}>\n      <span className=\"h-3 w-3 bg-foreground inline-block shadow-[2px_2px_0px_#888]\" />\n      <span>RETRO_PIXEL_TRACKER</span>\n    </div>\n  );\n}\nexport default PixelCursor;\n",
+      "type": "registry:ui",
+      "target": "components/ui/pixel-cursor.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "pixel-cursor"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

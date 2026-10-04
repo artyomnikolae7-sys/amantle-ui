@@ -1,0 +1,27 @@
+{
+  "name": "flip-words-cycle",
+  "type": "registry:ui",
+  "title": "Flip Words Cycle",
+  "description": "AMANTLE UI ui: flip-words-cycle",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/flip-words-cycle.tsx",
+      "content": "\"use client\";\nimport React, { useState, useEffect } from \"react\";\n/**\n * @component FlipWordsCycle\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function FlipWordsCycle({ words = [\"dynamic\", \"kinetic\", \"autonomous\", \"modern\"], className = \"\" }: { words?: string[]; className?: string }) {\n  const [idx, setIdx] = useState(0);\n  useEffect(() => {\n    const t = setInterval(() => setIdx(i => (i + 1) % words.length), 2000);\n    return () => clearInterval(t);\n  }, [words.length]);\n  return (\n    <span className={`font-black text-primary underline underline-offset-4 transition-all duration-300 ${className}`}>\n      {words[idx]}\n    </span>\n  );\n}\nexport default FlipWordsCycle;\n",
+      "type": "registry:ui",
+      "target": "components/ui/flip-words-cycle.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "flip-words-cycle"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "background-gradient-card",
+  "type": "registry:ui",
+  "title": "Background Gradient Card",
+  "description": "AMANTLE UI ui: background-gradient-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/background-gradient-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component BackgroundGradientCard\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function BackgroundGradientCard({ title = \"Gradient Surface\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`relative p-[2px] rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 ${className}`}>\n      <div className=\"rounded-[14px] bg-card p-5 text-center\">\n        <h4 className=\"text-xs font-bold text-foreground\">{title}</h4>\n      </div>\n    </div>\n  );\n}\nexport default BackgroundGradientCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/background-gradient-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "background-gradient-card"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

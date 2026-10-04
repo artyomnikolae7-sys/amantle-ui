@@ -1,0 +1,27 @@
+{
+  "name": "counter-spring",
+  "type": "registry:ui",
+  "title": "Counter Spring",
+  "description": "AMANTLE UI ui: counter-spring",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/counter-spring.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component CounterSpring\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function CounterSpring({ initial = 128, className = \"\" }: { initial?: number; className?: string }) {\n  const [val, setVal] = useState(initial);\n  return (\n    <div className={`inline-flex items-center gap-3 rounded-2xl border border-border/60 bg-card px-4 py-2 shadow-sm ${className}`}>\n      <button onClick={() => setVal(v => v - 1)} className=\"flex h-7 w-7 items-center justify-center rounded-lg border border-border hover:bg-muted active:scale-90 font-bold\">-</button>\n      <span className=\"font-mono text-xl font-black text-foreground min-w-[3rem] text-center\">{val}</span>\n      <button onClick={() => setVal(v => v + 1)} className=\"flex h-7 w-7 items-center justify-center rounded-lg border border-border hover:bg-muted active:scale-90 font-bold\">+</button>\n    </div>\n  );\n}\nexport default CounterSpring;\n",
+      "type": "registry:ui",
+      "target": "components/ui/counter-spring.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "counter-spring"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

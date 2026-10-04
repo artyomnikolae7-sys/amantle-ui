@@ -1,0 +1,27 @@
+{
+  "name": "hyper-testimonial-quote",
+  "type": "registry:ui",
+  "title": "Hyper Testimonial Quote",
+  "description": "AMANTLE UI ui: hyper-testimonial-quote",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hyper-testimonial-quote.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component HyperTestimonialQuote\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n */\nexport function HyperTestimonialQuote({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`p-4 rounded-xl border border-border/60 bg-muted/30 max-w-sm space-y-2 ${className}`}>\n      <div className=\"flex gap-1 text-amber-400 text-xs\">★★★★★</div>\n      <p className=\"text-xs italic text-foreground leading-relaxed\">\n        \"AMANTLE UI combined all the disparate component registries into one unified design system with zero effort.\"\n      </p>\n      <div className=\"flex items-center gap-2 pt-1\">\n        <div className=\"h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary\">\n          AL\n        </div>\n        <div>\n          <p className=\"text-[11px] font-semibold text-foreground\">Alex Lead</p>\n          <p className=\"text-[10px] text-muted-foreground\">Principal Architect</p>\n        </div>\n      </div>\n    </div>\n  );\n}\nexport default HyperTestimonialQuote;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hyper-testimonial-quote.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hyper-testimonial-quote"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT"
+  }
+}

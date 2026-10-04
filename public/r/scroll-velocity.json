@@ -1,0 +1,27 @@
+{
+  "name": "scroll-velocity",
+  "type": "registry:ui",
+  "title": "Scroll Velocity",
+  "description": "AMANTLE UI ui: scroll-velocity",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/scroll-velocity.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ScrollVelocity\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function ScrollVelocity({ text = \"KINETIC • VELOCITY • DYNAMICS • \", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <div className={`flex w-full overflow-hidden select-none py-2 text-xl font-black tracking-tight text-foreground ${className}`}>\n      <div className=\"flex shrink-0 animate-marquee gap-4\">\n        <span>{text}</span>\n        <span>{text}</span>\n        <span>{text}</span>\n      </div>\n    </div>\n  );\n}\nexport default ScrollVelocity;\n",
+      "type": "registry:ui",
+      "target": "components/ui/scroll-velocity.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "scroll-velocity"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

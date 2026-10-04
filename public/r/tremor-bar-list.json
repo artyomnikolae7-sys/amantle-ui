@@ -1,0 +1,27 @@
+{
+  "name": "tremor-bar-list",
+  "type": "registry:ui",
+  "title": "Tremor Bar List",
+  "description": "AMANTLE UI ui: tremor-bar-list",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-bar-list.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorBarList\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorBarList({ className = \"\" }: { className?: string }) {\n  const items = [\n    { name: \"/catalog/components\", value: 4520, percent: 85 },\n    { name: \"/studio\", value: 3120, percent: 62 },\n    { name: \"/templates/landing\", value: 1840, percent: 38 },\n  ];\n\n  return (\n    <div className={`w-full max-w-sm space-y-3 p-4 rounded-xl border border-border/60 bg-card ${className}`}>\n      <p className=\"text-xs font-semibold text-foreground\">Top Visited Routes</p>\n      <div className=\"space-y-2\">\n        {items.map((i) => (\n          <div key={i.name} className=\"space-y-1\">\n            <div className=\"flex justify-between text-xs\">\n              <span className=\"text-foreground font-mono text-[11px] truncate max-w-[200px]\">{i.name}</span>\n              <span className=\"text-muted-foreground font-mono text-[11px]\">{i.value.toLocaleString()}</span>\n            </div>\n            <div className=\"h-1.5 w-full bg-muted rounded-full overflow-hidden\">\n              <div className=\"h-full bg-primary rounded-full transition-all duration-500\" style={{ width: `${i.percent}%` }} />\n            </div>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\nexport default TremorBarList;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-bar-list.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-bar-list"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

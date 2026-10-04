@@ -1,0 +1,27 @@
+{
+  "name": "dock-lens",
+  "type": "registry:ui",
+  "title": "Dock Lens",
+  "description": "AMANTLE UI ui: dock-lens",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/dock-lens.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component DockLens\n * @source https://cult-ui.com\n * @author Cult UI\n * @license MIT\n */\nexport function DockLens({ className = \"\" }: { className?: string }) {\n  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);\n  const items = [\n    { label: \"Home\", icon: \"⌂\" },\n    { label: \"Search\", icon: \"🔍\" },\n    { label: \"Analytics\", icon: \"📊\" },\n    { label: \"Settings\", icon: \"⚙️\" },\n    { label: \"Profile\", icon: \"👤\" },\n  ];\n\n  return (\n    <div className={`flex items-end gap-2 p-2 rounded-2xl bg-card/80 backdrop-blur-md border border-border/60 shadow-xl ${className}`}>\n      {items.map((item, idx) => {\n        const isHovered = hoveredIdx === idx;\n        const isNeighbor = hoveredIdx !== null && Math.abs(hoveredIdx - idx) === 1;\n        const scale = isHovered ? \"scale-125 -translate-y-2\" : isNeighbor ? \"scale-110 -translate-y-1\" : \"scale-100\";\n\n        return (\n          <button\n            key={item.label}\n            onMouseEnter={() => setHoveredIdx(idx)}\n            onMouseLeave={() => setHoveredIdx(null)}\n            className={`group relative flex h-11 w-11 items-center justify-center rounded-xl bg-muted/60 hover:bg-primary/20 text-foreground transition-all duration-200 ease-out active:scale-95 ${scale}`}\n            title={item.label}\n          >\n            <span className=\"text-lg\">{item.icon}</span>\n            {isHovered && (\n              <span className=\"absolute -top-8 px-2 py-0.5 text-[10px] font-medium bg-popover text-popover-foreground rounded-md shadow-sm border border-border/40 whitespace-nowrap animate-in fade-in zoom-in-90 duration-150\">\n                {item.label}\n              </span>\n            )}\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport default DockLens;\n",
+      "type": "registry:ui",
+      "target": "components/ui/dock-lens.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "dock-lens"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI",
+    "license": "MIT"
+  }
+}

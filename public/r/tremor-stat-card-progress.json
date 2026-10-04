@@ -1,0 +1,27 @@
+{
+  "name": "tremor-stat-card-progress",
+  "type": "registry:ui",
+  "title": "Tremor Stat Card Progress",
+  "description": "AMANTLE UI ui: tremor-stat-card-progress",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-stat-card-progress.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component TremorStatCardProgress\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorStatCardProgress({ className = \"\" }: { className?: string }) {\n  return (\n    <div className={`p-4 rounded-xl border border-border/60 bg-card max-w-xs space-y-3 ${className}`}>\n      <div className=\"flex justify-between items-center text-xs\">\n        <span className=\"font-semibold text-foreground\">Weekly Target</span>\n        <span className=\"font-mono text-primary font-bold\">84%</span>\n      </div>\n      <div className=\"h-2 w-full bg-muted rounded-full overflow-hidden\">\n        <div className=\"h-full bg-primary rounded-full\" style={{ width: \"84%\" }} />\n      </div>\n      <p className=\"text-[11px] text-muted-foreground\">303 of 361 automated components passed motion audit.</p>\n    </div>\n  );\n}\nexport default TremorStatCardProgress;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-stat-card-progress.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-stat-card-progress"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

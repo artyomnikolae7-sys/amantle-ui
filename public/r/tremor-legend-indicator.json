@@ -1,0 +1,27 @@
+{
+  "name": "tremor-legend-indicator",
+  "type": "registry:ui",
+  "title": "Tremor Legend Indicator",
+  "description": "AMANTLE UI ui: tremor-legend-indicator",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tremor-legend-indicator.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component TremorLegendIndicator\n * @source https://raw.tremor.so\n * @author Tremor\n * @license MIT\n */\nexport function TremorLegendIndicator({ className = \"\" }: { className?: string }) {\n  const [active, setActive] = useState<string[]>([\"ui\", \"blocks\"]);\n\n  const items = [\n    { id: \"ui\", label: \"UI Primitives\", color: \"bg-primary\" },\n    { id: \"blocks\", label: \"Page Blocks\", color: \"bg-cyan-400\" },\n    { id: \"templates\", label: \"Templates\", color: \"bg-amber-400\" },\n  ];\n\n  const toggle = (id: string) => {\n    setActive((prev) => (prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]));\n  };\n\n  return (\n    <div className={`flex items-center gap-3 ${className}`}>\n      {items.map((item) => {\n        const isSelected = active.includes(item.id);\n        return (\n          <button\n            key={item.id}\n            onClick={() => toggle(item.id)}\n            className={`flex items-center gap-1.5 text-xs transition-opacity ${\n              isSelected ? \"opacity-100 font-medium text-foreground\" : \"opacity-40 text-muted-foreground\"\n            }`}\n          >\n            <span className={`h-2 w-2 rounded-full ${item.color}`} />\n            <span>{item.label}</span>\n          </button>\n        );\n      })}\n    </div>\n  );\n}\nexport default TremorLegendIndicator;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tremor-legend-indicator.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tremor-legend-indicator"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "MIT"
+  }
+}

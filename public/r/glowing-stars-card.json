@@ -1,0 +1,27 @@
+{
+  "name": "glowing-stars-card",
+  "type": "registry:ui",
+  "title": "Glowing Stars Card",
+  "description": "AMANTLE UI ui: glowing-stars-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/glowing-stars-card.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component GlowingStarsCard\n * @source https://ui.aceternity.com\n * @author Aceternity UI\n * @license MIT\n */\nexport function GlowingStarsCard({ title = \"Starlight Grid Deck\", className = \"\" }: { title?: string; className?: string }) {\n  return (\n    <div className={`flex h-36 w-60 flex-col justify-between rounded-2xl border border-border/60 bg-card p-5 shadow-sm ${className}`}>\n      <span className=\"text-xs font-bold text-primary\">✦ ✧ ✦</span>\n      <h4 className=\"text-xs font-bold text-foreground\">{title}</h4>\n    </div>\n  );\n}\nexport default GlowingStarsCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/glowing-stars-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "glowing-stars-card"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com",
+    "author": "Aceternity UI",
+    "license": "MIT"
+  }
+}

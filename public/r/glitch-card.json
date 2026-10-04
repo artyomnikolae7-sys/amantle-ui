@@ -1,0 +1,27 @@
+{
+  "name": "glitch-card",
+  "type": "registry:ui",
+  "title": "Glitch Card",
+  "description": "AMANTLE UI ui: glitch-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/glitch-card.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component GlitchCard\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function GlitchCard({ title = \"Cyber Glitch Surface\", className = \"\" }: { title?: string; className?: string }) {\n  const [glitch, setGlitch] = useState(false);\n  return (\n    <div\n      onMouseEnter={() => setGlitch(true)}\n      onMouseLeave={() => setGlitch(false)}\n      className={`relative h-44 w-64 overflow-hidden rounded-2xl border border-border/60 bg-card p-5 shadow-md cursor-pointer flex flex-col justify-between ${className}`}\n    >\n      <div className={`text-xs font-mono font-bold ${glitch ? \"text-rose-500 animate-pulse\" : \"text-primary\"}`}>\n        {glitch ? \"ERR_OVERCLOCK_0x9\" : \"SYS_STABLE\"}\n      </div>\n      <div>\n        <h4 className=\"text-sm font-bold text-foreground\">{title}</h4>\n        <p className=\"text-xs text-muted-foreground\">Hover to trigger chromatic slice</p>\n      </div>\n    </div>\n  );\n}\nexport default GlitchCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/glitch-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "glitch-card"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}

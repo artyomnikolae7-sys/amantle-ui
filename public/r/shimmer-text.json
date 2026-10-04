@@ -1,0 +1,27 @@
+{
+  "name": "shimmer-text",
+  "type": "registry:ui",
+  "title": "Shimmer Text",
+  "description": "AMANTLE UI ui: shimmer-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/shimmer-text.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component ShimmerText\n * @source https://cult-ui.com\n * @author Cult UI\n * @license MIT\n */\nexport function ShimmerText({ text = \"CULT UI EXPERIENCE\", className = \"\" }: { text?: string; className?: string }) {\n  return (\n    <div className={`inline-block font-bold tracking-wider text-xl uppercase select-none ${className}`}>\n      <span className=\"bg-gradient-to-r from-foreground/40 via-foreground via-50% to-foreground/40 bg-[length:200%_auto] bg-clip-text text-transparent animate-[shimmer_3s_infinite_linear]\">\n        {text}\n      </span>\n      <style jsx>{`\n        @keyframes shimmer {\n          0% { background-position: 200% center; }\n          100% { background-position: -200% center; }\n        }\n      `}</style>\n    </div>\n  );\n}\nexport default ShimmerText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/shimmer-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "shimmer-text"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com",
+    "author": "Cult UI",
+    "license": "MIT"
+  }
+}

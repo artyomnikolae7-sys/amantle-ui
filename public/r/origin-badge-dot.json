@@ -1,0 +1,27 @@
+{
+  "name": "origin-badge-dot",
+  "type": "registry:ui",
+  "title": "Origin Badge Dot",
+  "description": "AMANTLE UI ui: origin-badge-dot",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-badge-dot.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n/**\n * @component OriginBadgeDot\n * @source https://originui.com\n * @author Origin UI\n * @license MIT\n */\nexport function OriginBadgeDot({\n  label = \"Operational\",\n  variant = \"emerald\",\n  className = \"\",\n}: {\n  label?: string;\n  variant?: \"emerald\" | \"amber\" | \"rose\" | \"blue\";\n  className?: string;\n}) {\n  const colorMap = {\n    emerald: \"bg-emerald-500/10 text-emerald-500 border-emerald-500/20\",\n    amber: \"bg-amber-500/10 text-amber-500 border-amber-500/20\",\n    rose: \"bg-rose-500/10 text-rose-500 border-rose-500/20\",\n    blue: \"bg-blue-500/10 text-blue-500 border-blue-500/20\",\n  };\n\n  const dotMap = {\n    emerald: \"bg-emerald-500\",\n    amber: \"bg-amber-500\",\n    rose: \"bg-rose-500\",\n    blue: \"bg-blue-500\",\n  };\n\n  return (\n    <span\n      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium border ${colorMap[variant]} ${className}`}\n    >\n      <span className={`h-1.5 w-1.5 rounded-full ${dotMap[variant]}`} />\n      {label}\n    </span>\n  );\n}\nexport default OriginBadgeDot;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-badge-dot.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-badge-dot"
+  ],
+  "meta": {
+    "source": "https://originui.com",
+    "author": "Origin UI",
+    "license": "MIT"
+  }
+}

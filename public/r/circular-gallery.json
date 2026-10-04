@@ -1,0 +1,27 @@
+{
+  "name": "circular-gallery",
+  "type": "registry:ui",
+  "title": "Circular Gallery",
+  "description": "AMANTLE UI ui: circular-gallery",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/circular-gallery.tsx",
+      "content": "\"use client\";\nimport React, { useState } from \"react\";\n/**\n * @component CircularGallery\n * @source https://reactbits.dev\n * @author React Bits\n * @license MIT\n */\nexport function CircularGallery({ className = \"\" }: { className?: string }) {\n  const [deg, setDeg] = useState(0);\n  return (\n    <div className={`flex flex-col items-center gap-4 rounded-2xl border border-border/60 bg-card p-6 shadow-md ${className}`}>\n      <div\n        style={{ transform: `rotate(${deg}deg)`, transition: \"transform 300ms cubic-bezier(0.23, 1, 0.32, 1)\" }}\n        className=\"relative h-32 w-32 rounded-full border-2 border-dashed border-primary/40 flex items-center justify-center\"\n      >\n        <span className=\"absolute -top-3 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold text-primary-foreground\">01</span>\n        <span className=\"absolute -bottom-3 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold text-primary-foreground\">03</span>\n        <span className=\"absolute -left-3 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold text-primary-foreground\">04</span>\n        <span className=\"absolute -right-3 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold text-primary-foreground\">02</span>\n        <div className=\"h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary\">⚙️</div>\n      </div>\n      <div className=\"flex gap-2\">\n        <button onClick={() => setDeg(d => d - 90)} className=\"rounded-lg border border-border px-2.5 py-1 text-xs hover:bg-muted active:scale-95\">⟲ 90°</button>\n        <button onClick={() => setDeg(d => d + 90)} className=\"rounded-lg border border-border px-2.5 py-1 text-xs hover:bg-muted active:scale-95\">⟳ 90°</button>\n      </div>\n    </div>\n  );\n}\nexport default CircularGallery;\n",
+      "type": "registry:ui",
+      "target": "components/ui/circular-gallery.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "circular-gallery"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev",
+    "author": "React Bits",
+    "license": "MIT"
+  }
+}
