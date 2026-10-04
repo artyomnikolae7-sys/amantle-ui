@@ -83,8 +83,9 @@ async function main() {
   try {
     const remotes = execSync("git remote", { cwd: ROOT_DIR, encoding: "utf-8" }).trim();
     if (remotes.includes("origin") && shouldPush) {
-      console.log("  🚀 Pushing to origin master and tags...");
-      runCommand("git push origin master --tags");
+      const currentBranch = execSync("git rev-parse --abbrev-ref HEAD", { cwd: ROOT_DIR, encoding: "utf-8" }).trim();
+      console.log(`  🚀 Pushing to origin ${currentBranch} and tags...`);
+      runCommand(`git push origin ${currentBranch} --tags`);
       console.log("  ✅ Push completed successfully!");
     } else {
       console.log("  ℹ️ Remote 'origin' is not yet configured or --no-push was specified.");
