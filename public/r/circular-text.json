@@ -1,0 +1,28 @@
+{
+  "name": "circular-text",
+  "type": "registry:ui",
+  "title": "Circular Text",
+  "description": "AMANTLE UI ui: circular-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/circular-text.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component CircularText\n * @source https://reactbits.dev/text-animations/circular-text\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface CircularTextProps {\n  text?: string;\n  radius?: number;\n  spinDuration?: number;\n  className?: string;\n}\n\nexport function CircularText({\n  text = \"AMANTLE UI • CRAFTED WITH EMIL SPRINGS • \",\n  radius = 60,\n  spinDuration = 18,\n  className = \"\",\n}: CircularTextProps) {\n  const characters = text.split(\"\");\n  const degStep = 360 / characters.length;\n\n  return (\n    <div\n      className={`relative inline-flex items-center justify-center ${className}`}\n      style={{ width: radius * 2 + 40, height: radius * 2 + 40 }}\n    >\n      <div\n        className=\"absolute inset-0 flex items-center justify-center animate-spin\"\n        style={{ animationDuration: `${spinDuration}s` }}\n      >\n        {characters.map((char, index) => {\n          const rotate = index * degStep;\n          return (\n            <span\n              key={index}\n              className=\"absolute text-xs font-semibold uppercase tracking-widest text-foreground/80 select-none\"\n              style={{\n                transform: `rotate(${rotate}deg) translate(0, -${radius}px)`,\n                transformOrigin: \"center center\",\n              }}\n            >\n              {char}\n            </span>\n          );\n        })}\n      </div>\n      <div className=\"h-4 w-4 rounded-full bg-primary/20 ring-4 ring-primary/10\" />\n    </div>\n  );\n}\n\nexport default CircularText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/circular-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "circular-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/circular-text",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

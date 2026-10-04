@@ -1,0 +1,252 @@
+{
+  "sites": [
+    {
+      "id": "reactbits",
+      "name": "React Bits",
+      "url": "https://reactbits.dev",
+      "category": "animations-and-components",
+      "components": [
+        {
+          "name": "text-pressure",
+          "title": "Text Pressure",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "Variable font pressure animation responding dynamically to mouse proximity and movement.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "glitch-text",
+          "title": "Glitch Text",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "High-energy cyberpunk glitch animation with RGB split and random slice offsets.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "variable-proximity",
+          "title": "Variable Proximity",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "Text characters smoothly scale and shift weights based on radial cursor distance.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "circular-text",
+          "title": "Circular Text",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "Text arranged along a circular SVG curve with continuous smooth rotation.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "wave-text",
+          "title": "Wave Text",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "Fluid sine-wave text ripple effect propagating through individual letters.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "rolling-gallery",
+          "title": "Rolling Gallery",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "3D cylindrical rotating item carousel with smooth drag and inertia physics.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "elastic-slider",
+          "title": "Elastic Slider",
+          "category": "ui",
+          "family": "inputs-forms",
+          "description": "Range slider with organic rubber-band physics on drag limits and spring return.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "flowing-menu",
+          "title": "Flowing Menu",
+          "category": "ui",
+          "family": "navigation-menus",
+          "description": "Interactive list items that reveal hovering image cards and marquee text on mouseover.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "tilted-card",
+          "title": "Tilted Card",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "Hyper-smooth 3D parallax tilt card with dynamic specular glare and smooth spring dampening.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "spotlight-card",
+          "title": "Spotlight Card",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "Card surface with radial gradient illumination tracking cursor coordinates.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "infinite-scroll",
+          "title": "Infinite Scroll",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Seamless infinite scrolling banner with customizable speed and pause-on-hover.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "magnet",
+          "title": "Magnet",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Interactive wrapper pulling child elements towards cursor with spring elasticity.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "magnet-lines",
+          "title": "Magnet Lines",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Grid of directional lines rotating to dynamically point directly at mouse position.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "crosshair",
+          "title": "Crosshair",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Interactive targeting reticle overlay with smooth spring-delayed tracking.",
+          "author": "React Bits",
+          "license": "MIT"
+        },
+        {
+          "name": "electric-border",
+          "title": "Electric Border",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Pulsating high-voltage neon arc border effect around any container.",
+          "author": "React Bits",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "magicui",
+      "name": "Magic UI",
+      "url": "https://magicui.design",
+      "category": "modern-primitives",
+      "components": [
+        {
+          "name": "marquee",
+          "title": "Marquee",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Smooth GPU-accelerated horizontal looping ticker with reverse and pause controls.",
+          "author": "Magic UI",
+          "license": "MIT"
+        },
+        {
+          "name": "rainbow-button",
+          "title": "Rainbow Button",
+          "category": "ui",
+          "family": "buttons-actions",
+          "description": "Vibrant chromatic perimeter gradient rotating continuously around an action button.",
+          "author": "Magic UI",
+          "license": "MIT"
+        },
+        {
+          "name": "orbiting-circles",
+          "title": "Orbiting Circles",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Concentric planetary orbits with icons moving along circular tracks at varying speeds.",
+          "author": "Magic UI",
+          "license": "MIT"
+        },
+        {
+          "name": "avatar-circles",
+          "title": "Avatar Circles",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Overlapping stacked avatar pile with remaining user count indicator and hover springs.",
+          "author": "Magic UI",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "aceternity",
+      "name": "Aceternity UI",
+      "url": "https://ui.aceternity.com",
+      "category": "cinematic-ui",
+      "components": [
+        {
+          "name": "tracing-beam",
+          "title": "Tracing Beam",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Vertical SVG trace light running along scroll progress with glow halo.",
+          "author": "Aceternity UI",
+          "license": "MIT"
+        },
+        {
+          "name": "floating-navbar",
+          "title": "Floating Navbar",
+          "category": "ui",
+          "family": "navigation-menus",
+          "description": "Detached floating navigation pill responding to scroll direction with spring entrance.",
+          "author": "Aceternity UI",
+          "license": "MIT"
+        },
+        {
+          "name": "hover-border-gradient",
+          "title": "Hover Border Gradient",
+          "category": "ui",
+          "family": "buttons-actions",
+          "description": "Card button with a subtle highlighted gradient moving along border perimeter on hover.",
+          "author": "Aceternity UI",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "kokonut",
+      "name": "Kokonut UI / 21st.dev",
+      "url": "https://21st.dev",
+      "category": "next-gen-tools",
+      "components": [
+        {
+          "name": "action-bar-glow",
+          "title": "Action Bar Glow",
+          "category": "ui",
+          "family": "navigation-menus",
+          "description": "Floating action dock with neon underglow and contextual tooltips.",
+          "author": "21st.dev",
+          "license": "MIT"
+        },
+        {
+          "name": "ai-prompt-input",
+          "title": "AI Prompt Input",
+          "category": "ui",
+          "family": "inputs-forms",
+          "description": "Expanding AI command input with model selector, attachment pill, and animated send button.",
+          "author": "21st.dev",
+          "license": "MIT"
+        }
+      ]
+    }
+  ]
+}

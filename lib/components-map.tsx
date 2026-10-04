@@ -234,12 +234,43 @@ import { ButtonCyberGlass } from "@/registry/ui/button-cyber-glass";
 import { CardCyberGlass } from "@/registry/ui/card-cyber-glass";
 import { InputCyberGlass } from "@/registry/ui/input-cyber-glass";
 import { InputNeubrutalist } from "@/registry/ui/input-neubrutalist";
+import { TextPressure } from "@/registry/ui/text-pressure";
+import { GlitchText } from "@/registry/ui/glitch-text";
+import { VariableProximity } from "@/registry/ui/variable-proximity";
+import { CircularText } from "@/registry/ui/circular-text";
+import { WaveText } from "@/registry/ui/wave-text";
 // Page Templates
 import SaasLandingPage from "@/registry/templates/saas-landing-page";
 import ModernDashboardPage from "@/registry/templates/modern-dashboard-page";
 import AuthSplitScreenPage from "@/registry/templates/auth-split-screen-page";
 
 export const componentMap: Record<string, React.ComponentType<any>> = {
+  "text-pressure": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TextPressure {...props} />
+    </div>
+  ),
+  "glitch-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GlitchText {...props} />
+    </div>
+  ),
+  "variable-proximity": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <VariableProximity {...props} />
+    </div>
+  ),
+  "circular-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <CircularText {...props} />
+    </div>
+  ),
+  "wave-text": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <WaveText {...props} />
+    </div>
+  ),
+
   "button-elastic-bounce": (props: any) => (
     <div className="flex items-center justify-center p-6">
       <ButtonElasticBounce {...props} />

@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2026-10-04T17:55:45.689Z",
+  "activeSite": "reactbits",
+  "stats": {
+    "totalSites": 4,
+    "totalComponents": 24,
+    "completed": 0,
+    "pending": 24,
+    "failed": 0
+  },
+  "harvested": {
+    "text-pressure": {
+      "title": "Text Pressure",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:55:33.578Z"
+    },
+    "glitch-text": {
+      "title": "Glitch Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:55:33.653Z"
+    },
+    "variable-proximity": {
+      "title": "Variable Proximity",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:55:33.706Z"
+    },
+    "circular-text": {
+      "title": "Circular Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:55:33.757Z"
+    },
+    "wave-text": {
+      "title": "Wave Text",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:55:33.809Z"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "wave-text",
+  "type": "registry:ui",
+  "title": "Wave Text",
+  "description": "AMANTLE UI ui: wave-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/wave-text.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component WaveText\n * @source https://reactbits.dev/text-animations/wave-text\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface WaveTextProps {\n  text?: string;\n  className?: string;\n}\n\nexport function WaveText({\n  text = \"Fluid Wave Typography\",\n  className = \"\",\n}: WaveTextProps) {\n  const letters = text.split(\"\");\n\n  return (\n    <div className={`inline-flex select-none items-center overflow-hidden font-bold tracking-tight text-xl md:text-2xl ${className}`}>\n      {letters.map((char, i) => (\n        <span\n          key={i}\n          className=\"inline-block transition-transform hover:-translate-y-2\"\n          style={{\n            animation: `amantel-wave 1.6s ease-in-out infinite`,\n            animationDelay: `${i * 0.08}s`,\n            transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\",\n          }}\n        >\n          {char === \" \" ? \"\\u00A0\" : char}\n        </span>\n      ))}\n    </div>\n  );\n}\n\nexport default WaveText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/wave-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "wave-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/wave-text",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "glitch-text",
+  "type": "registry:ui",
+  "title": "Glitch Text",
+  "description": "AMANTLE UI ui: glitch-text",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/glitch-text.tsx",
+      "content": "\"use client\";\n\nimport React, { useState, useEffect } from \"react\";\n\n/**\n * @component GlitchText\n * @source https://reactbits.dev/text-animations/glitch-text\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface GlitchTextProps {\n  text?: string;\n  speed?: number;\n  className?: string;\n}\n\nexport function GlitchText({\n  text = \"SYSTEM_BREACH\",\n  speed = 1,\n  className = \"\",\n}: GlitchTextProps) {\n  const [isGlitching, setIsGlitching] = useState(false);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setIsGlitching(true);\n      setTimeout(() => setIsGlitching(false), 240);\n    }, 2800 / speed);\n    return () => clearInterval(interval);\n  }, [speed]);\n\n  return (\n    <div className={`relative inline-block select-none font-mono font-bold tracking-wider ${className}`}>\n      <span className=\"relative z-10 text-foreground\">{text}</span>\n      {isGlitching && (\n        <>\n          <span\n            aria-hidden=\"true\"\n            className=\"absolute left-0 top-0 -translate-x-[2px] translate-y-[1px] text-cyan-500 opacity-80 mix-blend-screen\"\n            style={{ clipPath: \"polygon(0 15%, 100% 15%, 100% 45%, 0 45%)\" }}\n          >\n            {text}\n          </span>\n          <span\n            aria-hidden=\"true\"\n            className=\"absolute left-0 top-0 translate-x-[2px] -translate-y-[1px] text-rose-500 opacity-80 mix-blend-screen\"\n            style={{ clipPath: \"polygon(0 60%, 100% 60%, 100% 85%, 0 85%)\" }}\n          >\n            {text}\n          </span>\n        </>\n      )}\n    </div>\n  );\n}\n\nexport default GlitchText;\n",
+      "type": "registry:ui",
+      "target": "components/ui/glitch-text.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "glitch-text"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/glitch-text",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

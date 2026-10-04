@@ -1,0 +1,28 @@
+{
+  "name": "variable-proximity",
+  "type": "registry:ui",
+  "title": "Variable Proximity",
+  "description": "AMANTLE UI ui: variable-proximity",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/variable-proximity.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState } from \"react\";\n\n/**\n * @component VariableProximity\n * @source https://reactbits.dev/text-animations/variable-proximity\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface VariableProximityProps {\n  label?: string;\n  className?: string;\n  radius?: number;\n}\n\nexport function VariableProximity({\n  label = \"Hover anywhere near this text to expand its presence\",\n  className = \"\",\n  radius = 120,\n}: VariableProximityProps) {\n  const containerRef = useRef<HTMLParagraphElement>(null);\n  const words = label.split(\" \");\n  const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null);\n\n  const handleMouseMove = (e: React.MouseEvent) => {\n    if (!containerRef.current) return;\n    const rect = containerRef.current.getBoundingClientRect();\n    setCursor({ x: e.clientX - rect.left, y: e.clientY - rect.top });\n  };\n\n  const handleMouseLeave = () => setCursor(null);\n\n  return (\n    <p\n      ref={containerRef}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={handleMouseLeave}\n      className={`flex flex-wrap items-center gap-x-2 gap-y-1 text-base leading-relaxed text-muted-foreground select-none ${className}`}\n    >\n      {words.map((word, i) => (\n        <span\n          key={i}\n          className=\"inline-block transition-all duration-200 motion-reduce:transition-none hover:text-foreground\"\n          style={{\n            transform: cursor ? \"scale(1.04)\" : \"scale(1)\",\n            transitionTimingFunction: \"cubic-bezier(0.23, 1, 0.32, 1)\",\n          }}\n        >\n          {word}\n        </span>\n      ))}\n    </p>\n  );\n}\n\nexport default VariableProximity;\n",
+      "type": "registry:ui",
+      "target": "components/ui/variable-proximity.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "variable-proximity"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/variable-proximity",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

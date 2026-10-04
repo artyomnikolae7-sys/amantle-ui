@@ -1,0 +1,28 @@
+{
+  "name": "text-pressure",
+  "type": "registry:ui",
+  "title": "Text Pressure",
+  "description": "AMANTLE UI ui: text-pressure",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/text-pressure.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState, useEffect } from \"react\";\n\n/**\n * @component TextPressure\n * @source https://reactbits.dev/text-animations/text-pressure\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Kowalski Physics)\n */\nexport interface TextPressureProps {\n  text?: string;\n  className?: string;\n  textColor?: string;\n  minFontSize?: number;\n  maxFontSize?: number;\n}\n\nexport function TextPressure({\n  text = \"AMANTLE\",\n  className = \"\",\n  textColor = \"text-foreground\",\n  minFontSize = 24,\n  maxFontSize = 72,\n}: TextPressureProps) {\n  const containerRef = useRef<HTMLDivElement>(null);\n  const [mouseDistances, setMouseDistances] = useState<number[]>([]);\n\n  const chars = text.split(\"\");\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!containerRef.current) return;\n    const rect = containerRef.current.getBoundingClientRect();\n    const cursorX = e.clientX - rect.left;\n    const cursorY = e.clientY - rect.top;\n\n    const charElements = containerRef.current.children;\n    const distances: number[] = [];\n\n    for (let i = 0; i < charElements.length; i++) {\n      const charRect = (charElements[i] as HTMLElement).getBoundingClientRect();\n      const charCenterX = charRect.left + charRect.width / 2 - rect.left;\n      const charCenterY = charRect.top + charRect.height / 2 - rect.top;\n      const dist = Math.hypot(cursorX - charCenterX, cursorY - charCenterY);\n      distances.push(dist);\n    }\n    setMouseDistances(distances);\n  };\n\n  const handleMouseLeave = () => {\n    setMouseDistances([]);\n  };\n\n  return (\n    <div\n      ref={containerRef}\n      onMouseMove={handleMouseMove}\n      onMouseLeave={handleMouseLeave}\n      className={`inline-flex select-none items-center justify-center gap-1 py-4 font-black tracking-tighter ${className}`}\n    >\n      {chars.map((char, index) => {\n        const dist = mouseDistances[index] ?? 200;\n        // Inverse proximity weight & scale\n        const proximity = Math.max(0, 1 - dist / 150);\n        const fontWeight = Math.round(300 + proximity * 600);\n        const scale = 1 + proximity * 0.25;\n\n        return (\n          <span\n            key={index}\n            style={{\n              fontWeight,\n              transform: `scale(${scale})`,\n              transition: \"transform 180ms cubic-bezier(0.23, 1, 0.32, 1), font-weight 180ms cubic-bezier(0.23, 1, 0.32, 1)\",\n            }}\n            className={`inline-block transition-transform duration-150 motion-reduce:transition-none ${textColor}`}\n          >\n            {char === \" \" ? \"\\u00A0\" : char}\n          </span>\n        );\n      })}\n    </div>\n  );\n}\n\nexport default TextPressure;\n",
+      "type": "registry:ui",
+      "target": "components/ui/text-pressure.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "text-pressure"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/text-animations/text-pressure",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Kowalski Physics)"
+  }
+}

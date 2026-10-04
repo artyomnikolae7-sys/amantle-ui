@@ -3068,6 +3068,106 @@
     }
   },
   {
+    "name": "text-pressure",
+    "type": "registry:ui",
+    "title": "Text Pressure",
+    "description": "AMANTLE UI ui: text-pressure",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "text-pressure"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/text-pressure",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Kowalski Physics)"
+    }
+  },
+  {
+    "name": "glitch-text",
+    "type": "registry:ui",
+    "title": "Glitch Text",
+    "description": "AMANTLE UI ui: glitch-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "glitch-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/glitch-text",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "variable-proximity",
+    "type": "registry:ui",
+    "title": "Variable Proximity",
+    "description": "AMANTLE UI ui: variable-proximity",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "variable-proximity"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/variable-proximity",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "circular-text",
+    "type": "registry:ui",
+    "title": "Circular Text",
+    "description": "AMANTLE UI ui: circular-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "circular-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/circular-text",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "wave-text",
+    "type": "registry:ui",
+    "title": "Wave Text",
+    "description": "AMANTLE UI ui: wave-text",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "wave-text"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/text-animations/wave-text",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
     "name": "hero-simple",
     "type": "registry:block",
     "title": "Hero Simple",
