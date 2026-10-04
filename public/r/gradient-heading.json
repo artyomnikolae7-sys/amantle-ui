@@ -1,0 +1,28 @@
+{
+  "name": "gradient-heading",
+  "type": "registry:ui",
+  "title": "Gradient Heading",
+  "description": "AMANTLE UI ui: gradient-heading",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/gradient-heading.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component GradientHeading\n * @source https://cult-ui.com/docs/components/gradient-heading\n * @author Cult UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface GradientHeadingProps {\n  children?: React.ReactNode;\n  gradient?: string;\n  size?: \"sm\" | \"md\" | \"lg\" | \"xl\";\n  className?: string;\n}\n\nexport function GradientHeading({\n  children = \"Kinetic Intelligence Interface\",\n  gradient = \"from-cyan-400 via-violet-500 to-fuchsia-500\",\n  size = \"lg\",\n  className = \"\",\n}: GradientHeadingProps) {\n  const sizeClasses = {\n    sm: \"text-xl md:text-2xl\",\n    md: \"text-2xl md:text-3xl\",\n    lg: \"text-3xl md:text-5xl\",\n    xl: \"text-4xl md:text-6xl\",\n  };\n\n  return (\n    <h2\n      className={`font-black tracking-tight bg-gradient-to-r bg-clip-text text-transparent select-none ${gradient} ${sizeClasses[size]} ${className}`}\n    >\n      {children}\n    </h2>\n  );\n}\n\nexport default GradientHeading;\n",
+      "type": "registry:ui",
+      "target": "components/ui/gradient-heading.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "gradient-heading"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com/docs/components/gradient-heading",
+    "author": "Cult UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

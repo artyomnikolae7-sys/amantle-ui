@@ -1,0 +1,115 @@
+{
+  "title": "Shadcn Studio Curated Registry Directory",
+  "description": "Сборник и каталог внешних open-source дизайн-систем, реестров и библиотек компонентов, агрегированных в Shadcn Studio и AMANTLE UI.",
+  "updatedAt": "2026-10-04T21:10:00.000Z",
+  "registries": [
+    {
+      "id": "reactbits",
+      "name": "React Bits",
+      "url": "https://reactbits.dev",
+      "author": "David Hckh",
+      "tags": ["Text Animations", "Kinetic Motion", "Micro-Interactions", "Components"],
+      "harvestedCount": 15,
+      "license": "MIT"
+    },
+    {
+      "id": "magicui",
+      "name": "Magic UI",
+      "url": "https://magicui.design",
+      "author": "Dillion Verma",
+      "tags": ["Backgrounds", "Bento Grid", "Marquee", "Buttons", "Orbits"],
+      "harvestedCount": 4,
+      "license": "MIT"
+    },
+    {
+      "id": "aceternity",
+      "name": "Aceternity UI",
+      "url": "https://ui.aceternity.com",
+      "author": "Manu Arora",
+      "tags": ["Cinematic UI", "Tracing Beam", "Floating Navbar", "Moving Borders"],
+      "harvestedCount": 3,
+      "license": "MIT"
+    },
+    {
+      "id": "kokonut",
+      "name": "Kokonut UI / 21st.dev",
+      "url": "https://21st.dev",
+      "author": "Community & Kokonut",
+      "tags": ["AI Prompts", "Action Bars", "Modern Inputs", "SaaS Primitives"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "shadcnstudio",
+      "name": "Shadcn Studio",
+      "url": "https://shadcnstudio.dev",
+      "author": "Shadcn Studio Team",
+      "tags": ["Visual Inspector", "Property Editor", "Code Exporter", "Builder Studio"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "cultui",
+      "name": "Cult UI",
+      "url": "https://cult-ui.com",
+      "author": "Cult UI Team",
+      "tags": ["Gradient Heading", "Minimal Apple-Style Cards", "Micro-Interactions"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "originui",
+      "name": "Origin UI",
+      "url": "https://originui.com",
+      "author": "Origin UI Team",
+      "tags": ["Advanced Inputs", "Tag Chips", "Custom Selects", "Form Controls"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "tremor",
+      "name": "Tremor Raw",
+      "url": "https://raw.tremor.so",
+      "author": "Tremor Team",
+      "tags": ["KPI Metrics", "Sparklines", "Progress Milestones", "Analytics Cards"],
+      "harvestedCount": 2,
+      "license": "Apache 2.0"
+    },
+    {
+      "id": "hoverdev",
+      "name": "Hover.dev",
+      "url": "https://hover.dev",
+      "author": "Tom Is Loading",
+      "tags": ["Hover Accordion", "Water Drop Grid", "Physics Interactions"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "hyperui",
+      "name": "HyperUI / Float UI",
+      "url": "https://hyperui.dev",
+      "author": "Mark Mead & Float UI",
+      "tags": ["Feature Pills", "Marketing Accent Cards", "Modern Blocks"],
+      "harvestedCount": 2,
+      "license": "MIT"
+    },
+    {
+      "id": "shadcn-official",
+      "name": "shadcn/ui (Core)",
+      "url": "https://ui.shadcn.com",
+      "author": "Shadcn",
+      "tags": ["Radix Primitives", "Tailwind CSS", "Accessible Primitives"],
+      "harvestedCount": 60,
+      "license": "MIT"
+    },
+    {
+      "id": "lukacho",
+      "name": "Lukacho UI",
+      "url": "https://lukacho.com",
+      "author": "Luka",
+      "tags": ["Card Hovers", "Grid Lines", "Glow Effects"],
+      "harvestedCount": 5,
+      "license": "MIT"
+    }
+  ]
+}

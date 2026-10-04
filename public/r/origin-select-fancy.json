@@ -1,0 +1,28 @@
+{
+  "name": "origin-select-fancy",
+  "type": "registry:ui",
+  "title": "Origin Select Fancy",
+  "description": "AMANTLE UI ui: origin-select-fancy",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-select-fancy.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component OriginSelectFancy\n * @source https://originui.com/selects\n * @author Origin UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface OriginSelectOption {\n  value: string;\n  label: string;\n  icon?: string;\n}\n\nexport interface OriginSelectFancyProps {\n  options?: OriginSelectOption[];\n  defaultValue?: string;\n  className?: string;\n}\n\nexport function OriginSelectFancy({\n  options = [\n    { value: \"reactbits\", label: \"React Bits Engine\", icon: \"⚡\" },\n    { value: \"magicui\", label: \"Magic UI Primitives\", icon: \"✨\" },\n    { value: \"aceternity\", label: \"Aceternity Cinematic\", icon: \"🌌\" },\n    { value: \"cultui\", label: \"Cult UI Minimal\", icon: \"🪐\" },\n  ],\n  defaultValue = \"reactbits\",\n  className = \"\",\n}: OriginSelectFancyProps) {\n  const [selected, setSelected] = useState(defaultValue);\n  const [open, setOpen] = useState(false);\n\n  const activeOption = options.find((o) => o.value === selected) || options[0];\n\n  return (\n    <div className={`relative w-full max-w-xs ${className}`}>\n      <button\n        type=\"button\"\n        onClick={() => setOpen(!open)}\n        className=\"flex w-full items-center justify-between rounded-xl border border-border/60 bg-card px-4 py-2.5 text-xs font-semibold text-foreground shadow-xs transition-all hover:bg-muted/30 active:scale-[0.98]\"\n        style={{ transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\" }}\n      >\n        <span className=\"flex items-center gap-2\">\n          <span>{activeOption.icon}</span>\n          <span>{activeOption.label}</span>\n        </span>\n        <span className={`text-muted-foreground transition-transform duration-200 ${open ? \"rotate-180\" : \"\"}`}>\n          ▾\n        </span>\n      </button>\n\n      {open && (\n        <div\n          className=\"absolute z-50 mt-1.5 flex w-full flex-col overflow-hidden rounded-xl border border-border/60 bg-card p-1 shadow-xl animate-in fade-in zoom-in-95 duration-150\"\n        >\n          {options.map((opt) => (\n            <button\n              key={opt.value}\n              onClick={() => {\n                setSelected(opt.value);\n                setOpen(false);\n              }}\n              className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium transition-colors ${\n                selected === opt.value ? \"bg-primary text-primary-foreground\" : \"text-foreground hover:bg-muted\"\n              }`}\n            >\n              <span className=\"flex items-center gap-2\">\n                <span>{opt.icon}</span>\n                <span>{opt.label}</span>\n              </span>\n              {selected === opt.value && <span>✓</span>}\n            </button>\n          ))}\n        </div>\n      )}\n    </div>\n  );\n}\n\nexport default OriginSelectFancy;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-select-fancy.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-select-fancy"
+  ],
+  "meta": {
+    "source": "https://originui.com/selects",
+    "author": "Origin UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ai-prompt-input",
+  "type": "registry:ui",
+  "title": "Ai Prompt Input",
+  "description": "AMANTLE UI ui: ai-prompt-input",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/ai-prompt-input.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component AiPromptInput\n * @source https://21st.dev/community/ai-prompt-input\n * @author 21st.dev\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface AiPromptInputProps {\n  placeholder?: string;\n  onSubmit?: (prompt: string) => void;\n  className?: string;\n}\n\nexport function AiPromptInput({\n  placeholder = \"Ask AMANTLE AI anything...\",\n  onSubmit,\n  className = \"\",\n}: AiPromptInputProps) {\n  const [val, setVal] = useState(\"\");\n\n  const handleSubmit = (e: React.FormEvent) => {\n    e.preventDefault();\n    if (!val.trim()) return;\n    onSubmit?.(val);\n    setVal(\"\");\n  };\n\n  return (\n    <form\n      onSubmit={handleSubmit}\n      className={`relative flex w-full max-w-lg items-center gap-2 rounded-2xl border border-border/60 bg-card p-2 shadow-lg transition-all focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 ${className}`}\n    >\n      <div className=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary text-xs font-bold\">\n        ✨\n      </div>\n      <input\n        type=\"text\"\n        value={val}\n        onChange={(e) => setVal(e.target.value)}\n        placeholder={placeholder}\n        className=\"w-full bg-transparent text-xs text-foreground placeholder:text-muted-foreground focus:outline-none\"\n      />\n      <button\n        type=\"submit\"\n        disabled={!val.trim()}\n        className=\"shrink-0 rounded-xl bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all duration-150 disabled:opacity-40 hover:bg-primary/90 active:scale-[0.96]\"\n      >\n        Send →\n      </button>\n    </form>\n  );\n}\n\nexport default AiPromptInput;\n",
+      "type": "registry:ui",
+      "target": "components/ui/ai-prompt-input.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "ai-prompt-input"
+  ],
+  "meta": {
+    "source": "https://21st.dev/community/ai-prompt-input",
+    "author": "21st.dev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

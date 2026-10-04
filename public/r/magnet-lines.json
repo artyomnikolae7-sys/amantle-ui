@@ -1,0 +1,28 @@
+{
+  "name": "magnet-lines",
+  "type": "registry:ui",
+  "title": "Magnet Lines",
+  "description": "AMANTLE UI ui: magnet-lines",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/magnet-lines.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState } from \"react\";\n\n/**\n * @component MagnetLines\n * @source https://reactbits.dev/components/magnet-lines\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface MagnetLinesProps {\n  rows?: number;\n  columns?: number;\n  className?: string;\n}\n\nexport function MagnetLines({\n  rows = 5,\n  columns = 8,\n  className = \"\",\n}: MagnetLinesProps) {\n  const containerRef = useRef<HTMLDivElement>(null);\n  const [angles, setAngles] = useState<number[]>(new Array(rows * columns).fill(0));\n\n  const handleMouseMove = (e: React.MouseEvent) => {\n    if (!containerRef.current) return;\n    const rect = containerRef.current.getBoundingClientRect();\n    const cursorX = e.clientX - rect.left;\n    const cursorY = e.clientY - rect.top;\n\n    const cells = containerRef.current.children;\n    const newAngles: number[] = [];\n\n    for (let i = 0; i < cells.length; i++) {\n      const cellRect = (cells[i] as HTMLElement).getBoundingClientRect();\n      const cellCenterX = cellRect.left + cellRect.width / 2 - rect.left;\n      const cellCenterY = cellRect.top + cellRect.height / 2 - rect.top;\n      const rad = Math.atan2(cursorY - cellCenterY, cursorX - cellCenterX);\n      newAngles.push((rad * 180) / Math.PI);\n    }\n    setAngles(newAngles);\n  };\n\n  return (\n    <div\n      ref={containerRef}\n      onMouseMove={handleMouseMove}\n      style={{\n        display: \"grid\",\n        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,\n      }}\n      className={`gap-3 rounded-2xl border border-border/50 bg-card p-6 shadow-sm ${className}`}\n    >\n      {angles.map((angle, idx) => (\n        <div key={idx} className=\"flex h-8 w-8 items-center justify-center\">\n          <div\n            className=\"h-5 w-1 rounded-full bg-primary/70 transition-transform duration-150\"\n            style={{\n              transform: `rotate(${angle}deg)`,\n              transitionTimingFunction: \"cubic-bezier(0.23, 1, 0.32, 1)\",\n            }}\n          />\n        </div>\n      ))}\n    </div>\n  );\n}\n\nexport default MagnetLines;\n",
+      "type": "registry:ui",
+      "target": "components/ui/magnet-lines.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "magnet-lines"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/magnet-lines",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

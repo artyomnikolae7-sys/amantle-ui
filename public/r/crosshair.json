@@ -1,0 +1,28 @@
+{
+  "name": "crosshair",
+  "type": "registry:ui",
+  "title": "Crosshair",
+  "description": "AMANTLE UI ui: crosshair",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/crosshair.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState } from \"react\";\n\n/**\n * @component Crosshair\n * @source https://reactbits.dev/components/crosshair\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface CrosshairProps {\n  className?: string;\n  color?: string;\n}\n\nexport function Crosshair({\n  className = \"\",\n  color = \"rgb(14, 165, 233)\",\n}: CrosshairProps) {\n  const containerRef = useRef<HTMLDivElement>(null);\n  const [pos, setPos] = useState({ x: -100, y: -100 });\n  const [visible, setVisible] = useState(false);\n\n  const handleMouseMove = (e: React.MouseEvent) => {\n    if (!containerRef.current) return;\n    const rect = containerRef.current.getBoundingClientRect();\n    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });\n  };\n\n  return (\n    <div\n      ref={containerRef}\n      onMouseEnter={() => setVisible(true)}\n      onMouseLeave={() => setVisible(false)}\n      onMouseMove={handleMouseMove}\n      className={`relative h-56 w-full max-w-md overflow-hidden rounded-2xl border border-border/60 bg-card/80 p-4 select-none ${className}`}\n    >\n      <div className=\"flex flex-col items-center justify-center h-full text-center text-muted-foreground\">\n        <span className=\"text-xs font-mono font-bold tracking-widest uppercase\">Target Area</span>\n        <span className=\"text-[11px] opacity-75\">Move cursor inside to engage reticle</span>\n      </div>\n      {visible && (\n        <>\n          <div\n            className=\"pointer-events-none absolute left-0 right-0 h-px transition-all duration-75\"\n            style={{ top: pos.y, backgroundColor: color, opacity: 0.6 }}\n          />\n          <div\n            className=\"pointer-events-none absolute top-0 bottom-0 w-px transition-all duration-75\"\n            style={{ left: pos.x, backgroundColor: color, opacity: 0.6 }}\n          />\n          <div\n            className=\"pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 h-6 w-6 rounded-full border border-current transition-all duration-75\"\n            style={{ left: pos.x, top: pos.y, color, boxShadow: `0 0 10px ${color}` }}\n          />\n        </>\n      )}\n    </div>\n  );\n}\n\nexport default Crosshair;\n",
+      "type": "registry:ui",
+      "target": "components/ui/crosshair.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "crosshair"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/crosshair",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

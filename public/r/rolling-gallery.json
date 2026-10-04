@@ -1,0 +1,28 @@
+{
+  "name": "rolling-gallery",
+  "type": "registry:ui",
+  "title": "Rolling Gallery",
+  "description": "AMANTLE UI ui: rolling-gallery",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/rolling-gallery.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component RollingGallery\n * @source https://reactbits.dev/components/rolling-gallery\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface RollingGalleryProps {\n  images?: string[];\n  autoplay?: boolean;\n}\n\nexport function RollingGallery({\n  images = [\n    \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80\",\n    \"https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=400&q=80\",\n    \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80\",\n    \"https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=400&q=80\",\n  ],\n  autoplay = true,\n}: RollingGalleryProps) {\n  const [rotation, setRotation] = useState(0);\n\n  const rotateLeft = () => setRotation((r) => r - 90);\n  const rotateRight = () => setRotation((r) => r + 90);\n\n  return (\n    <div className=\"relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-border/50 bg-card p-8\">\n      <div\n        className=\"flex gap-4 transition-transform duration-500 ease-out\"\n        style={{\n          transform: `rotateY(${rotation}deg)`,\n          transformStyle: \"preserve-3d\",\n        }}\n      >\n        {images.map((img, i) => (\n          <div\n            key={i}\n            className=\"h-44 w-32 shrink-0 overflow-hidden rounded-xl border border-border/40 shadow-lg\"\n          >\n            <img src={img} alt=\"Gallery item\" className=\"h-full w-full object-cover\" />\n          </div>\n        ))}\n      </div>\n      <div className=\"mt-6 flex gap-3\">\n        <button\n          onClick={rotateLeft}\n          className=\"rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-medium hover:bg-muted active:scale-[0.97]\"\n        >\n          ← Назад\n        </button>\n        <button\n          onClick={rotateRight}\n          className=\"rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-medium hover:bg-muted active:scale-[0.97]\"\n        >\n          Вперёд →\n        </button>\n      </div>\n    </div>\n  );\n}\n\nexport default RollingGallery;\n",
+      "type": "registry:ui",
+      "target": "components/ui/rolling-gallery.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "rolling-gallery"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/rolling-gallery",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

@@ -2,7 +2,7 @@
 
 **Дата отчёта**: 2026-10-04  
 **Версия реестра**: v0.2.0-motion  
-**Всего компонентов**: 223  
+**Всего компонентов**: 259  
 **Статус готовности**: 100% (205 / 205 компонентов обработаны и зарегистрированы)  
 **Средний балл качества движения**: 89/100  
 **Синхронизация с `components-map.tsx`**: 100% (205 / 205)  
@@ -14,10 +14,10 @@
 
 | Категория | Количество | Средний балл движения | Соответствие Provenance | В componentMap |
 |---|---|---|---|---|
-| **UI Primitives & Motion Compounds** (`registry/ui/`) | 144 | 88/100 | 100% | 100% |
+| **UI Primitives & Motion Compounds** (`registry/ui/`) | 180 | 88/100 | 100% | 100% |
 | **SaaS & Composite Blocks** (`registry/blocks/`) | 66 | 91/100 | 100% | 100% |
 | **Full Page Templates** (`registry/templates/`) | 13 | 91/100 | 100% | 100% |
-| **ИТОГО** | **223** | **89/100** | **100%** | **100%** |
+| **ИТОГО** | **259** | **89/100** | **100%** | **100%** |
 
 ---
 
@@ -169,85 +169,121 @@
 | 142 | `card-cyber-glass` | ui | 57 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
 | 143 | `input-cyber-glass` | ui | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
 | 144 | `input-neubrutalist` | ui | 47 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
-| 145 | `hero-simple` | blocks | 36 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 146 | `hero-gradient-glow` | blocks | 46 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 147 | `hero-badge-cta` | blocks | 40 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 148 | `pricing-cards-tier` | blocks | 114 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 149 | `pricing-comparison-table` | blocks | 85 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 150 | `bento-grid-3x3` | blocks | 99 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 151 | `feature-cards-grid` | blocks | 81 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 152 | `feature-alternating-rows` | blocks | 86 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 153 | `testimonials-slider` | blocks | 75 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 154 | `stats-counter-strip` | blocks | 39 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 155 | `faq-accordion` | blocks | 52 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 156 | `navbar-sticky-blur` | blocks | 45 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 157 | `footer-mega-columns` | blocks | 70 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 158 | `dashboard-stats-kpi` | blocks | 64 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 159 | `dashboard-recent-transactions` | blocks | 106 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 160 | `cta-banner-glow` | blocks | 45 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 161 | `newsletter-card-minimal` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 162 | `login-card-floating` | blocks | 51 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 163 | `empty-state-card` | blocks | 28 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 164 | `team-members-grid` | blocks | 48 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 165 | `contact-form-split` | blocks | 67 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 166 | `integration-logos-cloud` | blocks | 44 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 167 | `metrics-graph-card` | blocks | 51 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 168 | `user-profile-header` | blocks | 50 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 169 | `notification-feed-popover` | blocks | 80 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 170 | `search-command-palette` | blocks | 72 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 171 | `hero-video-dialog` | blocks | 39 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 172 | `hero-split-image` | blocks | 78 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 173 | `hero-floating-mockup` | blocks | 53 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 174 | `pricing-toggle-annual` | blocks | 124 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 175 | `pricing-slider` | blocks | 60 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 176 | `feature-timeline` | blocks | 70 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 177 | `feature-bento-spotlight` | blocks | 68 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 178 | `feature-comparison-matrix` | blocks | 51 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 179 | `testimonials-marquee` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 180 | `testimonials-grid-masonry` | blocks | 36 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 181 | `faq-searchable` | blocks | 67 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 182 | `cta-split-card` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 183 | `footer-minimal-centered` | blocks | 32 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 184 | `navbar-floating-glass` | blocks | 39 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 185 | `dashboard-activity-feed` | blocks | 40 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 186 | `dashboard-quick-actions` | blocks | 45 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 187 | `hero-lamp` | blocks | 58 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 188 | `hero-retro-grid` | blocks | 49 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 189 | `hero-canvas-reveal` | blocks | 50 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 190 | `ai-chat-prompt` | blocks | 78 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 191 | `ai-generation-card` | blocks | 60 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 192 | `ai-code-diff` | blocks | 56 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 193 | `bento-grid-interactive` | blocks | 65 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 194 | `sticky-scroll-reveal` | blocks | 55 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 195 | `pricing-tier-matrix` | blocks | 73 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 196 | `testimonials-infinite-slider` | blocks | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 197 | `stats-glass-grid` | blocks | 45 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 198 | `cta-lamp-glow` | blocks | 44 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 199 | `navbar-floating-dock` | blocks | 50 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 200 | `footer-columns-newsletter` | blocks | 75 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 201 | `dashboard-server-monitoring` | blocks | 61 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 202 | `dashboard-kanban-board` | blocks | 53 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 203 | `dashboard-table-pagination` | blocks | 70 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 204 | `integration-ecosystem-grid` | blocks | 47 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 205 | `comparison-slider-image` | blocks | 58 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 206 | `cookie-consent-banner` | blocks | 58 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 207 | `animated-beam-network` | blocks | 283 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 208 | `form-system-accessible` | blocks | 270 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 209 | `stats-card-sparkline` | blocks | 173 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 210 | `changelog-feed` | blocks | 199 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
-| 211 | `saas-landing-page` | templates | 40 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 212 | `modern-dashboard-page` | templates | 78 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 213 | `auth-split-screen-page` | templates | 48 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 214 | `changelog-page` | templates | 102 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 215 | `pricing-page-full` | templates | 26 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 216 | `settings-account-page` | templates | 97 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 217 | `error-404-page` | templates | 49 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 218 | `blog-post-template` | templates | 81 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
-| 219 | `ai-workspace-template` | templates | 112 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 220 | `developer-docs-template` | templates | 90 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
-| 221 | `analytics-dashboard-template` | templates | 73 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 222 | `onboarding-wizard-template` | templates | 101 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
-| 223 | `coming-soon-waitlist-template` | templates | 77 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 145 | `text-pressure` | ui | 88 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 146 | `glitch-text` | ui | 59 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 147 | `variable-proximity` | ui | 59 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **90/100** | ✅ Verified |
+| 148 | `circular-text` | ui | 59 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 149 | `wave-text` | ui | 43 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 150 | `rolling-gallery` | ui | 68 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 151 | `elastic-slider` | ui | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 152 | `flowing-menu` | ui | 63 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 153 | `tilted-card` | ui | 85 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 154 | `spotlight-card` | ui | 62 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 155 | `infinite-scroll` | ui | 61 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 156 | `magnet` | ui | 71 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 157 | `magnet-lines` | ui | 71 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 158 | `crosshair` | ui | 64 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 159 | `electric-border` | ui | 43 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 160 | `marquee` | ui | 71 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 161 | `rainbow-button` | ui | 43 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 162 | `orbiting-circles` | ui | 73 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 163 | `avatar-circles` | ui | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 164 | `tracing-beam` | ui | 44 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 165 | `floating-navbar` | ui | 56 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **65/100** | 🟡 Enhanced |
+| 166 | `hover-border-gradient` | ui | 48 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 167 | `action-bar-glow` | ui | 51 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **65/100** | 🟡 Enhanced |
+| 168 | `ai-prompt-input` | ui | 59 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **65/100** | 🟡 Enhanced |
+| 169 | `studio-component-inspector` | ui | 115 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 170 | `studio-code-preview` | ui | 79 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 171 | `gradient-heading` | ui | 42 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 172 | `minimal-card` | ui | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 173 | `origin-input-tag` | ui | 85 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **65/100** | 🟡 Enhanced |
+| 174 | `origin-select-fancy` | ui | 85 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 175 | `kpi-metric-card` | ui | 48 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 176 | `progress-bar-stepped` | ui | 44 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 177 | `hover-expand-card` | ui | 57 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 178 | `water-drop-grid` | ui | 57 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **65/100** | 🟡 Enhanced |
+| 179 | `marketing-feature-pill` | ui | 39 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 180 | `stats-card-accent` | ui | 42 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **80/100** | ✅ Verified |
+| 181 | `hero-simple` | blocks | 36 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 182 | `hero-gradient-glow` | blocks | 46 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 183 | `hero-badge-cta` | blocks | 40 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 184 | `pricing-cards-tier` | blocks | 114 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 185 | `pricing-comparison-table` | blocks | 85 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 186 | `bento-grid-3x3` | blocks | 99 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 187 | `feature-cards-grid` | blocks | 81 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 188 | `feature-alternating-rows` | blocks | 86 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 189 | `testimonials-slider` | blocks | 75 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 190 | `stats-counter-strip` | blocks | 39 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 191 | `faq-accordion` | blocks | 52 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 192 | `navbar-sticky-blur` | blocks | 45 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 193 | `footer-mega-columns` | blocks | 70 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 194 | `dashboard-stats-kpi` | blocks | 64 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 195 | `dashboard-recent-transactions` | blocks | 106 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 196 | `cta-banner-glow` | blocks | 45 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 197 | `newsletter-card-minimal` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 198 | `login-card-floating` | blocks | 51 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 199 | `empty-state-card` | blocks | 28 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 200 | `team-members-grid` | blocks | 48 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 201 | `contact-form-split` | blocks | 67 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 202 | `integration-logos-cloud` | blocks | 44 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 203 | `metrics-graph-card` | blocks | 51 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 204 | `user-profile-header` | blocks | 50 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 205 | `notification-feed-popover` | blocks | 80 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 206 | `search-command-palette` | blocks | 72 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 207 | `hero-video-dialog` | blocks | 39 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 208 | `hero-split-image` | blocks | 78 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 209 | `hero-floating-mockup` | blocks | 53 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 210 | `pricing-toggle-annual` | blocks | 124 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 211 | `pricing-slider` | blocks | 60 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 212 | `feature-timeline` | blocks | 70 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 213 | `feature-bento-spotlight` | blocks | 68 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 214 | `feature-comparison-matrix` | blocks | 51 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 215 | `testimonials-marquee` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 216 | `testimonials-grid-masonry` | blocks | 36 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 217 | `faq-searchable` | blocks | 67 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 218 | `cta-split-card` | blocks | 44 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 219 | `footer-minimal-centered` | blocks | 32 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 220 | `navbar-floating-glass` | blocks | 39 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 221 | `dashboard-activity-feed` | blocks | 40 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 222 | `dashboard-quick-actions` | blocks | 45 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 223 | `hero-lamp` | blocks | 58 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 224 | `hero-retro-grid` | blocks | 49 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 225 | `hero-canvas-reveal` | blocks | 50 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 226 | `ai-chat-prompt` | blocks | 78 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 227 | `ai-generation-card` | blocks | 60 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 228 | `ai-code-diff` | blocks | 56 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 229 | `bento-grid-interactive` | blocks | 65 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 230 | `sticky-scroll-reveal` | blocks | 55 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 231 | `pricing-tier-matrix` | blocks | 73 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 232 | `testimonials-infinite-slider` | blocks | 46 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 233 | `stats-glass-grid` | blocks | 45 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 234 | `cta-lamp-glow` | blocks | 44 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 235 | `navbar-floating-dock` | blocks | 50 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 236 | `footer-columns-newsletter` | blocks | 75 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 237 | `dashboard-server-monitoring` | blocks | 61 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 238 | `dashboard-kanban-board` | blocks | 53 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 239 | `dashboard-table-pagination` | blocks | 70 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 240 | `integration-ecosystem-grid` | blocks | 47 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 241 | `comparison-slider-image` | blocks | 58 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 242 | `cookie-consent-banner` | blocks | 58 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 243 | `animated-beam-network` | blocks | 283 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 244 | `form-system-accessible` | blocks | 270 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 245 | `stats-card-sparkline` | blocks | 173 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 246 | `changelog-feed` | blocks | 199 | ✅ Да | ✅ Да | ⚠️ Нет | ✅ Да | **90/100** | ✅ Verified |
+| 247 | `saas-landing-page` | templates | 40 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 248 | `modern-dashboard-page` | templates | 78 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 249 | `auth-split-screen-page` | templates | 48 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 250 | `changelog-page` | templates | 102 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 251 | `pricing-page-full` | templates | 26 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 252 | `settings-account-page` | templates | 97 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 253 | `error-404-page` | templates | 49 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 254 | `blog-post-template` | templates | 81 | ✅ Да | ✅ Да | ✅ Да | ✅ Да | **100/100** | ✅ Verified |
+| 255 | `ai-workspace-template` | templates | 112 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 256 | `developer-docs-template` | templates | 90 | ✅ Да | ➖ | ✅ Да | ✅ Да | **85/100** | ✅ Verified |
+| 257 | `analytics-dashboard-template` | templates | 73 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 258 | `onboarding-wizard-template` | templates | 101 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
+| 259 | `coming-soon-waitlist-template` | templates | 77 | ✅ Да | ➖ | ⚠️ Нет | ✅ Да | **75/100** | 🟡 Enhanced |
 
 ---
 *Журнал сформирован автоматически скриптом `scripts/generate-full-audit-log.mjs` на основе данных `public/r/index.json` и AST-анализа файлов.*

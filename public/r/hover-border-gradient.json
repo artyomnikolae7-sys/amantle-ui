@@ -1,0 +1,28 @@
+{
+  "name": "hover-border-gradient",
+  "type": "registry:ui",
+  "title": "Hover Border Gradient",
+  "description": "AMANTLE UI ui: hover-border-gradient",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/hover-border-gradient.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component HoverBorderGradient\n * @source https://ui.aceternity.com/components/hover-border-gradient\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface HoverBorderGradientProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  children?: React.ReactNode;\n  className?: string;\n}\n\nexport function HoverBorderGradient({\n  children = \"Hover Kinetic Border\",\n  className = \"\",\n  ...props\n}: HoverBorderGradientProps) {\n  const [hovered, setHovered] = useState(false);\n\n  return (\n    <button\n      onMouseEnter={() => setHovered(true)}\n      onMouseLeave={() => setHovered(false)}\n      {...props}\n      className={`relative inline-flex items-center justify-center rounded-xl p-[1px] overflow-hidden font-medium text-xs tracking-tight transition-transform duration-150 active:scale-[0.97] ${className}`}\n    >\n      <div\n        className={`absolute inset-0 transition-opacity duration-300 ${\n          hovered ? \"opacity-100 animate-spin\" : \"opacity-40\"\n        }`}\n        style={{\n          background: \"radial-gradient(circle, #38bdf8 10%, #818cf8 40%, transparent 70%)\",\n          animationDuration: \"3s\",\n        }}\n      />\n      <span className=\"relative z-10 flex h-full w-full items-center justify-center rounded-[11px] bg-card px-5 py-2.5 text-card-foreground shadow-sm\">\n        {children}\n      </span>\n    </button>\n  );\n}\n\nexport default HoverBorderGradient;\n",
+      "type": "registry:ui",
+      "target": "components/ui/hover-border-gradient.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "hover-border-gradient"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/hover-border-gradient",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

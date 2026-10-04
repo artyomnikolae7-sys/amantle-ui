@@ -1,0 +1,28 @@
+{
+  "name": "rainbow-button",
+  "type": "registry:ui",
+  "title": "Rainbow Button",
+  "description": "AMANTLE UI ui: rainbow-button",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/rainbow-button.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component RainbowButton\n * @source https://magicui.design/docs/components/rainbow-button\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface RainbowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  children?: React.ReactNode;\n  className?: string;\n}\n\nexport function RainbowButton({\n  children = \"Rainbow Kinetic Action\",\n  className = \"\",\n  ...props\n}: RainbowButtonProps) {\n  return (\n    <button\n      {...props}\n      className={`group relative inline-flex items-center justify-center rounded-xl p-[2px] font-semibold text-xs tracking-tight transition-transform duration-150 active:scale-[0.97] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/40 ${className}`}\n      style={{ transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\" }}\n    >\n      <div\n        className=\"absolute inset-0 rounded-xl animate-spin opacity-85 transition-opacity group-hover:opacity-100\"\n        style={{\n          background: \"conic-gradient(from 0deg, #ff0055, #7a00ff, #00e1ff, #00ff66, #ffea00, #ff0055)\",\n          animationDuration: \"4s\",\n        }}\n      />\n      <span className=\"relative z-10 flex h-full w-full items-center justify-center rounded-[10px] bg-background px-5 py-2.5 text-foreground transition-colors group-hover:bg-background/90\">\n        {children}\n      </span>\n    </button>\n  );\n}\n\nexport default RainbowButton;\n",
+      "type": "registry:ui",
+      "target": "components/ui/rainbow-button.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "rainbow-button"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/rainbow-button",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "minimal-card",
+  "type": "registry:ui",
+  "title": "Minimal Card",
+  "description": "AMANTLE UI ui: minimal-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/minimal-card.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component MinimalCard\n * @source https://cult-ui.com/docs/components/minimal-card\n * @author Cult UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface MinimalCardProps {\n  title?: string;\n  description?: string;\n  image?: string;\n  className?: string;\n}\n\nexport function MinimalCard({\n  title = \"Spatial Computing Deck\",\n  description = \"A clean Apple-grade translucent glass surface with razor thin border.\",\n  image = \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80\",\n  className = \"\",\n}: MinimalCardProps) {\n  return (\n    <div\n      className={`group relative flex w-full max-w-xs flex-col overflow-hidden rounded-2xl border border-white/10 bg-card/60 p-3 shadow-lg backdrop-blur-xl transition-all duration-200 hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] ${className}`}\n      style={{ transitionTimingFunction: \"cubic-bezier(0.23, 1, 0.32, 1)\" }}\n    >\n      <div className=\"relative h-44 w-full overflow-hidden rounded-xl bg-muted\">\n        <img\n          src={image}\n          alt={title}\n          className=\"h-full w-full object-cover transition-transform duration-500 group-hover:scale-105\"\n        />\n      </div>\n      <div className=\"mt-3 flex flex-col gap-1 p-1\">\n        <h3 className=\"text-sm font-semibold tracking-tight text-foreground\">{title}</h3>\n        <p className=\"text-xs text-muted-foreground leading-relaxed\">{description}</p>\n      </div>\n    </div>\n  );\n}\n\nexport default MinimalCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/minimal-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "minimal-card"
+  ],
+  "meta": {
+    "source": "https://cult-ui.com/docs/components/minimal-card",
+    "author": "Cult UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

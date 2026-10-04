@@ -1,0 +1,28 @@
+{
+  "name": "marquee",
+  "type": "registry:ui",
+  "title": "Marquee",
+  "description": "AMANTLE UI ui: marquee",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/marquee.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component Marquee\n * @source https://magicui.design/docs/components/marquee\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface MarqueeProps {\n  className?: string;\n  reverse?: boolean;\n  pauseOnHover?: boolean;\n  children?: React.ReactNode;\n  vertical?: boolean;\n  repeat?: number;\n}\n\nexport function Marquee({\n  className = \"\",\n  reverse = false,\n  pauseOnHover = true,\n  children,\n  vertical = false,\n  repeat = 4,\n}: MarqueeProps) {\n  return (\n    <div\n      className={`group flex overflow-hidden p-2 select-none [--gap:1rem] [gap:var(--gap)] ${\n        vertical ? \"flex-col\" : \"flex-row\"\n      } ${className}`}\n    >\n      {Array.from({ length: repeat }).map((_, i) => (\n        <div\n          key={i}\n          className={`flex shrink-0 justify-around [gap:var(--gap)] ${\n            vertical\n              ? \"flex-col\"\n              : \"flex-row\"\n          } ${pauseOnHover ? \"group-hover:[animation-play-state:paused]\" : \"\"}`}\n          style={{\n            animation: vertical ? \"marquee-vert 20s linear infinite\" : \"marquee-horiz 25s linear infinite\",\n            animationDirection: reverse ? \"reverse\" : \"normal\",\n          }}\n        >\n          {children || (\n            <div className=\"flex items-center gap-4\">\n              <span className=\"rounded-lg border border-border/60 bg-muted/30 px-3 py-1 text-xs font-medium text-foreground\">\n                AMANTLE Kinetic UI\n              </span>\n              <span className=\"rounded-lg border border-border/60 bg-muted/30 px-3 py-1 text-xs font-medium text-foreground\">\n                Next.js 15\n              </span>\n              <span className=\"rounded-lg border border-border/60 bg-muted/30 px-3 py-1 text-xs font-medium text-foreground\">\n                Tailwind v4\n              </span>\n              <span className=\"rounded-lg border border-border/60 bg-muted/30 px-3 py-1 text-xs font-medium text-foreground\">\n                Emil Springs\n              </span>\n            </div>\n          )}\n        </div>\n      ))}\n    </div>\n  );\n}\n\nexport default Marquee;\n",
+      "type": "registry:ui",
+      "target": "components/ui/marquee.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "marquee"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/marquee",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

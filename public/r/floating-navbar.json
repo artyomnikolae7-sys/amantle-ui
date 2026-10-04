@@ -1,0 +1,28 @@
+{
+  "name": "floating-navbar",
+  "type": "registry:ui",
+  "title": "Floating Navbar",
+  "description": "AMANTLE UI ui: floating-navbar",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/floating-navbar.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component FloatingNavbar\n * @source https://ui.aceternity.com/components/floating-navbar\n * @author Aceternity UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface FloatingNavbarItem {\n  name: string;\n  link: string;\n}\n\nexport interface FloatingNavbarProps {\n  navItems?: FloatingNavbarItem[];\n  className?: string;\n}\n\nexport function FloatingNavbar({\n  navItems = [\n    { name: \"Главная\", link: \"/\" },\n    { name: \"Компоненты\", link: \"/components\" },\n    { name: \"Блоки\", link: \"/blocks\" },\n    { name: \"Кастомизатор\", link: \"#customizer\" },\n  ],\n  className = \"\",\n}: FloatingNavbarProps) {\n  const [activeIdx, setActiveIdx] = useState(0);\n\n  return (\n    <nav\n      className={`fixed top-6 inset-x-0 mx-auto z-50 flex max-w-fit items-center justify-center gap-1 rounded-full border border-border/60 bg-background/80 px-4 py-2 shadow-lg backdrop-blur-md transition-all duration-300 ${className}`}\n      style={{ transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\" }}\n    >\n      {navItems.map((item, idx) => (\n        <button\n          key={idx}\n          onClick={() => setActiveIdx(idx)}\n          className={`relative rounded-full px-4 py-1.5 text-xs font-semibold transition-colors duration-150 active:scale-[0.96] ${\n            activeIdx === idx\n              ? \"text-primary-foreground bg-primary\"\n              : \"text-muted-foreground hover:text-foreground\"\n          }`}\n        >\n          {item.name}\n        </button>\n      ))}\n    </nav>\n  );\n}\n\nexport default FloatingNavbar;\n",
+      "type": "registry:ui",
+      "target": "components/ui/floating-navbar.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "floating-navbar"
+  ],
+  "meta": {
+    "source": "https://ui.aceternity.com/components/floating-navbar",
+    "author": "Aceternity UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

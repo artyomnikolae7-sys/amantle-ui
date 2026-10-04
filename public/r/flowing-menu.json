@@ -1,0 +1,28 @@
+{
+  "name": "flowing-menu",
+  "type": "registry:ui",
+  "title": "Flowing Menu",
+  "description": "AMANTLE UI ui: flowing-menu",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/flowing-menu.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component FlowingMenu\n * @source https://reactbits.dev/components/flowing-menu\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface FlowingMenuItem {\n  text: string;\n  image: string;\n}\n\nexport interface FlowingMenuProps {\n  items?: FlowingMenuItem[];\n  className?: string;\n}\n\nexport function FlowingMenu({\n  items = [\n    { text: \"Digital Architecture\", image: \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80\" },\n    { text: \"Kinetic Motion System\", image: \"https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=400&q=80\" },\n    { text: \"Spatial Audio Interface\", image: \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&q=80\" },\n    { text: \"Autonomous Agent Core\", image: \"https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=400&q=80\" },\n  ],\n  className = \"\",\n}: FlowingMenuProps) {\n  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);\n\n  return (\n    <nav className={`relative flex w-full max-w-md flex-col divide-y divide-border/40 overflow-hidden rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md ${className}`}>\n      {items.map((item, index) => (\n        <div\n          key={index}\n          onMouseEnter={() => setHoveredIdx(index)}\n          onMouseLeave={() => setHoveredIdx(null)}\n          className=\"group relative flex cursor-pointer items-center justify-between px-6 py-4 transition-colors duration-200 hover:bg-muted/40\"\n        >\n          <span className=\"text-sm font-semibold tracking-tight text-foreground transition-transform duration-200 group-hover:translate-x-1\">\n            {item.text}\n          </span>\n          <span className=\"text-xs text-muted-foreground opacity-60 group-hover:opacity-100\">\n            0{index + 1}\n          </span>\n          {hoveredIdx === index && (\n            <div\n              className=\"pointer-events-none absolute right-16 top-1/2 -translate-y-1/2 z-20 h-16 w-24 overflow-hidden rounded-lg border border-border shadow-xl animate-in fade-in zoom-in-95 duration-200\"\n              style={{ transitionTimingFunction: \"cubic-bezier(0.16, 1, 0.3, 1)\" }}\n            >\n              <img src={item.image} alt={item.text} className=\"h-full w-full object-cover\" />\n            </div>\n          )}\n        </div>\n      ))}\n    </nav>\n  );\n}\n\nexport default FlowingMenu;\n",
+      "type": "registry:ui",
+      "target": "components/ui/flowing-menu.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "flowing-menu"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/flowing-menu",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

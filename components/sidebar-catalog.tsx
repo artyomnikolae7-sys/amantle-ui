@@ -31,6 +31,7 @@ import { Input } from "@/registry/ui/input";
 import { Badge } from "@/registry/ui/badge";
 import { Button } from "@/registry/ui/button";
 import { getComponentFamily, ComponentFamily } from "@/lib/component-families";
+import { ECOSYSTEMS_CONFIG, getComponentEcosystem } from "@/lib/ecosystems";
 
 export interface CatalogItemMeta {
   name: string;
@@ -78,6 +79,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
   const [search, setSearch] = React.useState("");
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [selectedTab, setSelectedTab] = React.useState<"all" | "ui" | "blocks" | "templates">("all");
+  const [selectedEcosystem, setSelectedEcosystem] = React.useState<string>("all");
 
   const activeItemRef = React.useRef<HTMLAnchorElement>(null);
 
@@ -206,8 +208,14 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
 
       for (const [famId, famObj] of Object.entries(famMap)) {
         let matchingItems = famObj.items;
+        if (selectedEcosystem !== "all") {
+          const eco = ECOSYSTEMS_CONFIG[selectedEcosystem];
+          if (eco) {
+            matchingItems = matchingItems.filter((i) => eco.components.includes(i.name));
+          }
+        }
         if (q) {
-          matchingItems = famObj.items.filter(
+          matchingItems = matchingItems.filter(
             (i) =>
               i.name.toLowerCase().includes(q) ||
               (i.title && i.title.toLowerCase().includes(q)) ||
@@ -230,7 +238,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
     }
 
     return result;
-  }, [groupedData, search, selectedTab]);
+  }, [groupedData, search, selectedTab, selectedEcosystem]);
 
   // Calculate counts for tabs
   const tabCounts = React.useMemo(() => {
@@ -274,7 +282,7 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
           <Input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Поиск по 205 компонентам..."
+            placeholder="Поиск по 259 компонентам..."
             className="h-8 pl-8 pr-14 text-xs bg-muted/30 border-border focus-visible:ring-primary/30"
           />
           {search && (
@@ -285,6 +293,34 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
               Сброс
             </button>
           )}
+        </div>
+
+        {/* Ecosystem Filter Chips */}
+        <div className="flex gap-1 overflow-x-auto pb-1 scrollbar-none text-[10px]">
+          <button
+            onClick={() => setSelectedEcosystem("all")}
+            className={`shrink-0 rounded-full px-2 py-0.5 font-medium transition-colors cursor-pointer ${
+              selectedEcosystem === "all"
+                ? "bg-primary text-primary-foreground font-semibold"
+                : "bg-muted/50 text-muted-foreground hover:bg-muted"
+            }`}
+          >
+            Все
+          </button>
+          {Object.values(ECOSYSTEMS_CONFIG).map((eco) => (
+            <button
+              key={eco.id}
+              onClick={() => setSelectedEcosystem(eco.id)}
+              className={`shrink-0 flex items-center gap-1 rounded-full px-2 py-0.5 font-medium transition-colors cursor-pointer ${
+                selectedEcosystem === eco.id
+                  ? "bg-primary text-primary-foreground font-semibold"
+                  : "bg-muted/50 text-muted-foreground hover:bg-muted"
+              }`}
+            >
+              <span>{eco.name}</span>
+              <span className="opacity-70 font-mono text-[9px]">({eco.components.length})</span>
+            </button>
+          ))}
         </div>
 
         {/* Quick Filter Tabs */}
@@ -419,17 +455,23 @@ export function SidebarCatalog({ items }: SidebarCatalogProps) {
                                     <span className="truncate">
                                       {item.title || item.name}
                                     </span>
-                                    {item.name === "button" && (
-                                      <span
-                                        className={`text-[8px] px-1 rounded uppercase font-mono ${
-                                          isActive
-                                            ? "bg-primary-foreground/20 text-primary-foreground"
-                                            : "bg-primary/10 text-primary"
-                                        }`}
-                                      >
-                                        Updated
-                                      </span>
-                                    )}
+                                    {(() => {
+                                      const eco = getComponentEcosystem(item.name);
+                                      if (eco) {
+                                        return (
+                                          <span
+                                            className={`text-[8px] px-1 py-0.2 rounded font-mono border ${
+                                              isActive
+                                                ? "bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30"
+                                                : eco.badgeColor
+                                            }`}
+                                          >
+                                            {eco.name}
+                                          </span>
+                                        );
+                                      }
+                                      return null;
+                                    })()}
                                   </Link>
                                 );
                               })}

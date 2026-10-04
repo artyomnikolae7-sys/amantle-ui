@@ -1,0 +1,28 @@
+{
+  "name": "marketing-feature-pill",
+  "type": "registry:ui",
+  "title": "Marketing Feature Pill",
+  "description": "AMANTLE UI ui: marketing-feature-pill",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/marketing-feature-pill.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component MarketingFeaturePill\n * @source https://hyperui.dev\n * @author HyperUI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface MarketingFeaturePillProps {\n  label?: string;\n  badge?: string;\n  className?: string;\n}\n\nexport function MarketingFeaturePill({\n  label = \"AMANTLE v0.4.0 is now live with 10 ecosystems\",\n  badge = \"New Release\",\n  className = \"\",\n}: MarketingFeaturePillProps) {\n  return (\n    <div\n      className={`group inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/80 p-1 pr-3 text-xs shadow-sm backdrop-blur-md transition-all hover:border-primary/40 hover:shadow-md active:scale-[0.98] ${className}`}\n    >\n      <span className=\"rounded-full bg-primary px-2.5 py-0.5 font-bold text-[10px] text-primary-foreground uppercase tracking-wide\">\n        {badge}\n      </span>\n      <span className=\"font-medium text-foreground\">{label}</span>\n      <span className=\"text-muted-foreground transition-transform group-hover:translate-x-0.5\">\n        →\n      </span>\n    </div>\n  );\n}\n\nexport default MarketingFeaturePill;\n",
+      "type": "registry:ui",
+      "target": "components/ui/marketing-feature-pill.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "marketing-feature-pill"
+  ],
+  "meta": {
+    "source": "https://hyperui.dev",
+    "author": "HyperUI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

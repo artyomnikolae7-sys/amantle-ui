@@ -3168,6 +3168,628 @@
     }
   },
   {
+    "name": "rolling-gallery",
+    "type": "registry:ui",
+    "title": "Rolling Gallery",
+    "description": "AMANTLE UI ui: rolling-gallery",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "rolling-gallery"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/rolling-gallery",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "elastic-slider",
+    "type": "registry:ui",
+    "title": "Elastic Slider",
+    "description": "AMANTLE UI ui: elastic-slider",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "elastic-slider"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/elastic-slider",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "flowing-menu",
+    "type": "registry:ui",
+    "title": "Flowing Menu",
+    "description": "AMANTLE UI ui: flowing-menu",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "flowing-menu"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/flowing-menu",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "tilted-card",
+    "type": "registry:ui",
+    "title": "Tilted Card",
+    "description": "AMANTLE UI ui: tilted-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tilted-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/tilted-card",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "spotlight-card",
+    "type": "registry:ui",
+    "title": "Spotlight Card",
+    "description": "AMANTLE UI ui: spotlight-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "spotlight-card"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/spotlight-card",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "infinite-scroll",
+    "type": "registry:ui",
+    "title": "Infinite Scroll",
+    "description": "AMANTLE UI ui: infinite-scroll",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "infinite-scroll"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/infinite-scroll",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "magnet",
+    "type": "registry:ui",
+    "title": "Magnet",
+    "description": "AMANTLE UI ui: magnet",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "magnet"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/magnet",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "magnet-lines",
+    "type": "registry:ui",
+    "title": "Magnet Lines",
+    "description": "AMANTLE UI ui: magnet-lines",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "magnet-lines"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/magnet-lines",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "crosshair",
+    "type": "registry:ui",
+    "title": "Crosshair",
+    "description": "AMANTLE UI ui: crosshair",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "crosshair"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/crosshair",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "electric-border",
+    "type": "registry:ui",
+    "title": "Electric Border",
+    "description": "AMANTLE UI ui: electric-border",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "electric-border"
+    ],
+    "meta": {
+      "source": "https://reactbits.dev/components/electric-border",
+      "author": "React Bits",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "marquee",
+    "type": "registry:ui",
+    "title": "Marquee",
+    "description": "AMANTLE UI ui: marquee",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "marquee"
+    ],
+    "meta": {
+      "source": "https://magicui.design/docs/components/marquee",
+      "author": "Magic UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "rainbow-button",
+    "type": "registry:ui",
+    "title": "Rainbow Button",
+    "description": "AMANTLE UI ui: rainbow-button",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "rainbow-button"
+    ],
+    "meta": {
+      "source": "https://magicui.design/docs/components/rainbow-button",
+      "author": "Magic UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "orbiting-circles",
+    "type": "registry:ui",
+    "title": "Orbiting Circles",
+    "description": "AMANTLE UI ui: orbiting-circles",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "orbiting-circles"
+    ],
+    "meta": {
+      "source": "https://magicui.design/docs/components/orbiting-circles",
+      "author": "Magic UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "avatar-circles",
+    "type": "registry:ui",
+    "title": "Avatar Circles",
+    "description": "AMANTLE UI ui: avatar-circles",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "avatar-circles"
+    ],
+    "meta": {
+      "source": "https://magicui.design/docs/components/avatar-circles",
+      "author": "Magic UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "tracing-beam",
+    "type": "registry:ui",
+    "title": "Tracing Beam",
+    "description": "AMANTLE UI ui: tracing-beam",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "tracing-beam"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com/components/tracing-beam",
+      "author": "Aceternity UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "floating-navbar",
+    "type": "registry:ui",
+    "title": "Floating Navbar",
+    "description": "AMANTLE UI ui: floating-navbar",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "floating-navbar"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com/components/floating-navbar",
+      "author": "Aceternity UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "hover-border-gradient",
+    "type": "registry:ui",
+    "title": "Hover Border Gradient",
+    "description": "AMANTLE UI ui: hover-border-gradient",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-border-gradient"
+    ],
+    "meta": {
+      "source": "https://ui.aceternity.com/components/hover-border-gradient",
+      "author": "Aceternity UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "action-bar-glow",
+    "type": "registry:ui",
+    "title": "Action Bar Glow",
+    "description": "AMANTLE UI ui: action-bar-glow",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "action-bar-glow"
+    ],
+    "meta": {
+      "source": "https://21st.dev/community/action-bar",
+      "author": "21st.dev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "ai-prompt-input",
+    "type": "registry:ui",
+    "title": "Ai Prompt Input",
+    "description": "AMANTLE UI ui: ai-prompt-input",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "ai-prompt-input"
+    ],
+    "meta": {
+      "source": "https://21st.dev/community/ai-prompt-input",
+      "author": "21st.dev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "studio-component-inspector",
+    "type": "registry:ui",
+    "title": "Studio Component Inspector",
+    "description": "AMANTLE UI ui: studio-component-inspector",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "studio-component-inspector"
+    ],
+    "meta": {
+      "source": "https://shadcnstudio.dev",
+      "author": "Shadcn Studio",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "studio-code-preview",
+    "type": "registry:ui",
+    "title": "Studio Code Preview",
+    "description": "AMANTLE UI ui: studio-code-preview",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "studio-code-preview"
+    ],
+    "meta": {
+      "source": "https://shadcnstudio.dev",
+      "author": "Shadcn Studio",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "gradient-heading",
+    "type": "registry:ui",
+    "title": "Gradient Heading",
+    "description": "AMANTLE UI ui: gradient-heading",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "gradient-heading"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com/docs/components/gradient-heading",
+      "author": "Cult UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "minimal-card",
+    "type": "registry:ui",
+    "title": "Minimal Card",
+    "description": "AMANTLE UI ui: minimal-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "minimal-card"
+    ],
+    "meta": {
+      "source": "https://cult-ui.com/docs/components/minimal-card",
+      "author": "Cult UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "origin-input-tag",
+    "type": "registry:ui",
+    "title": "Origin Input Tag",
+    "description": "AMANTLE UI ui: origin-input-tag",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-input-tag"
+    ],
+    "meta": {
+      "source": "https://originui.com/inputs",
+      "author": "Origin UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "origin-select-fancy",
+    "type": "registry:ui",
+    "title": "Origin Select Fancy",
+    "description": "AMANTLE UI ui: origin-select-fancy",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "origin-select-fancy"
+    ],
+    "meta": {
+      "source": "https://originui.com/selects",
+      "author": "Origin UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "kpi-metric-card",
+    "type": "registry:ui",
+    "title": "Kpi Metric Card",
+    "description": "AMANTLE UI ui: kpi-metric-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "kpi-metric-card"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "Apache-2.0",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "progress-bar-stepped",
+    "type": "registry:ui",
+    "title": "Progress Bar Stepped",
+    "description": "AMANTLE UI ui: progress-bar-stepped",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "progress-bar-stepped"
+    ],
+    "meta": {
+      "source": "https://raw.tremor.so",
+      "author": "Tremor",
+      "license": "Apache-2.0",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "hover-expand-card",
+    "type": "registry:ui",
+    "title": "Hover Expand Card",
+    "description": "AMANTLE UI ui: hover-expand-card",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "hover-expand-card"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+    }
+  },
+  {
+    "name": "water-drop-grid",
+    "type": "registry:ui",
+    "title": "Water Drop Grid",
+    "description": "AMANTLE UI ui: water-drop-grid",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "water-drop-grid"
+    ],
+    "meta": {
+      "source": "https://hover.dev",
+      "author": "Hover.dev",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "marketing-feature-pill",
+    "type": "registry:ui",
+    "title": "Marketing Feature Pill",
+    "description": "AMANTLE UI ui: marketing-feature-pill",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "marketing-feature-pill"
+    ],
+    "meta": {
+      "source": "https://hyperui.dev",
+      "author": "HyperUI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
+    "name": "stats-card-accent",
+    "type": "registry:ui",
+    "title": "Stats Card Accent",
+    "description": "AMANTLE UI ui: stats-card-accent",
+    "dependencies": [],
+    "devDependencies": [],
+    "registryDependencies": [],
+    "category": "ui",
+    "tags": [
+      "ui",
+      "stats-card-accent"
+    ],
+    "meta": {
+      "source": "https://floatui.com",
+      "author": "Float UI",
+      "license": "MIT",
+      "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+    }
+  },
+  {
     "name": "hero-simple",
     "type": "registry:block",
     "title": "Hero Simple",

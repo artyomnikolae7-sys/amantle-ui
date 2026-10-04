@@ -1,0 +1,28 @@
+{
+  "name": "progress-bar-stepped",
+  "type": "registry:ui",
+  "title": "Progress Bar Stepped",
+  "description": "AMANTLE UI ui: progress-bar-stepped",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/progress-bar-stepped.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component ProgressBarStepped\n * @source https://raw.tremor.so\n * @author Tremor\n * @license Apache-2.0\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface ProgressBarSteppedProps {\n  currentStep?: number;\n  totalSteps?: number;\n  className?: string;\n}\n\nexport function ProgressBarStepped({\n  currentStep = 3,\n  totalSteps = 5,\n  className = \"\",\n}: ProgressBarSteppedProps) {\n  return (\n    <div className={`flex w-full max-w-sm flex-col gap-2 ${className}`}>\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground font-medium\">\n        <span>Batch Synthesis Pipeline</span>\n        <span className=\"font-mono text-foreground font-bold\">Step {currentStep} of {totalSteps}</span>\n      </div>\n      <div className=\"grid grid-cols-5 gap-1.5\">\n        {Array.from({ length: totalSteps }).map((_, i) => (\n          <div\n            key={i}\n            className={`h-2 rounded-full transition-all duration-300 ${\n              i < currentStep ? \"bg-primary\" : \"bg-muted\"\n            }`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}\n\nexport default ProgressBarStepped;\n",
+      "type": "registry:ui",
+      "target": "components/ui/progress-bar-stepped.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "progress-bar-stepped"
+  ],
+  "meta": {
+    "source": "https://raw.tremor.so",
+    "author": "Tremor",
+    "license": "Apache-2.0",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

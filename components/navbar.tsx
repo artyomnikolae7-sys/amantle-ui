@@ -20,6 +20,11 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-5 text-sm font-medium text-muted-foreground">
+            <Link href="/studio" className="text-foreground transition-colors flex items-center gap-1.5 font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-primary" />
+              <span>Studio</span>
+              <span className="text-[9px] bg-primary/15 text-primary border border-primary/20 px-1 py-0.2 rounded font-mono font-bold">10 Sites</span>
+            </Link>
             <Link href="/ui" className="hover:text-foreground transition-colors flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5" />
               Примитивы

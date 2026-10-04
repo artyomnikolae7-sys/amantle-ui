@@ -1,0 +1,28 @@
+{
+  "name": "elastic-slider",
+  "type": "registry:ui",
+  "title": "Elastic Slider",
+  "description": "AMANTLE UI ui: elastic-slider",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/elastic-slider.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component ElasticSlider\n * @source https://reactbits.dev/components/elastic-slider\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface ElasticSliderProps {\n  defaultValue?: number;\n  min?: number;\n  max?: number;\n  className?: string;\n}\n\nexport function ElasticSlider({\n  defaultValue = 50,\n  min = 0,\n  max = 100,\n  className = \"\",\n}: ElasticSliderProps) {\n  const [val, setVal] = useState(defaultValue);\n\n  return (\n    <div className={`flex w-full max-w-xs flex-col gap-2 ${className}`}>\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground font-medium\">\n        <span>Elastic Intensity</span>\n        <span className=\"font-mono text-foreground font-bold\">{val}%</span>\n      </div>\n      <input\n        type=\"range\"\n        min={min}\n        max={max}\n        value={val}\n        onChange={(e) => setVal(Number(e.target.value))}\n        className=\"h-2 w-full cursor-pointer appearance-none rounded-lg bg-muted accent-primary transition-all duration-200 active:scale-[0.99]\"\n      />\n    </div>\n  );\n}\n\nexport default ElasticSlider;\n",
+      "type": "registry:ui",
+      "target": "components/ui/elastic-slider.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "elastic-slider"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/elastic-slider",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "action-bar-glow",
+  "type": "registry:ui",
+  "title": "Action Bar Glow",
+  "description": "AMANTLE UI ui: action-bar-glow",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/action-bar-glow.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component ActionBarGlow\n * @source https://21st.dev/community/action-bar\n * @author 21st.dev\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface ActionBarGlowProps {\n  className?: string;\n}\n\nexport function ActionBarGlow({\n  className = \"\",\n}: ActionBarGlowProps) {\n  const [activeTab, setActiveTab] = useState(0);\n\n  const actions = [\n    { label: \"Search\", icon: \"🔍\" },\n    { label: \"AI Assist\", icon: \"✨\" },\n    { label: \"Bookmarks\", icon: \"🔖\" },\n    { label: \"Settings\", icon: \"⚙️\" },\n  ];\n\n  return (\n    <div\n      className={`relative inline-flex items-center gap-1 rounded-2xl border border-border/60 bg-card/80 p-1.5 shadow-[0_0_24px_rgba(59,130,246,0.15)] backdrop-blur-md ${className}`}\n    >\n      {actions.map((act, i) => (\n        <button\n          key={i}\n          onClick={() => setActiveTab(i)}\n          className={`flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-xs font-semibold transition-all duration-150 active:scale-[0.95] ${\n            activeTab === i\n              ? \"bg-primary text-primary-foreground shadow-sm\"\n              : \"text-muted-foreground hover:bg-muted/50 hover:text-foreground\"\n          }`}\n        >\n          <span>{act.icon}</span>\n          <span>{act.label}</span>\n        </button>\n      ))}\n    </div>\n  );\n}\n\nexport default ActionBarGlow;\n",
+      "type": "registry:ui",
+      "target": "components/ui/action-bar-glow.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "action-bar-glow"
+  ],
+  "meta": {
+    "source": "https://21st.dev/community/action-bar",
+    "author": "21st.dev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

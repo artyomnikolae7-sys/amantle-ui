@@ -1,0 +1,28 @@
+{
+  "name": "water-drop-grid",
+  "type": "registry:ui",
+  "title": "Water Drop Grid",
+  "description": "AMANTLE UI ui: water-drop-grid",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/water-drop-grid.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component WaterDropGrid\n * @source https://hover.dev\n * @author Hover.dev\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface WaterDropGridProps {\n  rows?: number;\n  cols?: number;\n  className?: string;\n}\n\nexport function WaterDropGrid({\n  rows = 5,\n  cols = 8,\n  className = \"\",\n}: WaterDropGridProps) {\n  const [activeIdx, setActiveIdx] = useState<number | null>(null);\n\n  const handleClick = (idx: number) => {\n    setActiveIdx(idx);\n    setTimeout(() => setActiveIdx(null), 600);\n  };\n\n  return (\n    <div\n      style={{\n        display: \"grid\",\n        gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,\n      }}\n      className={`gap-2.5 rounded-2xl border border-border/60 bg-card p-6 shadow-sm ${className}`}\n    >\n      {Array.from({ length: rows * cols }).map((_, i) => {\n        const isCenter = activeIdx === i;\n        return (\n          <button\n            key={i}\n            onClick={() => handleClick(i)}\n            className={`h-4 w-4 rounded-full transition-all duration-200 active:scale-50 ${\n              isCenter\n                ? \"scale-150 bg-primary shadow-[0_0_12px_rgba(59,130,246,0.8)]\"\n                : \"bg-muted/70 hover:bg-primary/50 hover:scale-125\"\n            }`}\n          />\n        );\n      })}\n    </div>\n  );\n}\n\nexport default WaterDropGrid;\n",
+      "type": "registry:ui",
+      "target": "components/ui/water-drop-grid.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "water-drop-grid"
+  ],
+  "meta": {
+    "source": "https://hover.dev",
+    "author": "Hover.dev",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

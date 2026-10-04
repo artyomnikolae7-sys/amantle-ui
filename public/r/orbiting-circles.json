@@ -1,0 +1,28 @@
+{
+  "name": "orbiting-circles",
+  "type": "registry:ui",
+  "title": "Orbiting Circles",
+  "description": "AMANTLE UI ui: orbiting-circles",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/orbiting-circles.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component OrbitingCircles\n * @source https://magicui.design/docs/components/orbiting-circles\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface OrbitingCirclesProps {\n  className?: string;\n  children?: React.ReactNode;\n  reverse?: boolean;\n  duration?: number;\n  delay?: number;\n  radius?: number;\n  path?: boolean;\n}\n\nexport function OrbitingCircles({\n  className = \"\",\n  children,\n  reverse = false,\n  duration = 20,\n  delay = 10,\n  radius = 50,\n  path = true,\n}: OrbitingCirclesProps) {\n  return (\n    <div className={`relative flex items-center justify-center ${className}`}>\n      {path && (\n        <svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          version=\"1.1\"\n          className=\"pointer-events-none absolute inset-0 size-full\"\n          style={{ width: radius * 2, height: radius * 2 }}\n        >\n          <circle\n            className=\"stroke-muted-foreground/20 stroke-1\"\n            cx={radius}\n            cy={radius}\n            r={radius - 2}\n            fill=\"none\"\n          />\n        </svg>\n      )}\n      <div\n        style={{\n          width: radius * 2,\n          height: radius * 2,\n          animation: `spin ${duration}s linear infinite`,\n          animationDirection: reverse ? \"reverse\" : \"normal\",\n        }}\n        className=\"absolute flex items-center justify-center will-change-transform\"\n      >\n        <div\n          style={{\n            transform: `translate(${radius - 12}px, 0)`,\n          }}\n          className=\"flex h-6 w-6 items-center justify-center rounded-full border border-border bg-card shadow-sm text-[10px] text-foreground font-bold\"\n        >\n          {children || \"🪐\"}\n        </div>\n      </div>\n      <div className=\"h-4 w-4 rounded-full bg-primary/20 ring-4 ring-primary/10\" />\n    </div>\n  );\n}\n\nexport default OrbitingCircles;\n",
+      "type": "registry:ui",
+      "target": "components/ui/orbiting-circles.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "orbiting-circles"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/orbiting-circles",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

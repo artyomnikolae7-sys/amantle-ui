@@ -244,7 +244,255 @@ import SaasLandingPage from "@/registry/templates/saas-landing-page";
 import ModernDashboardPage from "@/registry/templates/modern-dashboard-page";
 import AuthSplitScreenPage from "@/registry/templates/auth-split-screen-page";
 
+import { RollingGallery } from "@/registry/ui/rolling-gallery";
+
+import { ElasticSlider } from "@/registry/ui/elastic-slider";
+
+import { FlowingMenu } from "@/registry/ui/flowing-menu";
+
+import { TiltedCard } from "@/registry/ui/tilted-card";
+
+import { SpotlightCard } from "@/registry/ui/spotlight-card";
+
+import { InfiniteScroll } from "@/registry/ui/infinite-scroll";
+
+import { Magnet } from "@/registry/ui/magnet";
+
+import { MagnetLines } from "@/registry/ui/magnet-lines";
+
+import { Crosshair } from "@/registry/ui/crosshair";
+
+import { ElectricBorder } from "@/registry/ui/electric-border";
+
+import { Marquee } from "@/registry/ui/marquee";
+
+import { RainbowButton } from "@/registry/ui/rainbow-button";
+
+import { OrbitingCircles } from "@/registry/ui/orbiting-circles";
+
+import { AvatarCircles } from "@/registry/ui/avatar-circles";
+
+import { TracingBeam } from "@/registry/ui/tracing-beam";
+
+import { FloatingNavbar } from "@/registry/ui/floating-navbar";
+
+import { HoverBorderGradient } from "@/registry/ui/hover-border-gradient";
+
+import { ActionBarGlow } from "@/registry/ui/action-bar-glow";
+
+import { AiPromptInput } from "@/registry/ui/ai-prompt-input";
+
+import { StudioComponentInspector } from "@/registry/ui/studio-component-inspector";
+
+import { StudioCodePreview } from "@/registry/ui/studio-code-preview";
+
+import { GradientHeading } from "@/registry/ui/gradient-heading";
+
+import { MinimalCard } from "@/registry/ui/minimal-card";
+
+import { OriginInputTag } from "@/registry/ui/origin-input-tag";
+
+import { OriginSelectFancy } from "@/registry/ui/origin-select-fancy";
+
+import { KpiMetricCard } from "@/registry/ui/kpi-metric-card";
+
+import { ProgressBarStepped } from "@/registry/ui/progress-bar-stepped";
+
+import { HoverExpandCard } from "@/registry/ui/hover-expand-card";
+
+import { WaterDropGrid } from "@/registry/ui/water-drop-grid";
+
+import { MarketingFeaturePill } from "@/registry/ui/marketing-feature-pill";
+
+import { StatsCardAccent } from "@/registry/ui/stats-card-accent";
+
 export const componentMap: Record<string, React.ComponentType<any>> = {
+  "stats-card-accent": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StatsCardAccent {...props} />
+    </div>
+  ),
+
+  "marketing-feature-pill": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MarketingFeaturePill {...props} />
+    </div>
+  ),
+
+  "water-drop-grid": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <WaterDropGrid {...props} />
+    </div>
+  ),
+
+  "hover-expand-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverExpandCard {...props} />
+    </div>
+  ),
+
+  "progress-bar-stepped": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ProgressBarStepped {...props} />
+    </div>
+  ),
+
+  "kpi-metric-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <KpiMetricCard {...props} />
+    </div>
+  ),
+
+  "origin-select-fancy": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginSelectFancy {...props} />
+    </div>
+  ),
+
+  "origin-input-tag": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OriginInputTag {...props} />
+    </div>
+  ),
+
+  "minimal-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MinimalCard {...props} />
+    </div>
+  ),
+
+  "gradient-heading": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <GradientHeading {...props} />
+    </div>
+  ),
+
+  "studio-code-preview": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StudioCodePreview {...props} />
+    </div>
+  ),
+
+  "studio-component-inspector": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <StudioComponentInspector {...props} />
+    </div>
+  ),
+
+  "ai-prompt-input": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <AiPromptInput {...props} />
+    </div>
+  ),
+
+  "action-bar-glow": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ActionBarGlow {...props} />
+    </div>
+  ),
+
+  "hover-border-gradient": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <HoverBorderGradient {...props} />
+    </div>
+  ),
+
+  "floating-navbar": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FloatingNavbar {...props} />
+    </div>
+  ),
+
+  "tracing-beam": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TracingBeam {...props} />
+    </div>
+  ),
+
+  "avatar-circles": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <AvatarCircles {...props} />
+    </div>
+  ),
+
+  "orbiting-circles": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <OrbitingCircles {...props} />
+    </div>
+  ),
+
+  "rainbow-button": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <RainbowButton {...props} />
+    </div>
+  ),
+
+  "marquee": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <Marquee {...props} />
+    </div>
+  ),
+
+  "electric-border": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ElectricBorder {...props} />
+    </div>
+  ),
+
+  "crosshair": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <Crosshair {...props} />
+    </div>
+  ),
+
+  "magnet-lines": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <MagnetLines {...props} />
+    </div>
+  ),
+
+  "magnet": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <Magnet {...props} />
+    </div>
+  ),
+
+  "infinite-scroll": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <InfiniteScroll {...props} />
+    </div>
+  ),
+
+  "spotlight-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <SpotlightCard {...props} />
+    </div>
+  ),
+
+  "tilted-card": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <TiltedCard {...props} />
+    </div>
+  ),
+
+  "flowing-menu": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <FlowingMenu {...props} />
+    </div>
+  ),
+
+  "elastic-slider": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <ElasticSlider {...props} />
+    </div>
+  ),
+
+  "rolling-gallery": (props: any) => (
+    <div className="flex items-center justify-center p-6">
+      <RollingGallery {...props} />
+    </div>
+  ),
+
   "text-pressure": (props: any) => (
     <div className="flex items-center justify-center p-6">
       <TextPressure {...props} />

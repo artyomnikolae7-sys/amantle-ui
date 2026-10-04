@@ -1,0 +1,28 @@
+{
+  "name": "electric-border",
+  "type": "registry:ui",
+  "title": "Electric Border",
+  "description": "AMANTLE UI ui: electric-border",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/electric-border.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component ElectricBorder\n * @source https://reactbits.dev/components/electric-border\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface ElectricBorderProps {\n  children?: React.ReactNode;\n  className?: string;\n}\n\nexport function ElectricBorder({\n  children,\n  className = \"\",\n}: ElectricBorderProps) {\n  return (\n    <div className={`relative inline-flex p-[2px] overflow-hidden rounded-2xl ${className}`}>\n      <div\n        className=\"absolute inset-0 animate-spin\"\n        style={{\n          background: \"conic-gradient(from 0deg, transparent 0deg, #06b6d4 120deg, #a855f7 240deg, transparent 360deg)\",\n          animationDuration: \"3s\",\n        }}\n      />\n      <div className=\"relative z-10 flex flex-col items-center justify-center rounded-[14px] bg-card px-6 py-4 text-card-foreground shadow-lg\">\n        {children || (\n          <div className=\"flex flex-col items-center gap-1\">\n            <span className=\"text-xs font-mono font-bold tracking-wider text-primary uppercase\">Electric Border</span>\n            <span className=\"text-xs text-muted-foreground\">High-Voltage Animated Kinetic Rim</span>\n          </div>\n        )}\n      </div>\n    </div>\n  );\n}\n\nexport default ElectricBorder;\n",
+      "type": "registry:ui",
+      "target": "components/ui/electric-border.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "electric-border"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/electric-border",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

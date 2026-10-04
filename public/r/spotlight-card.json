@@ -1,0 +1,28 @@
+{
+  "name": "spotlight-card",
+  "type": "registry:ui",
+  "title": "Spotlight Card",
+  "description": "AMANTLE UI ui: spotlight-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/spotlight-card.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState } from \"react\";\n\n/**\n * @component SpotlightCard\n * @source https://reactbits.dev/components/spotlight-card\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface SpotlightCardProps {\n  title?: string;\n  description?: string;\n  spotlightColor?: string;\n  className?: string;\n}\n\nexport function SpotlightCard({\n  title = \"Spotlight Illuminator\",\n  description = \"Dynamic radial illumination tracking the user's cursor across interactive cards.\",\n  spotlightColor = \"rgba(139, 92, 246, 0.15)\",\n  className = \"\",\n}: SpotlightCardProps) {\n  const divRef = useRef<HTMLDivElement>(null);\n  const [position, setPosition] = useState({ x: -100, y: -100 });\n  const [opacity, setOpacity] = useState(0);\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!divRef.current) return;\n    const rect = divRef.current.getBoundingClientRect();\n    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });\n  };\n\n  return (\n    <div\n      ref={divRef}\n      onMouseMove={handleMouseMove}\n      onMouseEnter={() => setOpacity(1)}\n      onMouseLeave={() => setOpacity(0)}\n      className={`relative w-full max-w-sm overflow-hidden rounded-2xl border border-border/50 bg-card p-6 shadow-sm transition-all duration-200 hover:shadow-md ${className}`}\n    >\n      <div\n        className=\"pointer-events-none absolute -inset-px transition-opacity duration-300\"\n        style={{\n          opacity,\n          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,\n        }}\n      />\n      <div className=\"relative z-10 flex flex-col gap-2\">\n        <div className=\"h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs\">\n          ✦\n        </div>\n        <h3 className=\"text-base font-semibold tracking-tight text-foreground\">{title}</h3>\n        <p className=\"text-xs text-muted-foreground leading-relaxed\">{description}</p>\n      </div>\n    </div>\n  );\n}\n\nexport default SpotlightCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/spotlight-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "spotlight-card"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/spotlight-card",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "origin-input-tag",
+  "type": "registry:ui",
+  "title": "Origin Input Tag",
+  "description": "AMANTLE UI ui: origin-input-tag",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/origin-input-tag.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component OriginInputTag\n * @source https://originui.com/inputs\n * @author Origin UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface OriginInputTagProps {\n  initialTags?: string[];\n  maxTags?: number;\n  className?: string;\n}\n\nexport function OriginInputTag({\n  initialTags = [\"Next.js\", \"React 19\", \"Tailwind v4\"],\n  maxTags = 8,\n  className = \"\",\n}: OriginInputTagProps) {\n  const [tags, setTags] = useState<string[]>(initialTags);\n  const [inputVal, setInputVal] = useState(\"\");\n\n  const addTag = () => {\n    const val = inputVal.trim();\n    if (val && !tags.includes(val) && tags.length < maxTags) {\n      setTags([...tags, val]);\n      setInputVal(\"\");\n    }\n  };\n\n  const removeTag = (tagToRemove: string) => {\n    setTags(tags.filter((t) => t !== tagToRemove));\n  };\n\n  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {\n    if (e.key === \"Enter\" || e.key === \",\") {\n      e.preventDefault();\n      addTag();\n    } else if (e.key === \"Backspace\" && !inputVal && tags.length > 0) {\n      removeTag(tags[tags.length - 1]);\n    }\n  };\n\n  return (\n    <div className={`flex w-full max-w-sm flex-col gap-1.5 ${className}`}>\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground\">\n        <span className=\"font-medium\">Tags & Skills</span>\n        <span className=\"text-[11px]\">{tags.length}/{maxTags}</span>\n      </div>\n      <div className=\"flex min-h-[44px] flex-wrap items-center gap-1.5 rounded-xl border border-border/60 bg-card p-2 shadow-xs transition-all focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20\">\n        {tags.map((tag) => (\n          <span\n            key={tag}\n            className=\"inline-flex items-center gap-1 rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-foreground transition-all hover:bg-muted/80\"\n          >\n            {tag}\n            <button\n              type=\"button\"\n              onClick={() => removeTag(tag)}\n              className=\"text-muted-foreground hover:text-foreground active:scale-90\"\n            >\n              ×\n            </button>\n          </span>\n        ))}\n        {tags.length < maxTags && (\n          <input\n            type=\"text\"\n            value={inputVal}\n            onChange={(e) => setInputVal(e.target.value)}\n            onKeyDown={handleKeyDown}\n            placeholder={tags.length === 0 ? \"Type and hit enter...\" : \"Add tag...\"}\n            className=\"flex-1 min-w-[80px] bg-transparent text-xs text-foreground placeholder:text-muted-foreground focus:outline-none\"\n          />\n        )}\n      </div>\n    </div>\n  );\n}\n\nexport default OriginInputTag;\n",
+      "type": "registry:ui",
+      "target": "components/ui/origin-input-tag.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "origin-input-tag"
+  ],
+  "meta": {
+    "source": "https://originui.com/inputs",
+    "author": "Origin UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

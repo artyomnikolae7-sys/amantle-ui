@@ -1,0 +1,28 @@
+{
+  "name": "avatar-circles",
+  "type": "registry:ui",
+  "title": "Avatar Circles",
+  "description": "AMANTLE UI ui: avatar-circles",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/avatar-circles.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\n/**\n * @component AvatarCircles\n * @source https://magicui.design/docs/components/avatar-circles\n * @author Magic UI\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface AvatarCirclesProps {\n  numPeople?: number;\n  avatarUrls?: string[];\n  className?: string;\n}\n\nexport function AvatarCircles({\n  numPeople = 99,\n  avatarUrls = [\n    \"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80\",\n    \"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80\",\n    \"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&q=80\",\n    \"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&q=80\",\n  ],\n  className = \"\",\n}: AvatarCirclesProps) {\n  return (\n    <div className={`z-10 flex -space-x-3 rtl:space-x-reverse ${className}`}>\n      {avatarUrls.map((url, index) => (\n        <img\n          key={index}\n          className=\"h-10 w-10 rounded-full border-2 border-background object-cover transition-transform duration-200 hover:z-20 hover:scale-110 active:scale-95\"\n          src={url}\n          alt={`User avatar ${index + 1}`}\n        />\n      ))}\n      <div className=\"flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-muted text-center text-xs font-semibold text-muted-foreground transition-transform hover:z-20 hover:scale-110\">\n        +{numPeople}\n      </div>\n    </div>\n  );\n}\n\nexport default AvatarCircles;\n",
+      "type": "registry:ui",
+      "target": "components/ui/avatar-circles.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "avatar-circles"
+  ],
+  "meta": {
+    "source": "https://magicui.design/docs/components/avatar-circles",
+    "author": "Magic UI",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

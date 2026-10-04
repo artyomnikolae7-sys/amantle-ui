@@ -1,0 +1,28 @@
+{
+  "name": "infinite-scroll",
+  "type": "registry:ui",
+  "title": "Infinite Scroll",
+  "description": "AMANTLE UI ui: infinite-scroll",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/infinite-scroll.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\n/**\n * @component InfiniteScroll\n * @source https://reactbits.dev/components/infinite-scroll\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)\n */\nexport interface InfiniteScrollProps {\n  items?: string[];\n  speed?: number;\n  className?: string;\n}\n\nexport function InfiniteScroll({\n  items = [\n    \"Next.js 15\",\n    \"React 19\",\n    \"Tailwind v4\",\n    \"Emil Kowalski Springs\",\n    \"TypeScript\",\n    \"Framer Kinetics\",\n    \"Accessible WCAG AAA\",\n  ],\n  speed = 25,\n  className = \"\",\n}: InfiniteScrollProps) {\n  const [isPaused, setIsPaused] = useState(false);\n\n  return (\n    <div\n      onMouseEnter={() => setIsPaused(true)}\n      onMouseLeave={() => setIsPaused(false)}\n      className={`relative flex w-full max-w-xl overflow-hidden py-4 select-none ${className}`}\n    >\n      <div\n        className=\"flex gap-4 shrink-0 transition-transform\"\n        style={{\n          animation: `infinite-marquee ${speed}s linear infinite`,\n          animationPlayState: isPaused ? \"paused\" : \"running\",\n        }}\n      >\n        {[...items, ...items, ...items].map((item, idx) => (\n          <span\n            key={idx}\n            className=\"flex items-center gap-2 rounded-full border border-border/60 bg-muted/40 px-4 py-1.5 text-xs font-medium text-foreground backdrop-blur-sm\"\n          >\n            <span className=\"h-1.5 w-1.5 rounded-full bg-primary\" />\n            {item}\n          </span>\n        ))}\n      </div>\n    </div>\n  );\n}\n\nexport default InfiniteScroll;\n",
+      "type": "registry:ui",
+      "target": "components/ui/infinite-scroll.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "infinite-scroll"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/infinite-scroll",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars)"
+  }
+}

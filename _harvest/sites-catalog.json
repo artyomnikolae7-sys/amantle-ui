@@ -247,6 +247,162 @@
           "license": "MIT"
         }
       ]
+    },
+    {
+      "id": "shadcnstudio",
+      "name": "Shadcn Studio",
+      "url": "https://shadcnstudio.dev",
+      "category": "studio-tools",
+      "components": [
+        {
+          "name": "studio-component-inspector",
+          "title": "Studio Component Inspector",
+          "category": "ui",
+          "family": "feedback-overlays",
+          "description": "Live interactive inspector panel allowing runtime tweaking of radius, colors, padding, and viewport modes.",
+          "author": "Shadcn Studio",
+          "license": "MIT"
+        },
+        {
+          "name": "studio-code-preview",
+          "title": "Studio Code Preview",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Tabbed preview and code runner with 1-click CLI installer and TSX copy functionality.",
+          "author": "Shadcn Studio",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "cultui",
+      "name": "Cult UI",
+      "url": "https://cult-ui.com",
+      "category": "crafted-motion",
+      "components": [
+        {
+          "name": "gradient-heading",
+          "title": "Gradient Heading",
+          "category": "ui",
+          "family": "typography-text",
+          "description": "Multi-stop dynamic kinetic gradient heading with shimmering light highlights.",
+          "author": "Cult UI",
+          "license": "MIT"
+        },
+        {
+          "name": "minimal-card",
+          "title": "Minimal Card",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "Ultra-refined Apple-style minimal glass surface with subtle rim light and smooth tactile scale.",
+          "author": "Cult UI",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "originui",
+      "name": "Origin UI",
+      "url": "https://originui.com",
+      "category": "advanced-forms",
+      "components": [
+        {
+          "name": "origin-input-tag",
+          "title": "Origin Input Tag",
+          "category": "ui",
+          "family": "inputs-forms",
+          "description": "Interactive multi-tag input with keyboard navigation, chip deletion, and animated counter.",
+          "author": "Origin UI",
+          "license": "MIT"
+        },
+        {
+          "name": "origin-select-fancy",
+          "title": "Origin Select Fancy",
+          "category": "ui",
+          "family": "inputs-forms",
+          "description": "Advanced animated dropdown select with category filtering, search input, and check animations.",
+          "author": "Origin UI",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "tremor",
+      "name": "Tremor Raw",
+      "url": "https://raw.tremor.so",
+      "category": "analytics-metrics",
+      "components": [
+        {
+          "name": "kpi-metric-card",
+          "title": "KPI Metric Card",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "High-density dashboard metric card with delta indicator, miniature sparkline, and trend badge.",
+          "author": "Tremor",
+          "license": "Apache 2.0"
+        },
+        {
+          "name": "progress-bar-stepped",
+          "title": "Progress Bar Stepped",
+          "category": "ui",
+          "family": "data-display",
+          "description": "Segmented milestone progress bar displaying completion steps with active indicator.",
+          "author": "Tremor",
+          "license": "Apache 2.0"
+        }
+      ]
+    },
+    {
+      "id": "hoverdev",
+      "name": "Hover.dev",
+      "url": "https://hover.dev",
+      "category": "hover-physics",
+      "components": [
+        {
+          "name": "hover-expand-card",
+          "title": "Hover Expand Card",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "Horizontal accordion card that expands smoothly on hover with Emil spring physics.",
+          "author": "Hover.dev",
+          "license": "MIT"
+        },
+        {
+          "name": "water-drop-grid",
+          "title": "Water Drop Grid",
+          "category": "ui",
+          "family": "motion-fx",
+          "description": "Interactive geometric dot grid producing expanding ripple waves on user click.",
+          "author": "Hover.dev",
+          "license": "MIT"
+        }
+      ]
+    },
+    {
+      "id": "hyperui",
+      "name": "HyperUI / Float UI",
+      "url": "https://hyperui.dev",
+      "category": "marketing-blocks",
+      "components": [
+        {
+          "name": "marketing-feature-pill",
+          "title": "Marketing Feature Pill",
+          "category": "ui",
+          "family": "buttons-actions",
+          "description": "Pill announcement banner with avatar cluster, animated status pulse, and chevron link.",
+          "author": "HyperUI",
+          "license": "MIT"
+        },
+        {
+          "name": "stats-card-accent",
+          "title": "Stats Card Accent",
+          "category": "ui",
+          "family": "cards-surfaces",
+          "description": "Elevated card with colorful vertical accent bar, bold numeric value, and growth tag.",
+          "author": "Float UI",
+          "license": "MIT"
+        }
+      ]
     }
   ]
 }

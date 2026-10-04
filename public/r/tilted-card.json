@@ -1,0 +1,28 @@
+{
+  "name": "tilted-card",
+  "type": "registry:ui",
+  "title": "Tilted Card",
+  "description": "AMANTLE UI ui: tilted-card",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "ui/tilted-card.tsx",
+      "content": "\"use client\";\n\nimport React, { useRef, useState } from \"react\";\n\n/**\n * @component TiltedCard\n * @source https://reactbits.dev/components/tilted-card\n * @author React Bits\n * @license MIT\n * @modified Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)\n */\nexport interface TiltedCardProps {\n  title?: string;\n  subtitle?: string;\n  image?: string;\n  className?: string;\n}\n\nexport function TiltedCard({\n  title = \"Cybernetic Surface\",\n  subtitle = \"Dynamic 3D Parallax Tilt with Specular Glare\",\n  image = \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80\",\n  className = \"\",\n}: TiltedCardProps) {\n  const cardRef = useRef<HTMLDivElement>(null);\n  const [rotation, setRotation] = useState({ x: 0, y: 0 });\n  const [glare, setGlare] = useState({ x: 50, y: 50, opacity: 0 });\n\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n    if (!cardRef.current) return;\n    const rect = cardRef.current.getBoundingClientRect();\n    const x = e.clientX - rect.left;\n    const y = e.clientY - rect.top;\n    const centerX = rect.width / 2;\n    const centerY = rect.height / 2;\n\n    const rotX = ((y - centerY) / centerY) * -12;\n    const rotY = ((x - centerX) / centerX) * 12;\n\n    setRotation({ x: rotX, y: rotY });\n    setGlare({ x: (x / rect.width) * 100, y: (y / rect.height) * 100, opacity: 0.25 });\n  };\n\n  const handleMouseLeave = () => {\n    setRotation({ x: 0, y: 0 });\n    setGlare((g) => ({ ...g, opacity: 0 }));\n  };\n\n  return (\n    <div\n      style={{ perspective: 1000 }}\n      className={`inline-block select-none ${className}`}\n    >\n      <div\n        ref={cardRef}\n        onMouseMove={handleMouseMove}\n        onMouseLeave={handleMouseLeave}\n        style={{\n          transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,\n          transition: \"transform 200ms cubic-bezier(0.23, 1, 0.32, 1)\",\n          transformStyle: \"preserve-3d\",\n        }}\n        className=\"relative h-72 w-64 overflow-hidden rounded-2xl border border-border/60 bg-card p-4 shadow-xl will-change-transform\"\n      >\n        <div\n          className=\"pointer-events-none absolute inset-0 z-30 transition-opacity duration-300\"\n          style={{\n            background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.6) 0%, transparent 60%)`,\n            opacity: glare.opacity,\n          }}\n        />\n        <div className=\"h-40 w-full overflow-hidden rounded-xl\">\n          <img src={image} alt={title} className=\"h-full w-full object-cover\" />\n        </div>\n        <div className=\"mt-4 flex flex-col gap-1\">\n          <h4 className=\"text-sm font-bold tracking-tight text-foreground\">{title}</h4>\n          <p className=\"text-xs text-muted-foreground leading-relaxed\">{subtitle}</p>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport default TiltedCard;\n",
+      "type": "registry:ui",
+      "target": "components/ui/tilted-card.tsx"
+    }
+  ],
+  "category": "ui",
+  "tags": [
+    "ui",
+    "tilted-card"
+  ],
+  "meta": {
+    "source": "https://reactbits.dev/components/tilted-card",
+    "author": "React Bits",
+    "license": "MIT",
+    "modified": "Adapted for AMANTLE UI (React 19, Tailwind v4, CSS Vars, Emil Springs)"
+  }
+}

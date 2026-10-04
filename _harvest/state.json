@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T17:55:45.689Z",
+  "updatedAt": "2026-10-04T18:10:35.717Z",
   "activeSite": "reactbits",
   "stats": {
     "totalSites": 4,
@@ -48,6 +48,254 @@
       "family": "typography-text",
       "status": "COMPLETED",
       "timestamp": "2026-10-04T17:55:33.809Z"
+    },
+    "rolling-gallery": {
+      "title": "Rolling Gallery",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:59:56.383Z"
+    },
+    "elastic-slider": {
+      "title": "Elastic Slider",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "inputs-forms",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:59:56.447Z"
+    },
+    "flowing-menu": {
+      "title": "Flowing Menu",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "navigation-menus",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:59:56.498Z"
+    },
+    "tilted-card": {
+      "title": "Tilted Card",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:59:56.553Z"
+    },
+    "spotlight-card": {
+      "title": "Spotlight Card",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T17:59:56.615Z"
+    },
+    "infinite-scroll": {
+      "title": "Infinite Scroll",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:00:56.036Z"
+    },
+    "magnet": {
+      "title": "Magnet",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:00:56.106Z"
+    },
+    "magnet-lines": {
+      "title": "Magnet Lines",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:00:56.167Z"
+    },
+    "crosshair": {
+      "title": "Crosshair",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:00:56.228Z"
+    },
+    "electric-border": {
+      "title": "Electric Border",
+      "site": "reactbits",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:00:56.297Z"
+    },
+    "marquee": {
+      "title": "Marquee",
+      "site": "magicui",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:02:19.153Z"
+    },
+    "rainbow-button": {
+      "title": "Rainbow Button",
+      "site": "magicui",
+      "category": "ui",
+      "family": "buttons-actions",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:02:19.211Z"
+    },
+    "orbiting-circles": {
+      "title": "Orbiting Circles",
+      "site": "magicui",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:02:19.277Z"
+    },
+    "avatar-circles": {
+      "title": "Avatar Circles",
+      "site": "magicui",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:02:19.339Z"
+    },
+    "tracing-beam": {
+      "title": "Tracing Beam",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:03:45.416Z"
+    },
+    "floating-navbar": {
+      "title": "Floating Navbar",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "navigation-menus",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:03:45.479Z"
+    },
+    "hover-border-gradient": {
+      "title": "Hover Border Gradient",
+      "site": "aceternity",
+      "category": "ui",
+      "family": "buttons-actions",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:03:45.534Z"
+    },
+    "action-bar-glow": {
+      "title": "Action Bar Glow",
+      "site": "kokonut",
+      "category": "ui",
+      "family": "navigation-menus",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:03:57.668Z"
+    },
+    "ai-prompt-input": {
+      "title": "AI Prompt Input",
+      "site": "kokonut",
+      "category": "ui",
+      "family": "inputs-forms",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:03:57.719Z"
+    },
+    "studio-component-inspector": {
+      "title": "Studio Component Inspector",
+      "site": "shadcnstudio",
+      "category": "ui",
+      "family": "feedback-overlays",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:17.733Z"
+    },
+    "studio-code-preview": {
+      "title": "Studio Code Preview",
+      "site": "shadcnstudio",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:17.797Z"
+    },
+    "gradient-heading": {
+      "title": "Gradient Heading",
+      "site": "cultui",
+      "category": "ui",
+      "family": "typography-text",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:32.099Z"
+    },
+    "minimal-card": {
+      "title": "Minimal Card",
+      "site": "cultui",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:32.152Z"
+    },
+    "origin-input-tag": {
+      "title": "Origin Input Tag",
+      "site": "originui",
+      "category": "ui",
+      "family": "inputs-forms",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:46.294Z"
+    },
+    "origin-select-fancy": {
+      "title": "Origin Select Fancy",
+      "site": "originui",
+      "category": "ui",
+      "family": "inputs-forms",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:09:46.368Z"
+    },
+    "kpi-metric-card": {
+      "title": "KPI Metric Card",
+      "site": "tremor",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:00.320Z"
+    },
+    "progress-bar-stepped": {
+      "title": "Progress Bar Stepped",
+      "site": "tremor",
+      "category": "ui",
+      "family": "data-display",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:00.404Z"
+    },
+    "hover-expand-card": {
+      "title": "Hover Expand Card",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:14.224Z"
+    },
+    "water-drop-grid": {
+      "title": "Water Drop Grid",
+      "site": "hoverdev",
+      "category": "ui",
+      "family": "motion-fx",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:14.321Z"
+    },
+    "marketing-feature-pill": {
+      "title": "Marketing Feature Pill",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "buttons-actions",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:27.644Z"
+    },
+    "stats-card-accent": {
+      "title": "Stats Card Accent",
+      "site": "hyperui",
+      "category": "ui",
+      "family": "cards-surfaces",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-04T18:10:27.694Z"
     }
   }
 }
