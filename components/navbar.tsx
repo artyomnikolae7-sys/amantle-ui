@@ -23,7 +23,7 @@ export function Navbar() {
             <Link href="/studio" className="text-foreground transition-colors flex items-center gap-1.5 font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-primary" />
               <span>Studio</span>
-              <span className="text-[9px] bg-primary/15 text-primary border border-primary/20 px-1 py-0.2 rounded font-mono font-bold">10 Sites</span>
+              <span className="text-[9px] bg-primary/15 text-primary border border-primary/20 px-1 py-0.2 rounded font-mono font-bold">2,051 items</span>
             </Link>
             <Link href="/ui" className="hover:text-foreground transition-colors flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5" />
@@ -42,9 +42,9 @@ export function Navbar() {
 
         {/* Right side controls */}
         <div className="flex items-center gap-3">
-          <div className="hidden lg:flex items-center gap-1.5 text-xs text-muted-foreground bg-muted/60 px-2.5 py-1 rounded-md border border-border">
+          <div className="hidden lg:flex items-center gap-1.5 text-xs text-muted-foreground bg-muted/60 px-2.5 py-1 rounded-md border border-border font-mono">
             <Terminal className="w-3.5 h-3.5 text-primary" />
-            <span>npx shadcn add https://amantle.dev/r/...</span>
+            <span>npx amantle-ui add button</span>
           </div>
 
           <ThemeCustomizerTrigger />

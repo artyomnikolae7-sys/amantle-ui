@@ -52,13 +52,21 @@ export default async function HomePage() {
             href="#catalog"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition-opacity gap-2"
           >
-            <span>Исследовать каталог ({items.length > 0 ? items.length : "150+"})</span>
+            <span>Исследовать каталог ({items.length > 0 ? items.length : "2,051"} компонентов)</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
+          <Link
+            href="/studio"
+            className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground shadow-sm hover:bg-muted transition-colors gap-2"
+          >
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span>AMANTLE Studio</span>
+          </Link>
+
           <div className="flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-3 text-xs font-mono text-foreground shadow-sm">
             <Terminal className="w-4 h-4 text-primary" />
-            <span>npx shadcn add http://localhost:3000/r/button.json</span>
+            <span>npx amantle-ui add button</span>
           </div>
         </div>
 
@@ -68,9 +76,9 @@ export default async function HomePage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <Layers className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">150+ компонентов «Золотого фонда»</h3>
+            <h3 className="text-lg font-bold text-foreground">2,051+ компонентов из 10 экосистем</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Отполированные атомарные примитивы Radix UI, готовые продакшн-блоки Hero, Pricing, Bento и полноценные шаблоны страниц.
+              Примитивы Radix UI, дашборды Tremor, кинетика React Bits, спецэффекты Magic UI & Aceternity и блоки HyperUI в одном каталоге.
             </p>
           </div>
 
@@ -78,9 +86,9 @@ export default async function HomePage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <Cpu className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">Нативный MCP-сервер для AI</h3>
+            <h3 className="text-lg font-bold text-foreground">Нативный MCP-сервер и CLI</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Прямая интеграция с Cursor, Windsurf и Antigravity. Агенты сами находят блоки, забирают код и настраивают переменные темы.
+              Прямая интеграция с Cursor, Windsurf и Antigravity через MCP, плюс официальный CLI <code className="text-primary font-mono text-xs">npx amantle-ui add</code>.
             </p>
           </div>
 
@@ -88,9 +96,9 @@ export default async function HomePage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">Атрибуция и Provenance</h3>
+            <h3 className="text-lg font-bold text-foreground">60 FPS Виртуализация и Provenance</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Каждый компонент документирует источник, автора и лицензию (MIT). Никаких рисков нарушения авторских прав.
+              Мгновенный скролл каталога с бинарным поиском видимых строк. Каждый компонент документирует источник, автора и лицензию.
             </p>
           </div>
         </div>
