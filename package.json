@@ -1,6 +1,6 @@
 {
   "name": "amantle-ui",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,7 +15,8 @@
     "test:mcp": "node --experimental-strip-types scripts/test-mcp.mjs",
     "test": "node --experimental-strip-types scripts/test-mcp.mjs",
     "deploy": "node scripts/deploy-version.mjs",
-    "release": "node scripts/deploy-version.mjs"
+    "release": "node scripts/deploy-version.mjs",
+    "cli": "node packages/cli/bin/amantle-ui.js"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",

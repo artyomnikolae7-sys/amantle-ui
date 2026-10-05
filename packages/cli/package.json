@@ -1,0 +1,40 @@
+{
+  "name": "amantle-ui",
+  "version": "0.7.0",
+  "description": "Official CLI for AMANTLE UI — Next-generation design system with 2,051 components from 10+ open-source ecosystems",
+  "type": "module",
+  "bin": {
+    "amantle-ui": "./bin/amantle-ui.js",
+    "amantle": "./bin/amantle-ui.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "shadcn",
+    "shadcn-ui",
+    "components",
+    "design-system",
+    "react",
+    "nextjs",
+    "tailwind",
+    "amantle",
+    "amantle-ui"
+  ],
+  "author": "AMANTLE Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artyomnikolae7-sys/amantle-ui.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/artyomnikolae7-sys/amantle-ui/issues"
+  },
+  "homepage": "https://amantle-ui-x.vercel.app"
+}

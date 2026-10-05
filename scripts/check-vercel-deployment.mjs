@@ -9,6 +9,11 @@ async function monitor() {
   );
   const token = auth.token;
 
+  console.log("Checking latest Vercel deployments for project amantle-ui-x...");
+
+  // Wait a few seconds for GitHub webhook trigger
+  await new Promise((r) => setTimeout(r, 6000));
+
   // Find latest deployment
   const listRes = await fetch(
     "https://api.vercel.com/v6/deployments?projectId=prj_U2XMrLgCjj8drz4gAxAc8d2rQiB3&limit=3",
@@ -35,7 +40,22 @@ async function monitor() {
     if (d.readyState === "READY") {
       console.log("✅ Deployment READY!");
       console.log("URL:", d.url);
-      console.log("Aliases:", d.alias);
+
+      // Assign production alias
+      const deployId = d.id || d.uid || latest.uid;
+      const aliasRes = await fetch(
+        `https://api.vercel.com/v2/deployments/${deployId}/aliases`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: "Bearer " + token,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ alias: "amantle-ui-x.vercel.app" }),
+        }
+      );
+      const aliasData = await aliasRes.json();
+      console.log("Alias updated:", aliasData);
       return;
     }
 
